@@ -1,5 +1,5 @@
 # blog
 To run the blog locally:
 ```
-/docs$ bundle exec jekyll serve
+/docs$ bundle exec jekyll serve --livereload
 ```
