@@ -1,4 +1,5 @@
 # blog
+To run the blog locally:
 ```
-bundle exec jekyll serve
+/docs$ bundle exec jekyll serve
 ```
