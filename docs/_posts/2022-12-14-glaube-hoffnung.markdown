@@ -2,7 +2,7 @@
 layout: post
 title:  "Glaube und Hoffnung"
 date:   2022-12-14 22:00:00 +0100
-categories: Litertur
+categories: Physik
 ---
 Das wohl berühmteste Gedankenexperiment der Relativitätstheorie ist das Zwillingsparadoxon.
 

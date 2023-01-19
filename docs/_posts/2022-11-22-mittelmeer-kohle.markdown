@@ -2,7 +2,7 @@
 layout: post
 title:  "Warum kriegt das Mittelmeer keine Kohle?"
 date:   2022-11-13 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Weil Albert Camus falsch übersetzt wird.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Die Grenzen des Zufalls und des Elektrons"
 date:   2022-11-18 21:00:00 +0100
-categories: Litertur
+categories: Physik
 ---
 Ich spiele kein Lotto. Früher hab ich immer mit dem Opa die Ziehung angeschaut, denn er hatte da ein eigenes System. Die Oma fand das immer reine Geldverschwendung, weil beim Lotto ja keiner weiss was rauskommt. Damals gab es Lotto zum Glück nur Sonntags. Eine zusätzliche Mittwochsziehung hätte die Ehe sicher schwer belastet.
 

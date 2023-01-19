@@ -2,7 +2,7 @@
 layout: post
 title:  "Neues für den Katholiken"
 date:   2022-11-27 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Das Folgende ist nur gedacht und nachvollziehbar für Leser, die als Kinder katholischen Religionsunterricht erhalten und immer wieder am Sonntag die Hostie zu sich genommen haben.
 

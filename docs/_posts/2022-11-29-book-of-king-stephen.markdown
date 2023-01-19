@@ -2,7 +2,7 @@
 layout: post
 title:  "Book of King Stephen"
 date:   2022-11-29 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 I think Stephen King should be read in the form of verse, see for example „The Stand“, beginning of chapter forty-six:
 

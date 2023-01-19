@@ -2,7 +2,7 @@
 layout: post
 title:  "Bernard und Schottky gehen"
 date:   2022-12-14 23:00:00 +0100
-categories: Litertur
+categories: Physik
 ---
 Während ich, bevor Schottky weggegangen ist, nur am Mittwoch mit Bernhard gegangen bin, gehe ich jetzt, nachdem Schottky weggegangen ist, auch am Montag mit Bernhard. Während wir am Mittwoch immer in die eine (in die östliche) Richtung gehen, gehen wir am Montag in die westliche, auffallenderweise gehen wir am Montag viel schneller als am Mittwoch, wahrscheinlich, denke ich, ist Bernhard mit Schottky immer viel schneller gegangen als mit mir, weil er am Mittwoch viel langsamer, am Montag viel schneller geht.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Das Ende vom Faust"
 date:   2023-01-17 21:43:02 +0100
-categories: Litertur
+categories: Literatur
 ---
 Es ist ja allgemein bekannt, dass Goethes Faust im Teil Eins Margarethe (das Gretchen) schwängert. Der Teufel fädelt das Ganze ein (Faust: "Hör, du mußt mir die Dirne schaffen!"). Die Gretchenfrage "Nun sag’, wie hast du’s mit der Religion?" meint natürlich die Ehe, der Rest der Religionsüberzeugungen des Faust sind der Margarethe eher nicht so wichtig, würd ich (mit Sloterdijk) meinen. Er weicht in Philosohie aus, obwohl er ganz genau weiss, was Sache ist. "Nenn’ es dann wie du willst,
 Nenn’s Glück! Herz! Liebe! Gott! ... Name ist Schall und Rauch".

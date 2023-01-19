@@ -2,7 +2,7 @@
 layout: post
 title:  "Bukowski im Original"
 date:   2022-11-15 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Das Buch „Gödel, Escher, Bach“ (GEB) ist als Standardwerk der Artificial Intelligence (zu deutsch: „gekünstelte Intelligenz“) bekannt. Es wurde 1979 von Douglas R. Hofstadter veröffentlicht. Ich hab es nie ganz gelesen, es hat aber was. Mir ist nicht ganz klar, was.
 

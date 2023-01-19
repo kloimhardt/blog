@@ -2,7 +2,7 @@
 layout: post
 title:  "Random"
 date:   2023-01-10 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Giulini Straumann Zürich: Plancks ungerader Weg zur Strahlenformel https://onlinelibrary.wiley.com/doi/abs/10.1002/phbl.20000561214
 

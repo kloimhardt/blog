@@ -2,7 +2,7 @@
 layout: post
 title:  "Gespenst von Canterville"
 date:   2022-11-22 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Ich kiefelte lang an der Übersetzung des folgenden Satzes von Oscar Wilde aus 1887:
 

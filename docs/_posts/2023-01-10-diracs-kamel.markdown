@@ -2,7 +2,7 @@
 layout: post
 title:  "Diracs Kamel"
 date:   2023-01-10 21:00:00 +0100
-categories: Litertur
+categories: Physik
 ---
 Ich erzähl hier kurz mein Lieblingsgleichnis:
 

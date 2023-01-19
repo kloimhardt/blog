@@ -2,7 +2,7 @@
 layout: post
 title:  "Kunst und Tragik"
 date:   2022-11-22 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Der Titel von Henry Kissinger’s Buch „Leadership“ wurde mit „Staatskunst“ übersetzt. Tatsächlich hab‘ ich keine wirklich gute Übersetzung für das englische Wort „leadership“ gefunden.
 

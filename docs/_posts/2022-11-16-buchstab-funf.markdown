@@ -2,7 +2,7 @@
 layout: post
 title:  "Buchstab‘ fünf im ABC"
 date:   2022-11-16 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 Buchstab‘ fünf vom ABC kommt oft vor in unsrig‘ Sprach‘. Häufigst sogar. Und: sowohl auf Französisch ist das so, als auch auf Anglo-Sächsisch.
 

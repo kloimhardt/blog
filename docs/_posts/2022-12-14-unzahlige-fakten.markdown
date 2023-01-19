@@ -2,7 +2,7 @@
 layout: post
 title:  "Unzählige Fakten"
 date:   2022-12-14 21:00:00 +0100
-categories: Litertur
+categories: Physik
 ---
 Das [Zitat aus 1870](https://books.google.at/books?id=8YUCAAAAIAAJ&q=%22ugly+fact%22&redir_esc=y#v=snippet&q=%22ugly%20fact%22&f=false) „The great tragedy of Science—the slaying of a beautiful hypothesis by an ugly fact“ sollte mit Vorsicht genossen werden. Es charakterisiert die Wissenschaft nicht gut.
 

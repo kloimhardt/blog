@@ -2,7 +2,7 @@
 layout: post
 title:  "Wahrscheinlich objektiv"
 date:   2022-11-20 21:00:00 +0100
-categories: Litertur
+categories: Physik
 ---
 Wittgensteins [Tractatus](https://www.wittgensteinproject.org/w/index.php?title=Logisch-philosophische_Abhandlung_(Darstellung_in_Baumform)) ist für mich zum grossen Teil unverständlich. Aber zumindest weiss ein ehemaliger Physikstudent, dass man Bücher auch lesen kann, wenn man sie nicht versteht. Das ist sogar die wichtigste Fähigkeit: sich von komplizierten Zeichen und Worten nicht einschüchtern lassen.
 

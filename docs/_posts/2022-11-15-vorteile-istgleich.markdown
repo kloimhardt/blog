@@ -2,7 +2,7 @@
 layout: post
 title:  "Vorteile des Istgleichzeichens ="
 date:   2022-11-15 00:00:01 +0100
-categories: Literatur
+categories: Software
 ---
 Der folgende Programmcode, den du nicht weiter verstehen musst, liefert als Ergebnis die Zahl 120. Falls dich Programmcode abschreckt, lies einfach nur den restlichen Text, dieser Post ist ausserdem ziemlich kurz.
 

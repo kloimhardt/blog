@@ -2,7 +2,7 @@
 layout: post
 title:  "Zusammengeschnipselt"
 date:   2022-11-28 21:00:00 +0100
-categories: Litertur
+categories: Literatur
 ---
 In der Comic-Adaption des Ulysses von Nicholas Mahler finden sich ganze Seiten von Anzeigen aus dem Wiener Neuigkeits-Welt-Blatt vom 16. Juni 1904. Das ist weil unser Held Leopold Bloom (= Ulysses = Odysseus) von Beruf Anzeigenakquisiteur ist.
 
