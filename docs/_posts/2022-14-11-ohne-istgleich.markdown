@@ -8,29 +8,29 @@ Hier dreht sich alles um die Fakultät von fünf. Falls du dich nicht dran erinn
 
 Ich stelle fest, dass 5! wie folgt berechnet wird:
 
-{% highlight JS %}
+```javascript
 2*3*4*5
-{% endhighlight %}
+```
 
 zwei mal drei ist sechs, mal vier ist 24, mal fünf ist 120.
 
 In Javascript kann man die Sache in folgenden Programmzeilen codieren:
 
-{% highlight JS %}
+```javascript
 x=2;
 i=3;
 while (i<6) { x=x*i; i=i+1; }
 x;
-{% endhighlight %}
+```
 
 Das lässt sich leicht überprüfen, in meinem Firefox gehe ich auf Tools->Browser Tools->Web Developer Tools und kopiere die obigen Programmzeilen rein. Drücke Enter und voilà: hundertzwanzig steht da.
 
 Falls du obigen Programmzeilen so halbwegs verstehst, dann ist da eine Sache, die du irgendwann mal schlucken musstest. Diese Sache ist mittendrin:
 
-{% highlight JS %}
+```javascript
 i=3;
 i=i+1;
-{% endhighlight %}
+```
 
 Das i=3 geht ja noch, aber beim i=i+1 stellt’s jedem beim erstenmal Hinschauen die Haare auf. Weil das i links vom Istgleich steht und rechts davon auch das i. Natürlich weisst du, dass hinterher i gleich 3+1 also 4 ist, du hast dich schon so dran gewöhnt, aber am Anfang wars schwer zu kapieren was da vor sich geht.
 
@@ -40,22 +40,21 @@ Der Kernpunkt ist dieses Istgleichzeichen =. Wenn man das = loswerden könnt, da
 
 So Code wie oben, mit = drin, nennen wir übrigens prozeduralen Code. Nochmal zur Erinnerung:
 
-{% highlight JS %}
+```javascript
 x=2;
 i=3;
 while (i<6) { x=x*i; i=i+1; }
 x;
-{% endhighlight %}
+```
 
 Der neue Code der schlauen Leute, du musst ihn nicht verstehen, sieht so aus:
 
-{% highlight JS %}
+```javascript
 function f(x,i) {
  return i<6 ? f(x*i, i+1) : x;
 }
 f(2,3);
-{% endhighlight %}
-
+```
 
 Dieser Code, wir nennen ihn ab jetzt rekursiv, sieht etwas kompliziert aus. Aber er hat kein = mehr drin. Und er gibt genau das Ergebnis 120, probier’s am Besten selbst aus.
 
@@ -67,38 +66,39 @@ Der Trick ist, dass man die x und i und die Zahlen neu umgruppieren muss. Aus wh
 
 Zur Illustration variieren wir die Fakultät von fünf:
 
-{% highlight JS %}
+```javascript
 5*4*3*2
-{% endhighlight %}
+```
 
 Hat man mal die prozedurale Form ausgetüftelt,
 
-{% highlight JS %}
+```javascript
 x=5;
 i=4;
 while (i>1) { x=x*i; i=i-1; }
 x;
-{% endhighlight %}
+```
 
 gelangt man leicht zur rekursiven Form, hat man erst die Umgruppierung geschnallt:
 
-{% highlight JS %}
+```javascript
 function f(x,i) {
  return i>1 ? f(x*i, i-1) : x;
 }
 f(5,4);
-{% endhighlight %}
+```
+
 
 Und selbst wenn du die Umgruppierung jetzt nicht sofort aus dem Stand nachvollziehen willst (life is short), so wirst du doch merken, dass es keine Hexerei ist, das = loszuwerden. Und natürlich wird es nach einiger Übung irgendwann mal passieren, dass du dich eines schönen Nachmittags hinsetzt um die Rekursion zu verstehen. Aber selbst das ist dann Babyleicht, wegen der Geübtheit im Umgang.
 
 Zum Abschluss will ich noch den Sündenfall nennen, den all die schlauen Leute begehen, welche die Rekursion erklären. Sie beginnen, so wie ich, mit der Fakultät. Das ist gut. Aber sie präsentieren gleich am Anfang einen Code der folgenden Form:
 
-{% highlight JS %}
+```javascript
 function f(x) {
  return x>1 ? x*f(x-1) : x;
 }
 f(5);
-{% endhighlight %}
+```
 
 Ich seh schon ein, dass das geil ist, weil man in dieser genialen Form auch gleich noch das i losgeworden ist. Es kommt auch 120 raus, Gottseidank. Und wenn einer das so hinschreibt, kommt er sich gleich selber genial vor, obwohl er sich das sicher nie und nimmer selbst ausgedacht hat.
 

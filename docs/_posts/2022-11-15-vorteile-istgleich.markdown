@@ -8,7 +8,7 @@ Der folgende Programmcode, den du nicht weiter verstehen musst, liefert als Erge
 
 Wenn du grad neugierig bist, lass das Programm selber in deinem Browser laufen (in Firefox geht das über Tools -> Browser Tools -> Web Developer Tools und Copy/Paste).
 
-{% highlight JS %}
+```javascript
 x=2;
 i=3;
 
@@ -19,11 +19,11 @@ while (i<6) {
 }
 
 x;
-{% endhighlight %}
+```
 
 Da ich das Zeichen = im Code nicht mag, hab ich das Programm umgeschrieben, in eine andere Form übersetzt. Es kommen keine = mehr vor:
 
-{% highlight JS %}
+```javascript
 f(2,
   3);
 function f(x,i) {
@@ -35,7 +35,7 @@ function f(x,i) {
 function console_log(x) {
  return x;
 }
-{% endhighlight %}
+```
 
 Ohne viel verstehen zu müssen, sieht du rein formell, das die Zeilen sich nicht viel verändert haben. Ich musste nur zwei neue Zeilen mit function einfügen. Aber die = sind weg! Gut so. Und es kommt am Ende die selbe Zahl raus: 120.
 
@@ -49,12 +49,12 @@ PPS: Neuerdings spendier ich den } keine eigene Zeile mehr. Wen schon kein =, de
 
 PPPS: Nach einem langen Spaziergang hab ich beschlossen, das verwurstelte Beispiel aufzuräumen. Dafür gibt’s Vorbilder in den Schulbüchern, geschrieben von schlauen Leuten, die mit der entstandenen Verwurstelung unzufrieden sind. Das Ergebnis ist:
 
-{% highlight JS %}
+```javascript
 reduce(2,
        range(3,6),
        (function(x, i) {
         return x*i;}));
-{% endhighlight %}
+```
 
 Sieht doch ganz aufgeräumt aus, oder? Die beiden Wörter reduce und range sind allseitsbekannte Allzweckwaffen in jedem Arsenal eines = Vermeiders. Nur die Klammern am Ende häufen sich, was nicht so gut ist (dafür hat aber noch niemand eine Lösung gefunden).
 
