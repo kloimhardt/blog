@@ -12,6 +12,7 @@ categories: Literatur
     <script>
      window.klipse_settings = {
          selector_eval_js: '.language-klipse-eval-js', // css selector for the html elements you want to klipsify
+         selector: '.language-klipse'
      };
     </script>
 </head>
@@ -23,6 +24,14 @@ categories: Literatur
 
     <pre><code class="language-klipse-eval-js">
 [1,2,3].map(function(x){ return x + 1;})
+    </code></pre>
+
+    <pre><code class="language-klipse">
+(defn hiu [x] (* 7 x))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+cljs.user.hiu(3)
     </code></pre>
 
     <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
