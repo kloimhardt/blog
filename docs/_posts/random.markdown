@@ -27,3 +27,6 @@ However, even in the case of the fermions we can introduce the operators eta and
 Assuming here that the different states are all discrete. But that will not hold in practice. One will usually take the different states to be momentum states for our particles. Suffix _a will then be replaced by the three momentum values for the particle. This is just a technical generalization which we always have to make when we pass from discrete quantum states to a continuous range of quantum states.
 
 Experimentum Crisis: Warum sollte ein einziges Experiment zwischen zwei Theorien entscheiden? Die Maxwell Gleichungen folgen in Näherung aus der QED. Aber können nicht auch andere Gleichungen in Näherung aus der QED folgen, etwa Weber Elektrodynamik? Dann würde für ein Experiment vielleicht Maxwell gelten und für ein anderes Experiment dann Weber. U.U. hat man so einen Fall von zwei Theorien, für die keine Fundamentale Form gefunden wurde bisher.
+
+---------------
+Wishful thinking as way of solving problems (idea comes from SICP). Am Beispiel von Plancks paper.
