@@ -68,7 +68,7 @@ Writing a Scheme compiler means to learn that Scheme is a consequence of JavaScr
 
 Forgive me when I muse further a bit (despite I think you got the point). As said, it is easier to understand complicated stuff in Hamiltonian form. But in theoretical physics it is well known that it is not possible to see whether calculations in this form comply to Einsteins relativity conditions. For that one needs to look to the according Lagrangian. This can be compared to debugging: sometimes one is not sure whether the written Scheme code really does work the way intended, and thus one wants to have the possibility to go back to the fundamental JavaScript.
 
-Physicists care about the fundamentals. I personally know people who program spaghetti Matlab code and would like to know what real programming means. They do not know that no one knows how to program, but at least there is the functional method of the SICP book. Remember that SICP also exists in the JavaScript version, the version I would recommend for reference. We want to start with JavaScript after all and work our way up by building a compiler and physics examples both in parallel as needed.
+Physicists care about the fundamentals. I personally know people who program spaghetti Matlab code and would like to know what real programming means. They do not know that no one knows how to program, but Matlab already leans itself to a lightweight functional method, a paradigm which is thoroughly presented, discussed and compared in the SICP book. Remember that SICP also exists in a JavaScript version, the version I would recommend for reference. We want to start with JavaScript after all and work our way up by building a compiler and physics examples both in parallel as needed.
 
 ### Conclusion and Outlook
 
