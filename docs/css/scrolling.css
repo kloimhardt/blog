@@ -19,7 +19,6 @@ html,body {
   background-position: center center;
   hight: 100%;
   width: 100%;
-  text-align: center;
   display: table;
 }
 
@@ -33,9 +32,12 @@ html,body {
 }
 
 .scroll-bg {
-  background-color: #0f0f0a;
-  padding: 10px 70px;
-  color: #676767;
+  background-color: whitesmoke;
+  padding: 10px 0px;
+  font: 800 25px Arial;
+  color: orangered;
+  -webkit-text-fill-color: yellow;
+  -webkit-text-stroke: 2px;
 }
 
 /* first section */
