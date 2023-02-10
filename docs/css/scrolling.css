@@ -1,15 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-
 html,body {
   height: 100%;
 }
 
 .wrapper {
   height: 100%;
-  font-family: 'Quicksand', sans-serif;
   line-height: 1.5;
-  word-spacing: 4px;
-  letter-spacing: 1px;
 }
 
 .fixed-bg {
@@ -25,19 +20,15 @@ html,body {
 .fixed-bg h1 {
   display: table-cell;
   vertical-align: middle;
-  font: 800 25px Arial;
-  color: orangered;
-  -webkit-text-fill-color: yellow;
-  -webkit-text-stroke: 2px;
 }
 
+.fixed-bg p {
+    display: table-cell;
+    vertical-align: middle;
+}
 .scroll-bg {
   background-color: whitesmoke;
   padding: 10px 0px;
-  font: 800 25px Arial;
-  color: orangered;
-  -webkit-text-fill-color: yellow;
-  -webkit-text-stroke: 2px;
 }
 
 /* first section */
