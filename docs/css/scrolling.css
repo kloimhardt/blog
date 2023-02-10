@@ -17,8 +17,8 @@ html,body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  hight: 100%;
   width: 100%;
-  color: white;
   text-align: center;
   display: table;
 }
@@ -26,6 +26,10 @@ html,body {
 .fixed-bg h1 {
   display: table-cell;
   vertical-align: middle;
+  font: 800 25px Arial;
+  color: orangered;
+  -webkit-text-fill-color: yellow;
+  -webkit-text-stroke: 2px;
 }
 
 .scroll-bg {
@@ -37,13 +41,13 @@ html,body {
 /* first section */
 
 .bg-1 {
-    background-image: url('/blog/images/amphigorey_0009_3.png');
+    background-image: url('/blog/images/amphigorey_0009_1.jpg');
 }
 
 /* third section */
 
 .bg-2 {
-  background-image: url('https://www.dl.dropboxusercontent.com/s/jcord1lxh30e02z/bg2.jpg');
+    background-image: url('/blog/images/amphigorey_0009_2.jpg');
 }
 
 /* fifth section */
