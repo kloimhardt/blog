@@ -12,6 +12,7 @@ html,body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  height: 100%;
   width: 100%;
   display: table;
 }
@@ -30,22 +31,121 @@ html,body {
   padding: 10px 0px;
 }
 
-/* first section */
-
-.bg-1 {
+.bg-09-1 {
     background-image: url('/blog/images/amphigorey_0009_1.jpg');
 }
 
-/* third section */
-
-.bg-2 {
+.bg-09-2 {
     background-image: url('/blog/images/amphigorey_0009_2.jpg');
 }
 
-/* fifth section */
+.bg-10-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0010_1.jpg');
+}
 
-.bg-3 {
-  background-image: url('https://www.dl.dropboxusercontent.com/s/rsk15kp7azmsi27/bg3.jpg');
+.bg-10-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0010_2.jpg');
+}
+
+.bg-11-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0011_1.jpg');
+}
+
+.bg-11-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0011_2.jpg');
+}
+
+.bg-12-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0012_1.jpg');
+}
+
+.bg-12-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0012_2.jpg');
+}
+
+.bg-13-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0013_1.jpg');
+}
+
+.bg-13-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0013_2.jpg');
+}
+
+.bg-14-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0014_1.jpg');
+}
+
+.bg-14-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0014_2.jpg');
+}
+.bg-15-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0015_1.jpg');
+}
+
+.bg-15-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0015_2.jpg');
+}
+
+.bg-16-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0016_1.jpg');
+}
+
+.bg-16-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0016_2.jpg');
+}
+.bg-17-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0017_1.jpg');
+}
+
+.bg-17-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0017_2.jpg');
+}
+
+.bg-18-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0018_1.jpg');
+}
+
+.bg-18-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0018_2.jpg');
+}
+
+.bg-19-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0019_1.jpg');
+}
+
+.bg-19-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0019_2.jpg');
+}
+.bg-20-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0020_1.jpg');
+}
+
+.bg-20-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0020_2.jpg');
+}
+
+.bg-21-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0021_1.jpg');
+}
+
+.bg-21-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0021_2.jpg');
+}
+
+.bg-22-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0022_1.jpg');
+}
+
+.bg-22-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0022_2.jpg');
+}
+
+.bg-23-1 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0023_1.jpg');
+}
+
+.bg-23-2 {
+    background-image: url('http://www.kloimwieder.com/edward_gorey/images/amphigorey_0023_2.jpg');
 }
 
 .section-background img {

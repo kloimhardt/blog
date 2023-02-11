@@ -19,6 +19,7 @@ categories: Literatur
         </p>
 
     </div>
+
     <img src="/blog/images/amphigorey_0009_1.jpg">
     <div class="scroll-bg">
         <p>
@@ -26,7 +27,7 @@ categories: Literatur
         </p>
     </div>
 
-  <div class="fixed-bg bg-1">
+  <div class="fixed-bg bg-09-1">
       <p>
           Mr C(lavius) F(rederick) Earbrass is, of <br>
           course, the well-known novelist. Of his books, <br>
@@ -38,6 +39,7 @@ categories: Literatur
           Mortshire. He is studying a game left <br>
           unfinished at the end of summer. <br>
       </p>
+<h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
 <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
 <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
 <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
@@ -59,7 +61,7 @@ categories: Literatur
               </p>
           </div>
 
-     <div class="fixed-bg bg-2">
+     <div class="fixed-bg bg-09-2">
       <p>On November 18th of alternate years <br>
           Mr Earbrass begins writing ‘his new novel’. <br>
           Weeks ago he chose its title at random from <br>
@@ -75,13 +77,57 @@ categories: Literatur
     <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
     <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
     <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
     </div>
 
-  <div class="scroll-bg">
-    <p>Snow was falling ...</p>
-    <p>... when you found the original on <a href="https://archive.org/details/AmphigoreyFifeteenBooksByEdwardGorey">archive.org</a></p>
-  </div>
+    {% assign head_10_2 = "Mr C(lavius) F(rederick) Earbrass ..." %}
+    {% assign txt_10_2 =
+    'On November 18th of alternate years <br>
+    Mr Earbrass begins writing ‘his new novel’. <br>
+    Weeks ago he chose its title at random from <br>
+    a list of them he keeps in a little green <br>
+    note book. It being tea-time of the 17th, <br>
+    he is alarmed not to have thought of a plot <br>
+    to which "The Unstrung Harp" might apply, <br>
+    but his mind will keep reverting to the <br>
+    last biscuit on the plate. <br>' | split: "<br>" %}
+    {% assign foot_10_2 = "... at the end of summer."%}
+
+    {% for i in (10..10) %}
+    {% for j in (1..2) %}
+
+          <div class="scroll-bg">
+              <p>
+                  {% for line in txt_10_2 %}
+                  {{line}}<br>
+                  {% endfor %}
+              </p>
+          </div>
+
+<img src="http://www.kloimwieder.com/edward_gorey/images/amphigorey_00{{i}}_{{j}}.jpg">
+
+          <div class="scroll-bg">
+              <p>
+
+              </p>
+          </div>
+
+     <div class="fixed-bg bg-{{i}}-{{j}}">
+      <p>
+
+      </p>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
+    </div>
+
+    {% endfor %}
+    {% endfor %}
 
 </div> <!-- wrapper div ends-->
+<p>... when you found the original on <a href="https://archive.org/details/AmphigoreyFifeteenBooksByEdwardGorey">archive.org</a></p>
 
 </body>
