@@ -81,43 +81,51 @@ categories: Literatur
     </div>
 
     {% capture text %}
-    Mr40 C(lavius) F(rederick) Earbrass ... <b0>
-    Mr4 C(lavius) F(rederick) Earbrass is, of <br>
-    course, the well-known novelist. Of his books, <br>
-    "A Moral Dustbin", "More Chains Than Clank", <br>
-    "Was it Likely?", and the Hipdeep trilogy are, <br>
-    perhaps, the most admired. Mr Earbrass is <br>
-    seen on the croquet lawn of his home, <br>
-    Hobbies Odd, near Collapsed Pudding in <br>
-    Mortshire. He is studying a game left <br>
-    unfinished at the end of summer. <b0>
-    ... at the end of summer.<b0>
-    On November 18th ... <b0>
-    On November 18th of alternate years<br>
-    Mr Earbrass begins writing ‘his new novel’. <br>
-    Weeks ago he chose its title at random from <br>
-    a list of them he keeps in a little green <br>
-    note book. It being tea-time of the 17th, <br>
-    he is alarmed not to have thought of a plot <br>
-    to which "The Unstrung Harp" might apply, <br>
-    but his mind will keep reverting to the <br>
-    last biscuit on the plate. <b0>
-    ... biscuit on the plate.
-    {% endcapture %}
-    {% assign txt_pictures = text | split: "<b0>"}
+        Snow was tailing ...<b0>
+        Snow was tailing when Mr Earbrass <br>
+        woke, which suggested he open Tl r H with <br>
+        the first flakes of what could be developed <br>
+        into a prolonged and powerfully purple <br>
+        blizzard. On paper, if not outdoors, they <br>
+        have kept coming down all afternoon, <br>
+        over and over again, in all possible ways' ; <br>
+        and only now, at nightfall, have done so <br>
+        satisfactorily. For writing Mr Earbrass <br>
+        affects an athletic sweater of forgotten <br>
+        origin and unknown significance ■, it is <br>
+        always worn hind-side-to. <b0>
+        ... worn hind-side-to. <b0>
 
-    {% assign head_10_2 = "Mr C(lavius) F(rederick) Earbrass ..." %}
-    {% assign txt_10_2 =
-    'On November 18th of alternate years <br>
-    Mr Earbrass begins writing ‘his new novel’. <br>
-    Weeks ago he chose its title at random from <br>
-    a list of them he keeps in a little green <br>
-    note book. It being tea-time of the 17th, <br>
-    he is alarmed not to have thought of a plot <br>
-    to which "The Unstrung Harp" might apply, <br>
-    but his mind will keep reverting to the <br>
-    last biscuit on the plate. <br>' | split: "<br>" %}
-    {% assign foot_10_2 = "... at the end of summer."%}
+        Several weeks later ... <b0>
+        Several weeks later, the lootah trickling <br>
+        onhis knees, Mr Earbrass mulls over an <br>
+        awkward retrospective bit that ought to <br>
+        go in Chapter II . But where ? Even the <br>
+        voice of the omniscient author can <br>
+        hardly afford to interject a seemingly <br>
+        pointless anecdote concerning Ladder back <br>
+        inTibet when the other characters are <br>
+        feverishly engaged m wondering whether <br>
+        to have the pond at Disshiver Cottage <br>
+        dragged or not. <b0>
+        ... dragged or not. <b0>
+
+        Mr Ear brass belongs ... <b0>
+        Mr Ear brass belongs to the straying, rather <br>
+        than to the sedentary, type of author. He is <br>
+        never to be found at his desk unless actually <br>
+        writing down a sentence. Before this <br>
+        happens he broods over it indefinitely <br>
+        while picking up and putting down again <br>
+        small, loose objects; walking diagonally <br>
+        across rooms ; staring out windows ;and so <br>
+        forth. He frequently hums, more in his <br>
+        mind than anywhere else, themes from <br>
+        the V oddington Te Deum. <b0>
+        ... the V oddington Te Deum.
+
+    {% endcapture %}
+    {% assign txt_pictures = text | split: "<b0>" %}
 
     {% for i in (10..23) %}
     {% assign i0 = i | minus: 10 | times: 6 %}
