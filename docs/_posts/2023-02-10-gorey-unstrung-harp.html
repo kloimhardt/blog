@@ -80,6 +80,32 @@ categories: Literatur
     <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
     </div>
 
+    {% capture text %}
+    Mr40 C(lavius) F(rederick) Earbrass ... <b0>
+    Mr4 C(lavius) F(rederick) Earbrass is, of <br>
+    course, the well-known novelist. Of his books, <br>
+    "A Moral Dustbin", "More Chains Than Clank", <br>
+    "Was it Likely?", and the Hipdeep trilogy are, <br>
+    perhaps, the most admired. Mr Earbrass is <br>
+    seen on the croquet lawn of his home, <br>
+    Hobbies Odd, near Collapsed Pudding in <br>
+    Mortshire. He is studying a game left <br>
+    unfinished at the end of summer. <b0>
+    ... at the end of summer.<b0>
+    On November 18th ... <b0>
+    On November 18th of alternate years<br>
+    Mr Earbrass begins writing ‘his new novel’. <br>
+    Weeks ago he chose its title at random from <br>
+    a list of them he keeps in a little green <br>
+    note book. It being tea-time of the 17th, <br>
+    he is alarmed not to have thought of a plot <br>
+    to which "The Unstrung Harp" might apply, <br>
+    but his mind will keep reverting to the <br>
+    last biscuit on the plate. <b0>
+    ... biscuit on the plate.
+    {% endcapture %}
+    {% assign txt_pictures = text | split: "<b0>"}
+
     {% assign head_10_2 = "Mr C(lavius) F(rederick) Earbrass ..." %}
     {% assign txt_10_2 =
     'On November 18th of alternate years <br>
@@ -93,14 +119,17 @@ categories: Literatur
     last biscuit on the plate. <br>' | split: "<br>" %}
     {% assign foot_10_2 = "... at the end of summer."%}
 
-    {% for i in (10..10) %}
+    {% for i in (10..23) %}
+    {% assign i0 = i | minus: 10 | times: 6 %}
     {% for j in (1..2) %}
+        {% assign j0 = j | minus: 1 | times: 3 | plus: i0 %}
+        {% assign j1 = j0 | plus: 1 %}
+        {% assign j2 = j0 | plus: 2 %}
+        {% assign txt_picture = txt_pictures[1] %}
 
           <div class="scroll-bg">
               <p>
-                  {% for line in txt_10_2 %}
-                  {{line}}<br>
-                  {% endfor %}
+                  {{txt_pictures[j0]}}
               </p>
           </div>
 
@@ -108,13 +137,13 @@ categories: Literatur
 
           <div class="scroll-bg">
               <p>
-
+                  {{txt_pictures[j2]}}
               </p>
           </div>
 
-     <div class="fixed-bg bg-{{i}}-{{j}}">
+     <div class="fixed-bg bg-{{i}}-{{j}}" style="color: yellow;">
       <p>
-
+          {{txt_pictures[j1]}}
       </p>
     <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>
     <h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4><h4>&nbsp</h4>

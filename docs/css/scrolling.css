@@ -25,7 +25,10 @@ html,body {
 .fixed-bg p {
     display: table-cell;
     vertical-align: middle;
+    color: yellow;
+    text-shadow: 2px 2px black;
 }
+
 .scroll-bg {
   background-color: whitesmoke;
   padding: 10px 0px;
