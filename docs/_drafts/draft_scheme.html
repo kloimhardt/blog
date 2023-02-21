@@ -9,6 +9,7 @@ categories: Software
     <head>
         <meta charset="utf-8">
         <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
+        <script src="/blog/js/scheme_1.js"></script>
         <script>
          let output = demo.minimal.output;
          let eminus = sicmutils.generic._;
@@ -45,6 +46,31 @@ categories: Software
       <h2>
           Sicmutils is a JavaScript library
       </h2>
+      <script src="/blog/js/scheme_0.js"></script>
+      <div>
+      <textarea rows="1" cols="80" id="AS">3/4;</textarea>
+      <pre><code id="AR">dreiviertel</code></pre>
+      <script>out_eval("#AS","#AR");</script>
+      <button onClick='out_eval("#AS","#AR");'>eval</button>
+      </div>
+
+      <div>
+      <textarea rows="1" cols="80" id="BS">let div = sicmutils.env._SLASH_;</textarea>
+      <pre><code id="BR">dreiviertel</code></pre>
+      <script>out_eval("#BS","#BR");</script>
+      <button onClick='out_eval("#BS","#BR");'>eval</button>
+      </div>
+
+      <div>
+          <textarea rows="1" cols="80" id="CS">div(3,4);</textarea>
+          <pre><code id="CR">dreiviertel</code></pre>
+          <script>out_eval("#CS","#CR");</script>
+          <button onClick='out_eval("#CS","#CR");'>eval</button>
+      </div>
+
+
+
+
       <p>
           Press the button below to run the SICM demo calculations youself, in JavaScript, that is:
       </p>
