@@ -2,7 +2,7 @@
 layout: post
 title:  "Draft-JS sicmutils"
 date:   2023-01-23 06:00:01 +0100
-categories: Literatur
+categories: Software
 ---
 <!DOCTYPE html>
 <html>
@@ -12,8 +12,7 @@ categories: Literatur
 
     <script>
      window.klipse_settings = {
-         selector_eval_js: '.language-klipse-eval-js', // css selector for the html elements you want to klipsify
-         selector: '.language-klipse'
+         selector_eval_js: '.language-klipse-eval-js'
      };
     </script>
 </head>
@@ -23,19 +22,48 @@ categories: Literatur
         And now, we are going to <strong>klipsify</strong> this code snippet:
     </p>
 
+    <script>
+     var old_eval = window.eval;
+     var new_eval = txt => txt[0] === "("
+                         ? compile_scheme(txt)
+                         : old_eval(txt);
+     window.eval = new_eval;
+    </script>
+
     <pre><code class="language-klipse-eval-js">
-[1,2,3].map(function(x){ return x + 1;})
-    </code></pre>
-
-    <pre><code class="language-klipse">
-(defn hiu [x] (* 7 x))
+var x = 5;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-cljs.user.hiu(3)
-    </code></pre>
-    <script src="out/main.js" type="text/javascript"></script>
+var toJS = (d) => {
+    if (d.constructor == Array) {
+        return toJS(d[0])+ ".call(null," + d.slice(1).map(toJS) + ")";
+    } else if (d.substring(0, 8) == "esymbol_") {
+        return "esymbol(\"" + d.substring(8, d.length) + "\")";
+    } else {
+        return d;
+    }
+};
 
-    <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+var compile_scheme = (exp) => {
+    let s = [[/\(/g,"[ "], [/\)/g," ],"],
+             [/\'(\w+)/g,"esymbol_$1"],
+             [/\*/g,"emul"],[/\-/g,"eminus"],[/\//g,"ediv"],
+             [/(\w+)/g,'"$1",'], [/\,\s\]/g," ]"], [/,$/,""]
+            ].reduce((s,r) => s.replace(r[0],r[1]), exp);
+    return toJS(JSON.parse(s));
+};
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+x;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 / 5)
+    </code></pre>
+
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
 </html>
