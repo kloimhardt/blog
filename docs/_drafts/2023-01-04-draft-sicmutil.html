@@ -28,7 +28,7 @@ categories: Software
          txt.substring(0, 3) === "(js"
          ? compile_scheme(txt)
          : txt[0] === "("
-         ? old_eval(compile_scheme(txt))
+         ? sicmutils.env.__GT_infix(old_eval(compile_scheme(txt)))
          : old_eval(txt);
      window.eval = new_eval;
     </script>
