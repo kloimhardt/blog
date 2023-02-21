@@ -44,7 +44,7 @@ var ediv = (x, y) => x/y;
 ediv(x, 2);
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
+<pre><code class="language-klipse-eval-js">
 var toJS = (d) =>
     d.constructor == Array
   ? toJS(d[0]) + ".call(null," + d.slice(1).map(toJS) + ")"
@@ -63,18 +63,12 @@ var compile_scheme = (txt) => toJS(JSON.parse(txt_to_json(txt)))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-x;
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 (js (/ x 2))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (/ x 2)
     </code></pre>
-
-
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
