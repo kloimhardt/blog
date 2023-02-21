@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Draft-JS sicmutils"
-date:   2023-01-23 06:00:01 +0100
+title:  "draft sicmutils 0"
+date:   2023-02-19 06:00:01 +0100
 categories: Software
 ---
 <!DOCTYPE html>
@@ -64,6 +64,17 @@ var compile_scheme = (txt) => toJS(JSON.parse(txt_to_json(txt)))
 
     <pre><code class="language-klipse-eval-js">
 (js (/ x 2))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(/ x 2)
+    </code></pre>
+
+    <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
+
+    <pre><code class="language-klipse-eval-js">
+         var ediv = sicmutils.env._SLASH_;
+
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">

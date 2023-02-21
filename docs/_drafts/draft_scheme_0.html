@@ -1,41 +1,88 @@
 ---
 layout: post
-title:  "Draft-scheme_0"
+title:  "draft-sicmutils 1"
 date:   2023-02-21 06:00:01 +0100
 categories: Software
 ---
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+</head>
+
+<body>
+    <p>
+        And now, we are going to <strong>klipsify</strong> this code snippet:
+    </p>
+
+    <script>
+     var old_eval = window.eval;
+     var new_eval = txt =>
+         txt.substring(0, 3) === "(js"
+         ? compile_scheme(txt)
+         : txt[0] === "("
+         ? sicmutils.env.__GT_infix(old_eval(compile_scheme(txt)))
+         : old_eval(txt);
+     window.eval = new_eval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+var x = 5;
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+x/2;
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+var ediv = (x, y) => x/y;
+ediv(x, 2);
+    </code></pre>
+
+<pre><code class="language-klipse-eval-js">
+var toJS = (d) =>
+    d.constructor == Array
+  ? toJS(d[0]) + ".call(null," + d.slice(1).map(toJS) + ")"
+  : d.substring(0, 8) == "esymbol_"
+  ? "esymbol(\"" + d.substring(8, d.length) + "\")"
+  : d;
+
+var txt_to_json = (txt) =>
+[[/\(/g,"[ "], [/\)/g," ],"],
+             [/\'(\w+)/g,"esymbol_$1"],
+             [/\*/g,"emul"],[/\-/g,"eminus"],[/\//g,"ediv"],
+             [/(\w+)/g,'"$1",'], [/\,\s\]/g," ]"], [/,$/,""]
+            ].reduce((s,r) => s.replace(r[0],r[1]), txt)
+
+var compile_scheme = (txt) => toJS(JSON.parse(txt_to_json(txt)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(js (/ x 2))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(/ x 2)
+    </code></pre>
 
      <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
-     <script src="/blog/js/scheme_0.js"></script>
 
-      <div>
-          <textarea rows="1" cols="80" id="AS">3/4;</textarea>
-          <div>
-          <code id="AR">dreiviertel</code>
-          </div>
-          <script>out_eval("#AS","#AR");</script>
-          <button onClick='out_eval("#AS","#AR");'>eval</button>
-      </div>
+     <pre><code class="language-klipse-eval-js">
+         var ediv = sicmutils.env._SLASH_;
 
-      <div>
-          <textarea rows="1" cols="80" id="BS">window.div = sicmutils.env._SLASH_;</textarea>
-          <pre><code id="BR">dreiviertel</code></pre>
-          <script>out_eval("#BS","#BR");</script>
-          <button onClick='out_eval("#BS","#BR");'>eval</button>
-      </div>
+     </code></pre>
 
-      <div>
-          <textarea rows="1" cols="80" id="CS">div(3,4);</textarea>
-          <pre><code id="CR">dreiviertel</code></pre>
-          <script>out_eval("#CS","#CR");</script>
-          <button onClick='out_eval("#CS","#CR");'>eval</button>
-      </div>
+     <pre><code class="language-klipse-eval-js">
+(/ x 2)
+     </code></pre>
 
-    </body>
+
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
 </html>
