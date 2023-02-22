@@ -25,7 +25,7 @@ categories: Software
 var x = 1;
     </code></pre>
     <p>
-    and a simple calculation,
+    and a simple calculation
     </p>
     <pre><code class="language-klipse-eval-js">
 x/2;
@@ -48,7 +48,10 @@ div(x, 2);
 
     <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
     <p>
-        After redefining the calculation function,
+        This library was compiled according to the instructions found in the great <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">Sicmutils</a> repository (changing compiler-options from :advanced to :simple).
+    </p>
+    <p>
+        With the help of Sicmutils, we can redefine the calculation function
     </p>
     <pre><code class="language-klipse-eval-js">
 var div = sicmutils.env._SLASH_;
@@ -56,7 +59,7 @@ var div = sicmutils.env._SLASH_;
 div(x, 2).toString();
     </code></pre>
     <p>
-        we get the result as a rational number. But how to get back to the usual notation using the <code>/</code> sign? For this we code the calculation as a string
+        and get the result as a rational number. But how to get back to the usual notation using the <code>/</code> sign? For this we code the calculation as a string
 
     </p>
     <pre><code class="language-klipse-eval-js">
