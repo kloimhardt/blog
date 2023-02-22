@@ -1,0 +1,187 @@
+---
+layout: post
+title:  "Sicmutils as JavaScript library (3)"
+date:   2023-02-22 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+</head>
+
+<body>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <pre><code class="language-klipse-eval-js">
+var div = sicmutils.env._SLASH_;
+
+var replaceMath = (txt) => txt.replace(/\//g,"div");
+
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+   .replace(/\,\s\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
+
+var jsonToJs = (j) =>
+j.constructor == Array
+? jsonToJs(j[0]) + "(" +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var swapFirst = (j) =>
+j.constructor == Array
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j;
+
+var expressionToJs = (expr) =>
+jsonToJs(swapFirst(textToJson(expr))) + ".toString();";
+    </code></pre>
+
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+((1 / 2) / 2)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var mul = sicmutils.env._STAR_;
+
+mul(3, div(1, 2)).toString();
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var replaceMath = (txt) =>
+txt.replace(/\//g,"div") // old
+.replace(/\*/g,"mul")
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (1 / 2))
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+var sub = sicmutils.env._;
+var add = sicmutils.env._PLUS_;
+
+var replaceMath = (txt) =>
+txt.replace(/\//g,"div")
+.replace(/\*/g,"mul")
+.replace(/\-/g,"sub")
+.replace(/\+/g,"add");
+
+add(1, mul(sub(div(2, 3), 4), 5)).toString();
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (((2 / 3) - 4) * 5))
+    </code></pre>
+
+    <pre>&lt;script&gt;
+ var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+ }
+&lt;/script&gt;</pre>
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+loadEnv("expt");
+
+expt.call(null,2,3);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var jsonToJs = (j) =>
+j.constructor == Array
+// old: ? jsonToJs(j[0]) + "(" +  j.slice(1).map(jsonToJs) + ")"
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+jsonToJs(swapFirst(textToJson("(2 expt 3)")))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(2 expt 3)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var swapFirst = (j) =>
+j.constructor == Array
+&& ["div", "mul", "sub", "add"].includes(j[1]) // new
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j;
+
+jsonToJs(swapFirst(textToJson("(expt 2 3)")))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(expt 2 3)
+    </code></pre>
+
+    <p>
+Infix for math still works
+    </p>
+    <pre><code class="language-klipse-eval-js">
+(1 + (((2 / 3) - 4) * 5))
+    </code></pre>
+    <p>
+        But now also Prefix for math works
+    </p>
+    <pre><code class="language-klipse-eval-js">
+(+ 1 (* (- (/ 2 3) 4) 5))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+loadEnv("sin");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(* 3 (expt sin 2))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+1
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+1
+    </code></pre>
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
+</html>

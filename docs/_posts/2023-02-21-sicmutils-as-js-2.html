@@ -104,7 +104,7 @@ j[1] + "(" +  j[0] + ", " + j[2] + ")";
 jsonToJs(textToJson(formula));
     </code></pre>
     <p>
-        which is a string again. This JS-code string can be evaluated. First, we code the above learnings in a transformation function,
+        which is a string again. This JS-code string can be evaluated. First, we put the above learnings into a function,
     </p>
     <pre><code class="language-klipse-eval-js">
 var expressionToJs = (expr) =>
@@ -113,7 +113,7 @@ jsonToJs(textToJson(expr)) + ".toString();";
 expressionToJs(formula);
     </code></pre>
     <p>
-        and employ a small hack that kicks in our transpiler whenever code starts with a bracket -- square <code>[</code> or round <code>)</code>.
+        and employ a small hack that kicks in this transpiler whenever some code in Klipse starts with a bracket -- square <code>[</code> or round <code>)</code>.
     </p>
     <pre>&lt;script&gt;
      var oldEval = window.eval;
@@ -133,7 +133,7 @@ expressionToJs(formula);
      window.eval = newEval;
     </script>
     <p>
-        Voilà, our first rational calculation in JavaScript.
+        Voilà, our first calculation of a rational number in JavaScript.
     </p>
     <pre><code class="language-klipse-eval-js">
 [ x / 2 ]
