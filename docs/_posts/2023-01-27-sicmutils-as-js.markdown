@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sicmutils as JavaScript library"
+title:  "Sicmutils as JavaScript library (1)"
 date:   2023-01-27 00:00:01 +0100
 categories: Software
 ---

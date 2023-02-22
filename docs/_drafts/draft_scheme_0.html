@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "draft-sicmutils 1"
+title:  "Sicmutils as JavaScript library (2)"
 date:   2023-02-21 06:00:01 +0100
 categories: Software
 ---
@@ -18,67 +18,112 @@ categories: Software
 </head>
 
 <body>
+    <p>
+        In this blog post I show how to calculate with rational numbers in JavaScript. I begin with a simple variable declaration
+    </p>
     <pre><code class="language-klipse-eval-js">
 var x = 1;
     </code></pre>
+    <p>
+    and a simple calculation,
+    </p>
     <pre><code class="language-klipse-eval-js">
 x/2;
     </code></pre>
+    <p>
+        giving a floating point number. Sure we can always write any calculation as a function,
+    </p>
     <pre><code class="language-klipse-eval-js">
 var div = (x, y) => x/y;
 
 div(x, 2);
     </code></pre>
-
+    <p>
+        the notation becomes clumsier but the result will be the same floating point number. But we can do better and get to rational numbers if we import the right JavaScript library.
+    </p>
     <pre>&lt;script src=&quot;http://kloimwieder.com/sicmutils/demo/out/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
-
+    <p>
+        After redefining the calculation function,
+    </p>
     <pre><code class="language-klipse-eval-js">
 var div = sicmutils.env._SLASH_;
 
 div(x, 2).toString();
     </code></pre>
+    <p>
+        we get the result as a rational number. But how to get back closer to the usual notation using the <code>/</code> sign? For this we code the calculation as a string
 
+    </p>
     <pre><code class="language-klipse-eval-js">
-"[ x / 2 ]".replace(/\//g,"div");
+var formula = "[ x / 2 ]";
     </code></pre>
-
+    <p>
+        and first replace the <code>/</code> within the string
+    </p>
     <pre><code class="language-klipse-eval-js">
-"[ x div 2 ]"
-.replace(/(\w+)/g,'"$1",')
-.replace(/\,\s\]/g," ]");
+var replaceMath = (txt) => txt.replace(/\//g,"div");
+
+replaceMath(formula);
     </code></pre>
-
+    <p>
+        and second produce comma seperated substrings. They do not look nice,
+    </p>
     <pre><code class="language-klipse-eval-js">
-var text = "[ x / 2 ]"
-
-var replaceMath = (txt) =>
-txt.replace(/\//g,"div");
-
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
    .replace(/\,\s\]/g," ]");
 
+insertCommas(replaceMath(formula))
+    </code></pre>
+    <p>
+        but allow us to easily convert the original string into a JavaScript array.
+    </p>
+    <pre><code class="language-klipse-eval-js">
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(txt)));
 
-textToJson(text);
+textToJson(formula);
     </code></pre>
-
+    <p>
+        This in turn allows for easy transformation into JavaScript code,
+    </p>
     <pre><code class="language-klipse-eval-js">
-var text = "[ x / 2 ]"
+// above: var formula = "[ x / 2 ]";
 
 var jsonToJs = (j) =>
 j[1] + "(" +  j[0] + ", " + j[2] + ")";
 
-jsonToJs(textToJson(text));
-
+jsonToJs(textToJson(formula));
     </code></pre>
+    <p>
+        which is a string again. This JS-code string can be evaluated. We first define the transformation function
+    </p>
+    <pre><code class="language-klipse-eval-js">
+var expressionToJs = (expr) =>
+jsonToJs(textToJson(expr)) + ".toString();";
+
+expressionToJs(formula);
+    </code></pre>
+    <p>
+        and employ a small hack that makes the browser call our transpiler whenever code starts with a <code>(</code>.
+    </p>
 
     <pre><code class="language-klipse-eval-js">
-var text = "((x / 2) / 2)";
+var formula = "((x / 2) / 2)";
+    </code></pre>
 
+    <p>
+        But first we'd like to transform a more complicated formula,
+    </p>
+    <pre><code class="language-klipse-eval-js">
+var formula = "((x / 2) / 2)";
+    </code></pre>
+    <p>
+        which as a modification now uses round brackets <code>()</code> that have to be converted to square brackets.
+    </p>
+    <pre><code class="language-klipse-eval-js">
 var makeBrackets = (txt) =>
 txt.replace(/\(/g,"[ ")
 .replace(/\)/g," ],")
@@ -88,55 +133,78 @@ var textToJson = (txt) =>
 // old: JSON.parse(insertCommas(replaceMath(txt)))
 JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
-textToJson(text)
+textToJson(formula)
     </code></pre>
-
+    <p>
+Sice the formula is nested, we need a new function to transform the JS-array into JS-code.
+    </p>
     <pre><code class="language-klipse-eval-js">
-var text = "((x / 2) / 2)";
-
 var jsonToJs = (j) =>
 // old: j[1] + "(" +  j[0] + ", " + j[2] + ")"
 j.constructor == Array
 ? jsonToJs(j[0]) + "(" +  j.slice(1).map(jsonToJs) + ")"
 : j;
 
-jsonToJs(textToJson(text));
+jsonToJs(textToJson(formula));
     </code></pre>
+    <p>
+        As you can see, we are not there yet, the symbols are somehow topsy-turvy, but we immediately notice that this way of doing it is good for prefix notation of our formula.
+    </p>
+    <pre><code class="language-klipse-eval-js">
+jsonToJs(textToJson("(/ (/ x 2) 2)"));
+    </code></pre>
+    <p>
+        This gives us a hint how the flaw can be fixed: we write a helper function that swaps all first two elements in a nested array.
+    </p>
 
     <pre><code class="language-klipse-eval-js">
-var schemeCode = "(/ (/ x 2) 2)";
+var swapFirst = (j) =>
+j.constructor == Array
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j;
 
-var schemeToJs = (expr) =>
-jsonToJs(textToJson(expr)) + ".toString();";
+swapFirst([["x", "div", 2], "div", 2]);
+    </code></pre>
+    <p>
+        Now we have a nice transformation function to produce JS-code out of some formula.
+    </p>
+    <pre><code class="language-klipse-eval-js">
+var expressionToJs = (expr) =>
+jsonToJs(swapFirst(textToJson(expr))) + ".toString();";
 
-schemeToJs(schemeCode);
+expressionToJs(formula);
     </code></pre>
 
+    <p>
+        We employ a small hack that makes the browser call our transpiler whenever code starts with a <code>(</code>.
+    </p>
 
-    <pre>var oldEval = window.eval;
-
-var newEval = (txt) =>
-txt[0] === "("
-? oldEval(schemeToJs(txt))
-: oldEval(txt);
-
-window.eval = newEval;</pre>
+    <pre>&lt;script&gt;
+          var oldEval = window.eval;
+          var newEval = (txt) =>
+              txt[0] === "("
+              ? oldEval(expressionToJs(txt))
+              : oldEval(txt);
+          window.eval = newEval;
+&lt;/script&gt;</pre>
 
     <script>
      var oldEval = window.eval;
      var newEval = (txt) =>
          txt[0] === "("
-         ? oldEval(schemeToJs(txt))
+         ? oldEval(expressionToJs(txt))
          : oldEval(txt);
      window.eval = newEval;
     </script>
-
+    <p>
+        Let's give it a try: first make sure that usual JS-code is executed as expected,
+    </p>
     <pre><code class="language-klipse-eval-js">
 div(div(x,2),2).toString();
     </code></pre>
-
+    <p>and voilà the formula results in a rational number.</p>
     <pre><code class="language-klipse-eval-js">
-(/ (/ x 2) 2)
+((x / 2) / 2)
     </code></pre>
 
 
