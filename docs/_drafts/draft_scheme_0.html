@@ -18,69 +18,126 @@ categories: Software
 </head>
 
 <body>
-    <p>
-        And now, we are going to <strong>klipsify</strong> this code snippet:
-    </p>
-
-    <script>
-     var old_eval = window.eval;
-     var new_eval = txt =>
-         txt.substring(0, 3) === "(js"
-         ? compile_scheme(txt)
-         : txt[0] === "("
-         ? sicmutils.env.__GT_infix(old_eval(compile_scheme(txt)))
-         : old_eval(txt);
-     window.eval = new_eval;
-    </script>
-
     <pre><code class="language-klipse-eval-js">
-var x = 5;
+var x = 1;
     </code></pre>
     <pre><code class="language-klipse-eval-js">
 x/2;
     </code></pre>
     <pre><code class="language-klipse-eval-js">
-var ediv = (x, y) => x/y;
-ediv(x, 2);
+var div = (x, y) => x/y;
+
+div(x, 2);
     </code></pre>
 
-<pre><code class="language-klipse-eval-js">
-var toJS = (d) =>
-    d.constructor == Array
-  ? toJS(d[0]) + ".call(null," + d.slice(1).map(toJS) + ")"
-  : d.substring(0, 8) == "esymbol_"
-  ? "esymbol(\"" + d.substring(8, d.length) + "\")"
-  : d;
+    <pre>&lt;script src=&quot;http://kloimwieder.com/sicmutils/demo/out/main.js&quot;&gt;&lt;/script&gt;</pre>
 
-var txt_to_json = (txt) =>
-[[/\(/g,"[ "], [/\)/g," ],"],
-             [/\'(\w+)/g,"esymbol_$1"],
-             [/\*/g,"emul"],[/\-/g,"eminus"],[/\//g,"ediv"],
-             [/(\w+)/g,'"$1",'], [/\,\s\]/g," ]"], [/,$/,""]
-            ].reduce((s,r) => s.replace(r[0],r[1]), txt)
+    <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
 
-var compile_scheme = (txt) => toJS(JSON.parse(txt_to_json(txt)))
+    <pre><code class="language-klipse-eval-js">
+var div = sicmutils.env._SLASH_;
+
+div(x, 2).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(js (/ x 2))
+"[ x / 2 ]".replace(/\//g,"div");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(/ x 2)
+"[ x div 2 ]"
+.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s\]/g," ]");
     </code></pre>
 
-     <script src="http://kloimwieder.com/sicmutils/demo/out/main.js"></script>
+    <pre><code class="language-klipse-eval-js">
+var text = "[ x / 2 ]"
 
-     <pre><code class="language-klipse-eval-js">
-         var ediv = sicmutils.env._SLASH_;
+var replaceMath = (txt) =>
+txt.replace(/\//g,"div");
 
-     </code></pre>
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+   .replace(/\,\s\]/g," ]");
 
-     <pre><code class="language-klipse-eval-js">
-(/ x 2)
-     </code></pre>
+var textToJson = (txt) =>
+JSON.parse(insertCommas(replaceMath(txt)));
 
+textToJson(text);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var text = "[ x / 2 ]"
+
+var jsonToJs = (j) =>
+j[1] + "(" +  j[0] + ", " + j[2] + ")";
+
+jsonToJs(textToJson(text));
+
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var text = "((x / 2) / 2)";
+
+var makeBrackets = (txt) =>
+txt.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+// old: JSON.parse(insertCommas(replaceMath(txt)))
+JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
+
+textToJson(text)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var text = "((x / 2) / 2)";
+
+var jsonToJs = (j) =>
+// old: j[1] + "(" +  j[0] + ", " + j[2] + ")"
+j.constructor == Array
+? jsonToJs(j[0]) + "(" +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+jsonToJs(textToJson(text));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var schemeCode = "(/ (/ x 2) 2)";
+
+var schemeToJs = (expr) =>
+jsonToJs(textToJson(expr)) + ".toString();";
+
+schemeToJs(schemeCode);
+    </code></pre>
+
+
+    <pre>var oldEval = window.eval;
+
+var newEval = (txt) =>
+txt[0] === "("
+? oldEval(schemeToJs(txt))
+: oldEval(txt);
+
+window.eval = newEval;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(schemeToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+div(div(x,2),2).toString();
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(/ (/ x 2) 2)
+    </code></pre>
 
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
