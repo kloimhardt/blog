@@ -29,10 +29,11 @@ var replaceMath = (txt) => txt.replace(/\//g,"div");
 
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
-   .replace(/\,\s\]/g," ]");
+   .replace(/\,\s+\]/g," ]");
 
 var makeBrackets = (txt) =>
-txt.replace(/\(/g,"[ ")
+txt.trim()
+.replace(/\(/g,"[ ")
 .replace(/\)/g," ],")
 .replace(/,$/,"");
 
@@ -120,12 +121,23 @@ j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : j;
 
-jsonToJs(swapFirst(textToJson("(2 ^ 3)")))
+expressionToJs("(2 ^ 3)");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (2 ^ 3)
     </code></pre>
+
+    <p>
+        Up to now, the numbers in our mathematical expressions, like 1/2, 2^3, always came in pairs. If there is only one argument, like in cos(0), we would need to apply an awkward notation.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+expressionToJs("(0 cos)");
+    </code></pre>
+    <p>
+        This notation is unacceptable and needs fixing. As an intermediate step, we write a dedicated procedure for importing functions
+    </p>
 
     <pre>&lt;script&gt;
  var loadEnv = (name) => {
@@ -140,6 +152,10 @@ jsonToJs(swapFirst(textToJson("(2 ^ 3)")))
          return name;
      }
     </script>
+
+    <p>
+        and us it.
+    </p>
 
     <pre><code class="language-klipse-eval-js">
 var names = ["sin", "cos"];
@@ -162,47 +178,62 @@ jsonToJs(swapFirst(textToJson("(cos 0)")));
     </code></pre>
 
     <p>
-Infix for math still works
+Acceptable
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(1 + (((2 / 3) - 4) * (5 ^ 2)))
+(1 + (cos (sin 0)))
     </code></pre>
+
     <p>
-        But now also Prefix for math works
+        if not happy yet, proposal
     </p>
-    <pre><code class="language-klipse-eval-js">
- (+ 1 (* (- (/ 2 3) 4) (expt 5 2)))
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(+ (cos 0) 1)
-    </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 var shiftParen = (txt) =>
 names.reduce((s,r) => s.replace(r+"(","("+r+" "), txt);
 
-shiftParen("sin(cos(0))", names);
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(makeBrackets(shiftParen(txt)))));
 
-expressionToJs("cos(0)");
-    </code></pre>
-    <pre><code class="language-klipse-eval-js">
-(cos(0) + 1)
+shiftParen("sin(cos(0))", names);
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-(cos 0)
-    </code></pre>
+    <p>
+        better
+    </p>
 
     <pre><code class="language-klipse-eval-js">
-1
+(1 + cos(sin(0)))
     </code></pre>
+
+    <p>
+but square has to be written like this
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(sin((314 / 100)) ^ 2)
+    </code></pre>
+
+    <p>
+        Needs lots of work to improve, so stick without last step.
+    </p>
+
+
+    <pre><code class="language-klipse-eval-js">
+((sin ^ 2) (314 / 100))
+    </code></pre>
+
+    <p>
+        In this last step we did not square a number, but we squared a function and then applied it to a number,
+    </p>
+    <p>
+        Before moving on, practice a bit.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
 
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>

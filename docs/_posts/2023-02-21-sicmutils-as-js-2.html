@@ -79,7 +79,7 @@ replaceMath(formula);
     <pre><code class="language-klipse-eval-js">
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
-   .replace(/\,\s\]/g," ]");
+   .replace(/\,\s+\]/g," ]");
 
 insertCommas(replaceMath(formula))
     </code></pre>
@@ -150,7 +150,8 @@ var formula = "((x / 2) / 2)";
     </p>
     <pre><code class="language-klipse-eval-js">
 var makeBrackets = (txt) =>
-txt.replace(/\(/g,"[ ")
+txt.trim()
+.replace(/\(/g,"[ ")
 .replace(/\)/g," ],")
 .replace(/,$/,"");
 
