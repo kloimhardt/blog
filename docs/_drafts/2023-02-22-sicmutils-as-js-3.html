@@ -93,12 +93,14 @@ txt.replace(/\//g,"div") // old
     <pre><code class="language-klipse-eval-js">
 var sub = sicmutils.env._;
 var add = sicmutils.env._PLUS_;
+var expt = sicmutils.env.expt;
 
 var replaceMath = (txt) =>
 txt.replace(/\//g,"div")
 .replace(/\*/g,"mul")
 .replace(/\-/g,"sub")
-.replace(/\+/g,"add");
+.replace(/\+/g,"add")
+.replace(/\^/g,"expt");
 
 add(1, mul(sub(div(2, 3), 4), 5)).toString();
     </code></pre>
@@ -107,22 +109,7 @@ add(1, mul(sub(div(2, 3), 4), 5)).toString();
 (1 + (((2 / 3) - 4) * 5))
     </code></pre>
 
-    <pre>&lt;script&gt;
- var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
-    return name;
- }
-&lt;/script&gt;</pre>
-    <script>
-     var loadEnv = (name) => {
-         window[name] = sicmutils.env[name];
-         return name;
-     }
-    </script>
-
     <pre><code class="language-klipse-eval-js">
-loadEnv("expt");
-
 expt.call(null,2,3);
     </code></pre>
 
@@ -133,54 +120,90 @@ j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : j;
 
-jsonToJs(swapFirst(textToJson("(2 expt 3)")))
+jsonToJs(swapFirst(textToJson("(2 ^ 3)")))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(2 expt 3)
+(2 ^ 3)
+    </code></pre>
+
+    <pre>&lt;script&gt;
+ var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+ }
+
+&lt;/script&gt;</pre>
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+var names = ["sin", "cos"];
+
+names.map(loadEnv);
+
+cos.call(null, 0);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 var swapFirst = (j) =>
 j.constructor == Array
-&& ["div", "mul", "sub", "add"].includes(j[1]) // new
+&& ["div", "mul", "sub", "add", "expt"].includes(j[1]) // new
 ? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array //new
+? j.map(swapFirst)
 : j;
 
-jsonToJs(swapFirst(textToJson("(expt 2 3)")))
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(expt 2 3)
+jsonToJs(swapFirst(textToJson("(cos 0)")));
     </code></pre>
 
     <p>
 Infix for math still works
     </p>
+
     <pre><code class="language-klipse-eval-js">
-(1 + (((2 / 3) - 4) * 5))
+(1 + (((2 / 3) - 4) * (5 ^ 2)))
     </code></pre>
     <p>
         But now also Prefix for math works
     </p>
     <pre><code class="language-klipse-eval-js">
-(+ 1 (* (- (/ 2 3) 4) 5))
+ (+ 1 (* (- (/ 2 3) 4) (expt 5 2)))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-loadEnv("sin");
+(+ (cos 0) 1)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(* 3 (expt sin 2))
+var shiftParen = (txt) =>
+names.reduce((s,r) => s.replace(r+"(","("+r+" "), txt);
+
+shiftParen("sin(cos(0))", names);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var textToJson = (txt) =>
+JSON.parse(insertCommas(replaceMath(makeBrackets(shiftParen(txt)))));
+
+expressionToJs("cos(0)");
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+(cos(0) + 1)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(cos 0)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 1
     </code></pre>
-    <pre><code class="language-klipse-eval-js">
-1
-    </code></pre>
+
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
