@@ -1,0 +1,181 @@
+---
+layout: post
+title:  "Sicmutils as JavaScript library (4)"
+date:   2023-02-24 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+</head>
+
+<body>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <pre>&lt;script&gt;
+ var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+ }
+&lt;/script&gt;</pre>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+var div = sicmutils.env._SLASH_;
+var mul = sicmutils.env._STAR_;
+var sub = sicmutils.env._;
+var add = sicmutils.env._PLUS_;
+["expt", "sin", "cos"].map(loadEnv);
+
+var replaceMath = (txt) =>
+txt.replace(/\//g,"div")
+.replace(/\*/g,"mul")
+.replace(/\-/g,"sub")
+.replace(/\+/g,"add")
+.replace(/\^/g,"expt");
+
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
+
+var jsonToJs = (j) =>
+j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var swapFirst = (j) =>
+j.constructor == Array
+&& ["div", "mul", "sub", "add", "expt"].includes(j[1]) // new
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array //new
+? j.map(swapFirst)
+: j;
+
+var expressionToJs = (expr) =>
+jsonToJs(swapFirst(textToJson(expr))) + ".toString();"; null;
+    </code></pre>
+
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (cos 0))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * cos) 0)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var symbol = cljs.core.symbol;
+
+mul(3, expt.call(null, sin, 2)).call(null, symbol("x")).toString();
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var replaceMath = (txt) =>
+txt.replace(/\//g,"div")
+.replace(/\*/g,"mul")
+.replace(/\-/g,"sub")
+.replace(/\+/g,"add")
+.replace(/\^/g,"expt")
+.replace(/\'(\w+)/g,"symbol_$1"); // new
+
+var jsonToJs = (j) =>
+j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j.substring(0, 7) == "symbol_" // new
+? 'symbol("' + j.substring(7, j.length) + '")'
+: j;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * (sin ^ 2)) 'x)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var expressionToJs = (expr) =>
+"sicmutils.env.__GT_infix("
++ jsonToJs(swapFirst(textToJson(expr))) + ");";
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * (sin ^ 2)) 'x)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var drv = sicmutils.env.D;
+var f = mul(3, expt.call(null, sin, 2));
+var x = symbol("x");
+drv.call(null, f).call(null, x).toString();
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var replaceMath = (txt) =>
+txt.replace(/\//g,"div")
+.replace(/\*/g,"mul")
+.replace(/\-/g,"sub")
+.replace(/\+/g,"add")
+.replace(/\^/g,"expt")
+.replace(/\'(\w+)/g,"symbol_$1")
+.replace(/D\s/g,"drv "); // new
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((D (* 3 (sin ^ 2))) 'x)
+    </code></pre>
+
+
+    <pre><code class="language-klipse-eval-js">
+1
+    </code></pre>
+
+
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
+</html>
