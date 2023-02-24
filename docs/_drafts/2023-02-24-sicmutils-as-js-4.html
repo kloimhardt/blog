@@ -113,17 +113,13 @@ jsonToJs(swapFirst(textToJson(expr))) + ".toString();"; null;
     <pre><code class="language-klipse-eval-js">
 var symbol = cljs.core.symbol;
 
-mul(3, expt.call(null, sin, 2)).call(null, symbol("x")).toString();
+cos.call(null, symbol("x")).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var oldReplaceA = replaceMath;
 var replaceMath = (txt) =>
-txt.replace(/\//g,"div")
-.replace(/\*/g,"mul")
-.replace(/\-/g,"sub")
-.replace(/\+/g,"add")
-.replace(/\^/g,"expt")
-.replace(/\'(\w+)/g,"symbol_$1"); // new
+oldReplaceA(txt).replace(/\'(\w+)/g,"symbol_$1");
 
 var jsonToJs = (j) =>
 j.constructor == Array
@@ -134,13 +130,17 @@ j.constructor == Array
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((3 * (sin ^ 2)) 'x)
+(cos 'x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 var expressionToJs = (expr) =>
 "sicmutils.env.__GT_infix("
 + jsonToJs(swapFirst(textToJson(expr))) + ");";
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(cos 'x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -155,14 +155,9 @@ drv.call(null, f).call(null, x).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var oldReplaceB = replaceMath;
 var replaceMath = (txt) =>
-txt.replace(/\//g,"div")
-.replace(/\*/g,"mul")
-.replace(/\-/g,"sub")
-.replace(/\+/g,"add")
-.replace(/\^/g,"expt")
-.replace(/\'(\w+)/g,"symbol_$1")
-.replace(/D\s/g,"drv "); // new
+oldReplaceB(txt).replace(/D\s/g,"drv ");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
