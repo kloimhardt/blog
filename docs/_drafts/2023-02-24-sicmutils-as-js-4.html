@@ -72,7 +72,7 @@ var swapFirst = (j) =>
 j.constructor == Array
 && ["div", "mul", "sub", "add", "expt"].includes(j[1]) // new
 ? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
-: j.constructor == Array //new
+: j.constructor == Array
 ? j.map(swapFirst)
 : j;
 
@@ -158,16 +158,10 @@ drv.call(null, f).call(null, x).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var oldReplaceB = replaceMath;
-var replaceMath = (txt) =>
-oldReplaceB(txt).replace(/D\s/g,"drv ");
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 var replaceD = (j) =>
 j.constructor == Array
 ? j.map(replaceD)
-: j == "D" ? "div" : j;
+: j == "D" ? "drv" : j;
 
 var expressionToJs = (expr) =>
 jsonToJs(preAmble(replaceD(swapFirst(textToJson(expr)))));
