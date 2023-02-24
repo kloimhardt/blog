@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sicmutils as JavaScript library (4)"
-date:   2023-02-24 06:00:01 +0100
+date:   2023-02-23 06:00:01 +0100
 categories: Software
 ---
 <!DOCTYPE html>
@@ -134,9 +134,12 @@ j.constructor == Array
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+loadEnv("__GT_infix");
+
+var preAmble = (j) => ["__GT_infix", j]
+
 var expressionToJs = (expr) =>
-"sicmutils.env.__GT_infix("
-+ jsonToJs(swapFirst(textToJson(expr))) + ");";
+jsonToJs(preAmble(swapFirst(textToJson(expr))));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -161,15 +164,29 @@ oldReplaceB(txt).replace(/D\s/g,"drv ");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((D (* 3 (sin ^ 2))) 'x)
+var replaceD = (j) =>
+j.constructor == Array
+? j.map(replaceD)
+: j == "D" ? "div" : j;
+
+var expressionToJs = (expr) =>
+jsonToJs(preAmble(replaceD(swapFirst(textToJson(expr)))));
     </code></pre>
 
 
     <pre><code class="language-klipse-eval-js">
-1
+((D (3 * (sin ^ 2))) 'x)
     </code></pre>
 
+    <pre><code class="language-klipse-eval-js">
+ loadEnv("simplify");
 
+var preAmble = (j) => ["__GT_infix", ["simplify", j]]
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((D (3 * (sin ^ 2))) 'x)
+    </code></pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
