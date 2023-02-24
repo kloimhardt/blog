@@ -122,23 +122,23 @@ jsonToJs(modifyJson(textToJson(expr))); null;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var jsonCode = textToJson("(define (funame x) (+ x 1))")
+var jsonCode = textToJson("(define (funame x) (x + 1))")
 
 var makeFun = (j, callBack) =>
 "var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
 + callBack(j[2]) +";";
 
-makeFun(jsonCode, x=> "_" + x)
+makeFun(jsonCode, x=> "<" + x + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var jsonCode = textToJson("(define ((funame x) y) (+ x y))")
+var jsonCode = textToJson("(define ((funame x) y) (x + y))")
 
 var makeFunFun = (j, callBack) =>
 "var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
 + "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
 
-makeFunFun(jsonCode, x=> "_" + x)
+makeFunFun(jsonCode, x=> "<" + x + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
