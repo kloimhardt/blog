@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Sicmutils as JavaScript library (4)"
-date:   2023-02-23 06:00:01 +0100
+title:  "Sicmutils as JavaScript library (5)"
+date:   2023-02-24 06:00:01 +0100
 categories: Software
 ---
 <!DOCTYPE html>
@@ -41,14 +41,17 @@ var div = sicmutils.env._SLASH_;
 var mul = sicmutils.env._STAR_;
 var sub = sicmutils.env._;
 var add = sicmutils.env._PLUS_;
-["expt", "sin", "cos"].map(loadEnv);
+var symbol = cljs.core.symbol;
+var drv = sicmutils.env.D;
+["expt", "sin", "cos", "__GT_infix", "simplify"].map(loadEnv);
 
 var replaceMath = (txt) =>
 txt.replace(/\//g,"div")
 .replace(/\*/g,"mul")
 .replace(/\-/g,"sub")
 .replace(/\+/g,"add")
-.replace(/\^/g,"expt");
+.replace(/\^/g,"expt")
+.replace(/\'(\w+)/g,"symbol_$1");
 
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
@@ -63,11 +66,6 @@ txt.trim()
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
-var jsonToJs = (j) =>
-j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j;
-
 var swapFirst = (j) =>
 j.constructor == Array
 && ["div", "mul", "sub", "add", "expt"].includes(j[1])
@@ -76,9 +74,26 @@ j.constructor == Array
 ? j.map(swapFirst)
 : j;
 
+var replaceD = (j) =>
+j.constructor == Array
+? j.map(replaceD)
+: j == "D" ? "drv" : j;
+
+var preAmble = (j) => ["__GT_infix", ["simplify", j]];
+
+var modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+
+var jsonToJs = (j) =>
+j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j.substring(0, 7) == "symbol_"
+? 'symbol("' + j.substring(7, j.length) + '")'
+: j;
+
 var expressionToJs = (expr) =>
-jsonToJs(swapFirst(textToJson(expr))) + ".toString();"; null;
+jsonToJs(modifyJson(textToJson(expr))); null;
     </code></pre>
+
 
     <pre>&lt;script&gt;
      var oldEval = window.eval;
@@ -103,87 +118,70 @@ jsonToJs(swapFirst(textToJson(expr))) + ".toString();"; null;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(3 * (cos 0))
+((D (3 * (sin ^ 2))) 'x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((3 * cos) 0)
+var jsonCode = textToJson("(define (funame x) (+ x 1))")
+
+var makeFun = (j, callBack) =>
+"var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
++ callBack(j[2]) +";";
+
+makeFun(jsonCode, x=> "_" + x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var symbol = cljs.core.symbol;
+var jsonCode = textToJson("(define ((funame x) y) (+ x y))")
 
-cos.call(null, symbol("x")).toString();
+var makeFunFun = (j, callBack) =>
+"var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
++ "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
+
+makeFunFun(jsonCode, x=> "_" + x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var oldReplaceA = replaceMath;
-var replaceMath = (txt) =>
-oldReplaceA(txt).replace(/\'(\w+)/g,"symbol_$1");
+var modifyJson = (j) =>
+j[0] != "define"
+? preAmble(replaceD(swapFirst(j)))
+: replaceD(swapFirst(j));
 
 var jsonToJs = (j) =>
-j.constructor == Array
+j.constructor == Array && j[0] === "define"
+&& j[1][0].constructor == Array
+? makeFunFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+? makeFun(j, jsonToJs)
+: j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : j.substring(0, 7) == "symbol_" // new
 ? 'symbol("' + j.substring(7, j.length) + '")'
-: j;
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(cos 'x)
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-loadEnv("__GT_infix");
-
-var preAmble = (j) => ["__GT_infix", j]
-
-var modifyJson = (j) => preAmble(swapFirst(j))
-
-var expressionToJs = (expr) =>
-jsonToJs(modifyJson(textToJson(expr)));
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(cos 'x)
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((3 * (sin ^ 2)) 'x)
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-var drv = sicmutils.env.D;
-var f = mul(3, expt.call(null, sin, 2));
-var x = symbol("x");
-drv.call(null, f).call(null, x).toString();
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-var replaceD = (j) =>
-j.constructor == Array
-? j.map(replaceD)
-: j == "D" ? "drv" : j;
-
-var oldModify = modifyJson;
-var modifyJson = (j) => oldModify(replaceD(j));
+: j
     </code></pre>
 
 
     <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x)
+(define (auname x) (x + 1))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-loadEnv("simplify");
-
-var oldPre = preAmble;
-var preAmble = (j) => oldPre(["simplify", j]);
+(auname 4)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x)
+
+(define ((buname x) y) (x + y))
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((buname 4) 5)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+    </code></pre>
+
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
