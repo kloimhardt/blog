@@ -18,6 +18,8 @@ categories: Software
 </head>
 
 <body>
+    (This post is part of a series, all with the same title)
+
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
@@ -35,23 +37,33 @@ categories: Software
          return name;
      }
     </script>
-
+    <p>
+        Next loads the compiler (I took the liberty to clean the code regarding elementary math functions a bit, at this stage the changes are purely compiler internal namings, e.g. <code>add</code> is now called <code>_PLUS_</code>)
+    </p>
     <pre><code class="language-klipse-eval-js">
-var div = sicmutils.env._SLASH_;
-var mul = sicmutils.env._STAR_;
-var sub = sicmutils.env._;
-var add = sicmutils.env._PLUS_;
-var symbol = cljs.core.symbol;
-var drv = sicmutils.env.D;
-["expt", "sin", "cos", "__GT_infix", "simplify"].map(loadEnv);
+var mathfns =
+[["_SLASH_", /\//g],
+["_STAR_", /\*/g],
+["_", /\-/g],
+["_PLUS_", /\+/g],
+["expt", /\^/g]]
 
-var replaceMath = (txt) =>
-txt.replace(/\//g,"div")
-.replace(/\*/g,"mul")
-.replace(/\-/g,"sub")
-.replace(/\+/g,"add")
-.replace(/\^/g,"expt")
-.replace(/\'(\w+)/g,"symbol_$1");
+mathfns.map(x=> x[0]).map(loadEnv);
+
+var symbol = cljs.core.symbol;
+
+var _replaceMath = (txt) =>
+mathfns.reduce((s,r) => s.replace(r[1],r[0]),
+txt.replace(/\'(\w+)/g,"symbol_$1"));
+
+var replaceMath = _replaceMath;
+
+var swapFirst = (j) =>
+j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array
+? j.map(swapFirst)
+: j;
 
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
@@ -66,18 +78,14 @@ txt.trim()
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
-var swapFirst = (j) =>
-j.constructor == Array
-&& ["div", "mul", "sub", "add", "expt"].includes(j[1])
-? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
-: j.constructor == Array
-? j.map(swapFirst)
-: j;
+var drv = sicmutils.env.D;
 
 var replaceD = (j) =>
 j.constructor == Array
 ? j.map(replaceD)
 : j == "D" ? "drv" : j;
+
+["__GT_infix", "simplify"].map(loadEnv);
 
 var preAmble = (j) => ["__GT_infix", ["simplify", j]];
 
@@ -91,7 +99,9 @@ j.constructor == Array
 : j;
 
 var expressionToJs = (expr) =>
-jsonToJs(modifyJson(textToJson(expr))); null;
+jsonToJs(modifyJson(textToJson(expr)));
+
+["sin", "cos"].map(loadEnv); null;
     </code></pre>
 
 
@@ -155,7 +165,7 @@ j.constructor == Array && j[0] === "define"
 ? makeFun(j, jsonToJs)
 : j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j.substring(0, 7) == "symbol_" // new
+: j.substring(0, 7) == "symbol_"
 ? 'symbol("' + j.substring(7, j.length) + '")'
 : j
     </code></pre>
@@ -179,15 +189,7 @@ j.constructor == Array && j[0] === "define"
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var d = textToJson("(let ((a b)) e)");
-//{let a = b;
-// retrun e}
-
-"{let " + d[1][0][0] + " = " + d[1][0][1] +"; return " + d[2] + "}"
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-var jsonCode = textToJson("(let ((a b) (c d)) 5)");
+var jsonCode = textToJson("(let ((a b) (c d)) (a + c))");
 
 var smap = (f, v) =>
 v.length === 1
@@ -212,7 +214,7 @@ j.constructor == Array && j[0] === "define"
 ? makeLet(j, jsonToJs)
 : j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j.substring(0, 7) == "symbol_" // new
+: j.substring(0, 7) == "symbol_"
 ? 'symbol("' + j.substring(7, j.length) + '")'
 : j
 
@@ -232,14 +234,7 @@ expressionToJs("(define (fu x) (let ((y 1)) (+ x y)))")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var replaceMath = (txt) =>
-txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],") // new
-.replace(/\//g,"div")
-.replace(/\*/g,"mul")
-.replace(/\-/g,"sub")
-.replace(/\+/g,"add")
-.replace(/\^/g,"expt")
-.replace(/\'(\w+)/g,"symbol_$1");
+var replaceMath = (txt) =>  _replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">

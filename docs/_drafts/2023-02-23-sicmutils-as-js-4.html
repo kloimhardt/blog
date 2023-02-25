@@ -18,6 +18,8 @@ categories: Software
 </head>
 
 <body>
+    (This post is part of a series, all with the same title)
+
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
@@ -43,12 +45,14 @@ var sub = sicmutils.env._;
 var add = sicmutils.env._PLUS_;
 ["expt", "sin", "cos"].map(loadEnv);
 
-var replaceMath = (txt) =>
+var _replaceMath = (txt) =>
 txt.replace(/\//g,"div")
 .replace(/\*/g,"mul")
 .replace(/\-/g,"sub")
 .replace(/\+/g,"add")
 .replace(/\^/g,"expt");
+
+var replaceMath = _replaceMath;
 
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
@@ -63,10 +67,12 @@ txt.trim()
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
-var jsonToJs = (j) =>
+var _jsonToJs = (j) =>
 j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : j;
+
+var jsonToJs = _jsonToJs;
 
 var swapFirst = (j) =>
 j.constructor == Array
@@ -117,9 +123,8 @@ cos.call(null, symbol("x")).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var oldReplaceA = replaceMath;
 var replaceMath = (txt) =>
-oldReplaceA(txt).replace(/\'(\w+)/g,"symbol_$1");
+_replaceMath(txt).replace(/\'(\w+)/g,"symbol_$1");
 
 var jsonToJs = (j) =>
 j.constructor == Array
@@ -165,8 +170,10 @@ j.constructor == Array
 ? j.map(replaceD)
 : j == "D" ? "drv" : j;
 
-var oldModify = modifyJson;
-var modifyJson = (j) => oldModify(replaceD(j));
+var _modifyJson = (j) => // from above
+preAmble(swapFirst(j));
+
+var modifyJson = (j) => _modifyJson(replaceD(j));
     </code></pre>
 
 
@@ -177,8 +184,9 @@ var modifyJson = (j) => oldModify(replaceD(j));
     <pre><code class="language-klipse-eval-js">
 loadEnv("simplify");
 
-var oldPre = preAmble;
-var preAmble = (j) => oldPre(["simplify", j]);
+var _preAmble = (j) => ["__GT_infix", j] // from above
+
+var preAmble = (j) => _preAmble(["simplify", j]);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
