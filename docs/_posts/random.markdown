@@ -30,3 +30,10 @@ Experimentum Crisis: Warum sollte ein einziges Experiment zwischen zwei Theorien
 
 ---------------
 Wishful thinking as way of solving problems (idea comes from SICP). Am Beispiel von Plancks paper.
+
+_____
+Pinoccio - nicht kügen kann (Nase) -- Authist -- Reudiger Hund/ Strassenkater -- advanced Pinoccio weiss um Verbrecher kann nicht aus -- kleiner Tod -- Versuch zu entkommen -- Geschichten (Blog) -- Sharazad -- kein Sex nötig -- aber Kopfweh
+
+--------
+
+Mein Scheme Compiler eigentlich OO nötig wegen Ersetzung von Funktionen.

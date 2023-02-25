@@ -87,16 +87,19 @@ j.constructor == Array
 
 ["__GT_infix", "simplify"].map(loadEnv);
 
-var preAmble = (j) => ["__GT_infix", ["simplify", j]];
+var _preAmble = (j) => ["__GT_infix", ["simplify", j]];
+var preAmble = _preAmble;
 
 var modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
 
-var jsonToJs = (j) =>
-j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j.substring(0, 7) == "symbol_"
+var _jsonToJs = (j) =>
+j.constructor == String && j.substring(0, 7) == "symbol_"
 ? 'symbol("' + j.substring(7, j.length) + '")'
+:j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : j;
+
+var jsonToJs = _jsonToJs;
 
 var expressionToJs = (expr) =>
 jsonToJs(modifyJson(textToJson(expr)));
@@ -140,6 +143,11 @@ var makeFun = (j, callBack) =>
 
 makeFun(jsonCode, x=> "<" + x + ">")
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+    </code></pre>
+
 
     <pre><code class="language-klipse-eval-js">
 var jsonCode = textToJson("(define ((funame x) y) (x + y))")
