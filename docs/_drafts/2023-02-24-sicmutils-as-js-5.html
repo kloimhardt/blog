@@ -135,6 +135,30 @@ jsonToJs(modifyJson(textToJson(expr)));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var preAmble = (j) =>
+j[0] != "define"
+? _preAmble(j)
+: j;
+
+var __jsonToJs = (j) =>
+j.constructor == Array && j[0] === "define"
+&& j[1].constructor == String
+? "var " + j[1] + " = " + jsonToJs(j[2]) + ";"
+: _jsonToJs(j);
+
+var jsonToJs = __jsonToJs;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define value 6)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+value
+    </code></pre>
+
+
+    <pre><code class="language-klipse-eval-js">
 var jsonCode = textToJson("(define (funame x) (x + 1))")
 
 var makeFun = (j, callBack) =>
@@ -145,12 +169,25 @@ makeFun(jsonCode, x=> "<" + x + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var _3_jsonToJs = (j) =>
+j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+? makeFun(j, jsonToJs)
+: __jsonToJs(j);
 
+var jsonToJs = _3_jsonToJs;
     </code></pre>
 
+    <pre><code class="language-klipse-eval-js">
+(define (funame x) (x + 1))
+    </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var jsonCode = textToJson("(define ((funame x) y) (x + y))")
+(funame 4)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var jsonCode = textToJson("(define ((ffuname x) y) (x + y))")
 
 var makeFunFun = (j, callBack) =>
 "var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
@@ -160,44 +197,27 @@ makeFunFun(jsonCode, x=> "<" + x + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var modifyJson = (j) =>
-j[0] != "define"
-? preAmble(replaceD(swapFirst(j)))
-: replaceD(swapFirst(j));
-
-var jsonToJs = (j) =>
+var _4_jsonToJs = (j) =>
 j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
 && j[1][0].constructor == Array
 ? makeFunFun(j, jsonToJs)
-:j.constructor == Array && j[0] === "define"
-? makeFun(j, jsonToJs)
-: j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j.substring(0, 7) == "symbol_"
-? 'symbol("' + j.substring(7, j.length) + '")'
-: j
-    </code></pre>
+: _3_jsonToJs(j);
 
-
-    <pre><code class="language-klipse-eval-js">
-(define (auname x) (x + 1))
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(auname 4)
+var jsonToJs = _4_jsonToJs;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 
-(define ((buname x) y) (x + y))
+(define ((ffuname x) y) (x + y))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((buname 4) 5)
+((ffuname 4) 5)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var jsonCode = textToJson("(let ((a b) (c d)) (a + c))");
+var jsonCode = textToJson("(let ((x a) (y b)) (x + y))");
 
 var smap = (f, v) =>
 v.length === 1
@@ -213,36 +233,24 @@ makeLet(jsonCode, x=>"<"+ x +">");
 
     <pre><code class="language-klipse-eval-js">
 var jsonToJs = (j) =>
-j.constructor == Array && j[0] === "define"
-&& j[1][0].constructor == Array
-? makeFunFun(j, jsonToJs)
-: j.constructor == Array && j[0] === "define"
-? makeFun(j, jsonToJs)
-: j.constructor == Array && j[0] === "let"
+j.constructor == Array && j[0] === "let"
 ? makeLet(j, jsonToJs)
-: j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j.substring(0, 7) == "symbol_"
-? 'symbol("' + j.substring(7, j.length) + '")'
-: j
+: _4_jsonToJs(j);
 
-expressionToJs("(define (fu x) (let ((y 1)) (+ x y)))")
+expressionToJs("(define (fulet x) (let ((y 1)) (+ x y)))")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define (fu x) (let ((y 1)) (+ x y)))
+(define (fulet x) (let ((y 1)) (+ x y)))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(fu 4)
+(fulet 4)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-["velocity", "dot-product"].map(loadEnv);
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-var replaceMath = (txt) =>  _replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
+var replaceMath = (txt) =>
+_replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -251,8 +259,8 @@ var replaceMath = (txt) =>  _replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2
 
     <pre><code class="language-klipse-eval-js">
 var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
+["velocity", "dot-product", "up"].map(loadEnv); null;
     </code></pre>
-
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
@@ -261,8 +269,20 @@ var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(1 + 1/2)
+var literal_function = sicmutils.abstract$.function$.literal_function;
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define q
+  (up (literal-function 'x)
+      (literal-function 'y)
+      (literal-function 'z)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(q 't)
+    </code></pre>
+
 
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
