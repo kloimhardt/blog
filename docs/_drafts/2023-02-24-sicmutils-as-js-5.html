@@ -135,7 +135,7 @@ jsonToJs(modifyJson(textToJson(expr)));
         I took the liberty to clean the code regarding elementary math functions a bit, the changes are purely compiler internal namings. Forexample, the <code>add</code> is now called <code>_PLUS_</code> and the minus sign is internally represented by an underscore, not <code>sub</code>.
     </p>
     <pre><code class="language-klipse-eval-js">
-expressionToJs("(1 + 1)")
+[textToJson("(1 + 1)")," and " , textToJson("(1 - 1)")].toString()
     </code></pre>
 
 
