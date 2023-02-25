@@ -82,8 +82,10 @@ j.constructor == Array
 ? j.map(swapFirst)
 : j;
 
-var expressionToJs = (expr) =>
-jsonToJs(swapFirst(textToJson(expr))) + ".toString();"; null;
+var _expressionToJs = (expr) =>
+jsonToJs(swapFirst(textToJson(expr))) + ".toString();";
+
+var expressionToJs = _expressionToJs; null;
     </code></pre>
 
     <pre>&lt;script&gt;
@@ -127,11 +129,9 @@ var replaceMath = (txt) =>
 _replaceMath(txt).replace(/\'(\w+)/g,"symbol_$1");
 
 var jsonToJs = (j) =>
-j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j.substring(0, 7) == "symbol_" // new
+j.constructor == String && j.substring(0, 7) == "symbol_"
 ? 'symbol("' + j.substring(7, j.length) + '")'
-: j;
+: _jsonToJs(j);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -141,12 +141,16 @@ j.constructor == Array
     <pre><code class="language-klipse-eval-js">
 loadEnv("__GT_infix");
 
-var preAmble = (j) => ["__GT_infix", j]
+var _preAmble = (j) => ["__GT_infix", j];
+var preAmble = _preAmble;
 
-var modifyJson = (j) => preAmble(swapFirst(j))
+var _modifyJson = (j) => preAmble(swapFirst(j));
+var modifyJson = _modifyJson;
 
-var expressionToJs = (expr) =>
-jsonToJs(modifyJson(textToJson(expr)));
+var expressionToJs = (expr) => // new
+1 === 1
+? jsonToJs(modifyJson(textToJson(expr)))
+: _expressionToJs(expr); // old nver called
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -170,9 +174,6 @@ j.constructor == Array
 ? j.map(replaceD)
 : j == "D" ? "drv" : j;
 
-var _modifyJson = (j) => // from above
-preAmble(swapFirst(j));
-
 var modifyJson = (j) => _modifyJson(replaceD(j));
     </code></pre>
 
@@ -183,8 +184,6 @@ var modifyJson = (j) => _modifyJson(replaceD(j));
 
     <pre><code class="language-klipse-eval-js">
 loadEnv("simplify");
-
-var _preAmble = (j) => ["__GT_infix", j] // from above
 
 var preAmble = (j) => _preAmble(["simplify", j]);
     </code></pre>
