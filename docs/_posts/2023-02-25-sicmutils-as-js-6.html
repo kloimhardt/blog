@@ -158,6 +158,8 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
 
     <pre><code class="language-klipse-eval-js">
 var edgeCases = (j) =>
+// a hack. let shoud better be implemented within the procedures
+// makeFun and makeFunFun, dispense with makeLet alltogether
 j[0] === "define"
 && j[2].constructor == Array && j[2][0] === "let"
 && j[1].constructor == String
@@ -165,6 +167,7 @@ j[0] === "define"
 : j;
 
 var letFlat = (j) =>
+// only nesting of two lets possible, but that is more than ok
 j.constructor == Array && j[0] === "let" && j[2][0] === "let"
 ? ["let", j[1].concat(j[2][1]),j[2][2]]
 : j.constructor == Array
@@ -206,8 +209,11 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
     <pre><code class="language-klipse-eval-js">
 ((compose (L-free-particle 'm) (Gamma q)) 't)
     </code></pre>
-
+    <p>
+        Make floating point and negative numbers possible.
+    </p>
     <pre><code class="language-klipse-eval-js">
+// a hack. Should be implemented within replaceMath and replaceD
 var insertCommas = (txt) =>
 _insertCommas(txt.replace(/(\d+)\.(\d+)/g, "$1_DOT_$2"))
 .replace(/(\d+)_DOT_(\d+)/g, "$1.$2")
