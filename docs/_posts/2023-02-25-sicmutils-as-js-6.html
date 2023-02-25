@@ -314,13 +314,18 @@ loadEnv("coordinate");
     </code></pre>
 
     <p>
-Pi not implementet!
+:Pi not implementet yet! In the original code of the book it is :pi/2.
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define q
-  (find-path (L-harmonic 1.0 1.0) 0.0 1.0 314/200 0.0 3))
+var _PIHALF_TEMPORARAY = sicmutils.env.pi/2;
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define q
+  (find-path (L-harmonic 1.0 1.0) 0.0 1.0 _PIHALF_TEMPORARAY 0.0 3))
+    </code></pre>
+
     <p>
         q is close enough to the cosine
     </p>
