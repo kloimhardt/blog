@@ -91,7 +91,8 @@ j[0] != "define"
 ? ["__GT_infix", ["simplify", j]]
 : j;
 
-var modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+var _modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+var modifyJson = _modifyJson;
 
 var makeFun = (j, callBack) =>
 "var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
@@ -154,6 +155,40 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
          : oldEval(txt);
      window.eval = newEval;
     </script>
+
+    <pre><code class="language-klipse-eval-js">
+var edgeCases = (j) =>
+j[0] === "define"
+&& j[2].constructor == Array && j[2][0] === "let"
+&& j[1].constructor == String
+? [mathfns[0][0], "889", "9"]
+: j;
+
+var letFlat = (j) =>
+j.constructor == Array && j[0] === "let" && j[2][0] === "let"
+? ["let", j[1].concat(j[2][1]),j[2][2]]
+: j.constructor == Array
+? j.map(letFlat)
+: j;
+
+var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu z) (let ((x 1)) (let ((y 2)) (+ x y z))))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fu 7)
+    </code></pre>
+
+    <p>
+ (define value1 (let ...)) is excluded explicitely.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define value1 (let ((x 1)) (+ x 1)))
+    </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
@@ -250,7 +285,45 @@ var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_mi
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants
+loadEnv("coordinate");
+    </code></pre>
 
+
+    <pre><code class="language-klipse-eval-js">
+(define (find-path Lagrangian t0 q0 t1 q1 n)
+  (let ((initial-qs (linear-interpolants q0 q1 n)))
+    (let ((minimizing-qs
+            (multidimensional-minimize
+              (parametric-path-action Lagrangian t0 q0 t1 q1)
+              initial-qs)))
+      (make-path t0 q0 t1 q1 minimizing-qs))))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-harmonic m k) local)
+  (let ((q (coordinate local))
+        (v (velocity local)))
+    (- (* 1/2 m (square v)) (* 1/2 k (square q)))))
+    </code></pre>
+
+    <p>
+Pi not implementet!
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define q
+  (find-path (L-harmonic 1.0 1.0) 0.0 1.0 314/200 0.0 3))
+    </code></pre>
+    <p>
+        q is close enough to the cosine
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(- (cos 0.8) (q 0.8))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
