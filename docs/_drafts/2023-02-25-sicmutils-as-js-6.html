@@ -175,11 +175,12 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
     <pre><code class="language-klipse-eval-js">
 var insertCommas = (txt) =>
 _insertCommas(txt.replace(/(\d+)\.(\d+)/g, "$1_DOT_$2"))
-.replace(/(\d+)_DOT_(\d+)/g, "$1.$2");
+.replace(/(\d+)_DOT_(\d+)/g, "$1.$2")
+.replace(/_(\d+)/g, "-$1");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(1.7 + 2.9)
+(-1.7 + 2.9)
     </code></pre>
 
 
@@ -188,14 +189,72 @@ loadEnv("definite_integral")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(define (Lagrangian-action L q t1 t2)
+  (definite-integral (compose L (Gamma q)) t1 t2))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (test-path t)
+  (up (+ (* 4 t) 7)
+      (+ (* 3 t) 5)
+      (+ (* 2 t) 1)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(Lagrangian-action (L-free-particle 3.0)
+                   test-path 0.0 10.0)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((make-eta nu t1 t2) t)
+(* (- t t1) (- t t2) (nu t)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((varied-free-particle-action mass q nu t1 t2) eps)
+  (let ((eta (make-eta nu t1 t2)))
+    (Lagrangian-action (L-free-particle mass)
+                       (+ q (* eps eta))
+                       t1
+                       t2)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+["minimize", "square"].map(loadEnv);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((varied-free-particle-action 3.0 test-path
+                              (up sin cos square)
+                              0.0 10.0)
+ 0.001)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(minimize
+  (varied-free-particle-action 3.0 test-path
+                               (up sin cos square)
+                               0.0 10.0)
+  -2.0 1.0)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var make_path = sicmutils.mechanics.lagrange.make_path;
+var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((parametric-path-action Lagrangian t0 q0 t1 q1) qs)
+  (let ((path (make-path t0 q0 t1 q1 qs)))
+    (Lagrangian-action Lagrangian path t0 t1)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-    </code></pre>
-
 
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
