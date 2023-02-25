@@ -259,7 +259,7 @@ _replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
 
     <pre><code class="language-klipse-eval-js">
 var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
-["velocity", "dot-product", "up"].map(loadEnv); null;
+["velocity", "dot_product", "up"].map(loadEnv); null;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -281,6 +281,28 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
 
     <pre><code class="language-klipse-eval-js">
 (q 't)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((D q) 't)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+["Gamma", "compose"].map(loadEnv); null;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((Gamma q) 't)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((compose (L-free-particle 'm) (Gamma q)) 't)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
     </code></pre>
 
 
