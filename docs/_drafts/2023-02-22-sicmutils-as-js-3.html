@@ -192,12 +192,21 @@ jsonToJs(swapFirst(textToJson("(cos 0)")));
     </code></pre>
 
     <p>
-Acceptable
+Acceptable, we can write
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(1 + (cos (sin 0)))
+(1 + (cos 0))
     </code></pre>
+
+    <p>
+        as well as
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(+ 1 (cos 0))
+    </code></pre>
+
 
     <p>
         if not happy yet, proposal
