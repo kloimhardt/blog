@@ -179,7 +179,86 @@ j.constructor == Array && j[0] === "define"
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var d = textToJson("(let ((a b)) e)");
+//{let a = b;
+// retrun e}
 
+"{let " + d[1][0][0] + " = " + d[1][0][1] +"; return " + d[2] + "}"
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var jsonCode = textToJson("(let ((a b) (c d)) 5)");
+
+var smap = (f, v) =>
+v.length === 1
+? f(v[0]) +";"
+: f(v[0]) +"; "  + smap(f, v.slice(1));
+
+var makeLet = (j, callBack) =>
+"{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
++ " return " +  callBack(j[2]) + "; }"
+
+makeLet(jsonCode, x=>"<"+ x +">");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var jsonToJs = (j) =>
+j.constructor == Array && j[0] === "define"
+&& j[1][0].constructor == Array
+? makeFunFun(j, jsonToJs)
+: j.constructor == Array && j[0] === "define"
+? makeFun(j, jsonToJs)
+: j.constructor == Array && j[0] === "let"
+? makeLet(j, jsonToJs)
+: j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j.substring(0, 7) == "symbol_" // new
+? 'symbol("' + j.substring(7, j.length) + '")'
+: j
+
+expressionToJs("(define (fu x) (let ((y 1)) (+ x y)))")
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu x) (let ((y 1)) (+ x y)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fu 4)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+["velocity", "dot-product"].map(loadEnv);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var replaceMath = (txt) =>
+txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],") // new
+.replace(/\//g,"div")
+.replace(/\*/g,"mul")
+.replace(/\-/g,"sub")
+.replace(/\+/g,"add")
+.replace(/\^/g,"expt")
+.replace(/\'(\w+)/g,"symbol_$1");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + 1/2)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
+    </code></pre>
+
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-free-particle mass) local)
+  (let ((v (velocity local)))
+    (* 1/2 mass (dot-product v v))))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + 1/2)
     </code></pre>
 
 
