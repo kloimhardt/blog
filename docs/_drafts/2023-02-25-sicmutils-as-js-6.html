@@ -1,0 +1,176 @@
+---
+layout: post
+title:  "Sicmutils as JavaScript library (6)"
+date:   2023-02-25 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+</head>
+
+<body>
+    (This post is part of a series, all with the same title)
+
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <pre>&lt;script&gt;
+ var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+ }
+&lt;/script&gt;</pre>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+var mathfns =
+[["_SLASH_", /\//g],
+["_STAR_", /\*/g],
+["_", /\-/g],
+["_PLUS_", /\+/g],
+["expt", /\^/g]]
+
+mathfns.map(x=> x[0]).map(loadEnv);
+
+var symbol = cljs.core.symbol;
+
+var replaceMath = (txt) =>
+mathfns.reduce((s,r) => s.replace(r[1],r[0]),
+txt.replace(/\'(\w+)/g,"symbol_$1")
+.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
+
+var swapFirst = (j) =>
+j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array
+? j.map(swapFirst)
+: j;
+
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
+
+var drv = sicmutils.env.D;
+
+var replaceD = (j) =>
+j.constructor == Array
+? j.map(replaceD)
+: j == "D" ? "drv" : j;
+
+["__GT_infix", "simplify"].map(loadEnv);
+
+var preAmble = (j) =>
+j[0] != "define"
+? ["__GT_infix", ["simplify", j]]
+: j;
+
+var modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+
+var makeFun = (j, callBack) =>
+"var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
++ callBack(j[2]) +";";
+
+var makeFunFun = (j, callBack) =>
+"var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
++ "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
+
+var smap = (f, v) =>
+v.length === 1
+? f(v[0]) +";"
+: f(v[0]) +"; "  + smap(f, v.slice(1));
+
+var makeLet = (j, callBack) =>
+"{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
++ " return " +  callBack(j[2]) + "; }"
+
+var jsonToJs = (j) =>
+j.constructor == Array && j[0] === "let"
+? makeLet(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+&& j[1][0].constructor == Array
+? makeFunFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+? makeFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == String
+? "var " + j[1] + " = " + jsonToJs(j[2]) + ";"
+:j.constructor == String && j.substring(0, 7) == "symbol_"
+? 'symbol("' + j.substring(7, j.length) + '")'
+:j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var expressionToJs = (expr) =>
+jsonToJs(modifyJson(textToJson(expr)));
+
+var literal_function = sicmutils.abstract$.function$.literal_function;
+
+["sin", "cos", "velocity", "dot_product",
+"up", "Gamma", "compose"].map(loadEnv); null;
+    </code></pre>
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-free-particle mass) local)
+(let ((v (velocity local)))
+(* 1/2 mass (dot-product v v))))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define q
+ (up (literal-function 'x)
+ (literal-function 'y)
+ (literal-function 'z)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((compose (L-free-particle 'm) (Gamma q)) 't)
+    </code></pre>
+
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
+</html>
