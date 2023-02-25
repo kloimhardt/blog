@@ -37,9 +37,6 @@ categories: Software
          return name;
      }
     </script>
-    <p>
-        Next loads the compiler (I took the liberty to clean the code regarding elementary math functions a bit, at this stage the changes are purely compiler internal namings, e.g. <code>add</code> is now called <code>_PLUS_</code>)
-    </p>
     <pre><code class="language-klipse-eval-js">
 var mathfns =
 [["_SLASH_", /\//g],
@@ -133,6 +130,14 @@ jsonToJs(modifyJson(textToJson(expr)));
     <pre><code class="language-klipse-eval-js">
 ((D (3 * (sin ^ 2))) 'x)
     </code></pre>
+
+    <p>
+        I took the liberty to clean the code regarding elementary math functions a bit, the changes are purely compiler internal namings. Forexample, the <code>add</code> is now called <code>_PLUS_</code> and the minus sign is internally represented by an underscore, not <code>sub</code>.
+    </p>
+    <pre><code class="language-klipse-eval-js">
+expressionToJs("(1 + 1)")
+    </code></pre>
+
 
     <pre><code class="language-klipse-eval-js">
 var preAmble = (j) =>

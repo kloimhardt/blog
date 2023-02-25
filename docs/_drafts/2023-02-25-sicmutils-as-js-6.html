@@ -52,7 +52,7 @@ var symbol = cljs.core.symbol;
 
 var replaceMath = (txt) =>
 mathfns.reduce((s,r) => s.replace(r[1],r[0]),
-txt.replace(/\'(\w+)/g,"symbol_$1")
+txt.replace(/\'(\w+)/g,"_SYMBOL_$1")
 .replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
 
 var swapFirst = (j) =>
@@ -62,9 +62,11 @@ j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
 ? j.map(swapFirst)
 : j;
 
-var insertCommas = (txt) =>
+var _insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
 .replace(/\,\s+\]/g," ]");
+
+var insertCommas = _insertCommas;
 
 var makeBrackets = (txt) =>
 txt.trim()
@@ -121,7 +123,7 @@ j.constructor == Array && j[0] === "let"
 :j.constructor == Array && j[0] === "define"
 && j[1].constructor == String
 ? "var " + j[1] + " = " + jsonToJs(j[2]) + ";"
-:j.constructor == String && j.substring(0, 7) == "symbol_"
+:j.constructor == String && j.substring(0, 8) == "_SYMBOL_"
 ? 'symbol("' + j.substring(7, j.length) + '")'
 :j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
@@ -169,6 +171,26 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
     <pre><code class="language-klipse-eval-js">
 ((compose (L-free-particle 'm) (Gamma q)) 't)
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var insertCommas = (txt) =>
+_insertCommas(txt.replace(/(\d+)\.(\d+)/g, "$1_DOT_$2"))
+.replace(/(\d+)_DOT_(\d+)/g, "$1.$2");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+loadEnv("definite_integral")
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
 
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
