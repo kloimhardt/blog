@@ -53,7 +53,9 @@ j.constructor == Array
 : j;
 
 var expressionToJs = (expr) =>
-jsonToJs(swapFirst(textToJson(expr))) + ".toString();";
+expr[expr.length-1] === " "
+? jsonToJs(swapFirst(textToJson(expr))) + ".toString();"
+: "'add blank'";
     </code></pre>
 
     <pre>&lt;script&gt;
@@ -75,7 +77,7 @@ jsonToJs(swapFirst(textToJson(expr))) + ".toString();";
     </script>
 
     <pre><code class="language-klipse-eval-js">
-((1 / 2) / 2)
+((1 / 2) / 2) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -95,7 +97,7 @@ var replaceMath = __replaceMath;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(3 * (1 / 2))
+(3 * (1 / 2)) 
     </code></pre>
     <pre><code class="language-klipse-eval-js">
 var sub = sicmutils.env._;
@@ -112,7 +114,7 @@ add(1, mul(sub(div(2, 3), 4), 5)).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(1 + (((2 / 3) - 4) * 5))
+(1 + (((2 / 3) - 4) * 5)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -130,11 +132,11 @@ j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : _jsonToJs(j);
 
-expressionToJs("(2 ^ 3)");
+expressionToJs("(2 ^ 3) ");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(2 ^ 3)
+(2 ^ 3) 
     </code></pre>
 
     <p>
@@ -142,7 +144,7 @@ expressionToJs("(2 ^ 3)");
     </p>
 
     <pre><code class="language-klipse-eval-js">
-expressionToJs("(0 cos)");
+expressionToJs("(0 cos) ");
     </code></pre>
     <p>
         This notation is unacceptable and needs fixing. As an intermediate step, we write a dedicated procedure for importing functions
@@ -196,7 +198,7 @@ Acceptable, we can write
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(1 + (cos 0))
+(1 + (cos 0)) 
     </code></pre>
 
     <p>
@@ -204,7 +206,7 @@ Acceptable, we can write
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(+ 1 (cos 0))
+(+ 1 (cos 0)) 
     </code></pre>
 
 
@@ -230,7 +232,7 @@ shiftParen("sin(cos(0))", names);
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(1 + cos(sin(0)))
+(1 + cos(sin(0))) 
     </code></pre>
 
     <p>
@@ -238,7 +240,7 @@ but square has to be written like this
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(sin((314 / 100)) ^ 2)
+(sin((314 / 100)) ^ 2) 
     </code></pre>
 
     <p>
@@ -247,7 +249,7 @@ but square has to be written like this
 
 
     <pre><code class="language-klipse-eval-js">
-((sin ^ 2) (314 / 100))
+((sin ^ 2) (314 / 100)) 
     </code></pre>
 
     <p>

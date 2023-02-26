@@ -101,6 +101,11 @@ var jsonToJs = _jsonToJs;
 var expressionToJs = (expr) =>
 jsonToJs(modifyJson(textToJson(expr)));
 
+var expressionToJs = (expr) =>
+expr[expr.length-1] === " "
+? jsonToJs(modifyJson(textToJson(expr)))
+: "'add blank'";
+
 ["sin", "cos"].map(loadEnv); null;
     </code></pre>
 
@@ -124,11 +129,11 @@ jsonToJs(modifyJson(textToJson(expr)));
     </script>
 
     <pre><code class="language-klipse-eval-js">
-((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2)))
+((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x)
+((D (3 * (sin ^ 2))) 'x) 
     </code></pre>
 
     <p>
@@ -155,7 +160,7 @@ var jsonToJs = __jsonToJs;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define value 6)
+(define value 6) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -184,11 +189,11 @@ var jsonToJs = _3_jsonToJs;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define (funame x) (x + 1))
+(define (funame x) (x + 1)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(funame 4)
+(funame 4) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -213,12 +218,11 @@ var jsonToJs = _4_jsonToJs;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-
-(define ((ffuname x) y) (x + y))
+(define ((ffuname x) y) (x + y)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((ffuname 4) 5)
+((ffuname 4) 5) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -242,15 +246,15 @@ j.constructor == Array && j[0] === "let"
 ? makeLet(j, jsonToJs)
 : _4_jsonToJs(j);
 
-expressionToJs("(define (fulet x) (let ((y 1)) (+ x y)))")
+expressionToJs("(define (fulet x) (let ((y 1)) (+ x y))) ")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define (fulet x) (let ((y 1)) (+ x y)))
+(define (fulet x) (let ((y 1)) (+ x y))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(fulet 4)
+(fulet 4) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -259,7 +263,7 @@ _replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(1 + 1/2)
+(1 + 1/2) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -270,7 +274,7 @@ var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
   (let ((v (velocity local)))
-    (* 1/2 mass (dot-product v v))))
+    (* 1/2 mass (dot-product v v)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -281,15 +285,21 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
 (define q
   (up (literal-function 'x)
       (literal-function 'y)
-      (literal-function 'z)))
+      (literal-function 'z))) 
     </code></pre>
-
+    <p>
+In the next calculation, append a blank to see the result.
+    </p>
     <pre><code class="language-klipse-eval-js">
 (q 't)
     </code></pre>
+    <p>
+        In the next calculation, do you know where to put the <code>D</code> to get it right?
+    </p>
 
     <pre><code class="language-klipse-eval-js">
-((D q) 't)
+((  q) 't)
+D
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -297,20 +307,19 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((Gamma q) 't)
+((Gamma q) 't) 
+    </code></pre>
+
+    <p>
+        Get the <code>'m</code> right.
+    </p>
+    <pre><code class="language-klipse-eval-js">
+((compose (L-free-particle   ) (Gamma q)) 't)
+'m
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((compose (L-free-particle 'm) (Gamma q)) 't)
     </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-    </code></pre>
-
-
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>

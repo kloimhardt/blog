@@ -71,6 +71,8 @@ var formula = "[ x / 2 ]";
         and first, within the string, replace the <code>/</code>
     </p>
     <pre><code class="language-klipse-eval-js">
+var formula = "[ x / 2 ]";
+
 var replaceMath = (txt) => txt.replace(/\//g,"div");
 
 replaceMath(formula);
@@ -79,6 +81,8 @@ replaceMath(formula);
         and second produce comma separated substrings. They do not look nice,
     </p>
     <pre><code class="language-klipse-eval-js">
+var formula = "[ x / 2 ]";
+
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
    .replace(/\,\s+\]/g," ]");
@@ -89,6 +93,8 @@ insertCommas(replaceMath(formula))
         but allow us to easily convert the original string into a JavaScript array.
     </p>
     <pre><code class="language-klipse-eval-js">
+var formula = "[ x / 2 ]";
+
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(txt)));
 
@@ -98,7 +104,7 @@ textToJson(formula);
         This in turn allows for easy transformation into JavaScript code,
     </p>
     <pre><code class="language-klipse-eval-js">
-// above: var formula = "[ x / 2 ]";
+var formula = "[ x / 2 ]";
 
 var jsonToJs = (j) =>
 j[1] + "(" +  j[0] + ", " + j[2] + ")";
@@ -110,12 +116,14 @@ jsonToJs(textToJson(formula));
     </p>
     <pre><code class="language-klipse-eval-js">
 var expressionToJs = (expr) =>
-jsonToJs(textToJson(expr)) + ".toString();";
+expr[expr.length-1] === " "
+? jsonToJs(textToJson(expr)) + ".toString();"
+: "'add blank'";
 
 expressionToJs(formula);
     </code></pre>
     <p>
-        and employ a small hack that kicks in this transpiler whenever some code in Klipse starts with a bracket -- square <code>[</code> or round <code>)</code>.
+        which imposes the condition that a conversion is only made when the string ends with a blank. Then we employ a small hack that kicks in this transpiler whenever some code in Klipse starts with a bracket -- square <code>[</code> or round <code>)</code>.
     </p>
     <pre>&lt;script&gt;
      var oldEval = window.eval;
@@ -138,19 +146,24 @@ expressionToJs(formula);
         Voilà, our first calculation of a rational number in JavaScript.
     </p>
     <pre><code class="language-klipse-eval-js">
-[ x / 2 ]
+[ x / 2 ] 
     </code></pre>
 
     <p>
         Next we implement a more complicated formula,
     </p>
+
     <pre><code class="language-klipse-eval-js">
 var formula = "((x / 2) / 2)";
     </code></pre>
+
     <p>
         which as a modification now uses round brackets <code>()</code>. Those have to be converted to square brackets.
     </p>
+
     <pre><code class="language-klipse-eval-js">
+var formula = "((x / 2) / 2)";
+
 var makeBrackets = (txt) =>
 txt.trim()
 .replace(/\(/g,"[ ")
@@ -163,10 +176,14 @@ JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
 textToJson(formula)
     </code></pre>
+
     <p>
 Since the formula is nested, we need a new function to transform a JS-array into JS-code.
     </p>
+
     <pre><code class="language-klipse-eval-js">
+var formula = "((x / 2) / 2)";
+
 var jsonToJs = (j) =>
 // old: j[1] + "(" +  j[0] + ", " + j[2] + ")"
 j.constructor == Array
@@ -175,12 +192,15 @@ j.constructor == Array
 
 jsonToJs(textToJson(formula));
     </code></pre>
+
     <p>
         As you can see, we are not there yet, the symbols are somehow topsy-turvy, but we immediately notice that things work if we use prefix notation for our formula.
     </p>
+
     <pre><code class="language-klipse-eval-js">
 jsonToJs(textToJson("(/ (/ x 2) 2)"));
     </code></pre>
+
     <p>
         This gives us a hint how the flaw can be fixed: we write a helper function that swaps all first two elements in a nested array,
     </p>
@@ -193,13 +213,19 @@ j.constructor == Array
 
 swapFirst([["x", "div", 2], "div", 2]);
     </code></pre>
+
     <p>
         and add it to the transpiler function.
     </p>
+
     <pre><code class="language-klipse-eval-js">
+var formula = "((x / 2) / 2)";
+
 var expressionToJs = (expr) =>
-// old: jsonToJs(textToJson(expr)) + ".toString();";
-jsonToJs(swapFirst(textToJson(expr))) + ".toString();";
+expr[expr.length-1] === " "
+// old ? jsonToJs(textToJson(expr)) + ".toString();"
+? jsonToJs(swapFirst(textToJson(expr))) + ".toString();"
+: "'add blank'";
 
 expressionToJs(formula);
     </code></pre>
@@ -209,9 +235,8 @@ expressionToJs(formula);
     </p>
 
     <pre><code class="language-klipse-eval-js">
-((x / 2) / 2)
+((x / 2) / 2) 
     </code></pre>
-
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>

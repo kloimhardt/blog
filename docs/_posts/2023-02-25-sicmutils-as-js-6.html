@@ -131,13 +131,16 @@ j.constructor == Array && j[0] === "let"
 : j;
 
 var expressionToJs = (expr) =>
-jsonToJs(modifyJson(textToJson(expr)));
+expr[expr.length-1] === " "
+? jsonToJs(modifyJson(textToJson(expr)))
+: "'add blank'";
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose"].map(loadEnv); null;
     </code></pre>
+
     <pre>&lt;script&gt;
      var oldEval = window.eval;
      var newEval = (txt) =>
@@ -157,13 +160,15 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
     </script>
 
     <pre><code class="language-klipse-eval-js">
+var identity = x => x;
+
 var edgeCases = (j) =>
 // a hack. let shoud better be implemented within the procedures
 // makeFun and makeFunFun, dispense with makeLet alltogether
 j[0] === "define"
 && j[2].constructor == Array && j[2][0] === "let"
 && j[1].constructor == String
-? [mathfns[0][0], "889", "9"]
+? ["identity", "'let not allowed in variable definition'"]
 : j;
 
 var letFlat = (j) =>
@@ -178,11 +183,11 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define (fu z) (let ((x 1)) (let ((y 2)) (+ x y z))))
+(define (fu z) (let ((x 1)) (let ((y 2)) (+ x y z)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(fu 7)
+(fu 7) 
     </code></pre>
 
     <p>
@@ -190,28 +195,30 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define value1 (let ((x 1)) (+ x 1)))
+(define value1 (let ((x 1)) (+ x 1))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
 (let ((v (velocity local)))
-(* 1/2 mass (dot-product v v))))
+(* 1/2 mass (dot-product v v)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (define q
  (up (literal-function 'x)
  (literal-function 'y)
- (literal-function 'z)))
+ (literal-function 'z))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((compose (L-free-particle 'm) (Gamma q)) 't)
+((compose (L-free-particle 'm) (Gamma q)) 't) 
     </code></pre>
+
     <p>
         Make floating point and negative numbers possible.
     </p>
+
     <pre><code class="language-klipse-eval-js">
 // a hack. Should be implemented within replaceMath and replaceD
 var insertCommas = (txt) =>
@@ -221,7 +228,7 @@ _insertCommas(txt.replace(/(\d+)\.(\d+)/g, "$1_DOT_$2"))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(-1.7 + 2.9)
+(-1.7 + 2.9) 
     </code></pre>
 
 
@@ -231,24 +238,24 @@ loadEnv("definite_integral")
 
     <pre><code class="language-klipse-eval-js">
 (define (Lagrangian-action L q t1 t2)
-  (definite-integral (compose L (Gamma q)) t1 t2))
+  (definite-integral (compose L (Gamma q)) t1 t2)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (define (test-path t)
   (up (+ (* 4 t) 7)
       (+ (* 3 t) 5)
-      (+ (* 2 t) 1)))
+      (+ (* 2 t) 1))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (Lagrangian-action (L-free-particle 3.0)
-                   test-path 0.0 10.0)
+                   test-path 0.0 10.0) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (define ((make-eta nu t1 t2) t)
-(* (- t t1) (- t t2) (nu t)))
+(* (- t t1) (- t t2) (nu t))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -257,7 +264,7 @@ loadEnv("definite_integral")
     (Lagrangian-action (L-free-particle mass)
                        (+ q (* eps eta))
                        t1
-                       t2)))
+                       t2))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -268,14 +275,17 @@ loadEnv("definite_integral")
 ((varied-free-particle-action 3.0 test-path
                               (up sin cos square)
                               0.0 10.0)
- 0.001)
+ 0.001) 
     </code></pre>
+    <p>
+        This calculation takes a second or two. Append blank to start the calculation.
+    </p>
 
     <pre><code class="language-klipse-eval-js">
 (minimize
   (varied-free-particle-action 3.0 test-path
-                               (up sin cos square)
-                               0.0 10.0)
+   (up sin cos square)
+    0.0 10.0)
   -2.0 1.0)
     </code></pre>
 
@@ -287,14 +297,13 @@ var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_mi
     <pre><code class="language-klipse-eval-js">
 (define ((parametric-path-action Lagrangian t0 q0 t1 q1) qs)
   (let ((path (make-path t0 q0 t1 q1 qs)))
-    (Lagrangian-action Lagrangian path t0 t1)))
+    (Lagrangian-action Lagrangian path t0 t1))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants
 loadEnv("coordinate");
     </code></pre>
-
 
     <pre><code class="language-klipse-eval-js">
 (define (find-path Lagrangian t0 q0 t1 q1 n)
@@ -303,14 +312,14 @@ loadEnv("coordinate");
             (multidimensional-minimize
               (parametric-path-action Lagrangian t0 q0 t1 q1)
               initial-qs)))
-      (make-path t0 q0 t1 q1 minimizing-qs))))
+      (make-path t0 q0 t1 q1 minimizing-qs)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-harmonic m k) local)
   (let ((q (coordinate local))
         (v (velocity local)))
-    (- (* 1/2 m (square v)) (* 1/2 k (square q)))))
+    (- (* 1/2 m (square v)) (* 1/2 k (square q))))) 
     </code></pre>
 
     <p>
@@ -321,25 +330,26 @@ loadEnv("coordinate");
 var _PIHALF_TEMPORARAY = sicmutils.env.pi/2;
     </code></pre>
 
+    <p>
+        This calculation takes a few seconds.
+    </p>
     <pre><code class="language-klipse-eval-js">
 (define q
   (find-path (L-harmonic 1.0 1.0) 0.0 1.0 _PIHALF_TEMPORARAY 0.0 3))
+
     </code></pre>
 
     <p>
-        q is close enough to the cosine
+        Show that q is close enough to the cosine by fixing the puzzle.
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(- (cos 0.8) (q 0.8))
+(- (cos 0.8) (  0.8))
+q
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-    </code></pre>
-
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
