@@ -198,6 +198,34 @@ j.constructor == String && j == "D"
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+jsn0 = textToJson("(let ((x 1)) (let ((y 2) (w 8)) (let ((z 3)) (6 7))))")
+jsn1 = textToJson("(let ((x 1)) (let ((y 2)) (6 7)))")
+jsn2 = textToJson("(let ((x 1)) (4 5))")
+
+var fnr = (j) =>
+j[0] === "let"
+? j[1].concat(fnr(j[2]))
+: [j];
+
+t1 = fnr(jsn0);
+t1[t1.length - 1]; 
+t1.slice(0, t1.length - 1);
+["let", t1.slice(0, t1.length - 1), t1[t1.length - 1]]
+
+var cl = (j) => ["let", j.slice(0, j.length - 1), j[j.length - 1]]
+
+var fl = (j) =>
+j.constructor == Array && j[0] === "let"
+? cl(fnr(j))
+: j.constructor == Array
+? j.map(letFlat)
+: j;
+
+fl(jsn0)
+
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
 var identity = x => x;
 
 var edgeCases = (j) =>
@@ -245,11 +273,13 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
 _COLON_pi = pi;
 __COLON_pi = _pi;
 
-var specialchars =
+var _3_specialchars =
    [["__COLON_$1", /\-:(\w+)/g],
    ["_COLON_$1", /:(\w+)/g],
    ["[ / -$1 $2 ],", /-(\w+)\/(\d+)/g],
    ["[ / $1 $2 ],", /(\w+)\/(\d+)/g]].concat(__specialchars);
+
+var specialchars = _3_specialchars;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -257,6 +287,16 @@ var specialchars =
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var specialchars = _3_specialchars
+.concat([["$1-_GT_$2", /(\w+)->(\w+)/g]]); 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define F->G 3) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(identity F->G) 
     </code></pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>

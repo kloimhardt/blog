@@ -70,6 +70,7 @@ var specialchars =
 ["$1_DOT_$2", /(\d+)\.(\d+)/g],
 ["__COLON_$1", /\-:(\w+)/g],
 ["_COLON_$1", /:(\w+)/g],
+["$1__GT_$2", /(\w+)->(\w+)/g],
 ["[ / -$1 $2 ],", /-(\w+)\/(\d+)/g],
 ["[ / $1 $2 ],", /(\w+)\/(\d+)/g]];
 
@@ -557,13 +558,24 @@ var show_expression = identity;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(define (p->r local)
+  (let ((polar-tuple (coordinate local)))
+    (let ((r (ref polar-tuple 0))
+          (phi (ref polar-tuple 1)))
+      (let ((x (* r (cos phi)))
+            (y (* r (sin phi))))
+        (up x y)))))
+    </code></pre>
 
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  (velocity
+    ((F->C p->r)
+     (up 't (up 'r 'phi) (up 'rdot 'phidot)))))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>
-
-
 
     <h1>
 Footer of this html file
