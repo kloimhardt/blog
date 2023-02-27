@@ -37,23 +37,30 @@ categories: Software
          return name;
      }
     </script>
+    <p>
+        Refactor symbol and 1/2 into specialchars.
+    </p>
 
     <pre><code class="language-klipse-eval-js">
+var symbol = cljs.core.symbol;
+
+var _specialchars =
+[["[ / $1 $2 ],", /(\d+)\/(\d+)/g],
+["_SYMBOL_$1", /\'(\w+)/g]];
+
+specialchars = _specialchars;
+
 var mathfns =
 [["_SLASH_", /\//g],
 ["_STAR_", /\*/g],
 ["_", /\-/g],
 ["_PLUS_", /\+/g],
-["expt", /\^/g]]
+["expt", /\^/g]];
 
 mathfns.map(x=> x[0]).map(loadEnv);
 
-var symbol = cljs.core.symbol;
-
 var replaceMath = (txt) =>
-mathfns.reduce((s,r) => s.replace(r[1],r[0]),
-txt.replace(/\'(\w+)/g,"_SYMBOL_$1")
-.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
+specialchars.concat(mathfns).reduce((s,r) => s.replace(r[1],r[0]), txt);
 
 var swapFirst = (j) =>
 j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
@@ -79,10 +86,12 @@ JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
 var drv = sicmutils.env.D;
 
-var replaceD = (j) =>
+var _replaceD = (j) =>
 j.constructor == Array
 ? j.map(replaceD)
 : j == "D" ? "drv" : j;
+
+replaceD = _replaceD;
 
 ["__GT_infix", "simplify"].map(loadEnv);
 
@@ -160,45 +169,6 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
     </script>
 
     <pre><code class="language-klipse-eval-js">
-var identity = x => x;
-
-var edgeCases = (j) =>
-// a hack. let shoud better be implemented within the procedures
-// makeFun and makeFunFun, dispense with makeLet alltogether
-j[0] === "define"
-&& j[2].constructor == Array && j[2][0] === "let"
-&& j[1].constructor == String
-? ["identity", "'let not allowed in variable definition'"]
-: j;
-
-var letFlat = (j) =>
-// only nesting of two lets possible, but that is more than ok
-j.constructor == Array && j[0] === "let" && j[2][0] === "let"
-? ["let", j[1].concat(j[2][1]),j[2][2]]
-: j.constructor == Array
-? j.map(letFlat)
-: j;
-
-var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define (fu z) (let ((x 1)) (let ((y 2)) (+ x y z)))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(fu 7) 
-    </code></pre>
-
-    <p>
- (define value1 (let ...)) is excluded explicitely.
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-(define value1 (let ((x 1)) (+ x 1))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
 (let ((v (velocity local)))
 (* 1/2 mass (dot-product v v)))) 
@@ -220,11 +190,21 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
     </p>
 
     <pre><code class="language-klipse-eval-js">
-// a hack. Should be implemented within replaceMath and replaceD
-var insertCommas = (txt) =>
-_insertCommas(txt.replace(/(\d+)\.(\d+)/g, "$1_DOT_$2"))
-.replace(/(\d+)_DOT_(\d+)/g, "$1.$2")
-.replace(/_(\d+)/g, "-$1");
+var __specialchars = _specialchars.concat(
+[["$1_DOT_$2", /(\d+)\.(\d+)/g]]);
+
+var specialchars = __specialchars;
+
+var specialchars_2 =
+[["$1.$2", /(\d+)_DOT_(\d+)/g],
+["-$1", /_(\d+)/g]]
+
+var replaceD = (j) =>
+j.constructor == String && j == "D"
+? "drv"
+: j.constructor == String
+? specialchars_2.reduce((s,r) => s.replace(r[1],r[0]), j)
+: _replaceD(j);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -288,6 +268,47 @@ loadEnv("definite_integral")
     0.0 10.0)
   -2.0 1.0)
     </code></pre>
+    <pre><code class="language-klipse-eval-js">
+var identity = x => x;
+
+var edgeCases = (j) =>
+j[0] === "define"
+&& j[2].constructor == Array && j[2][0] === "let"
+&& j[1].constructor == String
+? ["identity", "'let not allowed in variable definition'"]
+: j;
+
+var letFlat = (j) =>
+// only nesting of two lets possible, but that is more than ok
+j.constructor == Array && j[0] === "let" && j[2][0] === "let"
+? ["let", j[1].concat(j[2][1]),j[2][2]]
+: j.constructor == Array
+? j.map(letFlat)
+: j;
+
+var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(identity 1/2) 
+    </code></pre>
+
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu z) (let ((x 1)) (let ((y 2)) (+ x y z)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fu 7) 
+    </code></pre>
+
+    <p>
+ (define value1 (let ...)) is excluded explicitely.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define value1 (let ((x 1)) (+ x 1))) 
+    </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 var make_path = sicmutils.mechanics.lagrange.make_path;
@@ -323,12 +344,21 @@ loadEnv("coordinate");
     </code></pre>
 
     <p>
-        :Pi not implementet yet! In the original code of the <a href="https://tgvaughan.github.io/sicm/">SICM book</a> we read :pi/2 instead of PI-HALF-NOT-IMPLEMENTED. I intend to finish this blog series sometime by implementing the whole book. In the meantime, the implementation is left as an exercise to the reader :-). In any case, if you enjoyed reading, write an email to markus.agwin@gmx.net and mention Immanuel Kant, so I know you came this far. Can you add the necessary replacements to the compiler to get :pi/2 fixed?
+        :Pi not implementet yet! In the original code of the <a href="https://tgvaughan.github.io/sicm/">SICM book</a> we read :pi/2 instead of PI-HALF-NOT-IMPLEMENTED. I intend to finish this blog series sometime by implementing the whole book. In the meantime, the implementation is left as an exercise to the reader :-. In any case, if you enjoyed reading, write an email to markus.agwin@gmx.net and mention Immanuel Kant, so I know you came this far. Can you add the necessary replacements to the compiler to get :pi/2 fixed?
     </p>
 
     <pre><code class="language-klipse-eval-js">
 ["pi", "_pi"].map(loadEnv);
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+// var specialchars = __specialchars.concat(["[ / $1 $2 ],", /(\w+)\/(\d+)/g]);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+insertCommas(replaceMath(makeBrackets("(* -0.5 -pi)")))
+    </code></pre>
+
 
     <pre><code class="language-klipse-eval-js">
 (define PI-HALF-NOT-IMPLEMENTED (* -0.5 -pi)) 
@@ -348,8 +378,7 @@ loadEnv("coordinate");
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(- (cos 0.8) (  0.8))
-q
+(- (cos 0.8) (q 0.8))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
