@@ -323,11 +323,15 @@ loadEnv("coordinate");
     </code></pre>
 
     <p>
-:Pi not implementet yet! In the original code of the book it is :pi/2.
+        :Pi not implementet yet! In the original code of the <a href="https://tgvaughan.github.io/sicm/">SICM book</a> we read :pi/2 instead of PI-HALF-NOT-IMPLEMENTED. I intend to finish this blog series sometime by implementing the whole book. In the meantime, the implementation is left as an exercise to the reader :-). In any case, if you enjoyed reading, write an email to markus.agwin@gmx.net and mention Immanuel Kant, so I know you came this far. Can you add the necessary replacements to the compiler to get :pi/2 fixed?
     </p>
 
     <pre><code class="language-klipse-eval-js">
-var _PIHALF_TEMPORARAY = sicmutils.env.pi/2;
+["pi", "_pi"].map(loadEnv);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define PI-HALF-NOT-IMPLEMENTED (* -0.5 -pi)) 
     </code></pre>
 
     <p>
@@ -335,7 +339,7 @@ var _PIHALF_TEMPORARAY = sicmutils.env.pi/2;
     </p>
     <pre><code class="language-klipse-eval-js">
 (define q
-  (find-path (L-harmonic 1.0 1.0) 0.0 1.0 _PIHALF_TEMPORARAY 0.0 3))
+  (find-path (L-harmonic 1.0 1.0) 0.0 1.0 PI-HALF-NOT-IMPLEMENTED 0.0 3))
 
     </code></pre>
 
