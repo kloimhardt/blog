@@ -56,7 +56,7 @@
 7 + 3
     </code></pre>
 
-    <h1>Main Section</h1>
+    <h1>Implement the Compiler</h1>
 
     <pre><code class="language-klipse-eval-js">
 ["pi", "_pi"].map(loadEnv);
@@ -189,14 +189,15 @@ expr[expr.length-1] === " "
 : "'add blank'";
 
 ["sin", "cos", "velocity", "dot_product",
-"up", "Gamma", "compose",
-"definite_integral","coordinate",
-"minimize", "square"].map(loadEnv);
+"up", "Gamma", "compose", "definite_integral",
+"coordinate", "minimize", "square", "partial",
+"ref", "sqrt"].map(loadEnv);
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
 var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
 var make_path = sicmutils.mechanics.lagrange.make_path;
+var show_expression = identity;
     </code></pre>
 
     <pre>&lt;script&gt;
@@ -216,6 +217,8 @@ var make_path = sicmutils.mechanics.lagrange.make_path;
          : oldEval(txt);
      window.eval = newEval;
     </script>
+
+    <h1>Start the Compiler</h1>
 
     <pre><code class="language-klipse-eval-js">
 ((1 / 2) / 2) 
@@ -308,6 +311,10 @@ var make_path = sicmutils.mechanics.lagrange.make_path;
     <pre><code class="language-klipse-eval-js">
 (1 + 1/2) 
     </code></pre>
+
+    <h1>1 Lagrangian Mechanics</h1>
+
+    <h2>1.4   Computing Actions</h2>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
@@ -407,6 +414,156 @@ var make_path = sicmutils.mechanics.lagrange.make_path;
     <pre><code class="language-klipse-eval-js">
 (- (cos 0.8) (q 0.8))
     </code></pre> 
+
+    <h2>
+        1.5   The Euler–Lagrange Equations
+    </h2>
+    <h3>
+        1.5.2 Computing Lagrange's Equations
+    </h3>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((Lagrange-equations Lagrangian) q)
+  (- (D (compose ((partial 2) Lagrangian) (Gamma q)))
+     (compose ((partial 1) Lagrangian) (Gamma q)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (test-path t)
+  (up (+ (* 'a t) 'a0)
+      (+ (* 'b t) 'b0)
+      (+ (* 'c t) 'c0))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(((Lagrange-equations (L-free-particle 'm))
+  test-path)
+ 't) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  (((Lagrange-equations (L-free-particle 'm))
+    (literal-function 'x))
+   't)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (proposed-solution t)
+  (* 'A (cos (+ (* 'omega t) 'phi)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  (((Lagrange-equations (L-harmonic 'm 'k))
+    proposed-solution)
+   't)) 
+    </code></pre>
+
+    <h4>
+        Exercise 1.11: Kepler's third law
+    </h4>
+
+    <p>
+        Show that a planet in circular orbit satisfies Kepler's third law 
+        n^2a^3=G(M_1 + m_2), where n is the angular frequency of the orbit and a
+        is the distance between sun and planet. (Hint: use the reduced mass to construct the Lagrangian)
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-central-polar m V) local)
+  (let ((q (coordinate local))
+        (qdot (velocity local)))
+    (let ((r (ref q 0))     (phi (ref q 1))
+                            (rdot (ref qdot 0)) (phidot (ref qdot 1)))
+      (- (* 1/2 m
+            (+ (square rdot) (square (* r phidot))) )
+         (V r))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((gravitational-energy G m1 m2) r)
+  (- (/ (* G m1 m2) r))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (circle t)
+  (up 'a (* 'n t))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define lagrangian-reduced
+(L-central-polar (/ (* 'M_1 'm_2) (+ 'M_1 'm_2))
+(gravitational-energy 'G 'M_1 'm_2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(((Lagrange-equations lagrangian-reduced) circle) 't) 
+    </code></pre>
+    <h2>
+        1.6 How to find Lagrangians
+    </h2>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-uniform-acceleration m g) local)
+  (let ((q (coordinate local))
+        (v (velocity local)))
+    (let ((y (ref q 1)))
+      (- (* 1/2 m (square v)) (* m g y))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  (((Lagrange-equations
+      (L-uniform-acceleration 'm 'g))
+    (up (literal-function 'x)
+        (literal-function 'y)))
+   't)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-central-rectangular m U) local)
+  (let ((q (coordinate local))
+        (v (velocity local)))
+    (- (* 1/2 m (square v))
+       (U (sqrt (square q)))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  (((Lagrange-equations
+      (L-central-rectangular 'm (literal-function 'U)))
+    (up (literal-function 'x)
+        (literal-function 'y)))
+   't)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  (((Lagrange-equations
+      (L-central-polar 'm (literal-function 'U)))
+    (up (literal-function 'r)
+        (literal-function 'phi)))
+   't)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((F->C F) local)
+  (up (time local)
+      (F local)
+      (+ (((partial 0) F) local)
+         (* (((partial 1) F) local)
+            (velocity local))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+
 
     <h1>
 Footer of this html file
