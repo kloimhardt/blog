@@ -71,6 +71,7 @@ var specialchars =
 ["__COLON_$1", /\-:(\w+)/g],
 ["_COLON_$1", /:(\w+)/g],
 ["$1__GT_$2", /(\w+)->(\w+)/g],
+[" state__GT_t ", /(\s+)time(\s+)/g],
 ["[ / -$1 $2 ],", /-(\w+)\/(\d+)/g],
 ["[ / $1 $2 ],", /(\w+)\/(\d+)/g]];
 
@@ -96,7 +97,7 @@ j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
 
 var insertCommas = (txt) =>
 txt.replace(/(\w+)/g,'"$1",')
-.replace(/\,\s+\]/g," ]");
+.replace(/\,(\s+)\]/g," ]");
 
 var makeBrackets = (txt) =>
 txt.trim()
@@ -199,7 +200,7 @@ expr[expr.length-1] === " "
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose", "definite_integral",
 "coordinate", "minimize", "square", "partial",
-"ref", "sqrt", "time"].map(loadEnv);
+"ref", "sqrt", "state__GT_t"].map(loadEnv);
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
@@ -582,7 +583,86 @@ var show_expression = identity;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(define (L-central-polar m U)
+  (compose (L-central-rectangular m U) (F->C p->r))) 
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+  ((L-central-polar 'm (literal-function 'U))
+   (up 't (up 'r 'phi) (up 'rdot 'phidot)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-free-rectangular m) local)
+  (let ((vx (ref (velocities local) 0))
+        (vy (ref (velocities local) 1)))
+    (* 1/2 m (+ (square vx) (square vy))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (L-free-polar m)
+  (compose (L-free-rectangular m) (F->C p->r))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((F Omega) local)
+  (let ((t (time local))
+        (r (ref (coordinates local) 0))
+        (theta (ref (coordinates local) 1)))
+    (up r (+ theta (* Omega t))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (L-rotating-polar m Omega)
+  (compose (L-free-polar m) (F->C (F Omega)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (L-rotating-rectangular m Omega)
+  (compose (L-rotating-polar m Omega) (F->C r->p))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (p->r local)
+  (let ((polar-tuple (coordinate local)))
+    (let ((r (ref polar-tuple 0))
+          (phi (ref polar-tuple 1)))
+      (let ((x (* r (cos phi)))
+            (y (* r (sin phi))))
+        (up x y)))))
+
+(defn r->p
+  "rectangular to polar coordinates of state."
+  [[_ [x y :as q]]]
+  (up (sqrt (square q)) (atan (/ y x))))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (r->p local)
+  (let ((rect-tuple (coordinate local))
+    (let ((x (ref rect-tuple 0))
+          (y (ref rect-tuple 1)))
+       (let ((r (sqrt (square rect-tuple)))
+             (phi (atan (/ y x))))
+         (up r phi)))))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
 
     <h1>
 Footer of this html file

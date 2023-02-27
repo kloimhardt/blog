@@ -266,8 +266,10 @@ var specialchars = _3_specialchars;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var specialchars = _3_specialchars
-.concat([["$1-_GT_$2", /(\w+)->(\w+)/g]]); 
+var _4_specialchars = _3_specialchars
+.concat([["$1-_GT_$2", /(\w+)->(\w+)/g]]);
+
+var specialchars = _4_specialchars
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -277,6 +279,29 @@ var specialchars = _3_specialchars
     <pre><code class="language-klipse-eval-js">
 (identity F->G) 
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var _5_specialchars = _4_specialchars
+.concat([["state__GT_t", /(\s+)time(\s+)/g]]);
+
+var specialchars = _5_specialchars;
+
+loadEnv("state__GT_t");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(time (up 't (up 'r 'phi) (up 'rdot 'phidot))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
