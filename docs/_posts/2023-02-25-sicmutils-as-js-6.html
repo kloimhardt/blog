@@ -198,34 +198,6 @@ j.constructor == String && j == "D"
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-jsn0 = textToJson("(let ((x 1)) (let ((y 2) (w 8)) (let ((z 3)) (6 7))))")
-jsn1 = textToJson("(let ((x 1)) (let ((y 2)) (6 7)))")
-jsn2 = textToJson("(let ((x 1)) (4 5))")
-
-var fnr = (j) =>
-j[0] === "let"
-? j[1].concat(fnr(j[2]))
-: [j];
-
-t1 = fnr(jsn0);
-t1[t1.length - 1]; 
-t1.slice(0, t1.length - 1);
-["let", t1.slice(0, t1.length - 1), t1[t1.length - 1]]
-
-var cl = (j) => ["let", j.slice(0, j.length - 1), j[j.length - 1]]
-
-var fl = (j) =>
-j.constructor == Array && j[0] === "let"
-? cl(fnr(j))
-: j.constructor == Array
-? j.map(letFlat)
-: j;
-
-fl(jsn0)
-
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 var identity = x => x;
 
 var edgeCases = (j) =>
@@ -235,10 +207,17 @@ j[0] === "define"
 ? ["identity", "'let not allowed in variable definition'"]
 : j;
 
+var letFlat2 = (j) =>
+j[0] === "let"
+? j[1].concat(letFlat2(j[2]))
+: [j];
+
+var constructLet = (j) =>
+["let", j.slice(0, j.length - 1), j[j.length - 1]]
+
 var letFlat = (j) =>
-// only nesting of two lets possible, but that is more than ok
-j.constructor == Array && j[0] === "let" && j[2][0] === "let"
-? ["let", j[1].concat(j[2][1]),j[2][2]]
+j.constructor == Array && j[0] === "let"
+? constructLet(letFlat2(j))
 : j.constructor == Array
 ? j.map(letFlat)
 : j;

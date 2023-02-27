@@ -138,10 +138,17 @@ j[0] === "define"
 ? ["identity", "'let not allowed in variable definition'"]
 : j;
 
+var letFlat2 = (j) =>
+j[0] === "let"
+? j[1].concat(letFlat2(j[2]))
+: [j];
+
+var constructLet = (j) =>
+["let", j.slice(0, j.length - 1), j[j.length - 1]]
+
 var letFlat = (j) =>
-// only nesting of two lets possible, but that is more than ok
-j.constructor == Array && j[0] === "let" && j[2][0] === "let"
-? ["let", j[1].concat(j[2][1]),j[2][2]]
+j.constructor == Array && j[0] === "let"
+? constructLet(letFlat2(j))
 : j.constructor == Array
 ? j.map(letFlat)
 : j;
@@ -192,7 +199,7 @@ expr[expr.length-1] === " "
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose", "definite_integral",
 "coordinate", "minimize", "square", "partial",
-"ref", "sqrt"].map(loadEnv);
+"ref", "sqrt", "time"].map(loadEnv);
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
@@ -564,14 +571,14 @@ var show_expression = identity;
           (phi (ref polar-tuple 1)))
       (let ((x (* r (cos phi)))
             (y (* r (sin phi))))
-        (up x y)))))
+        (up x y))))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (show-expression
   (velocity
     ((F->C p->r)
-     (up 't (up 'r 'phi) (up 'rdot 'phidot)))))
+     (up 't (up 'r 'phi) (up 'rdot 'phidot))))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
