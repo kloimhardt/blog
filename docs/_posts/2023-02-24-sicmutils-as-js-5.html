@@ -299,13 +299,9 @@ In the next calculation, append a blank to see the result.
     <pre><code class="language-klipse-eval-js">
 (q 't)
     </code></pre>
-    <p>
-        In the next calculation, do you know where to put the <code>D</code> to get it right?
-    </p>
 
     <pre><code class="language-klipse-eval-js">
-((  q) 't)
-D
+((D  q) 't) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -316,26 +312,9 @@ D
 ((Gamma q) 't) 
     </code></pre>
 
-    <p>
-        Get the <code>'m</code> right.
-    </p>
     <pre><code class="language-klipse-eval-js">
-((compose (L-free-particle   ) (Gamma q)) 't)
-'m
+((compose (L-free-particle 'm) (Gamma q)) 't) 
     </code></pre>
-
-    <p>
-        old stuff still works
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x) 
-    </code></pre>
-
-    <p>
-        new stuff
-    </p>
-
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>

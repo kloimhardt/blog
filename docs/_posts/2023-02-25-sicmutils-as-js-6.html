@@ -20,6 +20,10 @@ categories: Software
 <body>
     (This post is part of a series, all with the same title)
 
+    <p>
+        In this last post, we develop the compiler. To see the example of the whole book, look <a href="/blog/html/sicmutils-as-js-book.html">here</a>.
+    </p>
+
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
@@ -168,35 +172,6 @@ var literal_function = sicmutils.abstract$.function$.literal_function;
     </script>
 
     <p>
-        old stuff still works
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x) 
-    </code></pre>
-
-<p>
-    new stuff
-</p>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((L-free-particle mass) local)
-(let ((v (velocity local)))
-(* 1/2 mass (dot-product v v)))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define q
- (up (literal-function 'x)
- (literal-function 'y)
- (literal-function 'z))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((compose (L-free-particle 'm) (Gamma q)) 't) 
-    </code></pre>
-
-    <p>
         Make floating point and negative numbers possible.
     </p>
 
@@ -220,64 +195,6 @@ j.constructor == String && j == "D"
 
     <pre><code class="language-klipse-eval-js">
 (-1.7 + 2.9) 
-    </code></pre>
-
-
-    <pre><code class="language-klipse-eval-js">
-loadEnv("definite_integral")
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define (Lagrangian-action L q t1 t2)
-  (definite-integral (compose L (Gamma q)) t1 t2)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define (test-path t)
-  (up (+ (* 4 t) 7)
-      (+ (* 3 t) 5)
-      (+ (* 2 t) 1))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(Lagrangian-action (L-free-particle 3.0)
-                   test-path 0.0 10.0) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((make-eta nu t1 t2) t)
-(* (- t t1) (- t t2) (nu t))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((varied-free-particle-action mass q nu t1 t2) eps)
-  (let ((eta (make-eta nu t1 t2)))
-    (Lagrangian-action (L-free-particle mass)
-                       (+ q (* eps eta))
-                       t1
-                       t2))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-["minimize", "square"].map(loadEnv);
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((varied-free-particle-action 3.0 test-path
-                              (up sin cos square)
-                              0.0 10.0)
- 0.001) 
-    </code></pre>
-    <p>
-        This calculation takes a second or two. Append blank to start the calculation.
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-(minimize 
-  (varied-free-particle-action 3.0 test-path
-   (up sin cos square)
-    0.0 10.0)
-  -2.0 1.0)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -323,39 +240,6 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var make_path = sicmutils.mechanics.lagrange.make_path;
-var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((parametric-path-action Lagrangian t0 q0 t1 q1) qs)
-  (let ((path (make-path t0 q0 t1 q1 qs)))
-    (Lagrangian-action Lagrangian path t0 t1))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants
-loadEnv("coordinate");
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define (find-path Lagrangian t0 q0 t1 q1 n)
-  (let ((initial-qs (linear-interpolants q0 q1 n)))
-    (let ((minimizing-qs
-            (multidimensional-minimize
-              (parametric-path-action Lagrangian t0 q0 t1 q1)
-              initial-qs)))
-      (make-path t0 q0 t1 q1 minimizing-qs)))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((L-harmonic m k) local)
-  (let ((q (coordinate local))
-        (v (velocity local)))
-    (- (* 1/2 m (square v)) (* 1/2 k (square q))))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 ["pi", "_pi"].map(loadEnv);
 
 _COLON_pi = pi;
@@ -371,23 +255,6 @@ var specialchars =
     <pre><code class="language-klipse-eval-js">
 (identity -:pi/2) 
     </code></pre>
-
-    <p>
-        This calculation takes a few seconds.
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-(define q 
-  (find-path (L-harmonic 1.0 1.0) 0.0 1.0 :pi/2 0.0 3))
-    </code></pre>
-
-    <p>
-         q is close enough to the cosine.
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-(- (cos 0.8) (q 0.8))
-    </code></pre> 
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>
