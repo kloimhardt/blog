@@ -10,20 +10,32 @@
      };
     </script>
 </head>
-
 <body>
-    (This post is part of a series, all with the same title)
+    <h1>Header of this html file </h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"&gt;
 
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+        &lt;script&gt;
+         window.klipse_settings = {
+             selector_eval_js: '.language-klipse-eval-js'
+         };
+        &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+      var loadEnv = (name) => {
+          window[name] = sicmutils.env[name];
+          return name;
+      }
+    &lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-
-    <pre>&lt;script&gt;
- var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
-    return name;
- }
-&lt;/script&gt;</pre>
 
     <script>
      var loadEnv = (name) => {
@@ -31,9 +43,20 @@
          return name;
      }
     </script>
-    <p>
-        Refactor symbol and 1/2 into specialchars.
-    </p>
+
+    <h1>Code blocks look like this</h1>
+
+    <pre>
+    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+7 + 3
+    &lt;/code&gt;&lt;/pre&gt
+    </pre>
+
+    <pre><code class="language-klipse-eval-js">
+7 + 3
+    </code></pre>
+
+    <h1>Main Section</h1>
 
     <pre><code class="language-klipse-eval-js">
 ["pi", "_pi"].map(loadEnv);
@@ -165,15 +188,15 @@ expr[expr.length-1] === " "
 ? jsonToJs(modifyJson(textToJson(expr)))
 : "'add blank'";
 
-var literal_function = sicmutils.abstract$.function$.literal_function;
-var make_path = sicmutils.mechanics.lagrange.make_path;
-var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
-var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
-
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose",
 "definite_integral","coordinate",
-"minimize", "square"].map(loadEnv); null;
+"minimize", "square"].map(loadEnv);
+
+var literal_function = sicmutils.abstract$.function$.literal_function;
+var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
+var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
+var make_path = sicmutils.mechanics.lagrange.make_path;
     </code></pre>
 
     <pre>&lt;script&gt;
@@ -194,12 +217,8 @@ var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
      window.eval = newEval;
     </script>
 
-   <p>
-        old stuff still works
-    </p>
-
     <pre><code class="language-klipse-eval-js">
-((x / 2) / 2) 
+((1 / 2) / 2) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -223,24 +242,71 @@ var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(1 + cos(sin(0))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(sin((314 / 100)) ^ 2) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
 ((sin ^ 2) (314 / 100)) 
     </code></pre>
 
+    <pre><code class="language-klipse-eval-js">
+((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (cos (sin 0)) (* (- (/ 2 3) 4) (expt 5 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * cos) 0) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(cos 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * (sin ^ 2)) 'x) 
+    </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 ((D (3 * (sin ^ 2))) 'x) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x) 
+(define value 6) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(identity value) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (funame x) (x + 1)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((ffuname x) y) (x + y)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+((ffuname 4) 5) 
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+(define (fulet x) (let ((y 1)) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fulet 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + 1/2) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -254,6 +320,10 @@ var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
  (up (literal-function 'x)
  (literal-function 'y)
  (literal-function 'z))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((Gamma q) 't) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -299,7 +369,7 @@ var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
     </code></pre>
     <pre><code class="language-klipse-eval-js">
 
-(minimize
+(minimize 
   (varied-free-particle-action 3.0 test-path
    (up sin cos square)
     0.0 10.0)
@@ -330,17 +400,24 @@ var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define q
+(define q 
   (find-path (L-harmonic 1.0 1.0) 0.0 1.0 :pi/2 0.0 3))
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (- (cos 0.8) (q 0.8))
-    </code></pre>
+    </code></pre> 
 
-    <p>
-        new stuff
-    </p>
+    <h1>
+Footer of this html file
+    </h1>
+
+    <pre>
+&lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
 </html>

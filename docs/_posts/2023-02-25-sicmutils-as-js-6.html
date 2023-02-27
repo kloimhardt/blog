@@ -273,7 +273,7 @@ loadEnv("definite_integral")
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(minimize
+(minimize 
   (varied-free-particle-action 3.0 test-path
    (up sin cos square)
     0.0 10.0)
@@ -355,10 +355,6 @@ loadEnv("coordinate");
     (- (* 1/2 m (square v)) (* 1/2 k (square q))))) 
     </code></pre>
 
-    <p>
-        :Pi not implementet yet! In the original code of the <a href="https://tgvaughan.github.io/sicm/">SICM book</a> we read :pi/2 instead of PI-HALF-NOT-IMPLEMENTED. I intend to finish this blog series sometime by implementing the whole book. In the meantime, the implementation is left as an exercise to the reader :-. In any case, if you enjoyed reading, write an email to markus.agwin@gmx.net and mention Immanuel Kant, so I know you came this far. Can you add the necessary replacements to the compiler to get :pi/2 fixed?
-    </p>
-
     <pre><code class="language-klipse-eval-js">
 ["pi", "_pi"].map(loadEnv);
 
@@ -381,7 +377,7 @@ var specialchars =
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define q
+(define q 
   (find-path (L-harmonic 1.0 1.0) 0.0 1.0 :pi/2 0.0 3))
     </code></pre>
 
@@ -391,7 +387,7 @@ var specialchars =
 
     <pre><code class="language-klipse-eval-js">
 (- (cos 0.8) (q 0.8))
-    </code></pre>
+    </code></pre> 
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>

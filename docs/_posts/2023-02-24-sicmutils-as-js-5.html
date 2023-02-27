@@ -128,6 +128,9 @@ expr[expr.length-1] === " "
      window.eval = newEval;
     </script>
 
+    <p>
+        old stuff still works
+    </p>
     <pre><code class="language-klipse-eval-js">
 ((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
     </code></pre>
@@ -137,12 +140,15 @@ expr[expr.length-1] === " "
     </code></pre>
 
     <p>
+        New stuff
+    </p>
+
+    <p>
         I took the liberty to clean the code regarding elementary math functions a bit, the changes are purely compiler internal namings. Forexample, the <code>add</code> is now called <code>_PLUS_</code> and the minus sign is internally represented by an underscore, not <code>sub</code>.
     </p>
     <pre><code class="language-klipse-eval-js">
 [textToJson("(1 + 1)")," and " , textToJson("(1 - 1)")].toString()
     </code></pre>
-
 
     <pre><code class="language-klipse-eval-js">
 var preAmble = (j) =>
