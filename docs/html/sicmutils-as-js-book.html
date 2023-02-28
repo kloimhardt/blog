@@ -117,7 +117,8 @@ JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 var drv = sicmutils.env.D;
 
 var specialchars_2 =
-    [["$1.$2", /(\d+)_DOT_(\d+)/g],
+    [["_SYMBOL_$1^$2", /_SYMBOL_(\w+)expt(\w+)/],
+     ["$1.$2", /(\d+)_DOT_(\d+)/g],
      ["-$1", /_(\d+)/g]];
 
 var replaceD = (j) =>
@@ -209,7 +210,8 @@ expr[expr.length-1] === " "
 "up", "Gamma", "compose", "definite_integral",
 "coordinate", "minimize", "square", "partial",
 "ref", "sqrt", "atan", "down", "solve_linear_left",
-"state_advancer", "cross_product"].map(loadEnv);
+"state_advancer", "cross_product", "Rx", "Ry", "Rz",
+"osculating_path"].map(loadEnv);
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
@@ -217,7 +219,8 @@ var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
 var make_path = sicmutils.mechanics.lagrange.make_path;
 var show_expression = identity;
 var velocities = velocity;
-var coordinates = coordinate; null;
+var coordinates = coordinate;
+var vector_length = cljs.core.count; null;
     </code></pre>
 
     <pre>&lt;script&gt;
@@ -237,100 +240,6 @@ var coordinates = coordinate; null;
          : oldEval(txt);
      window.eval = newEval;
     </script>
-
-    <h1>Start the Compiler</h1>
-
-    <pre><code class="language-klipse-eval-js">
-((1 / 2) / 2) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(3 * (1 / 2)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(1 + (((2 / 3) - 4) * 5)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(2 ^ 3) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(1 + (cos 0)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(+ 1 (cos 0)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((sin ^ 2) (314 / 100)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(+ (cos (sin 0)) (* (- (/ 2 3) 4) (expt 5 2))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(3 * (cos 0)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((3 * cos) 0) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(cos 'x) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((3 * (sin ^ 2)) 'x) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-((D (3 * (sin ^ 2))) 'x) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define value 6) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(identity value) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define (funame x) (x + 1)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(funame 4) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((ffuname x) y) (x + y)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-
-((ffuname 4) 5) 
-    </code></pre>
-    <pre><code class="language-klipse-eval-js">
-(define (fulet x) (let ((y 1)) (+ x y))) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(fulet 4) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(1 + 1/2) 
-    </code></pre>
 
     <h1>1 Lagrangian Mechanics</h1>
 
@@ -1018,13 +927,179 @@ var coordinates = coordinate; null;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((Lagrangian->energy (LR3B1 ’m ’a_0 ’a_1 ’Omega ’GM_0 ’GM_1))
-(up ’t (up ’x_r ’y_r) (up ’v_r^x ’v_r^y)))
+((Lagrangian->energy (LR3B1 'm 'a_0 'a_1 'Omega 'GM_0 'GM_1))
+(up 't (up 'x_r 'y_r) (up 'v_r^x 'v_r^y)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (* 1/2 'm (expt 'v_r^x 2))
+(* 1/2 'm (expt 'v_r^y 2))
+(/ (* -1 'GM_0 'm)
+(sqrt (+ (expt (+ 'x_r 'a_0) 2) (expt 'y_r 2))))
+(/ (* -1 'GM_1 'm)
+(sqrt (+ (expt (- 'x_r 'a_1) 2) (expt 'y_r 2))))
+(* -1/2 'm (expt 'Omega 2) (expt 'x_r 2))
+(* -1/2 'm (expt 'Omega 2) (expt 'y_r 2)))
+    </code></pre>
+
+    <h3>1.8.5 Noether’s Theorem</h3>
+
+    <pre><code class="language-klipse-eval-js">
+(define (F-tilde angle-x angle-y angle-z)
+(compose (Rx angle-x) (Ry angle-y) (Rz angle-z) coordinate)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-central-rectangular m U) state)
+(let ((q (coordinate state))
+(v (velocity state)))
+(- (* 1/2 m (square v))
+(U (sqrt (square q)))))) 
+    </code></pre>
+
+    <p>
+        A <code>let</code> within a variable definition is not allowed
+        in our little Scheme compiler,
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define the-Noether-integral
+  (let ((L (L-central-rectangular
+              'm (literal-function 'U))))
+     (* ((partial 2) L) ((D F-tilde) 0 0 0)))) 
+    </code></pre>
+
+    <p>
+        ... so we split in two expressions.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define let-L (L-central-rectangular
+              'm (literal-function 'U))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define the-Noether-integral
+  (* ((partial 2) let-L) ((D F-tilde) 0 0 0))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(the-Noether-integral
+(up 't
+(up 'x 'y 'z)
+(up 'vx 'vy 'vz))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(down (+ (* 'm 'vy 'z) (* -1 'm 'vz 'y))
+(+ (* 'm 'vz 'x) (* -1 'm 'vx 'z))
+(+ (* 'm 'vx 'y) (* -1 'm 'vy 'x))) 
+    </code></pre>
+
+    <h2>1.9   Abstraction of Path Functions</h2>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((Gamma-bar f-bar) local)
+((f-bar (osculating-path local)) (time local))) 
+    </code></pre>
+
+    <p>
+        <code>define</code> withing <code>define</code> is not allowed in
+        our little Scheme compiler ...
+    </p>
+
+
+    <pre><code class="language-klipse-eval-js">
+(define (F->C F)
+(define (C local)
+(let ((n (vector-length local)))
+(define (f-bar q-prime)
+(define q
+(compose F (Gamma q-prime)))
+(Gamma q n))
+((Gamma-bar f-bar) local)))
+C) ;;do not execute
+    </code></pre>
+
+    <p>
+        ... so we use <code>let</code>
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (F->C F)
+  (let ((C (lambda (local)
+    (let ((n (vector-length local)  )
+          (f-bar (lambda (q-prime)
+                   (let ((q (compose F (Gamma q-prime))  ))
+                     (Gamma q n)))))
+      ((Gamma-bar f-bar) local)))))
+    C)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+((F->C p->r)
+(up 't (up 'r 'theta) (up 'rdot 'thetadot)))) 
+    </code></pre>
+
+    <p>
+        <code>define</code> withing <code>define</code> is not allowed in
+        our little Scheme compiler ...
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (Dt F)
+(define (DtF state)
+(let ((n (vector-length state)))
+(define (DF-on-path q)
+(D (compose F (Gamma q (- n 1)))))
+((Gamma-bar DF-on-path) state)))
+DtF);;do not execute
+    </code></pre>
+
+<p>
+    ... so we use <code>let</code>
+</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (Dt F)
+  (let ((DtF (lambda (state)
+               (let ((n (vector-length state))
+                   (DF-on-path (lambda (q)
+                                 (D (compose F (Gamma q (- n 1)))))))
+                 ((Gamma-bar DF-on-path) state)))))
+    DtF)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (Euler-Lagrange-operator L)
+(- (Dt ((partial 2) L)) ((partial 1) L))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((Euler-Lagrange-operator
+   (L-harmonic 'm 'k))
+     (up 't 'x 'v 'a)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (* 'a 'm) (* 'k 'x)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((compose
+(Euler-Lagrange-operator (L-harmonic 'm 'k))
+(Gamma (literal-function 'x) 4))
+'t) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (* 'k ((literal-function 'x) 't))
+   (* 'm (((expt D 2) (literal-function 'x)) 't))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
     </code></pre>
-
 
 
     <h1>
