@@ -123,7 +123,7 @@ var makeLet = (j, callBack) =>
 "{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
 + " return " +  callBack(j[2]) + "; }"
 
-var jsonToJs = (j) =>
+var _jsonToJs = (j) =>
 j.constructor == Array && j[0] === "let"
 ? makeLet(j, jsonToJs)
 :j.constructor == Array && j[0] === "define"
@@ -141,6 +141,8 @@ j.constructor == Array && j[0] === "let"
 :j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
 : j;
+
+var jsonToJs = _jsonToJs;
 
 var expressionToJs = (expr) =>
 expr[expr.length-1] === " "
@@ -181,9 +183,11 @@ var __specialchars = _specialchars.concat(
 
 var specialchars = __specialchars;
 
-var specialchars_2 =
+var _specialchars_2 =
 [["$1.$2", /(\d+)_DOT_(\d+)/g],
 ["-$1", /_(\d+)/g]]
+
+specialchars_2 = _specialchars_2;
 
 var replaceD = (j) =>
 j.constructor == String && j == "D"
@@ -294,12 +298,52 @@ loadEnv("state__GT_t");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var jsonCode = textToJson("(lambda (x y) (+ x y))");
+
+var makeLambda = (j, callBack) =>
+"(" + j[1] + ") => " + callBack(j[2]) +";";
+
+makeLambda(jsonCode, e => "<" + e + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var __jsonToJs = (j) =>
+j.constructor == Array && j[0] === "lambda"
+? makeLambda(j, jsonToJs)
+: _jsonToJs(j);
+
+var jsonToJs = __jsonToJs;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(define funame (lambda (x y) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 1 2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu x)
+  (let ((ffu (lambda (y)
+               (let ((r 1))
+                 (+ y x r)))))
+    ffu)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((fu 3) 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var __specialchars_2 =
+    [["_SYMBOL_$1^$2", /_SYMBOL_(\w+)expt(\w+)/]].concat(_specialchars_2);
+
+specialchars_2 = __specialchars_2;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+('v_r^x ^ 4) 
     </code></pre>
 
 

@@ -181,7 +181,7 @@ var makeFun = (j, callBack) =>
 "var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
 + callBack(j[2]) +";";
 
-makeFun(jsonCode, x=> "<" + x + ">")
+makeFun(jsonCode, e=> "<" + e + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -209,7 +209,7 @@ var makeFunFun = (j, callBack) =>
 "var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
 + "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
 
-makeFunFun(jsonCode, x=> "<" + x + ">")
+makeFunFun(jsonCode, e=> "<" + e + ">")
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -243,7 +243,7 @@ var makeLet = (j, callBack) =>
 "{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
 + " return " +  callBack(j[2]) + "; }"
 
-makeLet(jsonCode, x=>"<"+ x +">");
+makeLet(jsonCode, e=>"<"+ e +">");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
