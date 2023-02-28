@@ -206,7 +206,7 @@ expr[expr.length-1] === " "
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose", "definite_integral",
 "coordinate", "minimize", "square", "partial",
-"ref", "sqrt", "atan", "down"].map(loadEnv);
+"ref", "sqrt", "atan", "down", "solve_linear_left"].map(loadEnv);
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
@@ -570,6 +570,8 @@ var coordinates = coordinate;
    't)) 
     </code></pre>
 
+    <h3>1.6.1 Coordinate Transformations</h3>
+
     <pre><code class="language-klipse-eval-js">
 (define ((F->C F) local)
   (up (time local)
@@ -607,12 +609,7 @@ var coordinates = coordinate;
    (up 't (up 'r 'phi) (up 'rdot 'phidot)))) 
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-(define ((L-free-rectangular m) local)
-  (let ((vx (ref (velocities local) 0))
-        (vy (ref (velocities local) 1)))
-    (* 1/2 m (+ (square vx) (square vy))))) 
-    </code></pre>
+    <h4>Coriolis and centrifugal forces</h4>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-rectangular m) local)
@@ -699,8 +696,128 @@ var coordinates = coordinate;
 (* 'm (((expt D 2) y_r) 't)))) 
     </code></pre>
 
+    <h3>1.6.2 Systems with Rigid Constraints</h3>
+    <h4>A pendulum driven at the pivot</h4>
+
+    <p>See <a href="https://kloimhardt.github.io/cljtiles.html?page=116">here</a> for a presentation of the Driven Pendulum using visual programming</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((T-pend m l g ys) local)
+(let ((t (time local))
+(theta (coordinate local))
+(thetadot (velocity local)))
+(let ((vys (D ys)))
+(* 1/2 m
+(+ (square (* l thetadot))
+(square (vys t))
+(* 2 l (vys t) thetadot (sin theta))))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((V-pend m l g ys) local)
+(let ((t (time local))
+      (theta (coordinate local)))
+  (* m g (- (ys t) (* l (cos theta)))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define L-pend (- T-pend V-pend)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+(((Lagrange-equations
+(L-pend 'm 'l 'g (literal-function 'y_s)))
+(literal-function 'theta))
+'t)) 
+    </code></pre>
+
+    <h3>
+        1.6.3 Constraints as Coordinate Transformations
+    </h3>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((L-uniform-acceleration m g) local)
+(let ((q (coordinate local))
+(v (velocity local)))
+(let ((y (ref q 1)))
+(- (* 1/2 m (square v)) (* m g y))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((dp-coordinates l y_s) local)
+(let ((t (time local))
+(theta (coordinate local)))
+(let ((x (* l (sin theta)))
+(y (- (y_s t) (* l (cos theta)))))
+(up x y)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (L-pend m l g y_s)
+(compose (L-uniform-acceleration m g)
+(F->C (dp-coordinates l y_s)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(show-expression
+((L-pend 'm 'l 'g (literal-function 'y_s))
+(up 't 'theta 'thetadot))) 
+    </code></pre>
+
+    <h3>1.7   Evolution of Dynamical State</h3>
+
+    <pre><code class="language-klipse-eval-js">
+(define (Lagrangian->acceleration L)
+(let ((P ((partial 2) L)) (F ((partial 1) L)))
+(solve-linear-left
+((partial 2) P)
+(- F
+(+ ((partial 0) P)
+(* ((partial 1) P) velocity)))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (Lagrangian->state-derivative L)
+(let ((acceleration (Lagrangian->acceleration L)))
+(lambda (state)
+(up 1
+(velocity state)
+(acceleration state))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (harmonic-state-derivative m k)
+(Lagrangian->state-derivative (L-harmonic m k)))
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((harmonic-state-derivative 'm 'k)
+(up 't (up 'x 'y) (up 'v_x 'v_y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(up 1 (up 'v_x 'v_y) (up (/ (* -1 'k 'x) 'm) (/ (* -1 'k 'y) 'm))) 
+    </code></pre>
+
     <pre><code class="language-klipse-eval-js">
     </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+    </code></pre>
+
 
 
     <h1>
