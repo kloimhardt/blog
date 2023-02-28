@@ -65,7 +65,7 @@
     <h1>Implement the Compiler</h1>
 
     <pre><code class="language-klipse-eval-js">
-["pi", "_pi"].map(loadEnv);
+["pi", "_pi", "state__GT_t"].map(loadEnv);
 
 var symbol = cljs.core.symbol;
 var _COLON_pi = pi;
@@ -206,13 +206,15 @@ expr[expr.length-1] === " "
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose", "definite_integral",
 "coordinate", "minimize", "square", "partial",
-"ref", "sqrt", "state__GT_t"].map(loadEnv);
+"ref", "sqrt", "atan", "down"].map(loadEnv);
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
 var linear_interpolants = sicmutils.mechanics.lagrange.linear_interpolants;
 var make_path = sicmutils.mechanics.lagrange.make_path;
 var show_expression = identity;
+var velocities = velocity;
+var coordinates = coordinate;
     </code></pre>
 
     <pre>&lt;script&gt;
@@ -389,8 +391,10 @@ var show_expression = identity;
                               0.0 10.0)
  0.001) 
     </code></pre>
-    <pre><code class="language-klipse-eval-js">
 
+    <p>Calculation should not take more than 5 seconds. Add a blank at the and to start calculation. Somtimes it blocks the page.</p>
+
+    <pre><code class="language-klipse-eval-js">
 (minimize 
   (varied-free-particle-action 3.0 test-path
    (up sin cos square)
@@ -421,10 +425,14 @@ var show_expression = identity;
     (- (* 1/2 m (square v)) (* 1/2 k (square q))))) 
     </code></pre>
 
+    <p> Calculation takes a few seconds, add a blank at the and to start</p>
+
     <pre><code class="language-klipse-eval-js">
 (define q 
   (find-path (L-harmonic 1.0 1.0) 0.0 1.0 :pi/2 0.0 3))
     </code></pre>
+
+    <p> Add a blank at the and to start</p>
 
     <pre><code class="language-klipse-eval-js">
 (- (cos 0.8) (q 0.8))
@@ -607,6 +615,13 @@ var show_expression = identity;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(define ((L-free-rectangular m) local)
+  (let ((vx (ref (velocities local) 0))
+        (vy (ref (velocities local) 1)))
+    (* 1/2 m (+ (square vx) (square vy))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
 (define (L-free-polar m)
   (compose (L-free-rectangular m) (F->C p->r))) 
     </code></pre>
@@ -629,41 +644,59 @@ var show_expression = identity;
   (compose (L-rotating-polar m Omega) (F->C r->p))) 
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-(define (p->r local)
-  (let ((polar-tuple (coordinate local)))
-    (let ((r (ref polar-tuple 0))
-          (phi (ref polar-tuple 1)))
-      (let ((x (* r (cos phi)))
-            (y (* r (sin phi))))
-        (up x y)))))
-
-(defn r->p
-  "rectangular to polar coordinates of state."
-  [[_ [x y :as q]]]
-  (up (sqrt (square q)) (atan (/ y x))))
-    </code></pre>
+    <p><code>r->p</code> added</p>
 
     <pre><code class="language-klipse-eval-js">
 (define (r->p local)
-  (let ((rect-tuple (coordinate local))
+  (let ((rect-tuple (coordinate local)))
     (let ((x (ref rect-tuple 0))
           (y (ref rect-tuple 1)))
        (let ((r (sqrt (square rect-tuple)))
              (phi (atan (/ y x))))
-         (up r phi)))))
+         (up r phi))))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+((L-rotating-rectangular 'm 'Omega)
+(up 't (up 'x_r 'y_r) (up 'xdot_r 'ydot_r))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(+ (* 1/2 (expt 'Omega 2) 'm (expt 'x_r 2))
+(* 1/2 (expt 'Omega 2) 'm (expt 'y_r 2))
+(* -1 'Omega 'm 'xdot_r 'y_r)
+(* 'Omega 'm 'ydot_r 'x_r)
+(* 1/2 'm (expt 'xdot_r 2))
+(* 1/2 'm (expt 'ydot_r 2))) 
+    </code></pre>
+
+    <p><code>x_r, y_r</code>: underscore added. Calculation takes a few seconds,
+    add a blank at the and to start</p>
+
+    <pre><code class="language-klipse-eval-js">
+(((Lagrange-equations (L-rotating-rectangular 'm 'Omega))
+  (up (literal-function 'x_r) (literal-function 'y_r)))
+ 't)
+    </code></pre>
+
+    <p>definitions x_r y_r added</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define x_r (literal-function 'x_r)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(define y_r (literal-function 'y_r)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+(down
+(+ (* -1 (expt 'Omega 2) 'm (x_r 't))
+(* -2 'Omega 'm ((D y_r) 't))
+(* 'm (((expt D 2) x_r) 't)))
+(+ (* -1 (expt 'Omega 2) 'm (y_r 't))
+(* 2 'Omega 'm ((D x_r) 't))
+(* 'm (((expt D 2) y_r) 't)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
