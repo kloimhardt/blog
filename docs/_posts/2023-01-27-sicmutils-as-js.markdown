@@ -5,7 +5,9 @@ date:   2023-01-27 00:00:01 +0100
 categories: Software
 ---
 ## Summary
-This post ist the first in a series, all with the same title. I argue that it is a good idea to use [Sicmutils](https://github.com/sicmutils/sicmutils) as a JavaScript library. The reason is that Sicmutils(JS) along with a parsimonious Scheme-to-JavaScript compiler is by comparison the most direct entry to the underlying [SICMechanics](https://tgvaughan.github.io/sicm/) book.
+This post ist the first in a series, all with the same title. I argue that it is a good idea to use [Sicmutils](https://github.com/sicmutils/sicmutils) as a JavaScript library. The reason is that Sicmutils(JS) along with a parsimonious Scheme-to-JavaScript compiler is by comparison the most direct entry to the underlying [SICMechanics book](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/book.html) (also avalable in [different formatting]((https://tgvaughan.github.io/sicm/))).
+
+An implementation of such a Scheme-to-JavaScript compiler along with all executed examples of the first part of the SICMechanics book is given on [this Web page](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book.html).
 
 Disclaimer: If you do not know what Sicmutils is, it will be hard to understand this text. So maybe you take a quick look, here I only say that Sicmutils is a package for doing Algebra on the Computer.
 
@@ -73,6 +75,8 @@ Physicists care about the fundamentals. I personally know people who program spa
 ### Conclusion and Outlook
 
 I want to sum up with the main conclusion: In a series of blog posts using Sicmutils as JavaScript library, the SICMechanics book in its published paper form (with MIT-Scheme language) would become interactive and online. This is the most direct entry to the material. Understanding how all this comes about requires considerable time and effort by the reader, because he has to write a compiler and learn physics in parallel. But the guarding rails for this journey are two books by a renowned author.
+
+This blog post series and the first worked out [part of SICMechanics](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book.html) serve as a start of such a journey.
 
 After having completed the journey, people are prepared to write their own blog posts, or at least send around HTML files by e-mail to be opened locally.
 
