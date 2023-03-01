@@ -5,7 +5,7 @@ date:   2023-01-27 00:00:01 +0100
 categories: Software
 ---
 ## Summary
-This post ist the first in a series, all with the same title. I argue that it is a good idea to use [Sicmutils](https://github.com/sicmutils/sicmutils) as a JavaScript library. The reason is that Sicmutils(JS) along with a parsimonious Scheme-to-JavaScript compiler is by comparison the most direct entry to the underlying [SICMechanics book](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/book.html) (also avalable in [different formatting]((https://tgvaughan.github.io/sicm/))).
+This post ist the first in a series, all with the same title. I argue that it is a good idea to use [Sicmutils](https://github.com/sicmutils/sicmutils) as a JavaScript library. The reason is that Sicmutils(JS) along with a parsimonious Scheme-to-JavaScript compiler is by comparison the most direct entry to the underlying [SICMechanics book](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/book.html) (also avalable in [different formatting]((https://tgvaughan.github.io/sicm/)).
 
 An implementation of such a Scheme-to-JavaScript compiler along with all executed examples of the first part of the SICMechanics book is given on [this Web page](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html).
 
