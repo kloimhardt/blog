@@ -17,8 +17,7 @@
 <body>
     <h1>Header of this html file </h1>
 
-    <pre>
-&lt;!DOCTYPE html&gt;
+    <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;meta charset="utf-8"&gt;
@@ -30,8 +29,8 @@
          };
         &lt;/script&gt;
     &lt;/head&gt;</pre>
-        <pre>
-&lt;body&gt;
+
+        <pre>&lt;body&gt;
     &lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;
 
     &lt;script&gt;
@@ -51,17 +50,20 @@
     </script>
 
     <pre>
-    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
-7 + 3
+    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
+#t
     &lt;/code&gt;&lt;/pre&gt
-    </pre>
+
+    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+1 + 2 + 3;
+    &lt;/code&gt;&lt;/pre&gt</pre>
 
     <pre><code class="language-klipse-scheme">
 #t
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-7 + 3
+1 + 2 + 3
     </code></pre>
 
     <h1>The Compiler</h1>
@@ -228,13 +230,17 @@ var vector_length = cljs.core.count; null;
     </code></pre>
 
     <pre>&lt;script&gt;
-     var oldEval = window.eval;
-     var newEval = (txt) =>
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
          txt[0] === "("
-         ? oldEval(expressionToJs(txt))
-         : oldEval(txt);
-     window.eval = newEval;
-&lt;/script&gt;</pre>
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
+&lt;/script&gt;
+
+    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+(+ 1 2 3) 
+    &lt;/code&gt;&lt;/pre&gt</pre>
 
     <script>
      var oldEval = window.eval;
@@ -244,6 +250,10 @@ var vector_length = cljs.core.count; null;
          : oldEval(txt);
      window.eval = newEval;
     </script>
+
+    <pre><code class="language-klipse-eval-js">
+(+ 1 2 3) 
+    </code></pre>
 
     <h1>1 Lagrangian Mechanics</h1>
 
@@ -1058,7 +1068,7 @@ C) ;;do not execute
 (define (DF-on-path q)
 (D (compose F (Gamma q (- n 1)))))
 ((Gamma-bar DF-on-path) state)))
-DtF);;do not execute
+DtF) ;;do not execute
     </code></pre>
 
 <p>
