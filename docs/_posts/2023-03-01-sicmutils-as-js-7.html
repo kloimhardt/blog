@@ -1,0 +1,122 @@
+---
+layout: post
+title:  "Sicmutils as JavaScript library (7)"
+date:   2023-03-01 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js',
+         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
+         codemirror_options_in: {
+             mode: 'scheme'
+         }
+     };
+    </script>
+</head>
+<body>
+    <h1>Header of this html file </h1>
+
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"&gt;
+
+        &lt;script&gt;
+         window.klipse_settings = {
+             selector_eval_js: '.language-klipse-eval-js'
+         };
+        &lt;/script&gt;
+    &lt;/head&gt;</pre>
+
+        <pre>&lt;body&gt;
+    &lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+      var loadEnv = (name) => {
+          window[name] = sicmutils.env[name];
+          return name;
+      }
+    &lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <pre>
+    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
+#t
+    &lt;/code&gt;&lt;/pre&gt
+
+    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+1 + 2 + 3;
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre><code class="language-klipse-scheme">
+#t
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+1 + 2 + 3
+    </code></pre>
+
+    <h1>The Compiler</h1>
+
+    <script src="https://kloimhardt.github.io/blog/js/sicmutils-as-js-scheme-7.js"></script>
+
+    <pre>&lt;script&gt;
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
+         txt[0] === "("
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
+&lt;/script&gt;
+
+    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+(+ 1 2 3) 
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <script>
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
+         txt[0] === "("
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+(+ 1 2 3) 
+    </code></pre>
+
+
+    <pre><code class="language-klipse-eval-js">
+(+ (* 'a 'm) (* 'k 'x)) 
+    </code></pre>
+
+    <h1>
+Footer of this html file
+    </h1>
+
+    <pre>
+&lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
+</html>

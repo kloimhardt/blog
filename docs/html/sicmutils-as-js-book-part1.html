@@ -158,7 +158,7 @@ j[0] === "let"
 : [j];
 
 var constructLet = (j) =>
-["let", j.slice(0, j.length - 1), j[j.length - 1]]
+["let", j.slice(0, j.length - 1), j[j.length - 1]];
 
 var letFlat = (j) =>
 j.constructor == Array && j[0] === "let"
@@ -184,7 +184,7 @@ v.length === 1
 
 var makeLet = (j, callBack) =>
 "{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
-+ " return " +  callBack(j[2]) + "; }"
+    + " return " +  callBack(j[2]) + "; }";
 
 var jsonToJs = (j) =>
 j.constructor == Array && j[0] === "let"
@@ -243,12 +243,12 @@ var vector_length = cljs.core.count; null;
     &lt;/code&gt;&lt;/pre&gt</pre>
 
     <script>
-     var oldEval = window.eval;
-     var newEval = (txt) =>
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
          txt[0] === "("
-         ? oldEval(expressionToJs(txt))
-         : oldEval(txt);
-     window.eval = newEval;
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
     </script>
 
     <pre><code class="language-klipse-eval-js">
