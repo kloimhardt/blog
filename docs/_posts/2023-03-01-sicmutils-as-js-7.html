@@ -26,13 +26,16 @@ categories: Software
         (This post is part of a series, all with the same title)
     </p>
 
-    <h1>Examples in the SICMechanics book</h1>
+    <h1>File with executed examples of the SICMechanics book</h1>
 
     <p>
-        The compiler now is in a state to run <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">all 109 examples</a> of the first part of the <a hrep="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>.
+        The compiler now is in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>. The examples are shown in <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">this html file</a>. In the remainder of this post, we give an outline of that file.
    </p>
 
-    <h1>Header of this html file </h1>
+    <h1>Outline of html file containing the examples</h1>
+    <p>
+        First, we load the stylesheet for <a href="https://codemirror.net">Codemirror</a> and set the options for <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a>: allow execution of JavaScript code and set the Codemirror mode to Scheme-Language code formatting.
+    </p>
 
     <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -41,51 +44,58 @@ categories: Software
         &lt;link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"&gt;
 
         &lt;script&gt;
-         window.klipse_settings = {
-             selector_eval_js: '.language-klipse-eval-js'
-         };
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js',
+         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
+         codemirror_options_in: {
+             mode: 'scheme'
+         }
+     };
         &lt;/script&gt;
-    &lt;/head&gt;</pre>
+    &lt;/head&gt;
+&lt;body&gt;</pre>
 
-        <pre>&lt;body&gt;
-    &lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;
+    <p>
+        Then we load <a href="https://github.com/sicmutils/sicmutils">Sicmutils</a> as a JavaScript library.
+    </p>
 
-    &lt;script&gt;
-      var loadEnv = (name) => {
-          window[name] = sicmutils.env[name];
-          return name;
-      }
-    &lt;/script&gt;</pre>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
 
-    <script>
-     var loadEnv = (name) => {
-         window[name] = sicmutils.env[name];
-         return name;
-     }
-    </script>
+    <p>
+        This specific library was compiled according to the instructions found <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">here</a>, changing compiler-options from :advanced to :simple.
+    </p>
+    <p>
+For good measure, let's try out Klipse on some simple JavaScript.
+    </p>
 
-    <pre>
-    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
-#t
-    &lt;/code&gt;&lt;/pre&gt
-
-    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
 1 + 2 + 3;
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre><code class="language-klipse-eval-js">
+1 + 2 + 3
+    </code></pre>
+
+    <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some Scheme code in Klipse.</p>
+
+    <pre>    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
+#t
     &lt;/code&gt;&lt;/pre&gt</pre>
 
     <pre><code class="language-klipse-scheme">
 #t
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-1 + 2 + 3
-    </code></pre>
+    <p>Note that we will never use <code>language-klipse-scheme</code> again.</p>
 
-    <h1>The Compiler</h1>
+    <p>Then we load our own little Scheme compiler, it has ony 161 lines of code.</p>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/sicmutils-as-js-scheme-7.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/sicmutils-as-js-scheme-7.js"></script>
+
+    <p>The js-file just loaded exposes the function <code>expressionToJs</code>. We patch the JavaScript <code>eval</code> function to invoke <code>expressionToJs</code> whenever some code starts with a round bracket <code>(</code>.</p>
 
     <pre>&lt;script&gt;
      var _2_eval = window.eval;
@@ -94,11 +104,7 @@ categories: Software
          ? _2_eval(expressionToJs(txt))
          : _2_eval(txt);
      window.eval = _3_eval;
-&lt;/script&gt;
-
-    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
-(+ 1 2 3) 
-    &lt;/code&gt;&lt;/pre&gt</pre>
+&lt;/script&gt;</pre>
 
     <script>
      var _2_eval = window.eval;
@@ -109,24 +115,48 @@ categories: Software
      window.eval = _3_eval;
     </script>
 
+    <p>
+        Of course we immediately want to try this out. We need to make sure to append the <code>blank</code> character at the end of every Scheme code snippet.
+    </p>
+
+    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+(+ 1 2 3) 
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
     <pre><code class="language-klipse-eval-js">
 (+ 1 2 3) 
     </code></pre>
 
+    <p>
+        As noted above, we do not use Klipse in Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>.
+    </p>
+
+    <p>
+        Now we can execute code given in the SICMechanics book. I only give one juicy taste here (again: <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">link to the whole shebang</a>).
+    </p>
 
     <pre><code class="language-klipse-eval-js">
-(+ (* 'a 'm) (* 'k 'x)) 
+(define ((L-central-rectangular m U) local)
+  (let ((q (coordinate local))
+        (v (velocity local)))
+    (- (* 1/2 m (square v))
+       (U (sqrt (square q)))))) 
     </code></pre>
 
-    <h1>
-Footer of this html file
-    </h1>
+    <pre><code class="language-klipse-eval-js">
+ (((Lagrange-equations
+    (L-central-rectangular 'm (literal-function 'U)))
+   (up (literal-function 'x)
+       (literal-function 'y)))
+  't) 
+    </code></pre>
 
-    <pre>
+    <p>The footer of the html file finally loads Klipse.</p>
+
+   <pre>
 &lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-    </pre>
+&lt;/html&gt;</pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>

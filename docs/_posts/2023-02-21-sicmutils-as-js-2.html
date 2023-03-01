@@ -60,13 +60,14 @@ var div = (x, y) => x/y;
 div(x, 2);
     </code></pre>
     <p>
-        and whereas the notation becomes clumsier, the result remains the same floating point number. But we can do better and get to rational numbers if we import the right JavaScript library.
+        and whereas the notation becomes clumsier, the result remains the same floating point number. But we can do better and get to rational numbers if we import the right JavaScript library: <a href="https://github.com/sicmutils/sicmutils">Sicmutils</a>.
     </p>
+
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
     <p>
-        This library was compiled according to the instructions found in the great <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">Sicmutils</a> repository (changing compiler-options from :advanced to :simple).
+
     </p>
     <p>
         With the help of Sicmutils, we can redefine the calculation function
@@ -139,8 +140,9 @@ expr[expr.length-1] === " "
 expressionToJs(formula);
     </code></pre>
     <p>
-        which imposes the condition that a conversion is only made when the string ends with a blank. Then we employ a small hack that kicks in this transpiler whenever some code in Klipse starts with a bracket -- square <code>[</code> or round <code>)</code>.
+        which imposes the condition that a conversion is only made when the string ends with a blank. Then we employ a small hack that kicks in this transpiler whenever some code in Klipse starts with a bracket -- square <code>[</code> or round <code>(</code>.
     </p>
+
     <pre>&lt;script&gt;
      var oldEval = window.eval;
      var newEval = (txt) =>

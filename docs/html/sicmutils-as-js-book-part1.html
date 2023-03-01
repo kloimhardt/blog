@@ -24,9 +24,13 @@
         &lt;link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"&gt;
 
         &lt;script&gt;
-         window.klipse_settings = {
-             selector_eval_js: '.language-klipse-eval-js'
-         };
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js',
+         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
+         codemirror_options_in: {
+             mode: 'scheme'
+         }
+     };
         &lt;/script&gt;
     &lt;/head&gt;</pre>
 
@@ -49,26 +53,25 @@
      }
     </script>
 
-    <pre>
-    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
-#t
+    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+1 + 2 + 3;
     &lt;/code&gt;&lt;/pre&gt
 
-    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
-1 + 2 + 3;
-    &lt;/code&gt;&lt;/pre&gt</pre>
-
-    <pre><code class="language-klipse-scheme">
+    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
 #t
-    </code></pre>
+    &lt;/code&gt;&lt;/pre&gt</pre>
 
     <pre><code class="language-klipse-eval-js">
 1 + 2 + 3
     </code></pre>
 
+    <pre><code class="language-klipse-scheme">
+#t
+    </code></pre>
+
     <h1>The Compiler</h1>
 
-    <p>The following compiler is developed in a series of <a href="https://kloimhardt.github.io/blog/software/2023/02/21/sicmutils-as-js-2.html">blog posts</a>.</p>
+    <p>The following compiler is developed in a series of <a href="https://kloimhardt.github.io/blog/software/2023/03/01/sicmutils-as-js-7.html">blog posts</a>.</p>
 
     <pre><code class="language-klipse-eval-js">
 ["pi", "_pi", "state__GT_t"].map(loadEnv);

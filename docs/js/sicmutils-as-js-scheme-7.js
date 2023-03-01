@@ -1,3 +1,8 @@
+var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+};
+
 ["pi", "_pi", "state__GT_t"].map(loadEnv);
 
 var symbol = cljs.core.symbol;
