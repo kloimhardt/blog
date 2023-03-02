@@ -8,6 +8,7 @@ categories: Software
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
     <style>
      .CodeMirror { max-height: 150px; }
@@ -36,14 +37,17 @@ categories: Software
    </p>
 
     <h1>Outline of html file containing the examples</h1>
+    <p> In the header we do four things: (1) prepare for mobile devices (2) load the stylesheet for <a href="https://codemirror.net">Codemirror</a>, (3) configure <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> to allow execution of JavaScript (4) set the Klipse+Codemirror mode to Scheme-Language code formatting.
+    </p>
     <p>
-        First, we load the stylesheet for <a href="https://codemirror.net">Codemirror</a> and set the options for <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a>: allow execution of JavaScript code and set the Codemirror mode to Scheme-Language code formatting.
+Note that these are all just settings and no JavaScript code is executed just yet. In fact, Klipse+Codemirror is only executed in the footer of the html file.
     </p>
 
     <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
         &lt;link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"&gt;
 
         &lt;script&gt;
@@ -111,7 +115,7 @@ For good measure, let's try out Klipse on some simple JavaScript.
 
     <p>Note that we will never use <code>language-klipse-scheme</code> again.</p>
 
-    <p>Then we load our own little Scheme compiler. Here we show the first lines, it has in total ony 161 lines of code.</p>
+    <p>Then we load our own little Scheme compiler. Here we show the first lines, it has in total only 161 lines of code.</p>
 
     <pre><code class="language-klipse-eval-js">
 ["pi", "_pi", "state__GT_t"].map(loadEnv);
@@ -309,7 +313,7 @@ var vector_length = cljs.core.count; null;
     </p>
 
     <p>
-        Now we can execute code given in the SICMechanics book. I only give one juicy taste here (again: <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">link to the whole shebang</a>).
+        Now we can execute the code of the SICMechanics book. I only give one juicy taste here (again: <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">link to the whole shebang</a>).
     </p>
 
     <pre><code class="language-klipse-eval-js">
