@@ -33,11 +33,11 @@ categories: Software
     <h1>File with executed examples of the SICMechanics book</h1>
 
     <p>
-        The compiler now is in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>. The examples are shown in <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">this html file</a>. In the remainder of this post, we give an outline of that file.
+        Our little Scheme compiler developed in the last few blog posts is now in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>. The examples are shown in <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">this html file</a>. In the remainder of this post, we give an outline of that file.
    </p>
 
    <p>
-       Its content is quite simple, it is recommended to look at its source code. Maybe even copy-paste this html code into some text editor, save locally and open in the browser.
+       Its content is quite simple, it is recommended to look at its source code. Maybe even copy-paste that html-code into some text editor, save locally and open in the browser.
    </p>
 
     <h1>Outline of html file containing the examples</h1>
@@ -95,6 +95,30 @@ Next we add a helper function for loading variables from the sicmutils environme
          return name;
      }
     </script>
+    <p>
+        For good measure, let's try out Klipse on some simple JavaScript.
+    </p>
+
+    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+1 + 2 + 3;
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre><code class="language-klipse-eval-js">
+1 + 2 + 3
+    </code></pre>
+
+    <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use).</p>
+
+    <pre>    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
+#t
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre><code class="language-klipse-scheme">
+#t
+    </code></pre>
+
+    <p>Note that we will never use <code>language-klipse-scheme</code> again.</p>
+
 
     <p>Then we load our own little Scheme compiler. Here we show the first lines, it has in total only 161 lines of code.</p>
 
@@ -276,30 +300,6 @@ var vector_length = cljs.core.count; null;
          : _2_eval(txt);
      window.eval = _3_eval;
     </script>
-
-    <p>
-        For good measure, let's try out Klipse on some simple JavaScript first (and for suspension wait with our own compiler).
-    </p>
-
-    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
-1 + 2 + 3;
-    &lt;/code&gt;&lt;/pre&gt</pre>
-
-    <pre><code class="language-klipse-eval-js">
-1 + 2 + 3
-    </code></pre>
-
-    <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use).</p>
-
-    <pre>    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
-#t
-    &lt;/code&gt;&lt;/pre&gt</pre>
-
-    <pre><code class="language-klipse-scheme">
-#t
-    </code></pre>
-
-    <p>Note that we will never use <code>language-klipse-scheme</code> again.</p>
 
 
     <p>
