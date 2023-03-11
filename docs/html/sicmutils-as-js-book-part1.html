@@ -33,6 +33,16 @@
      }
     </script>
 
+    <h1>Some Code Snippets</h1>
+
+    <pre><code class="language-klipse-eval-js">
+1 + 2 + 3
+    </code></pre>
+
+    <pre><code class="language-klipse-scheme">
+#t
+    </code></pre>
+
     <h1>The Compiler</h1>
 
     <pre><code class="language-klipse-eval-js">
@@ -203,23 +213,13 @@ var vector_length = cljs.core.count; null;
      window.eval = _3_eval;
     </script>
 
-    <h1>Some Code Snippets</h1>
+    <h1>1 Lagrangian Mechanics</h1>
 
-    <pre><code class="language-klipse-eval-js">
-1 + 2 + 3
-    </code></pre>
-
-    <pre><code class="language-klipse-scheme">
-#t
-    </code></pre>
+    <h2>1.4   Computing Actions</h2>
 
     <pre><code class="language-klipse-eval-js">
 (+ 1 2 3) 
     </code></pre>
-
-    <h1>1 Lagrangian Mechanics</h1>
-
-    <h2>1.4   Computing Actions</h2>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)
@@ -340,7 +340,7 @@ var vector_length = cljs.core.count; null;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define (test-path t)
+(define (general-test-path t)
   (up (+ (* 'a t) 'a0)
       (+ (* 'b t) 'b0)
       (+ (* 'c t) 'c0))) 
@@ -348,7 +348,7 @@ var vector_length = cljs.core.count; null;
 
     <pre><code class="language-klipse-eval-js">
 (((Lagrange-equations (L-free-particle 'm))
-  test-path)
+  general-test-path)
  't) 
     </code></pre>
 
