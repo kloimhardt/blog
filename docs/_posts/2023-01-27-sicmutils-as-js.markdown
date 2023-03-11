@@ -7,7 +7,7 @@ categories: Software
 ## Summary
 This post ist the first in a series, all with the same title. I argue that it is a good idea to use [Sicmutils](https://github.com/sicmutils/sicmutils) as a JavaScript library. The reason is that Sicmutils(JS) along with a parsimonious Scheme-to-JavaScript compiler is by comparison the most direct entry to the underlying [SICMechanics book](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/book.html) (also avalable in [different formatting](https://tgvaughan.github.io/sicm/)).
 
-An implementation of such a Scheme-to-JavaScript compiler along with all 109 executed examples of the first part of the SICMechanics book is given on [this Web page](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html).
+An implementation of such a Scheme-to-JavaScript compiler along with all 109 executed examples of the first part of the SICMechanics book is given on [this Web page](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html). Anyone can copy-paste the according html source-code into some text editor (e.g. Notepad++), save locally and open in the browser.
 
 Disclaimer: If you do not know what Sicmutils is, it will be hard to understand this text. So maybe you take a quick look, here I only say that Sicmutils is a package for doing Algebra on the Computer.
 
@@ -22,7 +22,7 @@ Physicists love books. The books SICMechanics and [SICP](https://sourceacademy.o
 Sicmutils can be demonstrated as (1) a JavaScript library (2) in a blog post, both formats which are widely known and also work offline. The connection to the SICMechanics book is made by showing how to build a Scheme-to-JavaScript compiler, building compilers also being a topic elaborated further in SICP. The drawback is that the user has to learn JavaScript. But physicists rather learn and use something general (=JS) to derive something special (= Scheme) instead of just accepting a special notation. Going back to fundamentals is their method in physics. SICP in the Javascript version ideally supports this road.
 
 ### Conclusion
-Using Sicmutils as JavaScript library, the SICMechanics book in its published paper form (with MIT-Scheme language) would become interactive and online, opening a direct road to the material. Html + JS  can be the basis for readers' own blog posts. One could imagine to wet Matlab users' appetite by also providing another suitable compiler.
+Using Sicmutils as JavaScript library, the SICMechanics book in its published paper form (with MIT-Scheme language) becomes interactive and online, opening a direct road to the material. Html + JS  can be the basis for readers' own blog posts. One could imagine to wet Matlab users' appetite by also providing another suitable compiler.
 
 ## Full Post
 
@@ -46,7 +46,7 @@ And this is the great advantage of Sicmutils: it is based on the SICP and SICMec
 
 The problem with both books to reach a wider audience is the Scheme language. This language is not widely known. A physicist always looks for self-efficacy (hence the use of Matlab). "Why should I carry the mental load for learning Scheme?", he asks. "Because it is a simple language", is the answer. "Well yea, but I cannot use it anywhere else". A version of the "do not want to be tied to an unknown platform" argument again.
 
-There is a reason why the SICP book now exists in a JavaScript version (SICMechanics does not). Because learning JavaScript is perceived to increase self-efficacy. JavaScript drives the Internet after all, a property Scheme does not share.
+There is a reason why the SICP book now exists in a JavaScript version (note: SICMechanics does not and I think should not). Because learning JavaScript is perceived to increase self-efficacy. JavaScript drives the Internet after all, a property Scheme does not share.
 
 In any case, maybe some physicist can be convinced to buy and read SICMechanics despite its ample use of the Scheme language. After all, this book by a famous author solves the problem of arbitrariness of notation found in so many (if not all) physics textbooks. A situation which surely made him suffer more than one time in his life. Maybe he gets to share my belief that Classical Mechanics can nowhere else be understood so thoroughly and fast as with SICMechanics, once one has taken the decision to learn Scheme in an afternoon.
 
@@ -74,7 +74,7 @@ Physicists care about the fundamentals. I personally know people who program spa
 
 ### Conclusion and Outlook
 
-I want to sum up with the main conclusion: In a series of blog posts using Sicmutils as JavaScript library, the SICMechanics book in its published paper form (with MIT-Scheme language) would become interactive and online. This is the most direct entry to the material. Understanding how all this comes about requires considerable time and effort by the reader, because he has to write a compiler and learn physics in parallel. But the guarding rails for this journey are two books by a renowned author.
+I want to sum up with the main conclusion: In a series of blog posts using Sicmutils as JavaScript library, the SICMechanics book in its published paper form (with MIT-Scheme language) becomes interactive and online. This is the most direct entry to the material. Understanding how all this comes about requires considerable time and effort by the reader, because he has to write a compiler and learn physics in parallel. But the guarding rails for this journey are two books by a renowned author.
 
 This blog post series and [all 109 executed examples](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html) of the first part of SICMechanics serve as a start of such a journey.
 
