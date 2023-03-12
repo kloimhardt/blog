@@ -33,15 +33,23 @@ categories: Software
     <h1>File with executed examples of the SICMechanics book</h1>
 
     <p>
-        Our little Scheme compiler developed in the last few blog posts is now in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>. The examples are shown in <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">this html file</a>. In the remainder of this post, we give an outline of that file.
+        Our little Scheme syntax to JS compiler (developed in the last few blog posts) is now in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>.
+    </p>
+
+    <p>
+        <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">Click here</a> for the according html-file, it is the main work, it shows the SICM examples.
    </p>
 
    <p>
-       Its content is quite simple, it is recommended to look at its source code. Maybe even copy-paste that html-code into some text editor, save locally and open in the browser.
+       The html file is meant to be read as source code of both the Scheme SICM examples and the Scheme syntax compiler. This blog post helps with that reading, it gives an outline of the content of that file. Maybe even copy-paste that html-code into some text editor, save locally and open in the browser.
+   </p>
+
+   <p>
+       Every SICM example in that html file is a <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> snippet. You can modify every piece of code directly in the page to immediate effect. Even the Scheme syntax compiler is just a Klipse snippet. In fact, the compiler does exist only as copy-pasted Klipse snippets within blog posts and html files. It is small and there is no single source. The code you see on the page is what the browser runs.
    </p>
 
     <h1>Outline of html file containing the examples</h1>
-    <p> In the header we do four things: (1) prepare for mobile devices (2) load the stylesheet for <a href="https://codemirror.net">Codemirror</a>, (3) configure <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> to allow execution of JavaScript (4) set the Klipse+Codemirror mode to Scheme-Language code formatting.
+    <p> In the header we do four things: (1) prepare for mobile devices (2) load the stylesheet for <a href="https://codemirror.net">Codemirror</a>, (3) configure Klipse to allow execution of JavaScript (4) set the Klipse+Codemirror mode to Scheme-Language code formatting.
     </p>
     <p>
 Note that these are all just settings and no JavaScript code is executed just yet. In fact, Klipse+Codemirror is only executed in the footer of the html file.
@@ -75,7 +83,7 @@ Note that these are all just settings and no JavaScript code is executed just ye
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
 
     <p>
-        This specific library was compiled according to the instructions found <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">here</a>, changing compiler-options from :advanced to :simple.
+        This specific library was compiled according to the instructions found <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">here</a>[1].
     </p>
 
     <p>
@@ -107,6 +115,10 @@ Next we add a helper function for loading variables from the sicmutils environme
 1 + 2 + 3
     </code></pre>
 
+    <p>
+        You can change the code to immediate effect, maybe change 3 to 4 and see what happens.
+    </p>
+
     <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use).</p>
 
     <pre>    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
@@ -120,9 +132,11 @@ Next we add a helper function for loading variables from the sicmutils environme
     <p>Note that we will never use <code>language-klipse-scheme</code> again.</p>
 
 
-    <p>Then we load our own little Scheme compiler. Here we show the first lines, it has in total only 161 lines of code.</p>
+    <p>Then we add our own little Scheme compiler in the form of yet another Klipse JavaScript snippet. Here we show the first lines, it has in total about 160 lines of code (only!).</p>
 
     <pre><code class="language-klipse-eval-js">
+var greetings = "Hello word!";
+
 ["pi", "_pi", "state__GT_t"].map(loadEnv);
 
 var symbol = cljs.core.symbol;
@@ -260,7 +274,9 @@ j.constructor == Array && j[0] === "let"
 : j;
 
 var expressionToJs = (expr) =>
-expr[expr.length-1] === " "
+greetings != "Hello word!"
+? "'" + greetings + "'"
+: expr[expr.length-1] === " "
 ? jsonToJs(modifyJson(textToJson(expr)))
 : "'add blank'";
 
@@ -301,9 +317,8 @@ var vector_length = cljs.core.count; null;
      window.eval = _3_eval;
     </script>
 
-
     <p>
-        Finally, we want to try out our brand new Scheme compiler. Make sure to append the <code>blank</code> character at the end of every Scheme code snippet.
+        Finally, we want to try out our brand new Scheme compiler. 
     </p>
 
     <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
@@ -315,7 +330,15 @@ var vector_length = cljs.core.count; null;
     </code></pre>
 
     <p>
-        As noted above, we do not use Klipse in it's own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Go ahead, play around: maybe change the 3 into a 4 and see what happens.
+        Also this Scheme code can be changed to immediate effect. Maybe change the 3 to 4. Make sure that the <code>blank</code> character is at the end of a Scheme code snippet (omitting it is a feature that turns off compilation).
+    </p>
+
+    <p>
+        Now, modify the compiler itself, go up and change the greetings text to "Hello world!". Then come back and change 1 to 5. Go ahead, play around, but please reload the page at the end to restore full functionality.
+    </p>
+
+    <p>
+        As noted above, we do not use Klipse in it's own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler snippet -- the one that you just changed (and hopefully restored).
     </p>
 
     <p>
@@ -350,6 +373,10 @@ var vector_length = cljs.core.count; null;
 &lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
+
+   <p>
+       [1] for specialists: the specific command to compile sicmutils as JavaScript library is <code>shadow-cljs release sicm-browser</code>, changing compiler-options from <code>:advanced</code> to <code>:simple</code> in <code>shadow-cljs.edn</code>.
+   </p>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
