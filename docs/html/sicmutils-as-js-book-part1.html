@@ -37,7 +37,7 @@
 
     <h1>Some Code Snippets</h1>
 
-    <pre><code class="language-klipse-eval-js">
+    <pre id="one"><code class="language-klipse-eval-js">
 1 + 2 + 3
     </code></pre>
 
@@ -47,12 +47,12 @@
 
     <h1>The Compiler</h1>
 
-    <pre><code class="language-klipse-eval-js">
+    <pre id="compiler"><code class="language-klipse-eval-js">
 ["pi", "_pi", "state__GT_t"].map(loadEnv);
 
-var symbol = cljs.core.symbol;
 var _COLON_pi = pi;
 var __COLON_pi = _pi;
+var symbol = cljs.core.symbol;
 
 var specialchars =
 [["_SYMBOL_$1", /\'(\w+)/g],
@@ -1091,6 +1091,6 @@ DtF) ;;do not execute
     <pre><code class="language-klipse-eval-js">
     </code></pre>
 
-<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js" defer></script>
 </body>
 </html>
