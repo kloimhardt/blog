@@ -37,11 +37,11 @@
 
     <h1>Some Code Snippets</h1>
 
-    <pre id="one"><code class="language-klipse-eval-js">
+    <pre id="one-2-3"><code class="language-klipse-eval-js">
 1 + 2 + 3
     </code></pre>
 
-    <pre><code class="language-klipse-scheme">
+    <pre id="klipse-scheme"><code class="language-klipse-scheme">
 #t
     </code></pre>
 
@@ -50,9 +50,9 @@
     <pre id="compiler"><code class="language-klipse-eval-js">
 ["pi", "_pi", "state__GT_t"].map(loadEnv);
 
+var symbol = cljs.core.symbol;
 var _COLON_pi = pi;
 var __COLON_pi = _pi;
-var symbol = cljs.core.symbol;
 
 var specialchars =
 [["_SYMBOL_$1", /\'(\w+)/g],
@@ -219,8 +219,12 @@ var vector_length = cljs.core.count; null;
 
     <h2>1.4   Computing Actions</h2>
 
-    <pre><code class="language-klipse-eval-js">
+    <pre id="prefix-123"><code class="language-klipse-eval-js">
 (+ 1 2 3) 
+    </code></pre>
+
+    <pre id="cos-pi"><code class="language-klipse-eval-js">
+(cos :pi) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -335,7 +339,7 @@ var vector_length = cljs.core.count; null;
         1.5.2 Computing Lagrange's Equations
     </h3>
 
-    <pre><code class="language-klipse-eval-js">
+    <pre id="define-L-equations"><code class="language-klipse-eval-js">
 (define ((Lagrange-equations Lagrangian) q)
   (- (D (compose ((partial 2) Lagrangian) (Gamma q)))
      (compose ((partial 1) Lagrangian) (Gamma q)))) 
@@ -439,7 +443,7 @@ var vector_length = cljs.core.count; null;
    't)) 
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
+    <pre id="define-L-central-rectangular"><code class="language-klipse-eval-js">
 (define ((L-central-rectangular m U) local)
   (let ((q (coordinate local))
         (v (velocity local)))
@@ -447,13 +451,16 @@ var vector_length = cljs.core.count; null;
        (U (sqrt (square q)))))) 
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-(show-expression
+    <p>
+        <code>show-expression can actually be omitted, our little Scheme syntax compiler does that anyway.</code>
+    </p>
+
+    <pre id="calc-L-eqs-central-rect"><code class="language-klipse-eval-js">
   (((Lagrange-equations
       (L-central-rectangular 'm (literal-function 'U)))
     (up (literal-function 'x)
         (literal-function 'y)))
-   't)) 
+   't) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">

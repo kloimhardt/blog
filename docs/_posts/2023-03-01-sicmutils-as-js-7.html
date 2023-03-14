@@ -30,28 +30,45 @@ categories: Software
         (This post is part of a series, all with the same title)
     </p>
 
-    <h1>File with executed examples of the SICMechanics book</h1>
+    <h1>Executable examples of the SICMechanics book within an HTML page</h1>
 
     <p>
         Our little Scheme syntax to JS compiler (developed in the last few blog posts) is now in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>.
     </p>
 
-    <iframe id="part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin"></iframe>
+    <p>
+    The according html-file with the original Scheme examples is embedded here as an IFrame, albeit sandboxed, i.e. the examples are not executed.
+    </p>
+
+    <pre>&lt;iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin"&gt;&lt;/iframe&gt;</pre>
+
+    <iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin"></iframe>
+
+<p></p>
 
     <p>
-        <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">Click here</a> for the according html-file, it shows original SICM examples online executable. I made it because I could not find this somewhere else (a situation I found more and more wanting up to the year 2023).
+        <a href="/blog/html/sicmutils-as-js-book-part1.html">Click here</a> to see the full html page with the examples executed online.
    </p>
 
    <p>
-       The html file is meant to be read as source code for both the Scheme examples and their tailor-made syntax compiler. This blog post helps with that reading, giving an outline of the content of that file. Maybe even copy-paste that html-code into some text editor, save locally and open in the browser.
+       The html file is also meant to be read as source code for both the Scheme examples and their tailor-made syntax compiler. This blog post helps with that reading, giving an outline of the content of that file. Maybe, after opening the page, even copy-paste that html-code into some text editor, save locally and open that in a new browser window.
    </p>
 
    <p>
-       Every SICM example in that html file is a <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> snippet. You can modify every piece of code directly in the page to immediate effect. Even the Scheme syntax compiler is just a Klipse snippet. In fact, the compiler does exist only as copy-pasted Klipse snippets within blog posts and html files. It is small and there is no single source. The code you see on the page is what the browser runs.
+       Every example in that html file is a <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> snippet. We give a simple preview of one, in JavaScript, that is.</p>
+
+   <pre><code class="language-klipse-eval-js">
+1 + 2 + 3
+   </code></pre>
+
+   <p>You can modify every piece of code directly in the page to immediate effect, maybe change 3 to 4 directly above and see what happens.
    </p>
 
-    <h1>Outline of html file containing the examples</h1>
-    <p> In the header we do four things: (1) prepare for mobile devices (2) load the stylesheet for <a href="https://codemirror.net">Codemirror</a>, (3) configure Klipse to allow execution of JavaScript (4) set the Klipse+Codemirror mode to Scheme-Language code formatting.
+       <p>We already mention here that even the Scheme syntax compiler is just such a JavaScript snippet. In fact, the compiler does exist only as Klipse snippet within an html file. There is no other source file for it.
+   </p>
+
+    <h1>Header of the HTML file</h1>
+    <p> Lets start with the file content. In the header we do four things: (1) prepare for mobile devices (2) load the stylesheet for <a href="https://codemirror.net">Codemirror</a>, (3) configure Klipse to allow execution of JavaScript (4) set the Klipse+Codemirror mode to Scheme-Language code formatting.
     </p>
     <p>
 Note that these are all just settings and no JavaScript code is executed just yet. In fact, Klipse+Codemirror is only executed in the footer of the html file.
@@ -77,7 +94,7 @@ Note that these are all just settings and no JavaScript code is executed just ye
 &lt;body&gt;</pre>
 
     <p>
-        Then we load <a href="https://github.com/sicmutils/sicmutils">Sicmutils</a> as a JavaScript library.
+        Then <a href="https://github.com/sicmutils/sicmutils">Sicmutils</a> is loaded as a JavaScript library.
     </p>
 
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
@@ -89,7 +106,7 @@ Note that these are all just settings and no JavaScript code is executed just ye
     </p>
 
     <p>
-Next we add a helper function for loading variables from the sicmutils environment.
+Next comes a helper function for loading variables from the Sicmutils environment.
     </p>
 
     <pre>    &lt;script&gt;
@@ -105,17 +122,27 @@ Next we add a helper function for loading variables from the sicmutils environme
          return name;
      }
     </script>
+
     <p>
-        For good measure, let's try out Klipse on some simple JavaScript.
+        Then Klipse is tested with a simple JavaScript 1+2+3 example (the one already presented above as preview).
     </p>
 
-    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+    <pre>    &lt;pre id="one-2-3"&gt&lt;code class="language-klipse-eval-js"&gt
 1 + 2 + 3;
     &lt;/code&gt;&lt;/pre&gt</pre>
 
-    <pre><code class="language-klipse-eval-js">
-1 + 2 + 3
-    </code></pre>
+    <h1>Interlude: importing snippets from the HTML file into this post</h1>
+
+    <p>
+        Remember that, within this post, we embedded the source as an IFrame. Since the 1+2+3 snippet carries an id (<code>one-2-3</code>) in that source, we can access and copy it over. For this we write a helper function (it only lives within this post, not in the source).
+    </p>
+
+    <pre>&lt;script&gt;
+var loadSnippet = (iframeNode, snippetNode) =&gt;
+    document.getElementById(snippetNode).innerHTML =
+        document.getElementById(iframeNode).contentWindow.document
+                .getElementById(snippetNode).innerHTML;
+&lt;/script&gt;</pre>
 
     <script>
      var loadSnippet = (iframeNode, snippetNode) =>
@@ -124,33 +151,50 @@ Next we add a helper function for loading variables from the sicmutils environme
                      .getElementById(snippetNode).innerHTML;
     </script>
 
-    <pre id="one"></pre>
+    <p>Now we can easily copy arbitrary snippets from the source into this post.</p>
+
+    <pre>&lt;pre id="one-2-3"&gt;&lt;/pre&gt;
+&lt;script defer&gt;
+ loadSnippet('book-part1','one-2-3');
+&lt;/script&gt;</pre>
+
+    <pre id="one-2-3"></pre>
     <script defer>
-     loadSnippet('part1','one');
+     loadSnippet('book-part1','one-2-3');
     </script>
 
     <p>
-        You can change the code to immediate effect, maybe change 3 to 4 and see what happens.
+        All the following Klipse snippets are imported in this way. Note the <code>defer</code> keyword, the execution of the helper function needs to wait until the IFrame is loaded completely. <code>loadSnippet</code> works in the background of this post from now on.
     </p>
 
-    <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use).</p>
+    <h1>The rest of the HTML file</h1>
 
-    <pre>    &lt;pre&gt&lt;code class="language-klipse-scheme"&gt
+    <p>Back to the content. Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use). Consequently, <code>class="language-klipse-scheme"</code> is never used  again afterwards in the file.</p>
+
+    <pre>    &lt;pre id="klipse-scheme"&gt&lt;code class="language-klipse-scheme"&gt
 #t
     &lt;/code&gt;&lt;/pre&gt</pre>
 
-    <pre><code class="language-klipse-scheme">
-#t
-    </code></pre>
+    <pre id="klipse-scheme"></pre>
+    <script defer>
+     loadSnippet('book-part1','klipse-scheme');
+    </script>
 
-    <p>Note that we will never use <code>language-klipse-scheme</code> again.</p>
+    <p></p>
 
+    <p>Then our little Scheme syntax compiler is added, it is just another Klipse JavaScript snippet. Here we show the first lines, it has in total about 160 lines of code only. It is tailor-made (e.g. no if-then clause) and depends heavily on Sicmutils' functionality.</p>
 
-    <p>Then we add our own little Scheme compiler in the form of yet another Klipse JavaScript snippet. Here we show the first lines, it has in total about 160 lines of code (only!).</p>
+    <pre>    &lt;pre id="compiler"&gt;&lt;code class="language-klipse-eval-js"&gt;
+["pi", "_pi", "state__GT_t"].map(loadEnv);
+
+var symbol = cljs.core.symbol;
+var _COLON_pi = pi;
+...
+    &lt;/code&gt;&lt;/pre&gt</pre>
 
     <pre id="compiler"></pre>
     <script defer>
-     loadSnippet('part1','compiler');
+     loadSnippet('book-part1','compiler');
     </script>
 
     <p>The code just loaded exposes the function <code>expressionToJs</code>. We patch the JavaScript <code>eval</code> function to invoke <code>expressionToJs</code> whenever some code starts with a round bracket <code>(</code>.</p>
@@ -181,67 +225,64 @@ Next we add a helper function for loading variables from the sicmutils environme
 (+ 1 2 3) 
     &lt;/code&gt;&lt;/pre&gt</pre>
 
-    <pre><code class="language-klipse-eval-js">
-(+ 1 2 3) 
-    </code></pre>
+    <pre id="prefix-123"></pre>
+    <script defer>
+     loadSnippet('book-part1','prefix-123');
+    </script>
 
     <p>
         Also this Scheme code can be changed to immediate effect. Maybe change the 3 to 4. Make sure that the <code>blank</code> character is at the end of a Scheme code snippet (omitting it is a feature that turns off compilation).
     </p>
 
     <p>
-        Next, let's calculate the cosine of pi, which is minus one.
+        Next, let's calculate the cosine of pi, which results in minus one.
     </p>
 
-    <pre><code class="language-klipse-eval-js">
-(cos :pi) 
-    </code></pre>
+    <pre id="cos-pi"></pre>
+    <script defer>
+     loadSnippet('book-part1','cos-pi');
+    </script>
 
     <p>
-        Now, modify the compiler itself. Go up and change <code> _COLON_pi = pi;</code> to <code> _COLON_pi = 3.0;</code>. Then come back and add another blank to the snippet<code>(cos :pi)</code> to see that the result indeed changed.
+        Now, modify the compiler itself. Go up and change <code> _COLON_pi = pi;</code> to <code> _COLON_pi = 3.0;</code>. Then come back and add another blank to the snippet<code>(cos :pi)</code> to see that the result indeed changes (to a wrong value).
     </p>
 
     <p>
-        As noted above, we do not use Klipse in it's own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler snippet -- the one that you just changed (and hopefully restored).
+        As noted above, we do not use Klipse in its own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler -- the one that you just put a pi bug into.
     </p>
 
     <p>
         Now we can execute the code of the SICMechanics book. I only give one juicy taste here (again: <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">link to the whole shebang</a>).
     </p>
 
-    <pre><code class="language-klipse-eval-js">
-(define ((Lagrange-equations Lagrangian) q)
-  (- (D (compose ((partial 2) Lagrangian) (Gamma q)))
-     (compose ((partial 1) Lagrangian) (Gamma q)))) 
-    </code></pre>
+    <pre id="define-L-equations"></pre>
+    <script defer>
+     loadSnippet("book-part1","define-L-equations");
+    </script>
 
-    <pre><code class="language-klipse-eval-js">
-(define ((L-central-rectangular m U) local)
-  (let ((q (coordinate local))
-        (v (velocity local)))
-    (- (* 1/2 m (square v))
-       (U (sqrt (square q)))))) 
-    </code></pre>
+    <pre id="define-L-central-rectangular"></pre>
+    <script defer>
+     loadSnippet("book-part1", "define-L-central-rectangular");
+    </script>
 
-    <pre><code class="language-klipse-eval-js">
- (((Lagrange-equations
-    (L-central-rectangular 'm (literal-function 'U)))
-   (up (literal-function 'x)
-       (literal-function 'y)))
-  't) 
-    </code></pre>
 
-    <p>The footer of the html file finally loads Klipse.</p>
+    <pre id="calc-L-eqs-central-rect"></pre>
+    <script defer>
+     loadSnippet("book-part1", "calc-L-eqs-central-rect");
+    </script>
+
+    <p>The footer of the html file finally loads Klipse. Do not forget the <code>defer</code> keyword.</p>
 
    <pre>
 &lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js" defer&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
+   This ends the exposition.
+
    <p>
        [1] for specialists: the specific command to compile sicmutils as JavaScript library is <code>shadow-cljs release sicm-browser</code>, changing compiler-options from <code>:advanced</code> to <code>:simple</code> in <code>shadow-cljs.edn</code>.
    </p>
-
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js" defer></script>
 
