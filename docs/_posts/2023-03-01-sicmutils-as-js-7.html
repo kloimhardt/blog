@@ -175,6 +175,10 @@ var loadSnippet = (iframeNode, snippetNode) =&gt;
 #t
     &lt;/code&gt;&lt;/pre&gt</pre>
 
+    <p>
+        Using <code>loadSnippet('book-part1','klipse-scheme')</code>, this looks like
+    </p>
+
     <pre id="klipse-scheme"></pre>
     <script defer>
      loadSnippet('book-part1','klipse-scheme');
@@ -191,6 +195,10 @@ var symbol = cljs.core.symbol;
 var _COLON_pi = pi;
 ...
     &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <p>
+        With <code>loadSnippet('book-part1','compiler')</code>
+    </p>
 
     <pre id="compiler"></pre>
     <script defer>
@@ -221,7 +229,7 @@ var _COLON_pi = pi;
         Finally, we want to try out our brand new Scheme compiler. 
     </p>
 
-    <pre>    &lt;pre&gt&lt;code class="language-klipse-eval-js"&gt
+    <pre>    &lt;pre id="prefix-123"&gt&lt;code class="language-klipse-eval-js"&gt
 (+ 1 2 3) 
     &lt;/code&gt;&lt;/pre&gt</pre>
 
@@ -235,7 +243,7 @@ var _COLON_pi = pi;
     </p>
 
     <p>
-        Next, let's calculate the cosine of pi, which results in minus one.
+        Next, let's calculate the cosine of pi with <code>loadSnippet('book-part1','cos-pi')</code>, which results in minus one.
     </p>
 
     <pre id="cos-pi"></pre>
@@ -248,7 +256,7 @@ var _COLON_pi = pi;
     </p>
 
     <p>
-        As noted above, we do not use Klipse in its own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler -- the one that you just put a pi bug into.
+        As noted above, we do not use Klipse in its own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler -- the one that you just put a pi bug into (fortunatelly only locally and until you browser-reload this blog).
     </p>
 
     <p>
