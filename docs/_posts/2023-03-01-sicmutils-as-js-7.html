@@ -40,9 +40,9 @@ categories: Software
     The according html-file with the original Scheme examples is embedded here as an IFrame, albeit sandboxed, i.e. the examples are not executed.
     </p>
 
-    <pre>&lt;iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin"&gt;&lt;/iframe&gt;</pre>
+    <pre>&lt;iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin" onload="window['book-part1-iframe'] = true;"&gt;&lt;/iframe&gt;</pre>
 
-    <iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin"></iframe>
+    <iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" sandbox="allow-same-origin" onload="window['book-part1-iframe'] = true;"></iframe>
 
 <p></p>
 
@@ -139,32 +139,35 @@ Next comes a helper function for loading variables from the Sicmutils environmen
 
     <pre>&lt;script&gt;
 var loadSnippet = (iframeNode, snippetNode) =&gt;
+    window[iframeNode+'-iframe'] != true ? alert("IFrame lacks") : null;
     document.getElementById(snippetNode).innerHTML =
         document.getElementById(iframeNode).contentWindow.document
                 .getElementById(snippetNode).innerHTML;
 &lt;/script&gt;</pre>
 
     <script>
-     var loadSnippet = (iframeNode, snippetNode) =>
-         document.getElementById(snippetNode).innerHTML =
-             document.getElementById(iframeNode).contentWindow.document
-                     .getElementById(snippetNode).innerHTML;
+        var loadSnippet = (iframeNode, snippetNode) => {
+            window[iframeNode+'-iframe'] != true ? alert("IFrame lacks") : null;
+            document.getElementById(snippetNode).innerHTML =
+                document.getElementById(iframeNode).contentWindow.document
+                        .getElementById(snippetNode).innerHTML;
+        }
     </script>
 
-    <p>Now we can easily copy arbitrary snippets from the source into this post.</p>
+     <p>Now we can easily copy arbitrary snippets from the source into this post.</p>
 
     <pre>&lt;pre id="one-2-3"&gt;&lt;/pre&gt;
-&lt;script defer&gt;
+&lt;script&gt;
  loadSnippet('book-part1','one-2-3');
 &lt;/script&gt;</pre>
 
     <pre id="one-2-3"></pre>
-    <script defer>
+    <script>
      loadSnippet('book-part1','one-2-3');
     </script>
 
     <p>
-        All the following Klipse snippets are imported in this way. Note the <code>defer</code> keyword, the execution of the helper function needs to wait until the IFrame is loaded completely. <code>loadSnippet</code> works in the background of this post from now on.
+        All the following Klipse snippets are imported in this way. <code>loadSnippet</code> works in the background of this post from now on.
     </p>
 
     <h1>The rest of the HTML file</h1>
@@ -180,7 +183,7 @@ var loadSnippet = (iframeNode, snippetNode) =&gt;
     </p>
 
     <pre id="klipse-scheme"></pre>
-    <script defer>
+    <script>
      loadSnippet('book-part1','klipse-scheme');
     </script>
 
@@ -201,7 +204,7 @@ var _COLON_pi = pi;
     </p>
 
     <pre id="compiler"></pre>
-    <script defer>
+    <script>
      loadSnippet('book-part1','compiler');
     </script>
 
@@ -234,7 +237,7 @@ var _COLON_pi = pi;
     &lt;/code&gt;&lt;/pre&gt</pre>
 
     <pre id="prefix-123"></pre>
-    <script defer>
+    <script>
      loadSnippet('book-part1','prefix-123');
     </script>
 
@@ -247,7 +250,7 @@ var _COLON_pi = pi;
     </p>
 
     <pre id="cos-pi"></pre>
-    <script defer>
+    <script>
      loadSnippet('book-part1','cos-pi');
     </script>
 
@@ -264,25 +267,25 @@ var _COLON_pi = pi;
     </p>
 
     <pre id="define-L-equations"></pre>
-    <script defer>
+    <script>
      loadSnippet("book-part1","define-L-equations");
     </script>
 
     <pre id="define-L-central-rectangular"></pre>
-    <script defer>
+    <script>
      loadSnippet("book-part1", "define-L-central-rectangular");
     </script>
 
 
     <pre id="calc-L-eqs-central-rect"></pre>
-    <script defer>
+    <script>
      loadSnippet("book-part1", "calc-L-eqs-central-rect");
     </script>
 
-    <p>The footer of the html file finally loads Klipse. Do not forget the <code>defer</code> keyword.</p>
+    <p>The footer of the html file finally loads Klipse.</p>
 
    <pre>
-&lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js" defer&gt;&lt;/script&gt;
+&lt;script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
@@ -294,7 +297,7 @@ var _COLON_pi = pi;
        [1] for specialists: the specific command to compile sicmutils as JavaScript library is <code>shadow-cljs release sicm-browser</code>, changing compiler-options from <code>:advanced</code> to <code>:simple</code> in <code>shadow-cljs.edn</code>.
    </p>
 
-<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js" defer></script>
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 
 </body>
 </html>
