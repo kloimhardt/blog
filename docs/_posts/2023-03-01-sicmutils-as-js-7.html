@@ -142,30 +142,24 @@ Next comes a helper function for loading variables from the Sicmutils environmen
 
     <pre>&lt;script&gt;
 var loadSnippet = (iframeNode, snippetNode) =&gt; {
-    let nde = document.getElementById(iframeNode).contentWindow.document
+ let msg = snippetNode + " not in IFrame " + iframeNode;
+ let prn_msg = () =&gt; {alert(msg); return(msg);};
+ let nde = document.getElementById(iframeNode)
+                   .contentWindow.document
                    .getElementById(snippetNode);
-    if (nde != null) {
-         document.getElementById(snippetNode).innerHTML = nde.innerHTML;
-       } else {
-         let s = snippetNode + " not in IFrame " + iframeNode;
-         document.getElementById(snippetNode).innerHTML = s;
-         alert(s);
-       };
-}
+ document.getElementById(snippetNode).innerHTML =
+     nde != null ? nde.innerHTML : prn_msg();}
 &lt;/script&gt;</pre>
 
     <script>
 var loadSnippet = (iframeNode, snippetNode) => {
- let nde = document.getElementById(iframeNode).contentWindow.document
+ let msg = snippetNode + " not in IFrame " + iframeNode;
+ let prn_msg = () => {alert(msg); return(msg);};
+ let nde = document.getElementById(iframeNode)
+                   .contentWindow.document
                    .getElementById(snippetNode);
-     if (nde != null) {
-          document.getElementById(snippetNode).innerHTML = nde.innerHTML;
-        } else {
-            let s = snippetNode + " not in IFrame " + iframeNode;
-          document.getElementById(snippetNode).innerHTML = s;
-          alert(s);
-        };
-}
+ document.getElementById(snippetNode).innerHTML =
+     nde != null ? nde.innerHTML : prn_msg();}
     </script>
 
      <p>Now we can easily copy arbitrary snippets from the source into this post.</p>
