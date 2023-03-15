@@ -23,9 +23,11 @@ categories: Software
          }
      };
     </script>
+
+    <script src="/blog/js/blog_helper.js"></script>
 </head>
 
-<body>
+<body onload = "loadKlipse();">
     <p>
         (This post is part of a series, all with the same title)
     </p>
@@ -37,7 +39,7 @@ categories: Software
     </p>
 
     <p>
-        The according html-file with the original Scheme examples is embedded below as an IFrame, albeit sandboxed, i.e. the examples are not executed.
+        The according html-file with the original Scheme examples is embedded below as an IFrame, albeit sandboxed, i.e. the examples are not executed. But, using the method demonstrated in a previous blog, code examples from the html source can be imported and executed within this post.
     </p>
 
     <pre>&lt;iframe id="book-part1" sandbox="allow-same-origin" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100"&gt;&lt;/iframe&gt;</pre>
@@ -58,11 +60,12 @@ categories: Software
    </p>
 
    <p>
-       Every example in that html file is a <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> snippet. We give a simple preview of one, in JavaScript, that is.</p>
+       Every example in that html file is a <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> snippet. To give a simple preview of one, we import a small JavaScript snippet from the source.</p>
 
-   <pre><code class="language-klipse-eval-js">
-1 + 2 + 3
-   </code></pre>
+   <pre id="one-2-3"></pre>
+   <script>
+    addSnippet('book-part1','one-2-3');
+   </script>
 
    <p>You can modify every piece of code directly in the page to immediate effect, maybe change 3 to 4 directly above and see what happens.
    </p>
@@ -120,49 +123,6 @@ Next comes a helper function for loading variables from the Sicmutils environmen
     }
     &lt;/script&gt;</pre>
 
-    <p>
-        Then Klipse is tested with a simple JavaScript 1+2+3 example (the one already presented above as preview).
-    </p>
-
-    <pre>    &lt;pre id="one-2-3"&gt&lt;code class="language-klipse-eval-js"&gt
-1 + 2 + 3;
-    &lt;/code&gt;&lt;/pre&gt</pre>
-
-    <h1>Interlude: importing snippets from the HTML file into this post</h1>
-
-    <p>
-        Remember that, within this post, we embedded the source as an IFrame. Since the 1+2+3 snippet carries an id (<code>one-2-3</code>) in that source, we can access and copy it over. For this we write a helper function (it only lives within this post, not in the source).
-    </p>
-
-    <pre>&lt;script&gt;
-var loadSnippet = (iframeNode, snippetNode) =&gt; {
- let msg = snippetNode + " not in IFrame " + iframeNode;
- let prn_msg = () =&gt; {alert(msg); return(msg);};
- let nde = document.getElementById(iframeNode)
-                   .contentWindow.document
-                   .getElementById(snippetNode);
- document.getElementById(snippetNode).innerHTML =
-     nde != null ? nde.innerHTML : prn_msg();}
-&lt;/script&gt;</pre>
-
-    <script src="/blog/js/blog_helper.js"></script>
-
-     <p>Now we can easily copy arbitrary snippets from the source into this post.</p>
-
-    <pre>&lt;pre id="one-2-3"&gt;&lt;/pre&gt;
-&lt;script&gt;
- loadSnippet('book-part1','one-2-3');
-&lt;/script&gt;</pre>
-
-    <pre id="one-2-3"></pre>
-    <script>
-     loadSnippet('book-part1','one-2-3');
-    </script>
-
-    <p>
-        All the following Klipse snippets are imported in this way. <code>loadSnippet</code> works in the background of this post from now on.
-    </p>
-
     <h1>The rest of the HTML file</h1>
 
     <p>Back to the content. Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use). Consequently, <code>class="language-klipse-scheme"</code> is never used  again afterwards in the file.</p>
@@ -171,13 +131,9 @@ var loadSnippet = (iframeNode, snippetNode) =&gt; {
 #t
     &lt;/code&gt;&lt;/pre&gt</pre>
 
-    <p>
-        Using <code>loadSnippet('book-part1','klipse-scheme')</code>, this looks like
-    </p>
-
     <pre id="klipse-scheme"></pre>
     <script>
-     loadSnippet('book-part1','klipse-scheme');
+     addSnippet('book-part1','klipse-scheme');
     </script>
 
     <p></p>
@@ -192,13 +148,9 @@ var _COLON_pi = pi;
 ...
     &lt;/code&gt;&lt;/pre&gt</pre>
 
-    <p>
-        With <code>loadSnippet('book-part1','compiler')</code>
-    </p>
-
     <pre id="compiler"></pre>
     <script>
-     loadSnippet('book-part1','compiler');
+     addSnippet('book-part1','compiler');
     </script>
 
     <p>The code just loaded exposes the function <code>expressionToJs</code>. We patch the JavaScript <code>eval</code> function to invoke <code>expressionToJs</code> whenever some code starts with a round bracket <code>(</code>.</p>
@@ -222,7 +174,7 @@ var _COLON_pi = pi;
 
     <pre id="prefix-123"></pre>
     <script>
-     loadSnippet('book-part1','prefix-123');
+     addSnippet('book-part1','prefix-123');
     </script>
 
     <p>
@@ -230,12 +182,12 @@ var _COLON_pi = pi;
     </p>
 
     <p>
-        Next, let's calculate the cosine of pi with <code>loadSnippet('book-part1','cos-pi')</code>, which results in minus one.
+        Next, let's calculate the cosine of pi, which results in minus one.
     </p>
 
     <pre id="cos-pi"></pre>
     <script>
-     loadSnippet('book-part1','cos-pi');
+     addSnippet('book-part1','cos-pi');
     </script>
 
     <p>
@@ -252,18 +204,18 @@ var _COLON_pi = pi;
 
     <pre id="define-L-equations"></pre>
     <script>
-     loadSnippet("book-part1","define-L-equations");
+     addSnippet("book-part1", "define-L-equations");
     </script>
 
     <pre id="define-L-central-rectangular"></pre>
     <script>
-     loadSnippet("book-part1", "define-L-central-rectangular");
+     addSnippet("book-part1", "define-L-central-rectangular");
     </script>
 
 
     <pre id="calc-L-eqs-central-rect"></pre>
     <script>
-     loadSnippet("book-part1", "calc-L-eqs-central-rect");
+     addSnippet("book-part1", "calc-L-eqs-central-rect");
     </script>
 
     <p>The footer of the html file finally loads Klipse.</p>
@@ -280,8 +232,6 @@ var _COLON_pi = pi;
    <p>
        [1] The specific command to compile sicmutils as JavaScript library is <code>shadow-cljs release sicm-browser</code>, changing compiler-options from <code>:advanced</code> to <code>:simple</code> in <code>shadow-cljs.edn</code>. The resulting js-file size is 6MB, which means it takes some time to load (which gives the IFrame DOM enough time to build up for later access :-).
    </p>
-
-<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 
 </body>
 </html>

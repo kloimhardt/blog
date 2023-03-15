@@ -31,11 +31,40 @@ categories: Software
 1 + 2 + 3
     </code></pre>
 
+    <h1>Interlude: importing snippets from an HTML file into this post</h1>
+
+    <p>
+        We embed the source as an IFrame within this post, albeit sandboxed, i.e. code is not executed.
+    </p>
+
+    <pre>&lt;iframe id="code_snippet" sandbox="allow-same-origin" src="/blog/html/code_snippet.html" width="600" height="150"&gt;&lt;/iframe&gt;</pre>
 
     <iframe id="code_snippet" sandbox="allow-same-origin"
             src="/blog/html/code_snippet.html"
-            width="735" height="100">
+            width="735" height="150">
     </iframe>
+
+    <p>
+        Since the 4+5+6 snippet carries an id (<code>id = "first"</code>) in that source, we can access and copy it over. For this we use a helper function.
+    </p>
+
+    <pre>&lt;script&gt;
+var loadSnippet = (iframeNode, snippetNode) =&gt; {
+ let msg = snippetNode + " not in IFrame " + iframeNode;
+ let prn_msg = () =&gt; {alert(msg); return(msg);};
+ let nde = document.getElementById(iframeNode)
+                   .contentWindow.document
+                   .getElementById(snippetNode);
+ document.getElementById(snippetNode).innerHTML =
+     nde != null ? nde.innerHTML : prn_msg();}
+&lt;/script&gt;</pre>
+
+    <p>Now we can easily copy arbitrary snippets from the source into this post using  <code>addSnippet</code>, the asynchronous sibling of <code>loadSnippet</code>.</p>
+
+    <pre>&lt;pre id="first"&gt;&lt;/pre&gt;
+&lt;script&gt;
+ addSnippet('code_snippet','first');
+&lt;/script&gt;</pre>
 
     <pre id="first"></pre>
     <script>addSnippet('code_snippet','first')</script>
