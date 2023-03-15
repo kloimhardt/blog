@@ -40,15 +40,12 @@ categories: Software
         The according html-file with the original Scheme examples is embedded below as an IFrame, albeit sandboxed, i.e. the examples are not executed.
     </p>
 
-    <iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html"
-            width="735" height="100" sandbox="allow-same-origin"
-            onload="window['book-part1-iframe'] = true;">
-    </iframe>
+    <pre>&lt;iframe id="book-part1" sandbox="allow-same-origin" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100"&gt;&lt;/iframe&gt;</pre>
 
-    <pre>&lt;iframe id="book-part1" src="/blog/html/sicmutils-as-js-book-part1.html"
-        width="600" height="100" sandbox="allow-same-origin"
-        onload="window['book-part1-iframe'] = true;"&gt;
-&lt;/iframe&gt;</pre>
+    <iframe id="book-part1" sandbox="allow-same-origin"
+            src="/blog/html/sicmutils-as-js-book-part1.html"
+            width="735" height="100">
+    </iframe>
 
 <p></p>
 
@@ -144,20 +141,31 @@ Next comes a helper function for loading variables from the Sicmutils environmen
     </p>
 
     <pre>&lt;script&gt;
-var loadSnippet = (iframeNode, snippetNode) =&gt;
-    window[iframeNode+'-iframe'] != true ? alert("IFrame lacks") : null;
-    document.getElementById(snippetNode).innerHTML =
-        document.getElementById(iframeNode).contentWindow.document
-                .getElementById(snippetNode).innerHTML;
+var loadSnippet = (iframeNode, snippetNode) =&gt; {
+    let nde = document.getElementById(iframeNode).contentWindow.document
+                   .getElementById(snippetNode);
+    if (nde != null) {
+         document.getElementById(snippetNode).innerHTML = nde.innerHTML;
+       } else {
+         let s = snippetNode + " not in IFrame " + iframeNode;
+         document.getElementById(snippetNode).innerHTML = s;
+         alert(s);
+       };
+}
 &lt;/script&gt;</pre>
 
     <script>
-        var loadSnippet = (iframeNode, snippetNode) => {
-            window[iframeNode+'-iframe'] != true ? alert("IFrame lacks") : null;
-            document.getElementById(snippetNode).innerHTML =
-                document.getElementById(iframeNode).contentWindow.document
-                        .getElementById(snippetNode).innerHTML;
-        }
+var loadSnippet = (iframeNode, snippetNode) => {
+ let nde = document.getElementById(iframeNode).contentWindow.document
+                   .getElementById(snippetNode);
+     if (nde != null) {
+          document.getElementById(snippetNode).innerHTML = nde.innerHTML;
+        } else {
+            let s = snippetNode + " not in IFrame " + iframeNode;
+          document.getElementById(snippetNode).innerHTML = s;
+          alert(s);
+        };
+}
     </script>
 
      <p>Now we can easily copy arbitrary snippets from the source into this post.</p>
