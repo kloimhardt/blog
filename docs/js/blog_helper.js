@@ -14,10 +14,14 @@ function addSnippet(iframeNode, snippetNode) {
     glob_snippets = glob_snippets.concat([[iframeNode, snippetNode]]);
 }
 
+var glob_klipseurl = "";
+
+var setKlipseUrl = (s) => glob_klipseurl = s;
+
 function loadKlipse() {
     glob_snippets.map((p) => loadSnippet(p[0], p[1]));
     var el = document.createElement('script');
-    el.src = "https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js";
+    el.src = glob_klipseurl;
     el.type = 'text/javascript';
     document.getElementsByTagName('head')[0].appendChild(el);
 }
