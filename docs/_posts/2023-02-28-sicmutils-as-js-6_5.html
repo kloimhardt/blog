@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Sicmutils as JavaScript library (6.5)"
+date:   2023-02-28 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+    <style>
+     .CodeMirror { max-height: 150px; }
+    </style>
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+
+    <script src="/blog/js/blog_helper.js"></script>
+</head>
+
+<body onload = "loadKlipse();">
+    <p>
+        (This post is part of a series, all with the same title)
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+1 + 2 + 3
+    </code></pre>
+
+
+    <iframe id="code_snippet" sandbox="allow-same-origin"
+            src="/blog/html/code_snippet.html"
+            width="735" height="100">
+    </iframe>
+
+    <pre id="first"></pre>
+    <script>addSnippet('code_snippet','first')</script>
+
+</body>
+</html>
