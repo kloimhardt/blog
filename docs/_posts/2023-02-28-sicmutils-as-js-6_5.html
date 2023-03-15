@@ -37,9 +37,9 @@ categories: Software
         We embed the source as an IFrame within this post, albeit sandboxed, i.e. code is not executed.
     </p>
 
-    <pre>&lt;iframe id="code_snippet" sandbox="allow-same-origin" src="/blog/html/code_snippet.html" width="600" height="150"&gt;&lt;/iframe&gt;</pre>
+    <pre>&lt;iframe id="code_snippets" sandbox="allow-same-origin" src="/blog/html/code_snippet.html" width="600" height="150"&gt;&lt;/iframe&gt;</pre>
 
-    <iframe id="code_snippet" sandbox="allow-same-origin"
+    <iframe id="code_snippets" sandbox="allow-same-origin"
             src="/blog/html/code_snippet.html"
             width="735" height="150">
     </iframe>
@@ -63,11 +63,11 @@ var loadSnippet = (iframeNode, snippetNode) =&gt; {
 
     <pre>&lt;pre id="first"&gt;&lt;/pre&gt;
 &lt;script&gt;
- addSnippet('code_snippet','first');
+ addSnippet('code_snippets','first');
 &lt;/script&gt;</pre>
 
     <pre id="first"></pre>
-    <script>addSnippet('code_snippet','first')</script>
+    <script>addSnippet('code_snippets','first')</script>
 
 </body>
 </html>
