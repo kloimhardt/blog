@@ -22,7 +22,7 @@ One other thing is if you want to break the rules or write new ones: in that cas
 
 So I make the distinction between understanding/competence on the one hand and reasoning/comprehension on the other.
 
-I have this from Immanuel Kant, he made his most important distinction between wits ("Verstand") and reason ("Vernunft"). Wits is to grasp the rules to deal with stuff appearing at some time somewhere. Sensation is important here, a Prussian vindicating the double meaning of the English word "sense" as something bodily (appreciation) as well as spiritual (meaning). Then comes reason, which is to comprehend the rules of wit, to subordinate and sum them into principles. So he learns us. He stresses that pure reasoning is important but can easily lead even the most competent astray. Hence "Critique of Pure Reason".
+I have this from Immanuel Kant, he made his most important distinction between wits ("Verstand") and reason ("Vernunft"). Wits is to grasp the rules to deal with stuff appearing at some time somewhere. Sensation is important here -- pls. appreciate the Prussian vindicating the double meaning of the English word "sense" as something bodily (appreciation) as well as spiritual (meaning). Then comes reason, which is to comprehend the rules of wit, to subordinate and sum them into principles. So he learns us. He stresses that pure reasoning is important but can easily lead even the most competent astray. Hence "Critique of Pure Reason".
 
 And indeed, religious practice seldom does harm, religious principles can do so much more. In the same vain, the rules for estimating the necessary energy to speed up a train have been the same for 200 years, but the principles had to change from Newtonian to relativistic Einstein reasoning.
 
