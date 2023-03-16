@@ -8,7 +8,7 @@ Let's take a simple example: you go into a grocery store in Italy. You look wher
 
 You know the universal rules: butter must be in a fridge, one needs to pay before getting out.
 
-Rules are first of all something you need to understand. You do not necessarily have to know their reasons. You learn and subsequently understand the rules by standing by and watching, maybe your parents or friends etc.
+Rules are first of all something you need to understand. You do not necessarily have to know their reasons. You learn and subsequently understand the rules by standing by, you grasp them by watching your parents or people etc.
 
 In following the rules you acquire competence to put them to action. Some animals even seem to have competence that is present at birth. In that case they do not even have to understand. I find that hard to believe.
 
@@ -22,7 +22,7 @@ One other thing is if you want to break the rules or write new ones: in that cas
 
 So I make the distinction between understanding/competence on the one hand and reasoning/comprehension on the other.
 
-I have this from Immanuel Kant, he made his most important distinction between wits and reason. Wits is to understand the rules to deal with stuff, reason is to comprehend the principles behind those rules -- so he learns us. His main point is that pure reasoning can easily lead us astray. Hence "Critique of Pure Reason".
+I have this from Immanuel Kant, he made his most important distinction between wits and reason. Wits is to grasp the rules to deal with stuff appearing at some time somewhere. Reason is to comprehend the rules of wit, to order them into principles. So he learns us. He stresses that pure reasoning is important but can easily lead even the most competent astray. Hence "Critique of Pure Reason".
 
 And indeed, religious practice seldom does harm, religious principles can do so much more. In the same vain, the rules for estimating the necessary energy to speed up a train have been the same for 200 years, but the principles had to change from Newtonian to relativistic Einstein reasoning.
 
