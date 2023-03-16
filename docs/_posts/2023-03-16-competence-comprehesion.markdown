@@ -28,6 +28,6 @@ And indeed, religious practice seldom does harm, religious principles can do so 
 
 I think one is in a good place when one encounters a new situation and one is given some simple rules to understand. One can start to do something successful immediately. Best practice is rewarding.
 
-On the other hand, it is important to not get complacent by a comfortable situation: the one who does not go with the time, goes -- with time. After all, the rules for speeding up protons were not known 200 years ago. But we are not that type of complacent person, because we strive for comprehension, right?
+On the other hand, it is important to not get complacent by a comfortable situation: the one who does not go with the time, goes -- with time. After all, the rules for estimating the bang of colliding protons were not known 200 years ago (that went via principled reasoning). But we are not that type of complacent person, because we strive for comprehension, right?
 
 So, being thus not afraid of best practice as a convenient first step, competence it is. We want ways to learn by first understanding without the burdon of arduous reasoning. That is hard enough already in itself. Let that be the slogan of our preferred way of learning: "First the rules, then the principles: Competence before Comprehension".
