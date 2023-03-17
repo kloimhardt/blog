@@ -1,0 +1,19 @@
+.fixed-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.fixed-bg p {
+    color: black;
+    text-shadow: 2px 2px white;
+    padding: 0px 20px;
+}
+
+.scroll-bg {
+    text-align: center;
+    background-color: grey;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding: 0px 10px;
+}
