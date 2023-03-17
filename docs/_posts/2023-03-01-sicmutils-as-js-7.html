@@ -127,7 +127,7 @@ Next comes a helper function for loading variables from the Sicmutils environmen
 
     <h1>The rest of the HTML file</h1>
 
-    <p>Back to the content. Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use). Consequently, <code>class="language-klipse-scheme"</code> is never used  again afterwards in the file.</p>
+    <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use). Consequently, <code>class="language-klipse-scheme"</code> is never used  again afterwards in the file.</p>
 
     <pre>    &lt;pre id="klipse-scheme"&gt&lt;code class="language-klipse-scheme"&gt
 #t
@@ -200,6 +200,15 @@ var _COLON_pi = pi;
     <p>
         As noted above, we do not use Klipse in its own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler -- the one that you just put a pi bug into (fortunatelly only locally and until you browser-reload this blog).
     </p>
+
+    <p>
+        What follows is a bit more of an interesting example that can also be viewed as a <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/polar.org">visual version in clj-tiles</a>.
+    </p>
+
+    <pre id="polar2d"></pre>
+    <script>
+     addSnippet("book-part1", "polar2d");
+    </script>
 
     <p>
         Now we can execute the code of the SICMechanics book. I only give one juicy taste here. I mention again, that the code is not manually written but automatically imported (with the <code>addSnippet</code> command) from the <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">source html</a>).

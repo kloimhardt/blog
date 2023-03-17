@@ -215,9 +215,7 @@ var vector_length = cljs.core.count; null;
      window.eval = _3_eval;
     </script>
 
-    <h1>1 Lagrangian Mechanics</h1>
-
-    <h2>1.4   Computing Actions</h2>
+    <h1>Warm up</h1>
 
     <pre id="prefix-123"><code class="language-klipse-eval-js">
 (+ 1 2 3) 
@@ -226,6 +224,15 @@ var vector_length = cljs.core.count; null;
     <pre id="cos-pi"><code class="language-klipse-eval-js">
 (cos :pi) 
     </code></pre>
+
+    <pre id="polar2d"><code class="language-klipse-eval-js">
+(up (* 'R (cos 'phi))
+    (* 'R (sin 'phi))) 
+    </code></pre>
+
+    <h1>1 Lagrangian Mechanics</h1>
+
+    <h2>1.4   Computing Actions</h2>
 
     <pre><code class="language-klipse-eval-js">
 (define ((L-free-particle mass) local)

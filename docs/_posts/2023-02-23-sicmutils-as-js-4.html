@@ -173,6 +173,19 @@ expr[expr.length-1] === " "
 ((3 * (sin ^ 2)) 'x) 
     </code></pre>
 
+    <p>
+        A nice example, click for <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/polar.org">visual version in clj-tiles</a>
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+loadEnv("up");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(up (* 'R (cos 'phi))
+    (* 'R (sin 'phi))) 
+    </code></pre>
+
     <pre><code class="language-klipse-eval-js">
 var drv = sicmutils.env.D;
 var f = mul(3, expt.call(null, sin, 2));
@@ -202,6 +215,14 @@ var preAmble = (j) => _preAmble(["simplify", j]);
 
     <pre><code class="language-klipse-eval-js">
 ((D (3 * (sin ^ 2))) 'x) 
+    </code></pre>
+
+    <p>
+        Of course, prefix as well
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+((D (* 3 (expt sin 2))) 'x) 
     </code></pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
