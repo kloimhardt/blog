@@ -3,11 +3,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/prolog.css">
+
+<script>
+    window.klipse_settings = {
+        codemirror_options_in: {
+            lineWrapping: true,
+            autoCloseBrackets: true
+        },
+        codemirror_options_out: {
+            lineWrapping: true
+        },
+        beautify_strings: true,
+        selector_eval_js: '.language-klipse-eval-js, .language-eval-js, [data-lang=klipse-javascript]',
+        selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme'
+    };
+</script>
+
 </head>
 <body>
     <h1>The 4+5+6 code snippet</h1>
+
     <pre id="first"><code class="language-klipse-eval-js">
 4 + 5 + 6
     </code></pre>
+
+    <pre><code class="language-klipse-scheme">
+(+ 23 42)
+    </code></pre>
+
+    <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js?v=8.0.1"></script>
+
 </body>
 </html>
