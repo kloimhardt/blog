@@ -95,13 +95,13 @@ categories: HamiltonMechanics
         <p>Any stength of a spring is measured in groans. We define the specific spring with the strength of five groans.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define grnSPRING (* 2 'groans)) 
+(define grnSPRING (* 4 'groans)) 
         </code></pre>
 
         <p>Any body's resistance to movement is measured in grams. We define a specific body with the resistance of three grams.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define ftrBALL (* 5 'grams)) 
+(define ftrBALL (* 9 'grams)) 
         </code></pre>
 
         <p>Any energy is measured in calories. Any Hamiltonian is given as a function that takes some state and returns an energy. We define the specific Hamiltonian of our body of specific resistence attached to our spring of specific strength.</p>
@@ -140,14 +140,13 @@ categories: HamiltonMechanics
 (define (cal<-harmonic upSTATE)
   (let ((q (coordinate upSTATE))
         (p (momentum upSTATE)))
-    (+ (/ (* (* 2 groans) (square q)) 2)
+    (+ (/ (* (* 4 groans) (square q)) 2)
        (/ (square p) (* ftrBALL 2))))) 
         </code></pre>
 
         <pre><code class="language-klipse-eval-js">
 (cal<-harmonic upSEVEN) 
         </code></pre>
-
 
         <p>Any frequency is measured in cycles.</p>
 
@@ -304,67 +303,43 @@ We realize that by defining the Hamilton equations, we also determined calories 
 (define new-groans (/ calories (square 'meters))) 
 </code></pre>
 
-<p>We redefine the momentum function</p>
+<p>We redefine the coordinate and momentum function</p>
 
 <pre><code class="language-klipse-eval-js">
-(define (spk<-sine secT) (* -15 (sin (* cylTHREE secT)) new-sparks)) 
+(define m = (* 'm 'grams))
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define k = (* 'k new-groans))
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define (mtr<-q secT) (* A (cos (* (/ 2 3) (/ 1 'sec) secT)) 'meters)) 
+</code></pre>
+
+
+<pre><code class="language-klipse-eval-js">
+(define (mtr<-q secT) (* 'A (cos (* (/ 2 3) (/ 1 'sec) secT)) 'meters)) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define (spk<-p secT) (* -6 'A (sin (* (/ 2 3) (/ 1 'sec) secT)) new-sparks)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
 (define (cal<-hamiltonian upSTATE)
 (let ((q (coordinate upSTATE))
 (p (momentum upSTATE)))
-(+ (/ (* (* 2 new-groans) (square q)) 2)
+(+ (/ (* (* 4 new-groans) (square q)) 2)
 (/ (square p) (* ftrBALL 2))))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-((compose cal<-hamiltonian (state-path mtr<-cosine spk<-sine)) secTWO) 
+((compose cal<-hamiltonian (state-path mtr<-q spk<-p)) secTWO) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-hamiltonian) mtr<-cosine spk<-sine) secTWO) 
-</code></pre>
-
-
-<pre><code class="language-klipse-eval-js">
-(define (p-sin t) (* 'B (sin (* 'w t)))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-H-square>) q-cos p-sin) 't) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define w (sqrt (* 4 'groans 3 'feathers))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define (q-cosw t) (* 'A (cos (* w t)))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define B (/ (* 4 'groans 'A) w)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define (p-sinw t) (* B (- (sin (* w t))))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-H-square>) q-cosw p-sinw) 't) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define q (literal-function 'x)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define p (literal-function 'p_x)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-H-square>) q p) 't) 
+(((Hamilton-equations cal<-hamiltonian) mtr<-q spk<-p) secTWO) 
 </code></pre>
 
 </html>
