@@ -77,19 +77,19 @@ categories: HamiltonMechanics
     <p>Any state is given as an up-tuple. We define a specific state<p>
 
         <pre><code class="language-klipse-eval-js">
-(define upSEVEN (up secTWO mtrSEVEN spkFIVE)) 
+(define upSVEN (up secTWO mtrSEVEN spkFIVE)) 
         </code></pre>
 
         <p>We can get the cooridnate out of a state</p>
 
         <pre><code class="language-klipse-eval-js">
-(coordinate upSEVEN) 
+(coordinate upSVEN) 
         </code></pre>
 
         <p>We can get the momentum out of a state</p>
 
         <pre><code class="language-klipse-eval-js">
-(momentum upSEVEN) 
+(momentum upSVEN) 
         </code></pre>
 
         <p>Any stength of a spring is measured in groans. We define the specific spring with the strength of five groans.</p>
@@ -98,32 +98,36 @@ categories: HamiltonMechanics
 (define grnSPRING (* 2 'groans)) 
         </code></pre>
 
-        <p>Any body's resistance to movement is measured in feathers. We define a specific body with the resistance of three feathers.</p>
+        <p>Any body's resistance to movement is measured in grams. We define a specific body with the resistance of three grams.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define ftrBALL (* 3 'feathers)) 
+(define ftrBALL (* 3 'grams)) 
         </code></pre>
 
         <p>Any energy is measured in calories. Any Hamiltonian is given as a function that takes some state and returns an energy. We define the specific Hamiltonian of our body of specific resistence attached to our spring of specific strength.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define (cal<-harmonic upSTATE)
+(define (cal<-spring-ball upSTATE)
   (let ((q (coordinate upSTATE))
         (p (momentum upSTATE)))
     (+ (/ (* grnSPRING (square q)) 2)
-       (/ (* ftrBALL (square p)) 2)))) 
+       (/ (square p) (* ftrBALL 2))))) 
         </code></pre>
 
         <p>We apply the Hamiltonian to the state</p>
 
         <pre><code class="language-klipse-eval-js">
-(cal<-harmonic upSEVEN) 
+(cal<-spring-ball upSVEN) 
         </code></pre>
 
         <p>We realize that by defining our specific Hamiltonian, we also determined sparks in terms of feathers and calories</p>
 
         <pre><code class="language-klipse-eval-js">
-(define sparks (sqrt (/ 'calories 'feathers))) 
+(define sparks (sqrt (* 'calories 'grams))) 
+        </code></pre>
+
+        <pre><code class="language-klipse-eval-js">
+(define upSEVEN (up secTWO mtrSEVEN (* 5 sparks))) 
         </code></pre>
 
         <p>We realize that by defining our specific Hamiltonian, we also determined groans in terms of meters and calories</p>
@@ -132,28 +136,18 @@ categories: HamiltonMechanics
 (define groans (/ 'calories (square 'meters))) 
         </code></pre>
 
-        <p>Taking partial derivatives</p>
-
         <pre><code class="language-klipse-eval-js">
-(((partial 1) cal<-harmonic) upSEVEN) 
+(define (cal<-harmonic upSTATE)
+  (let ((q (coordinate upSTATE))
+        (p (momentum upSTATE)))
+    (+ (/ (* (* 2 groans) (square q)) 2)
+       (/ (square p) (* ftrBALL 2))))) 
         </code></pre>
 
         <pre><code class="language-klipse-eval-js">
-(((partial 2) cal<-harmonic) upSEVEN) 
+(cal<-harmonic upSEVEN) 
         </code></pre>
 
-    <p>The state-derivative is a higher order function. It takes some Hamiltonian and calculates the derivative of it. Using that, the state-derivative returns a function that takes some state and returns an up-tuple.</p>
-
-    <pre><code class="language-klipse-eval-js">
-(define ((state-derivative cal<-Hamiltonian) upSTATE)
-  (up 1
-      (((partial 2) cal<-Hamiltonian) upSTATE)
-      (- (((partial 1) cal<-Hamiltonian) upSTATE)))) 
-    </code></pre>
-
-<pre><code class="language-klipse-eval-js">
-((state-derivative cal<-harmonic) upSEVEN) 
-</code></pre>
 
         <p>Any frequency is measured in cycles.</p>
 
@@ -161,7 +155,7 @@ categories: HamiltonMechanics
 (define cycles (/ 1 'sec)) 
         </code></pre>
 
-        <p>We define the specific frequency of seven cycles.</p>
+        <p>We define the specific frequency.</p>
 
         <pre><code class="language-klipse-eval-js">
 (define cylTHREE (* 3 cycles)) 
@@ -181,7 +175,7 @@ categories: HamiltonMechanics
     <p>We define a momentum-function that takes some timestamp and returns a momentum.</p>
 
     <pre><code class="language-klipse-eval-js">
-(define (spk<-atan secT) (* (atan (* cylTHREE secT)) 'sparks)) 
+(define (spk<-atan secT) (* (atan (* cylTHREE secT)) sparks)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -201,7 +195,7 @@ categories: HamiltonMechanics
 (define up<-path-cosine (state-path mtr<-cosine spk<-atan)) 
     </code></pre>
 
-    <p>We show that indeed up<-path-cosine is a function that takes some timestamp and returns a state</p>
+    <p>We show that indeed, like any path-function, up<-path-cosine is a function that takes some timestamp and returns a state</p>
 
     <pre><code class="language-klipse-eval-js">
 (identity up<-path-cosine) 
@@ -234,11 +228,39 @@ categories: HamiltonMechanics
 (cal<-harmonic upSIX) 
     </code></pre>
 
+    <p>Taking partial derivatives</p>
+
+    <pre><code class="language-klipse-eval-js">
+(((partial 1) cal<-harmonic) upSEVEN) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(((partial 2) cal<-harmonic) upSEVEN) 
+    </code></pre>
+
+    <p>The state-derivative is a higher order function. It takes some Hamiltonian and calculates the derivative of it. Using that, the state-derivative returns a function that takes some state and returns a path function.</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((state-derivative cal<-Hamiltonian) upSTATE)
+  (up 1
+      (((partial 2) cal<-Hamiltonian) upSTATE)
+      (- (((partial 1) cal<-Hamiltonian) upSTATE)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(state-derivative cal<-harmonic) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((state-derivative cal<-harmonic) upSEVEN) 
+    </code></pre>
+
+
     <pre><code class="language-klipse-eval-js">
 ((state-derivative cal<-harmonic) upSIX) 
     </code></pre>
 
-    <p>We show how to apply our Hamiltonian directly to the timestamp using  path-function as an intermediary between the two.</p>
+    <p>We show how to apply our Hamiltonian directly to the timestamp using  path-function as an intermediary between the two. The composition of a Hamiltonian with a path-function is a simple function of time, i.e. a function that takes a number of seconds and returns a number of calories.</p>
 
     <pre><code class="language-klipse-eval-js">
 ((compose cal<-harmonic up<-path-cosine) secTWO) 
@@ -264,8 +286,40 @@ categories: HamiltonMechanics
 (((Hamilton-equations cal<-harmonic) mtr<-cosine spk<-atan) secTWO) 
 </code></pre>
 
+<p>
+We realize that by defining the Hamilton equations, we also determined calories in terms of meters and seconds
+</p>
+
 <pre><code class="language-klipse-eval-js">
-(define (q-cos t) (* 'A (cos (* 'w t)))) 
+(define calories (/ (* (square 'meters) 'grams) (square 'sec))) 
+</code></pre>
+
+<p>This implies new sparks and groans</p>
+
+<pre><code class="language-klipse-eval-js">
+(define new-sparks (sqrt (* calories 'grams))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define new-groans (/ calories (square 'meters))) 
+</code></pre>
+
+<p>We redefine the momentum function</p>
+
+<pre><code class="language-klipse-eval-js">
+(define (spk<-sine secT) (* (sin (* cylTHREE secT)) new-sparks)) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define (cal<-hamiltonian upSTATE)
+(let ((q (coordinate upSTATE))
+(p (momentum upSTATE)))
+(+ (/ (* (* 2 new-groans) (square q)) 2)
+(/ (square p) (* ftrBALL 2))))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+((compose cal<-hamiltonian (state-path mtr<-cosine spk<-sine)) secTWO) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
