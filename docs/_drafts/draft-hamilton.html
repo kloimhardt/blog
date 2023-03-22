@@ -210,7 +210,6 @@ categories: HamiltonMechanics
 ((D up<-path-cosine) secTWO) 
     </code></pre>
 
-
     <p>We define another specific state.</p>
 
     <pre><code class="language-klipse-eval-js">
@@ -286,7 +285,7 @@ categories: HamiltonMechanics
 </code></pre>
 
 <p>
-We realize that by defining the Hamilton equations, we also determined calories in terms of meters and seconds
+For realizable coordinate- and momentum-functions, the Hamilton-equantions path-function needs to be identically zero. By looking at the previous result, we realize that by defining the Hamilton equations, we also determined calories in terms of meters and seconds.
 </p>
 
 <pre><code class="language-klipse-eval-js">
@@ -306,32 +305,43 @@ We realize that by defining the Hamilton equations, we also determined calories 
 <p>We redefine the coordinate and momentum function</p>
 
 <pre><code class="language-klipse-eval-js">
-(define m = (* 'm 'grams))
+(define mb (* 'ma 'grams)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define k = (* 'k new-groans))
+(define kb (* 'ka new-groans)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define (mtr<-q secT) (* A (cos (* (/ 2 3) (/ 1 'sec) secT)) 'meters)) 
-</code></pre>
-
-
-<pre><code class="language-klipse-eval-js">
-(define (mtr<-q secT) (* 'A (cos (* (/ 2 3) (/ 1 'sec) secT)) 'meters)) 
+(define Eb (* 'En calories)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define (spk<-p secT) (* -6 'A (sin (* (/ 2 3) (/ 1 'sec) secT)) new-sparks)) 
+(define ww (sqrt (/ kb mb))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define mtrQNULL (sqrt (/ (* 2 Eb) (* mb (square ww))))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define spkPNULL (sqrt (* 2 mb Eb))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define (mtr<-q secT) (* mtrQNULL (sin (* ww secT)))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define (spk<-p secT) (* spkPNULL (cos (* ww secT)))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
 (define (cal<-hamiltonian upSTATE)
 (let ((q (coordinate upSTATE))
-(p (momentum upSTATE)))
-(+ (/ (* (* 4 new-groans) (square q)) 2)
-(/ (square p) (* ftrBALL 2))))) 
+      (p (momentum upSTATE)))
+(+ (/ (* kb (square q)) 2)
+   (/ (square p) (* mb 2))))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
@@ -340,6 +350,19 @@ We realize that by defining the Hamilton equations, we also determined calories 
 
 <pre><code class="language-klipse-eval-js">
 (((Hamilton-equations cal<-hamiltonian) mtr<-q spk<-p) secTWO) 
+</code></pre>
+
+<p>Unit checks</p>
+
+<pre><code class="language-klipse-eval-js">
+(/ mtrQNULL 'meters) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(/ spkPNULL new-sparks) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
 </code></pre>
 
 </html>
