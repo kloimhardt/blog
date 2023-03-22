@@ -56,171 +56,212 @@ categories: HamiltonMechanics
      addSnippet('book-part3','prefix-123');
     </script>
 
-    <p> Let's define a frequency of seven cycles per second</p>
+    <p>Any timestamp is measured in seconds. We define the specific timestamp of eight seconds.</p>
 
     <pre><code class="language-klipse-eval-js">
-(define sec-ten (* 10 'sec)) 
+(define secTWO (* 2 'sec)) 
+    </code></pre>
+
+    <p>Any coordiante-point is measured in meters. We define a specific coordinate-point.</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define mtrSEVEN (* 7 'meters)) 
+    </code></pre>
+
+    <p>Any momentum is measured in sparks. We define a specific momentum.</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define spkFIVE (* 5 'sparks)) 
+    </code></pre>
+
+    <p>Any state is given as an up-tuple. We define a specific state<p>
+
+        <pre><code class="language-klipse-eval-js">
+(define upSEVEN (up secTWO mtrSEVEN spkFIVE)) 
+        </code></pre>
+
+        <p>We can get the cooridnate out of a state</p>
+
+        <pre><code class="language-klipse-eval-js">
+(coordinate upSEVEN) 
+        </code></pre>
+
+        <p>We can get the momentum out of a state</p>
+
+        <pre><code class="language-klipse-eval-js">
+(momentum upSEVEN) 
+        </code></pre>
+
+        <p>Any stength of a spring is measured in groans. We define the specific spring with the strength of five groans.</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define grnSPRING (* 2 'groans)) 
+        </code></pre>
+
+        <p>Any body's resistance to movement is measured in feathers. We define a specific body with the resistance of three feathers.</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define ftrBALL (* 3 'feathers)) 
+        </code></pre>
+
+        <p>Any energy is measured in calories. Any Hamiltonian is given as a function that takes some state and returns an energy. We define the specific Hamiltonian of our body of specific resistence attached to our spring of specific strength.</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define (cal<-harmonic upSTATE)
+  (let ((q (coordinate upSTATE))
+        (p (momentum upSTATE)))
+    (+ (/ (* grnSPRING (square q)) 2)
+       (/ (* ftrBALL (square p)) 2)))) 
+        </code></pre>
+
+        <p>We apply the Hamiltonian to the state</p>
+
+        <pre><code class="language-klipse-eval-js">
+(cal<-harmonic upSEVEN) 
+        </code></pre>
+
+        <p>We realize that by defining our specific Hamiltonian, we also determined sparks in terms of feathers and calories</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define sparks (sqrt (/ 'calories 'feathers))) 
+        </code></pre>
+
+        <p>We realize that by defining our specific Hamiltonian, we also determined groans in terms of meters and calories</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define groans (/ 'calories (square 'meters))) 
+        </code></pre>
+
+        <p>Taking partial derivatives</p>
+
+        <pre><code class="language-klipse-eval-js">
+(((partial 1) cal<-harmonic) upSEVEN) 
+        </code></pre>
+
+        <pre><code class="language-klipse-eval-js">
+(((partial 2) cal<-harmonic) upSEVEN) 
+        </code></pre>
+
+    <p>The state-derivative is a higher order function. It takes some Hamiltonian and calculates the derivative of it. Using that, the state-derivative returns a function that takes some state and returns an up-tuple.</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((state-derivative cal<-Hamiltonian) upSTATE)
+  (up 1
+      (((partial 2) cal<-Hamiltonian) upSTATE)
+      (- (((partial 1) cal<-Hamiltonian) upSTATE)))) 
+    </code></pre>
+
+<pre><code class="language-klipse-eval-js">
+((state-derivative cal<-harmonic) upSEVEN) 
+</code></pre>
+
+        <p>Any frequency is measured in cycles.</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define cycles (/ 1 'sec)) 
+        </code></pre>
+
+        <p>We define the specific frequency of seven cycles.</p>
+
+        <pre><code class="language-klipse-eval-js">
+(define cylTHREE (* 3 cycles)) 
+        </code></pre>
+
+    <p>We define a coordinate-function that takes some timestamp and returns a coordinate-point</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (mtr<-cosine secT)
+  (* (cos (* cylTHREE secT)) 'meters)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define f (/ 7 'sec)) 
+(mtr<-cosine secTWO) 
     </code></pre>
 
-    <p>Just two functions q(t) and p(t). We measure q in meters and p in sparks.</p>
+    <p>We define a momentum-function that takes some timestamp and returns a momentum.</p>
 
     <pre><code class="language-klipse-eval-js">
-(define (q-cosine t) (* (cos (* f t)) 'meters)) 
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-(define (p-atan t) (* (atan (* f t)) 'sparks)) 
-    </code></pre>
-
-    <p>The state is the combination of t, q, p into one entity, a three component vector</p>
-
-    <pre id="qp->H-state-path"><code class="language-klipse-eval-js">
-        <script>addSnippet('book-part3',"qp->H-state-path");</script>
+(define (spk<-atan secT) (* (atan (* cylTHREE secT)) 'sparks)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(define State-cosine-path (qp->H-state-path q-cosine p-atan)) 
+(spk<-atan secTWO) 
     </code></pre>
 
-    <p>State-cosine-path is a function</p>
+    <p>We defina a higher order function called state-path. state-path takes some coordinate-function and some momentum-function. state-path returns a function that takes some timestamp and returns a state.</p>
 
     <pre><code class="language-klipse-eval-js">
-(identity State-cosine-path) 
+(define ((state-path mtr<-q spk<-p) secT)
+  (up secT (mtr<-q secT) (spk<-p secT))) 
     </code></pre>
 
+    <p>The function that state-path returns is called a path-function. We define a specific path-function.</p>
+
     <pre><code class="language-klipse-eval-js">
-(define time-point (* 10 'sec)) 
+(define up<-path-cosine (state-path mtr<-cosine spk<-atan)) 
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-(State-cosine-path time-point) 
-    </code></pre>
+    <p>We show that indeed up<-path-cosine is a function that takes some timestamp and returns a state</p>
 
     <pre><code class="language-klipse-eval-js">
-(define State-cosine-ten-seconds (State-cosine-path time-point)) 
-    </code></pre>
-
-
-    <pre><code class="language-klipse-eval-js">
-(coordinate State-cosine-ten-seconds) 
+(identity up<-path-cosine) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-loadEnv("momentum");
+(up<-path-cosine secTWO) 
+    </code></pre>
+
+    <p>We take the derivative of the state-path</p>
+
+    <pre><code class="language-klipse-eval-js">
+((D up<-path-cosine) secTWO) 
+    </code></pre>
+
+
+    <p>We define another specific state.</p>
+
+    <pre><code class="language-klipse-eval-js">
+(define upSIX (up<-path-cosine secTWO)) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(momentum State-cosine-ten-seconds) 
+(coordinate upSIX) 
     </code></pre>
 
-    <p>
-        Our beloved harmonic oscillator: a ball of some weight on a spring of some strength.
-    </p>
+    <p>We apply our Hamiltonian to this state</p>
 
     <pre><code class="language-klipse-eval-js">
-(define ((H-harmonic strength one_over_mass) state)
-(let ((q (coordinate state))
-(p (momentum state)))
-(+ (/ (* strength (square q)) 2)
-   (/ (* one_over_mass (square p)) 2)))) 
-    </code></pre></body>
+(cal<-harmonic upSIX) 
+    </code></pre>
 
-<p>
-    Let's measure weight in feathers, and strength in groans. These are made up unities but hopefully vivid ones.
-</p>
+    <pre><code class="language-klipse-eval-js">
+((state-derivative cal<-harmonic) upSIX) 
+    </code></pre>
+
+    <p>We show how to apply our Hamiltonian directly to the timestamp using  path-function as an intermediary between the two.</p>
+
+    <pre><code class="language-klipse-eval-js">
+((compose cal<-harmonic up<-path-cosine) secTWO) 
+    </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define H-pumping-feather (H-harmonic (* 5 'groans) (* 3 'feathers))) 
+((compose (state-derivative cal<-harmonic)
+   up<-path-cosine)
+  secTWO) 
 </code></pre>
 
-<pre><code class="language-klipse-eval-js">
-(H-pumping-feather State-cosine-ten-seconds) 
-</code></pre>
-
-<p>
-A state is really just numbers. It is the state-path wich is a function of time.
-</p>
+<p>Hamilton-equations is a higher order function. It takes some Hamiltonian. It returns a function that takes some coordinate-function and some momentum-function and returns a path-function.</p>
 
 <pre><code class="language-klipse-eval-js">
-(define State-word-numbers (up 'zero 'one 'two)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(identity State-word-numbers) 
+(define ((Hamilton-equations cal<-Hamiltonian) mtr<-q spk<-p)
+  (let ((up<-path (state-path mtr<-q spk<-p)))
+    (- (D up<-path)
+       (compose (state-derivative cal<-Hamiltonian)
+                up<-path)))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(H-pumping-feather State-word-numbers) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define State-numbers (up 0 1 2)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(H-pumping-feather State-numbers) 
-</code></pre>
-
-<p>H-pumping-feather is a function that takes numbers</p>
-<pre><code class="language-klipse-eval-js">
-(identity H-pumping-feather) 
-</code></pre>
-
-<p>If we want to calculate the Hamiltonian at an arbitrary point in time, we need to do this</p>
-
-<pre><code class="language-klipse-eval-js">
-(define H-pumping-feather-arbitrary
-  (compose H-pumping-feather State-cosine-path)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(H-pumping-feather-arbitrary 't) 
-</code></pre>
-
-<pre id="Hamiltonian->state-derivative"><code class="language-klipse-eval-js">
-    <script>addSnippet('book-part3',"Hamiltonian->state-derivative");</script>
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-((Hamiltonian->state-derivative H-pumping-feather)
-  State-numbers) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-((Hamiltonian->state-derivative H-pumping-feather)
-  State-word-numbers) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(identity State-cosine-ten-seconds) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-((Hamiltonian->state-derivative H-pumping-feather)
-  State-cosine-ten-seconds) 
-</code></pre>
-
-<p>Same as above, if we want to calculate the Hamiltonian->state-derivative at an arbitrary point in time, we need to do this</p>
-
-<pre><code class="language-klipse-eval-js">
-((compose (Hamiltonian->state-derivative H-pumping-feather)
-  State-cosine-path) 't) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-((D State-cosine-path) 't) 
-</code></pre>
-
-<pre id="Hamilton-equations"><code class="language-klipse-eval-js">
-    <script>addSnippet('book-part3',"Hamilton-equations");</script>
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(((Hamilton-equations H-pumping-feather) q-cosine p-atan) 't) 
+(((Hamilton-equations cal<-harmonic) mtr<-cosine spk<-atan) secTWO) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
@@ -232,7 +273,7 @@ A state is really just numbers. It is the state-path wich is a function of time.
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations H-pumping-feather) q-cos p-sin) 't) 
+(((Hamilton-equations cal<-H-square>) q-cos p-sin) 't) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
@@ -252,7 +293,7 @@ A state is really just numbers. It is the state-path wich is a function of time.
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations H-pumping-feather) q-cosw p-sinw) 't) 
+(((Hamilton-equations cal<-H-square>) q-cosw p-sinw) 't) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
@@ -264,7 +305,7 @@ A state is really just numbers. It is the state-path wich is a function of time.
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations H-pumping-feather) q p) 't) 
+(((Hamilton-equations cal<-H-square>) q p) 't) 
 </code></pre>
 
 </html>

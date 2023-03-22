@@ -55,6 +55,7 @@ var specialchars =
 ["__COLON_$1", /\-:(\w+)/g],
 ["_COLON_$1", /:(\w+)/g],
 ["$1__GT_$2", /(\w+)->(\w+)/g],
+["$1_GT__$2", /(\w+)<-(\w+)/g], //added part3
 [" state__GT_t ", /(\s+)time(\s+)/g],
 ["[ / -$1 $2 ],", /-(\w+)\/(\d+)/g],
 ["[ / $1 $2 ],", /(\w+)\/(\d+)/g]];
@@ -190,6 +191,8 @@ expr[expr.length-1] === " "
 "ref", "sqrt", "atan", "down", "solve_linear_left",
 "state_advancer", "cross_product", "Rx", "Ry", "Rz",
 "osculating_path"].map(loadEnv);
+
+loadEnv("momentum"); //added part3
 
 var literal_function = sicmutils.abstract$.function$.literal_function;
 var multidimensional_minimize = sicmutils.numerical.minimize.multidimensional_minimize;
