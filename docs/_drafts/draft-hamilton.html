@@ -101,7 +101,7 @@ categories: HamiltonMechanics
         <p>Any body's resistance to movement is measured in grams. We define a specific body with the resistance of three grams.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define ftrBALL (* 3 'grams)) 
+(define ftrBALL (* 5 'grams)) 
         </code></pre>
 
         <p>Any energy is measured in calories. Any Hamiltonian is given as a function that takes some state and returns an energy. We define the specific Hamiltonian of our body of specific resistence attached to our spring of specific strength.</p>
@@ -307,7 +307,7 @@ We realize that by defining the Hamilton equations, we also determined calories 
 <p>We redefine the momentum function</p>
 
 <pre><code class="language-klipse-eval-js">
-(define (spk<-sine secT) (* (sin (* cylTHREE secT)) new-sparks)) 
+(define (spk<-sine secT) (* -15 (sin (* cylTHREE secT)) new-sparks)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
@@ -321,6 +321,11 @@ We realize that by defining the Hamilton equations, we also determined calories 
 <pre><code class="language-klipse-eval-js">
 ((compose cal<-hamiltonian (state-path mtr<-cosine spk<-sine)) secTWO) 
 </code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(((Hamilton-equations cal<-hamiltonian) mtr<-cosine spk<-sine) secTWO) 
+</code></pre>
+
 
 <pre><code class="language-klipse-eval-js">
 (define (p-sin t) (* 'B (sin (* 'w t)))) 
