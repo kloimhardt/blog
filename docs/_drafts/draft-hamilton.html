@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "draft hamilton"
+title:  "Units and the Harmonic Oscillator"
 date:   2023-03-21 06:00:01 +0100
 categories: HamiltonMechanics
 ---
@@ -30,12 +30,17 @@ categories: HamiltonMechanics
 </head>
 
 <body onload = "loadKlipse();">
+    <p>Import the <a href="/blog/html/sicmutils-as-js-book-part3.html">the html file of SICM part 3</a> as an IFrame.
+
     <iframe id="book-part3" sandbox="allow-same-origin"
             src="/blog/html/sicmutils-as-js-book-part3.html"
             width="735" height="100">
     </iframe>
 
     <p></p>
+
+    <h1>The Compiler</h1>
+The compiler is loaded from the IFrame.
 
     <script src="/blog/js/main.js"></script>
     <script src="/blog/js/compiler_config.js"></script>
@@ -56,7 +61,9 @@ categories: HamiltonMechanics
      addSnippet('book-part3','prefix-123');
     </script>
 
-    <p>Any timestamp is measured in seconds. We define the specific timestamp of eight seconds.</p>
+    <h1>Time, Space and Momentum</h1>
+
+    <p>Any timestamp is measured in seconds. We define the specific timestamp of two seconds.</p>
 
     <pre><code class="language-klipse-eval-js">
 (define secTWO (* 2 'sec)) 
@@ -68,7 +75,7 @@ categories: HamiltonMechanics
 (define mtrSEVEN (* 7 'meters)) 
     </code></pre>
 
-    <p>Any momentum is measured in sparks. We define a specific momentum.</p>
+    <p>Any momentum is measured in sparks. It is a fictional unit for now (think of sparks in the fire box of a steam train). We define a specific momentum.</p>
 
     <pre><code class="language-klipse-eval-js">
 (define spkFIVE (* 5 'sparks)) 
@@ -92,17 +99,19 @@ categories: HamiltonMechanics
 (momentum upSVEN) 
         </code></pre>
 
-        <p>Any stength of a spring is measured in groans. We define the specific spring with the strength of five groans.</p>
+        <p>The stength of some spring is measured in groans (fictional unit). We define a specific spring with the strength of four groans.</p>
 
         <pre><code class="language-klipse-eval-js">
 (define grnSPRING (* 4 'groans)) 
         </code></pre>
 
-        <p>Any body's resistance to movement is measured in grams. We define a specific body with the resistance of three grams.</p>
+        <p>Any body's resistance to movement is measured in grams. We define a specific body with the resistance of nine grams.</p>
 
         <pre><code class="language-klipse-eval-js">
 (define ftrBALL (* 9 'grams)) 
         </code></pre>
+
+        <h1>Energy</h1>
 
         <p>Any energy is measured in calories. Any Hamiltonian is given as a function that takes some state and returns an energy. We define the specific Hamiltonian of our body of specific resistence attached to our spring of specific strength.</p>
 
@@ -120,7 +129,7 @@ categories: HamiltonMechanics
 (cal<-spring-ball upSVEN) 
         </code></pre>
 
-        <p>We realize that by defining our specific Hamiltonian, we also determined sparks in terms of feathers and calories</p>
+        <p>The parts of any sum must be of the same unit. Here the unit is calories. Thus we realize that by defining our specific Hamiltonian, we also determined sparks in terms of grams and calories.</p>
 
         <pre><code class="language-klipse-eval-js">
 (define sparks (sqrt (* 'calories 'grams))) 
@@ -147,6 +156,8 @@ categories: HamiltonMechanics
         <pre><code class="language-klipse-eval-js">
 (cal<-harmonic upSEVEN) 
         </code></pre>
+
+        <h1>Frequency</h1>
 
         <p>Any frequency is measured in cycles.</p>
 
@@ -181,6 +192,8 @@ categories: HamiltonMechanics
 (spk<-atan secTWO) 
     </code></pre>
 
+    <h1>State path and Path function</h1>
+
     <p>We defina a higher order function called state-path. state-path takes some coordinate-function and some momentum-function. state-path returns a function that takes some timestamp and returns a state.</p>
 
     <pre><code class="language-klipse-eval-js">
@@ -204,6 +217,8 @@ categories: HamiltonMechanics
 (up<-path-cosine secTWO) 
     </code></pre>
 
+    <h1>Derivatives</h1>
+
     <p>We take the derivative of the state-path</p>
 
     <pre><code class="language-klipse-eval-js">
@@ -218,6 +233,10 @@ categories: HamiltonMechanics
 
     <pre><code class="language-klipse-eval-js">
 (coordinate upSIX) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(momentum upSIX) 
     </code></pre>
 
     <p>We apply our Hamiltonian to this state</p>
@@ -257,6 +276,8 @@ categories: HamiltonMechanics
     <pre><code class="language-klipse-eval-js">
 ((state-derivative cal<-harmonic) upSIX) 
     </code></pre>
+
+    <h1>Hamilton's equations</h1>
 
     <p>We show how to apply our Hamiltonian directly to the timestamp using  path-function as an intermediary between the two. The composition of a Hamiltonian with a path-function is a simple function of time, i.e. a function that takes a number of seconds and returns a number of calories.</p>
 
@@ -301,6 +322,8 @@ For realizable coordinate- and momentum-functions, the Hamilton-equantions path-
 <pre><code class="language-klipse-eval-js">
 (define new-groans (/ calories (square 'meters))) 
 </code></pre>
+
+<h1>Textbook solution to the harmonic oscillator</h1>
 
 <p>We redefine the coordinate and momentum function</p>
 
