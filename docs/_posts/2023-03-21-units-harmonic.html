@@ -31,7 +31,7 @@ categories: HamiltonMechanics
 
 <body onload = "loadKlipse();">
     <h1>Purpose of this post</h1>
-    <p>The third part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter003.html">SICM book</a> covers Hamiltionian Mechanics. Already the first code snippets are hard to understand. This post builds things up from first principles. It is intended as a preamble for getting into the book. Nevertheless, a solid background in classical Physics is assumed.</p>
+    <p>The third part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter003.html">SICM book</a> covers Hamiltionian Mechanics. Already the first code snippets are hard to understand. This post builds things up from first principles. It is intended as a preamble for getting into the book. It also is an enlightning remark on physical units. However, a solid background in classical Mechanics is required.</p>
 
     <p>You can look at those code snippets of the book also in <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/sicm-book-vscheme-part3.org">graphical form</a>. For this, it is best to first read the post <a href="https://kloimhardt.github.io/blog/literatur/2023/03/16/competence-comprehesion-2.html">Competence before Comprehension</a>.</p>
 
@@ -80,7 +80,7 @@ categories: HamiltonMechanics
 (define mtrSEVEN (* 7 'meters)) 
     </code></pre>
 
-    <p>Any momentum is measured in sparks. It is a fictional unit (think of sparks in the fire box of a steam train). We define a specific momentum.</p>
+    <p>Any momentum is measured in sparks. It is a made up unit, think of sparks in the fire box of a steam train. We define a specific momentum.</p>
 
     <pre><code class="language-klipse-eval-js">
 (define spkFIVE (* 5 'sparks)) 
@@ -104,7 +104,7 @@ categories: HamiltonMechanics
 (momentum upSVEN) 
         </code></pre>
 
-        <p>The stength of some spring is measured in groans (fictional unit). We define a specific spring with the strength of four groans.</p>
+        <p>The stength of some spring is measured in groans. It is a made up unit, think of the groans in a fitness center when people bend springs and such. We define a specific spring with the strength of four groans.</p>
 
         <pre><code class="language-klipse-eval-js">
 (define grnSPRING (* 4 'groans)) 
@@ -118,10 +118,10 @@ categories: HamiltonMechanics
 
         <h1>Energy</h1>
 
-        <p>Any energy is measured in calories. Any Hamiltonian is given as a function that takes some state and returns an energy. We define the specific Hamiltonian of our body of specific resistence attached to our spring of specific strength.</p>
+        <p>Any energy is measured in hams. To picture one unit of ham, think of the amount of calories a sandwich has. Any Hamiltonian is given as a function that takes some state and returns an energy. We define a specific Hamiltonian which models our body attached to our spring.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define (cal<-spring-ball upSTATE)
+(define (ham<-spring-ball upSTATE)
   (let ((q (coordinate upSTATE))
         (p (momentum upSTATE)))
     (+ (/ (* grnSPRING (square q)) 2)
@@ -131,27 +131,27 @@ categories: HamiltonMechanics
         <p>We apply the Hamiltonian to the state</p>
 
         <pre><code class="language-klipse-eval-js">
-(cal<-spring-ball upSVEN) 
+(ham<-spring-ball upSVEN) 
         </code></pre>
 
-        <p>The parts of any sum must be of the same unit. Here the unit is calories. Thus we realize that by defining our specific Hamiltonian, we also determined sparks in terms of grams and calories.</p>
+        <p>The parts of any sum must be of the same unit. Here the unit is hams. Thus we realize that by defining our specific Hamiltonian, we also determined sparks in terms of grams and hams.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define sparks (sqrt (* 'calories 'grams))) 
+(define sparks (sqrt (* 'hams 'grams))) 
         </code></pre>
 
         <pre><code class="language-klipse-eval-js">
 (define upSEVEN (up secTWO mtrSEVEN (* 5 sparks))) 
         </code></pre>
 
-        <p>We realize that by defining our specific Hamiltonian, we also determined groans in terms of meters and calories</p>
+        <p>We realize that by defining our specific Hamiltonian, we also determined groans in terms of meters and hams</p>
 
         <pre><code class="language-klipse-eval-js">
-(define groans (/ 'calories (square 'meters))) 
+(define groans (/ 'hams (square 'meters))) 
         </code></pre>
 
         <pre><code class="language-klipse-eval-js">
-(define (cal<-harmonic upSTATE)
+(define (ham<-harmonic upSTATE)
   (let ((q (coordinate upSTATE))
         (p (momentum upSTATE)))
     (+ (/ (* (* 4 groans) (square q)) 2)
@@ -159,7 +159,7 @@ categories: HamiltonMechanics
         </code></pre>
 
         <pre><code class="language-klipse-eval-js">
-(cal<-harmonic upSEVEN) 
+(ham<-harmonic upSEVEN) 
         </code></pre>
 
         <h1>Frequency</h1>
@@ -247,51 +247,51 @@ categories: HamiltonMechanics
     <p>We apply our Hamiltonian to this state</p>
 
     <pre><code class="language-klipse-eval-js">
-(cal<-harmonic upSIX) 
+(ham<-harmonic upSIX) 
     </code></pre>
 
     <p>We show how to take partial derivatives</p>
 
     <pre><code class="language-klipse-eval-js">
-(((partial 1) cal<-harmonic) upSEVEN) 
+(((partial 1) ham<-harmonic) upSEVEN) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(((partial 2) cal<-harmonic) upSEVEN) 
+(((partial 2) ham<-harmonic) upSEVEN) 
     </code></pre>
 
     <p>The state-derivative is a higher order function. It takes some Hamiltonian and calculates the derivative of it. Using that, the state-derivative returns a function that takes some state and returns a path function.</p>
 
     <pre><code class="language-klipse-eval-js">
-(define ((state-derivative cal<-Hamiltonian) upSTATE)
+(define ((state-derivative ham<-Hamiltonian) upSTATE)
   (up 1
-      (((partial 2) cal<-Hamiltonian) upSTATE)
-      (- (((partial 1) cal<-Hamiltonian) upSTATE)))) 
+      (((partial 2) ham<-Hamiltonian) upSTATE)
+      (- (((partial 1) ham<-Hamiltonian) upSTATE)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(state-derivative cal<-harmonic) 
+(state-derivative ham<-harmonic) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((state-derivative cal<-harmonic) upSEVEN) 
+((state-derivative ham<-harmonic) upSEVEN) 
     </code></pre>
 
 
     <pre><code class="language-klipse-eval-js">
-((state-derivative cal<-harmonic) upSIX) 
+((state-derivative ham<-harmonic) upSIX) 
     </code></pre>
 
     <h1>Hamilton's equations</h1>
 
-    <p>We show how to apply our Hamiltonian directly to the timestamp using  path-function as an intermediary between the two. The composition of a Hamiltonian with a path-function is a simple function of time, i.e. a function that takes a number of seconds and returns a number of calories.</p>
+    <p>We show how to apply our Hamiltonian directly to the timestamp using  path-function as an intermediary between the two. The composition of a Hamiltonian with a path-function is a simple function of time, i.e. a function that takes a number of seconds and returns a number of hams.</p>
 
     <pre><code class="language-klipse-eval-js">
-((compose cal<-harmonic up<-path-cosine) secTWO) 
+((compose ham<-harmonic up<-path-cosine) secTWO) 
     </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-((compose (state-derivative cal<-harmonic)
+((compose (state-derivative ham<-harmonic)
    up<-path-cosine)
   secTWO) 
 </code></pre>
@@ -299,33 +299,31 @@ categories: HamiltonMechanics
 <p>Hamilton-equations is a higher order function. It takes some Hamiltonian. It returns a function that takes some coordinate-function and some momentum-function and returns a path-function.</p>
 
 <pre><code class="language-klipse-eval-js">
-(define ((Hamilton-equations cal<-Hamiltonian) mtr<-q spk<-p)
+(define ((Hamilton-equations ham<-Hamiltonian) mtr<-q spk<-p)
   (let ((up<-path (state-path mtr<-q spk<-p)))
     (- (D up<-path)
-       (compose (state-derivative cal<-Hamiltonian)
+       (compose (state-derivative ham<-Hamiltonian)
                 up<-path)))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-harmonic) mtr<-cosine spk<-atan) secTWO) 
+(((Hamilton-equations ham<-harmonic) mtr<-cosine spk<-atan) secTWO) 
 </code></pre>
 
 <p>
-For realizable coordinate- and momentum-functions, the Hamilton-equantions path-function needs to be identically zero. By looking at the previous result, we realize that by defining the Hamilton equations, we also determined calories in terms of meters and seconds.
+    For realizable coordinate- and momentum-functions, the Hamilton-equantions path-function needs to be identically zero. By looking at the previous result, we realize that by defining the Hamilton equations, we also determined hams in terms of meters, grams and seconds. This also implies new sparks and groans. With this step, we derived all our made up units.
 </p>
 
 <pre><code class="language-klipse-eval-js">
-(define calories (/ (* (square 'meters) 'grams) (square 'sec))) 
-</code></pre>
-
-<p>This implies new sparks and groans</p>
-
-<pre><code class="language-klipse-eval-js">
-(define new-sparks (sqrt (* calories 'grams))) 
+(define hams (/ (* (square 'meters) 'grams) (square 'sec))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define new-groans (/ calories (square 'meters))) 
+(define new-sparks (sqrt (* hams 'grams))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define new-groans (/ hams (square 'meters))) 
 </code></pre>
 
 <h1>Textbook solution of the harmonic oscillator</h1>
@@ -342,7 +340,7 @@ For realizable coordinate- and momentum-functions, the Hamilton-equantions path-
 
 
 <pre><code class="language-klipse-eval-js">
-(define (cal<-hamiltonian upSTATE)
+(define (ham<-hamiltonian upSTATE)
 (let ((q (coordinate upSTATE))
       (p (momentum upSTATE)))
 (+ (/ (* grnK (square q)) 2)
@@ -360,7 +358,7 @@ For realizable coordinate- and momentum-functions, the Hamilton-equantions path-
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define calE (* 'E calories)) 
+(define calE (* 'E hams)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
@@ -396,13 +394,13 @@ For realizable coordinate- and momentum-functions, the Hamilton-equantions path-
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-((compose cal<-hamiltonian (state-path mtr<-q spk<-p)) secT) 
+((compose ham<-hamiltonian (state-path mtr<-q spk<-p)) secT) 
 </code></pre>
 
 <p>We finally show that the path functions are indeed solutions of Hamilton's equations (result is zero for any timestamp t)</p>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-hamiltonian) mtr<-q spk<-p) secT) 
+(((Hamilton-equations ham<-hamiltonian) mtr<-q spk<-p) secT) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
