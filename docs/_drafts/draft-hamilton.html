@@ -30,17 +30,19 @@ categories: HamiltonMechanics
 </head>
 
 <body onload = "loadKlipse();">
-    <p>Import the <a href="/blog/html/sicmutils-as-js-book-part3.html">the html file of SICM part 3</a> as an IFrame.
+    <h1>Purpose of this post</h1>
+    <p>The third part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter003.html">SICM book</a> covers Hamiltionian Mechanics. Already the first code snippets are hard to understand. This post builds things up from first principles. It is intended as a preamble for getting into the book. Nevertheless, a solid background in classical Physics is assumed.</p>
+
+    <p>You can look at those code snippets of the book also in <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/sicm-book-vscheme-part3.org">graphical form</a>. For this, it is best to first read the post <a href="/blog/literatur/2023/03/17/competence-comprehesion-2.html">Competence before Comprehension</a>.</p>
+
+    <h1>The Compiler</h1>
+
+    <p>We import the <a href="/blog/html/sicmutils-as-js-book-part3.html">the html file of SICM part 3</a> as an IFrame. From it, we load the compiler which is used to execute the code snippets of this post here.</p>
 
     <iframe id="book-part3" sandbox="allow-same-origin"
             src="/blog/html/sicmutils-as-js-book-part3.html"
             width="735" height="100">
     </iframe>
-
-    <p></p>
-
-    <h1>The Compiler</h1>
-The compiler is loaded from the IFrame.
 
     <script src="/blog/js/main.js"></script>
     <script src="/blog/js/compiler_config.js"></script>
@@ -75,7 +77,7 @@ The compiler is loaded from the IFrame.
 (define mtrSEVEN (* 7 'meters)) 
     </code></pre>
 
-    <p>Any momentum is measured in sparks. It is a fictional unit for now (think of sparks in the fire box of a steam train). We define a specific momentum.</p>
+    <p>Any momentum is measured in sparks. It is a fictional unit (think of sparks in the fire box of a steam train). We define a specific momentum.</p>
 
     <pre><code class="language-klipse-eval-js">
 (define spkFIVE (* 5 'sparks)) 
@@ -105,10 +107,10 @@ The compiler is loaded from the IFrame.
 (define grnSPRING (* 4 'groans)) 
         </code></pre>
 
-        <p>Any body's resistance to movement is measured in grams. We define a specific body with the resistance of nine grams.</p>
+        <p>Any body's resistance to movement is measured in grams. This resistance is also called mass. We define a specific body with the resistance of nine grams.</p>
 
         <pre><code class="language-klipse-eval-js">
-(define ftrBALL (* 9 'grams)) 
+(define grmBALL (* 9 'grams)) 
         </code></pre>
 
         <h1>Energy</h1>
@@ -120,7 +122,7 @@ The compiler is loaded from the IFrame.
   (let ((q (coordinate upSTATE))
         (p (momentum upSTATE)))
     (+ (/ (* grnSPRING (square q)) 2)
-       (/ (square p) (* ftrBALL 2))))) 
+       (/ (square p) (* grmBALL 2))))) 
         </code></pre>
 
         <p>We apply the Hamiltonian to the state</p>
@@ -150,7 +152,7 @@ The compiler is loaded from the IFrame.
   (let ((q (coordinate upSTATE))
         (p (momentum upSTATE)))
     (+ (/ (* (* 4 groans) (square q)) 2)
-       (/ (square p) (* ftrBALL 2))))) 
+       (/ (square p) (* grmBALL 2))))) 
         </code></pre>
 
         <pre><code class="language-klipse-eval-js">
@@ -225,7 +227,7 @@ The compiler is loaded from the IFrame.
 ((D up<-path-cosine) secTWO) 
     </code></pre>
 
-    <p>We define another specific state.</p>
+    <p>As shown above, we can use our path function to define a specific state.</p>
 
     <pre><code class="language-klipse-eval-js">
 (define upSIX (up<-path-cosine secTWO)) 
@@ -245,7 +247,7 @@ The compiler is loaded from the IFrame.
 (cal<-harmonic upSIX) 
     </code></pre>
 
-    <p>Taking partial derivatives</p>
+    <p>We show how to take partial derivatives</p>
 
     <pre><code class="language-klipse-eval-js">
 (((partial 1) cal<-harmonic) upSEVEN) 
@@ -323,66 +325,81 @@ For realizable coordinate- and momentum-functions, the Hamilton-equantions path-
 (define new-groans (/ calories (square 'meters))) 
 </code></pre>
 
-<h1>Textbook solution to the harmonic oscillator</h1>
+<h1>Textbook solution of the harmonic oscillator</h1>
 
-<p>We redefine the coordinate and momentum function</p>
+<p>We define a new Hamiltonian which does not anymore contain specific numbers. Instead, the body mass is any number m and spring strength is any number k.</p>
 
 <pre><code class="language-klipse-eval-js">
-(define mb (* 'ma 'grams)) 
+(define grmM (* 'm 'grams)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(define kb (* 'ka new-groans)) 
+(define grnK  (* 'k new-groans)) 
 </code></pre>
 
-<pre><code class="language-klipse-eval-js">
-(define Eb (* 'En calories)) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define ww (sqrt (/ kb mb))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define mtrQNULL (sqrt (/ (* 2 Eb) (* mb (square ww))))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define spkPNULL (sqrt (* 2 mb Eb))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define (mtr<-q secT) (* mtrQNULL (sin (* ww secT)))) 
-</code></pre>
-
-<pre><code class="language-klipse-eval-js">
-(define (spk<-p secT) (* spkPNULL (cos (* ww secT)))) 
-</code></pre>
 
 <pre><code class="language-klipse-eval-js">
 (define (cal<-hamiltonian upSTATE)
 (let ((q (coordinate upSTATE))
       (p (momentum upSTATE)))
-(+ (/ (* kb (square q)) 2)
-   (/ (square p) (* mb 2))))) 
+(+ (/ (* grnK (square q)) 2)
+   (/ (square p) (* grmM 2))))) 
+</code></pre>
+
+<p>We define some new constants and check their units</p>
+
+<pre><code class="language-klipse-eval-js">
+(define cylW (sqrt (/ grnK grmM))) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-((compose cal<-hamiltonian (state-path mtr<-q spk<-p)) secTWO) 
+(/ cylW (/ 1 'sec)) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
-(((Hamilton-equations cal<-hamiltonian) mtr<-q spk<-p) secTWO) 
+(define calE (* 'E calories)) 
 </code></pre>
 
-<p>Unit checks</p>
+<pre><code class="language-klipse-eval-js">
+(define mtrQNULL (sqrt (/ (* 2 calE) (* grmM (square cylW))))) 
+</code></pre>
 
 <pre><code class="language-klipse-eval-js">
 (/ mtrQNULL 'meters) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
+(define spkPNULL (sqrt (* 2 grmM calE))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
 (/ spkPNULL new-sparks) 
+</code></pre>
+
+<p>We define new coordinate- and momentum-functions. They are solutions to the harmonic oscillator that can be found in any textbook on classical mechanics.</p>
+
+<pre><code class="language-klipse-eval-js">
+(define (mtr<-q secT) (* mtrQNULL (sin (* cylW secT)))) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+(define (spk<-p secT) (* spkPNULL (cos (* cylW secT)))) 
+</code></pre>
+
+<p>We show that the energy is conserved (independent of timestamp t) along the path.</p>
+
+<pre><code class="language-klipse-eval-js">
+(define secT (* 't 'sec)) 
+</code></pre>
+
+<pre><code class="language-klipse-eval-js">
+((compose cal<-hamiltonian (state-path mtr<-q spk<-p)) secT) 
+</code></pre>
+
+<p>We finally show that the path functions are indeed solutions of Hamilton's equations (result is zero for any timestamp t)</p>
+
+<pre><code class="language-klipse-eval-js">
+(((Hamilton-equations cal<-hamiltonian) mtr<-q spk<-p) secT) 
 </code></pre>
 
 <pre><code class="language-klipse-eval-js">
