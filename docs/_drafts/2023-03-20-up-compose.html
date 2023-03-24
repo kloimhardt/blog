@@ -79,8 +79,7 @@ expr[expr.length-1] === " "
          txt[0] === "("
          ? oldEval(expressionToJs(txt))
          : txt[txt.length - 1] != ";"
-         // ? oldEval(txt + ".toString();")
-         ? txt + ".toString();"
+         ? "JS source: " + txt
          : oldEval(txt);
      window.eval = newEval;
     </script>
@@ -92,7 +91,7 @@ math_sin = Math.sin;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
- up(0);
+ up(1, 0);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -109,6 +108,26 @@ up(math_cos, math_sin).call(null,0);
 
     <pre><code class="language-klipse-eval-js">
 ((up math_cos math_sin) 0) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+math_cos(math_sin(0));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(math_cos (math_sin 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+loadEnv("compose");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+compose(math_cos, math_sin).call(null, 0);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((compose math_cos math_sin) 0) 
     </code></pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
