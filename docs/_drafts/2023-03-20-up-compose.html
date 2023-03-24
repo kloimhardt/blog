@@ -1,0 +1,116 @@
+---
+layout: post
+title:  "Up and Compose"
+date:   2023-03-20 06:00:01 +0100
+categories: HamiltonMechanics
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+</head>
+
+<body>
+    (needs lots more text to actually explain things)
+
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <pre>&lt;script&gt;
+ var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+ }
+&lt;/script&gt;</pre>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+JSON.parse(insertCommas(makeBrackets(txt)));
+
+var jsonToJs = (j) =>
+j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var expressionToJs = (expr) =>
+expr[expr.length-1] === " "
+? jsonToJs(textToJson(expr)) + ".toString();"
+: "'add blank'";
+
+    </code></pre>
+
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         // ? oldEval(txt + ".toString();")
+         ? txt + ".toString();"
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+loadEnv("up");
+math_cos = Math.cos;
+math_sin = Math.sin;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+ up(0);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+up(math_cos(0), math_sin(0));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(up (math_cos 0) (math_sin 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+up(math_cos, math_sin).call(null,0);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((up math_cos math_sin) 0) 
+    </code></pre>
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
+</html>

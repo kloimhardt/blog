@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Competence before Comprehension"
+title:  "Competence before Comprehension (1)"
 date:   2023-03-16 06:00:01 +0100
 categories: Literatur
 ---
