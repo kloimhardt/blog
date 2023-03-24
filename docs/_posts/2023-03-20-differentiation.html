@@ -31,36 +31,22 @@ categories: HamiltonMechanics
         : oldEval(txt);
      window.eval = newEval;
     </script>
-(This post still needs a lot of work)
-    <h1>Automatic Forward Differentiation</h1>
 
-(Here the differentiation method of Sicmutils needs to be described)
-(and maybe explicitely programmed)
+    <h1>Differentiation in SICM</h1>
 
-    <pre><code>
-(((parial 0) square) 'x)
-    </code></pre>
+    <p>
+        The paper <a href="https://dspace.mit.edu/bitstream/handle/1721.1/6707/AIM-2002-018.pdf?sequence=2&isAllowed=y">The Role of Programming in the Formulation of Ideas</a> is by Sussman and Wisdom, the authors of the SICM book. It describes how differentiation of functions is performed. It is a great Introduction to the book.
+    </p>
 
-    <pre><code>
-((D square) 'x)
-    </code></pre>
+    <h1>Do it in code</h1>
+    (This section still needs a lot of work)
+    (It should show how the differentiation algorithm of Sicmutils works)
 
     <p>We include the Sicmutils library</p>
 
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-
-
-    <pre><code class="language-klipse-eval-js">
-var up = sicmutils.env.up;
-var cos = Math.cos;
-var sin = Math.sin;
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
-up(cos(0), sin(0));
-    </code></pre>
 
     <p>
 As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax compiler.
@@ -120,12 +106,17 @@ var expressionToJs = (expr) =>
 jsonToJs(JSON.parse(textToJson(expr)));
     </code></pre>
 
-    <p>Now we can omit the <code>.call(null, ...)</code>, which is so all pervasive when working with Sicmutils as a JavaScript library.</p>
-
-    <p>JavaScript</p>
+    <p>
+Some imports
+    </p>
 
     <pre><code class="language-klipse-eval-js">
-up(cos, sin).call(null,0);
+var up = sicmutils.env.up;
+var cos = sicmutils.env.cos;
+var sin = sicmutils.env.sin;
+var square = sicmutils.env.square;
+var compose = sicmutils.env.compose;
+var Drv = sicmutils.env.D;
     </code></pre>
 
     <p>Scheme syntax</p>
@@ -136,6 +127,18 @@ up(cos, sin).call(null,0);
 
     <pre><code class="language-klipse-eval-js">
 ((up cos (compose cos sin)) 0) 
+    </code></pre>
+
+    <p>Here we do differentiation</p>
+
+    <pre><code class="language-klipse-eval-js">
+((Drv square) 3) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((up
+(compose square sin)
+(Drv (compose square sin))) 1) 
     </code></pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
