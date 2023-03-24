@@ -18,25 +18,11 @@ categories: HamiltonMechanics
 </head>
 
 <body>
-    (needs lots more text to actually explain things)
+    <p>As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3) </a>, we include the Sicmutils library and show a simplified Scheme syntax compiler.</p>
 
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-
-    <pre>&lt;script&gt;
- var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
-    return name;
- }
-&lt;/script&gt;</pre>
-
-    <script>
-     var loadEnv = (name) => {
-         window[name] = sicmutils.env[name];
-         return name;
-     }
-    </script>
 
     <pre><code class="language-klipse-eval-js">
 var insertCommas = (txt) =>
@@ -58,34 +44,40 @@ j.constructor == Array
 : j;
 
 var expressionToJs = (expr) =>
-expr[expr.length-1] === " "
-? jsonToJs(textToJson(expr)) + ".toString();"
-: "'add blank'";
-
+jsonToJs(textToJson(expr)) + ".toString();";
     </code></pre>
+
+    <p>We also patch the JavaScript <code>eval</code> function.</p>
 
     <pre>&lt;script&gt;
      var oldEval = window.eval;
      var newEval = (txt) =>
-         txt[0] === "("
-         ? oldEval(expressionToJs(txt))
-         : oldEval(txt);
+        txt[0] === "(" && txt[txt.length - 1] != " "
+        ? "add blank to code: " + txt
+        : txt[0] === "("
+        ? oldEval(expressionToJs(txt))
+        : txt[txt.length - 1] != ";"
+        ? "add ; to code: " + txt
+        : oldEval(txt);
      window.eval = newEval;
 &lt;/script&gt;</pre>
+
 
     <script>
      var oldEval = window.eval;
      var newEval = (txt) =>
-         txt[0] === "("
-         ? oldEval(expressionToJs(txt))
-         : txt[txt.length - 1] != ";"
-         ? "JS source: " + txt
-         : oldEval(txt);
+        txt[0] === "(" && txt[txt.length - 1] != " "
+        ? "add blank to code: " + txt
+        : txt[0] === "("
+        ? oldEval(expressionToJs(txt))
+        : txt[txt.length - 1] != ";"
+        ? "add ; to code: " + txt
+        : oldEval(txt);
      window.eval = newEval;
     </script>
 
     <pre><code class="language-klipse-eval-js">
-loadEnv("up");
+var up = sicmutils.env.up;
 math_cos = Math.cos;
 math_sin = Math.sin;
     </code></pre>
@@ -119,7 +111,7 @@ math_cos(math_sin(0));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-loadEnv("compose");
+var compose = sicmutils.env.compose;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
