@@ -18,50 +18,6 @@ categories: HamiltonMechanics
 </head>
 
 <body>
-    <p>As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3) </a>, we include the Sicmutils library and show a simplified Scheme syntax compiler.</p>
-
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
-
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-
-    <pre><code class="language-klipse-eval-js">
-var insertCommas = (txt) =>
-txt.replace(/(\w+)/g,'"$1",')
-.replace(/\,\s+\]/g," ]");
-
-var makeBrackets = (txt) =>
-txt.trim()
-.replace(/\(/g,"[ ")
-.replace(/\)/g," ],")
-.replace(/,$/,"");
-
-var textToJson = (txt) =>
-JSON.parse(insertCommas(makeBrackets(txt)));
-
-var jsonToJs = (j) =>
-j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
-: j;
-
-var expressionToJs = (expr) =>
-jsonToJs(textToJson(expr)) + ".toString();";
-    </code></pre>
-
-    <p>We also patch the JavaScript <code>eval</code> function.</p>
-
-    <pre>&lt;script&gt;
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-        txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "add blank to code: " + txt
-        : txt[0] === "("
-        ? oldEval(expressionToJs(txt))
-        : txt[txt.length - 1] != ";"
-        ? "add ; to code: " + txt
-        : oldEval(txt);
-     window.eval = newEval;
-&lt;/script&gt;</pre>
-
 
     <script>
      var oldEval = window.eval;
@@ -76,50 +32,164 @@ jsonToJs(textToJson(expr)) + ".toString();";
      window.eval = newEval;
     </script>
 
+    <h1>Arrays and Vectors in JavaScript</h1>
+
+    <p>We include the Sicmutils library</p>
+
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <p>Some abbreviations</p>
+
     <pre><code class="language-klipse-eval-js">
 var up = sicmutils.env.up;
-math_cos = Math.cos;
-math_sin = Math.sin;
+var cos = Math.cos;
+var sin = Math.sin;
     </code></pre>
+    <p>JavaScript arrays are a nice way to combine numbers and calculate.</p>
+
+    <pre><code class="language-klipse-eval-js">
+ [1, 0].map(sin);
+    </code></pre>
+
+    <p>In the same manner, the Sicmutils function <code>up</code> is a way to combine numbers to a vector.</p>
 
     <pre><code class="language-klipse-eval-js">
  up(1, 0);
     </code></pre>
 
+    <p>One can even convert an <code>up</code> vector into a JS array, but that is ugly and not used further.</p>
+
     <pre><code class="language-klipse-eval-js">
-up(math_cos(0), math_sin(0));
+cljs.core.clj__GT_js(up(1, 0)).map(sin);
+    </code></pre>
+
+    <p>Sure, one can call functions inside of other functions, and <code>up</code> is no exception.</p>
+
+    <pre><code class="language-klipse-eval-js">
+cos(sin(0));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(up (math_cos 0) (math_sin 0)) 
+up(cos(0), sin(0));
+    </code></pre>
+
+    <p>In JS arrays as well as in vectors, not only can one combine numbers, but also functions.</p>
+
+    <pre><code class="language-klipse-eval-js">
+[cos, sin];
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-up(math_cos, math_sin).call(null,0);
+up(cos, sin);
     </code></pre>
 
-    <pre><code class="language-klipse-eval-js">
-((up math_cos math_sin) 0) 
-    </code></pre>
+    <p>Now the cool thing is that if an <code>up</code> vector only contains functions, one can call the vector. In this way, a vector behaves itself like a function.</p>
 
     <pre><code class="language-klipse-eval-js">
-math_cos(math_sin(0));
+up(cos, sin).call(null,0);
     </code></pre>
 
+    <h1>Composition</h1>
+
+    <p>We had functions within functions before</p>
+
     <pre><code class="language-klipse-eval-js">
-(math_cos (math_sin 0)) 
+cos(sin(0));
     </code></pre>
+
+    <p>The same result is achieved with function composition.</p>
 
     <pre><code class="language-klipse-eval-js">
 var compose = sicmutils.env.compose;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-compose(math_cos, math_sin).call(null, 0);
+compose(cos, sin).call(null, 0);
+    </code></pre>
+
+    <p>And function composition is indeed necessary when working with vectors.<p>
+        <pre><code class="language-klipse-eval-js">
+        up(cos, compose(cos, sin)).call(null,0);
+        </code></pre>
+
+    <h1>Scheme syntax</h1>
+
+    <p>
+As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax compiler.
+    </p>
+
+
+    <pre><code class="language-klipse-eval-js">
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+insertCommas(makeBrackets(txt));
+
+var expressionToJs = (expr) =>
+"'" + textToJson(expr) + "'";
+    </code></pre>
+
+    <p>We also patch the JavaScript <code>eval</code> function to make the syntax compiler kick in whenever code starts with a <code>(</code> and ends with a <code>blank</code>. It also requires JS code to end with a <code>;</code></p>
+
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+        txt[0] === "(" && txt[txt.length - 1] != " "
+        ? "add blank to code: " + txt
+        : txt[0] === "("
+        ? oldEval(expressionToJs(txt))
+        : txt[txt.length - 1] != ";"
+        ? "add ; to code: " + txt
+        : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <p>
+All we have done up to now, is converting the Scheme syntax into a nested JavaScript array.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(up (cos 0) (sin 0)) 
+    </code></pre>
+
+    <p>The magic is just in this 7 lines of code</p>
+
+    <pre><code class="language-klipse-eval-js">
+var jsonToJs = (j) =>
+j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var expressionToJs = (expr) =>
+jsonToJs(JSON.parse(textToJson(expr)));
+    </code></pre>
+
+    <p>Now we can omit the <code>.call(null, ...)</code>, which is so all pervasive when working with Sicmutils as a JavaScript library.</p>
+
+    <p>JavaScript</p>
+
+    <pre><code class="language-klipse-eval-js">
+up(cos, sin).call(null,0);
+    </code></pre>
+
+    <p>Scheme syntax</p>
+
+    <pre><code class="language-klipse-eval-js">
+((up cos sin) 0) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-((compose math_cos math_sin) 0) 
+((up cos (compose cos sin)) 0) 
     </code></pre>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
