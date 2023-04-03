@@ -19,19 +19,6 @@ categories: HamiltonMechanics
 
 <body>
 
-    <script>
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-        txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "add blank to code: " + txt
-        : txt[0] === "("
-        ? oldEval(expressionToJs(txt))
-        : txt[txt.length - 1] != ";"
-        ? "add ; to code: " + txt
-        : oldEval(txt);
-     window.eval = newEval;
-    </script>
-
     <h1>Arrays and Vectors in JavaScript</h1>
 
     <p>We include the Sicmutils library</p>
@@ -65,22 +52,27 @@ var sin = Math.sin;
 cljs.core.clj__GT_js(up(1, 0)).map(sin);
     </code></pre>
 
-    <p>Sure, one can call functions inside of other functions, and <code>up</code> is no exception.</p>
+    <p>Sure, one can call functions inside of other functions,</p>
 
     <pre><code class="language-klipse-eval-js">
 cos(sin(0));
     </code></pre>
 
+    <p>
+        and <code>up</code> is no exception.
+    </p>
+
     <pre><code class="language-klipse-eval-js">
 up(cos(0), sin(0));
     </code></pre>
 
-    <p>In JS arrays as well as in vectors, not only can one combine numbers, but also functions.</p>
+    <p>In JS arrays, not only can one combine numbers, but also functions.</p>
 
     <pre><code class="language-klipse-eval-js">
 [cos, sin];
     </code></pre>
 
+    <p>Also <code>up</code> vectors can contain funtions in the same manner.</p>
     <pre><code class="language-klipse-eval-js">
 up(cos, sin);
     </code></pre>
@@ -116,8 +108,7 @@ compose(cos, sin).call(null, 0);
 
     <h1>Scheme syntax</h1>
 
-    <p>
-As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax compiler.
+As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax to JS transpiler.
     </p>
 
 
@@ -134,32 +125,14 @@ txt.trim()
 
 var textToJson = (txt) =>
 insertCommas(makeBrackets(txt));
-
-var expressionToJs = (expr) =>
-"'" + textToJson(expr) + "'";
     </code></pre>
 
-    <p>We also patch the JavaScript <code>eval</code> function to make the syntax compiler kick in whenever code starts with a <code>(</code> and ends with a <code>blank</code>. It also requires JS code to end with a <code>;</code></p>
-
-    <pre>&lt;script&gt;
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-        txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "add blank to code: " + txt
-        : txt[0] === "("
-        ? oldEval(expressionToJs(txt))
-        : txt[txt.length - 1] != ";"
-        ? "add ; to code: " + txt
-        : oldEval(txt);
-     window.eval = newEval;
-&lt;/script&gt;</pre>
-
     <p>
-All we have done up to now, is converting the Scheme syntax into a nested JavaScript array.
+All we have done up to now, is converting the Scheme syntax into a nested JavaScript array (the so called AST).
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(up (cos 0) (sin 0)) 
+(up (cos 0) (sin 0))
     </code></pre>
 
     <p>The magic is just in this 7 lines of code</p>
@@ -174,15 +147,13 @@ var expressionToJs = (expr) =>
 jsonToJs(JSON.parse(textToJson(expr)));
     </code></pre>
 
-    <p>Now we can omit the <code>.call(null, ...)</code>, which is so all pervasive when working with Sicmutils as a JavaScript library.</p>
-
-    <p>JavaScript</p>
+    <p>Scheme syntax transpiled to Javascript</p>
 
     <pre><code class="language-klipse-eval-js">
-up(cos, sin).call(null,0);
+;((up cos sin) 0)
     </code></pre>
 
-    <p>Scheme syntax</p>
+    <p>Scheme syntax executed</p>
 
     <pre><code class="language-klipse-eval-js">
 ((up cos sin) 0) 
@@ -191,6 +162,40 @@ up(cos, sin).call(null,0);
     <pre><code class="language-klipse-eval-js">
 ((up cos (compose cos sin)) 0) 
     </code></pre>
+
+    <h1>Eval patch</h1>
+
+    <p>For all this we had to patch the JavaScript <code>eval</code> function: 1. the code is transpiled and executed whenever the text starts with a <code>(</code> and ends with a <code>blank</code> 2. the transpiled code is shown when the text starts with <code>;(</code> 3. the text is executed as JS when it starts with some letter and ends with a <code>;</code></p>
+
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+        txt.substr(0, 2) === ";("
+        ? "Transpiled JS: " + expressionToJs(txt.substr(1))
+        : txt[0] === "(" && txt[txt.length - 1] != " "
+        ? "Add blank to AST: " + textToJson(txt)
+        : txt[0] === "("
+        ? oldEval(expressionToJs(txt))
+        : txt[txt.length - 1] != ";"
+        ? "Add ; to JS: " + txt
+        : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt.substr(0, 2) === ";("
+         ? "Transpiled JS: " + expressionToJs(txt.substr(1))
+         : txt[0] === "(" && txt[txt.length - 1] != " "
+         ? "Add blank to AST: " + textToJson(txt)
+         : txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>

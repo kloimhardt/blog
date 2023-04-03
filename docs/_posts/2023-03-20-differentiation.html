@@ -19,21 +19,6 @@ categories: HamiltonMechanics
 
 <body>
 
-    <script>
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-        txt[0] === "(" && txt[txt.length - 1] === ";"
-        ? "Transpiled JS: " + expressionToJs(txt.substr(0, txt.length - 1))
-        : txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "Add blank to AST: " + textToJson(txt)
-        : txt[0] === "("
-        ? oldEval(expressionToJs(txt))
-        : txt[txt.length - 1] != ";"
-        ? "Add ; to JS: " + txt
-        : oldEval(txt);
-     window.eval = newEval;
-    </script>
-
     <h1>Differentiation in SICM</h1>
 
     <p>
@@ -44,16 +29,11 @@ categories: HamiltonMechanics
     (This section still needs a lot of work)
     (It should show how the differentiation algorithm of Sicmutils works)
 
-    <p>We include the Sicmutils library</p>
+    <p>We include the Sicmutils library and the transpiler</p>
 
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-
-    <p>
-As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax to JS transpiler.
-    </p>
-
 
     <pre><code class="language-klipse-eval-js">
 var insertCommas = (txt) =>
@@ -68,36 +48,7 @@ txt.trim()
 
 var textToJson = (txt) =>
 insertCommas(makeBrackets(txt));
-    </code></pre>
 
-    <p>We also patch the JavaScript <code>eval</code> function: 1. the code is transpiled and executed whenever the text starts with a <code>(</code> and ends with a <code>blank</code>; 2. the transpiled code is shown when text starts with a <code>(</code> and ends with a <code>;</code> 3. the text is executed as JS when it starts with some letter and ends with a <code>;</code></p>
-
-    <pre>&lt;script&gt;
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-        txt[0] === "(" && txt[txt.length - 1] === ";"
-        ? "Transpiled JS: " + expressionToJs(txt.substr(0, txt.length - 1))
-        : txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "Add blank to AST: " + textToJson(txt)
-        : txt[0] === "("
-        ? oldEval(expressionToJs(txt))
-        : txt[txt.length - 1] != ";"
-        ? "Add ; to JS: " + txt
-        : oldEval(txt);
-     window.eval = newEval;
-&lt;/script&gt;</pre>
-
-    <p>
-All we have done up to now, is converting the Scheme syntax into a nested JavaScript array (the so called AST).
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-(up (cos 0) (sin 0))
-    </code></pre>
-
-    <p>The magic is just in this 7 lines of code</p>
-
-    <pre><code class="language-klipse-eval-js">
 var jsonToJs = (j) =>
 j.constructor == Array
 ? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
@@ -105,14 +56,37 @@ j.constructor == Array
 
 var expressionToJs = (expr) =>
 jsonToJs(JSON.parse(textToJson(expr)));
+
+    </code></pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt.substr(0, 2) === ";("
+         ? "Transpiled JS: " + expressionToJs(txt.substr(1))
+         : txt[0] === "(" && txt[txt.length - 1] != " "
+         ? "Add blank to AST: " + textToJson(txt)
+         : txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+    <p>
+Converting the Scheme syntax into a nested JavaScript array (the so called AST).
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(up (cos 0) (sin 0))
     </code></pre>
 
     <p>Scheme syntax transpiled to Javascript</p>
 
     <pre><code class="language-klipse-eval-js">
-((up cos sin) 0);
+;((up cos sin) 0)
     </code></pre>
-
 
     <p>
 Some JS imports
