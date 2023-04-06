@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+      <!-- Sicmutils -->
+      <script src="/blog/js/main.js"></script>
+
+      <!-- Cherry -->
+      <script src="/blog/js/scittle.js"></script>
+
+    <h1>Call Sicmutils from Cherry</h1>
+
+    <script type="application/x-cherry">
+     (defn my-alert []
+         (js/alert (str "Cosine of Pi: " (sicmutils.env/cos (symbol "pi")))))
+
+     (set! (.-my_alert_cherry js/window) my-alert)
+    </script>
+
+    <button onclick="my_alert_cherry()">
+        Click Cherry
+    </button>
+
+     </body>
+</html>
