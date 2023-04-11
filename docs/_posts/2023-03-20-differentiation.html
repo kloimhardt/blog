@@ -34,6 +34,7 @@ categories: HamiltonMechanics
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+    <script src="/blog/js/compiler_config.js"></script>
 
     <pre><code class="language-klipse-eval-js">
 var insertCommas = (txt) =>
@@ -55,23 +56,12 @@ j.constructor == Array
 : j;
 
 var expressionToJs = (expr) =>
-jsonToJs(JSON.parse(textToJson(expr)));
+jsonToJs(JSON.parse(textToJson(expr))) + ";";
 
     </code></pre>
 
     <script>
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-         txt.substr(0, 2) === ";("
-         ? "Transpiled JS: " + expressionToJs(txt.substr(1))
-         : txt[0] === "(" && txt[txt.length - 1] != " "
-         ? "Add blank to AST: " + textToJson(txt)
-         : txt[0] === "("
-         ? oldEval(expressionToJs(txt))
-         : txt[txt.length - 1] != ";"
-         ? "Add ; to JS: " + txt
-         : oldEval(txt);
-     window.eval = newEval;
+     compiler_config_patchEvalOnce();
     </script>
 
     <p>
