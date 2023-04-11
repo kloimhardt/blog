@@ -190,7 +190,7 @@ j.constructor == Array && j[0] === "let"
 
 var expressionToJs = (expr) =>
 //part3 add JSON.parse and remove if ... else "'add blank'"
-jsonToJs(modifyJson(JSON.parse(textToJson(expr))));
+jsonToJs(modifyJson(JSON.parse(textToJson(expr)))) + ";";
 
 ["sin", "cos", "velocity", "dot_product",
 "up", "Gamma", "compose", "definite_integral",

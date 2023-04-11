@@ -154,7 +154,7 @@ j.constructor == Array
 : j;
 
 var expressionToJs = (expr) =>
-jsonToJs(JSON.parse(textToJson(expr)));
+jsonToJs(JSON.parse(textToJson(expr))) + ";";
     </code></pre>
 
     <p>Scheme syntax transpiled to Javascript</p>
