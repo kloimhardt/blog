@@ -56,10 +56,7 @@ categories: Software
    </p>
 
    <p>
-       The html file is not only meant to be changed on-line, but also to be read as source code for both the Scheme examples and their tailor-made syntax compiler. This blog post helps with that reading, giving an outline of the technical implementation of that file.
-   </p>
-   <p>
-While giving a technical outline, it is not the goal of this post to explain Theoretical Physics, which is the subject specific topic of SICM and thus of the html-file. But still, you can open the html page, copy-paste that html-code into some text editor, save locally and open that in a new browser window. In this way you have prove that the syntax compiler executes SICM code, even without necessarily understanding its theoretical content.
+       The html file is not only meant to be changed on-line, but also to be read as source code for both the Scheme examples and their tailor-made syntax compiler. This blog post helps with that reading, giving an outline of the technical implementation of that file. However, it is not the goal of this post to explain Theoretical Physics, which is the specific topic of SICM (and its showcase being the purpose of the html-file).
    </p>
 
    <p>
@@ -109,7 +106,6 @@ Note that these are all just settings and no JavaScript code is executed just ye
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="/blog/js/main.js"></script>
-    <script src="/blog/js/compiler_config.js"></script>
 
     <p>
         This specific library was compiled according to the instructions found <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">here</a>[1].
@@ -119,12 +115,19 @@ Note that these are all just settings and no JavaScript code is executed just ye
 Next comes a helper function for loading variables from the Sicmutils environment.
     </p>
 
-    <pre>    &lt;script&gt;
+    <pre>&lt;script&gt;
     var loadEnv = (name) => {
     window[name] = sicmutils.env[name];
     return name;
     }
-    &lt;/script&gt;</pre>
+&lt;/script&gt;</pre>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
 
     <h1>The rest of the HTML file</h1>
 
@@ -167,6 +170,15 @@ var _COLON_pi = pi;
      window.eval = _3_eval;
 &lt;/script&gt;</pre>
 
+    <script>
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
+         txt[0] === "("
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
+    </script>
+
     <p>
         Finally, we want to try out our brand new Scheme compiler. 
     </p>
@@ -177,7 +189,6 @@ var _COLON_pi = pi;
 
     <pre id="prefix-123"></pre>
     <script>
-     compiler_config_patchEvalOnce();
      addSnippet('book-part1','prefix-123');
     </script>
 

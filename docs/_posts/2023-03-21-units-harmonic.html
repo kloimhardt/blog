@@ -199,7 +199,7 @@ categories: HamiltonMechanics
 
     <h1>State path and Path function</h1>
 
-    <p>We defina a higher order function called state-path. state-path takes some coordinate-function and some momentum-function. state-path returns a function that takes some timestamp and returns a state.</p>
+    <p>We define a higher order function called state-path. state-path takes some coordinate-function and some momentum-function. state-path returns a function that takes some timestamp and returns a state.</p>
 
     <pre><code class="language-klipse-eval-js">
 (define ((state-path mtr<-q spk<-p) secT)
@@ -328,7 +328,7 @@ categories: HamiltonMechanics
 
 <h1>Textbook solution of the harmonic oscillator</h1>
 
-<p>We define a new Hamiltonian which does not anymore contain specific numbers. Instead, the body mass is any number m and spring strength is any number k.</p>
+<p>We define a new Hamiltonian which does not anymore contain specific numbers. Instead, the body mass is set to any number <code>m</code> of grams. In the same manner, the spring strength is quantified by the arbitrary number <code>k</code>.</p>
 
 <pre><code class="language-klipse-eval-js">
 (define grmM (* 'm 'grams)) 
@@ -356,6 +356,10 @@ categories: HamiltonMechanics
 <pre><code class="language-klipse-eval-js">
 (/ cylW (/ 1 'sec)) 
 </code></pre>
+
+<p>
+    Shown above is that <code>cylW</code> indeed is of dimension <code>one over second</code>, because the quotient is a dimensionless number (remember that <code>k</code> and <code>m</code> are just arbitrary numbers). Below the total energy of the oscillator is quantified by the dimensionless number <code>E</code>.
+</p>
 
 <pre><code class="language-klipse-eval-js">
 (define calE (* 'E hams)) 

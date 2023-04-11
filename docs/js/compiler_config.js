@@ -4,10 +4,16 @@ var loadEnv = (name) => {
 };
 
 function compiler_config_patchEvalOnce() {
-var _2_eval = window.eval;
-var _3_eval = (txt) =>
-    txt[0] === "("
-    ? _2_eval(expressionToJs(txt))
-    : _2_eval(txt);
-window.eval = _3_eval;
+    var oldEval = window.eval;
+    var newEval = (txt) =>
+        txt.substr(0, 2) === ";("
+        ? "Transpiled JS: " + expressionToJs(txt.substr(1))
+        : txt[0] === "(" && txt[txt.length - 1] != " "
+        ? "AST: " + textToJson(txt)
+        : txt[0] === "("
+        ? oldEval(expressionToJs(txt))
+        : txt[txt.length - 1] != ";"
+        ? "Add ; to JS: " + txt
+        : oldEval(txt);
+    window.eval = newEval;
 }
