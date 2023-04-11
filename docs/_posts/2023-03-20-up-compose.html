@@ -21,11 +21,13 @@ categories: HamiltonMechanics
 
     <h1>Arrays and Vectors in JavaScript</h1>
 
-    <p>We include the Sicmutils library</p>
+    <p>We include the Sicmutils library.</p>
 
     <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
 
     <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+
+    <p>Note that the compilation process left all functions with thier original names. Many might be surprised that this is mentioned explicitely, but experts will nod knowingly.</p>
 
     <p>Some abbreviations</p>
 
@@ -44,6 +46,14 @@ var sin = Math.sin;
 
     <pre><code class="language-klipse-eval-js">
  up(1, 0);
+    </code></pre>
+
+    <p>Do not be confused by the fact that the result itself includes the function name "up". You only see the string representation of the data as it was chosen by the library designers. Indeed, when accessing the zeroth element of our up vector, we get a number.</p>
+
+    <pre><code class="language-klipse-eval-js">
+var get = cljs.core.get;
+var data = up(1,0);
+get(data,0);
     </code></pre>
 
     <p>One can even convert an <code>up</code> vector into a JS array, but that is ugly and not used further.</p>
@@ -108,7 +118,7 @@ compose(cos, sin).call(null, 0);
 
     <h1>Scheme syntax</h1>
 
-As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax to JS transpiler.
+As a follow up to the expositions in blog post <a href="https://kloimhardt.github.io/blog/software/2023/02/22/sicmutils-as-js-3.html">Sicmutils as JavaScript library (3)</a>, we include a simple Scheme syntax transpiler.
     </p>
 
 
@@ -128,14 +138,14 @@ insertCommas(makeBrackets(txt));
     </code></pre>
 
     <p>
-All we have done up to now, is converting the Scheme syntax into a nested JavaScript array (the so called AST).
+        The above JavaScript program already defines the Scheme syntax. This syntax is shown below. Scheme code is converted into a nested JavaScript array (the so called AST).
     </p>
 
     <pre><code class="language-klipse-eval-js">
 (up (cos 0) (sin 0))
     </code></pre>
 
-    <p>The magic is just in this 7 lines of code</p>
+    <p>The magic to convert this AST into JavaScript is just in the following half dozen lines of code</p>
 
     <pre><code class="language-klipse-eval-js">
 var jsonToJs = (j) =>
@@ -173,7 +183,7 @@ jsonToJs(JSON.parse(textToJson(expr)));
         txt.substr(0, 2) === ";("
         ? "Transpiled JS: " + expressionToJs(txt.substr(1))
         : txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "Add blank to AST: " + textToJson(txt)
+        ? "AST: " + textToJson(txt)
         : txt[0] === "("
         ? oldEval(expressionToJs(txt))
         : txt[txt.length - 1] != ";"
@@ -188,7 +198,7 @@ jsonToJs(JSON.parse(textToJson(expr)));
          txt.substr(0, 2) === ";("
          ? "Transpiled JS: " + expressionToJs(txt.substr(1))
          : txt[0] === "(" && txt[txt.length - 1] != " "
-         ? "Add blank to AST: " + textToJson(txt)
+         ? "AST: " + textToJson(txt)
          : txt[0] === "("
          ? oldEval(expressionToJs(txt))
          : txt[txt.length - 1] != ";"
