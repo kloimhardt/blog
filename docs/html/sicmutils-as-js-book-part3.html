@@ -41,7 +41,7 @@
     </p>
 
     <pre id="one-2-3"><code class="language-klipse-eval-js">
-1 + 2 + 3
+1 + 2 + 3;
     </code></pre>
 
     <pre id="klipse-scheme"><code class="language-klipse-scheme">
@@ -218,6 +218,8 @@ var vector_length = cljs.core.count; null;
          ? "AST: " + textToJson(txt)
          : txt[0] === "("
          ? _2_eval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
          : _2_eval(txt);
      window.eval = _3_eval;
     </script>
