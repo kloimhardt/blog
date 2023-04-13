@@ -15,24 +15,37 @@ categories: HamiltonMechanics
          selector_eval_js: '.language-klipse-eval-js'
      };
     </script>
+
+    <script id="loadKlipse">
+     function loadKlipse() {
+         var el = document.createElement('script');
+         el.src = "https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js";
+         el.type = 'text/javascript';
+         document.getElementsByTagName('head')[0].appendChild(el);
+     }
+    </script>
+
+    <script type="module">
+     import * as emmy from "/blog/js/emmy-module/out/main.js";
+     var requireEmmy = (name) => {
+         window[name] = emmy[name];
+         return name;
+     };
+     window.requireEmmy = requireEmmy;
+    </script>
+
 </head>
 
-<body>
+<body onload = "loadKlipse();">
 
     <h1>Arrays and Vectors in JavaScript</h1>
 
-    <p>We include the Sicmutils library.</p>
-
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
-
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-
-    <p>Note that the compilation process left all functions with thier original names. Many might be surprised that this is mentioned explicitely, but experts will nod knowingly.</p>
+    <p>We include Emmy as described <a href="https://github.com/kloimhardt/emmy-module">here</a> </p>
 
     <p>Some abbreviations</p>
 
     <pre><code class="language-klipse-eval-js">
-var up = sicmutils.env.up;
+requireEmmy("up");
 var cos = Math.cos;
 var sin = Math.sin;
     </code></pre>
@@ -51,7 +64,7 @@ var sin = Math.sin;
     <p>Do not be confused by the fact that the result itself includes the function name "up". You only see the string representation of the data as it was chosen by the library designers. Indeed, when accessing the zeroth element of our up vector, we get a number.</p>
 
     <pre><code class="language-klipse-eval-js">
-var get = cljs.core.get;
+requireEmmy("get");
 var data = up(1,0);
 get(data,0);
     </code></pre>
@@ -59,7 +72,8 @@ get(data,0);
     <p>One can even convert an <code>up</code> vector into a JS array, but that is ugly and not used further.</p>
 
     <pre><code class="language-klipse-eval-js">
-cljs.core.clj__GT_js(up(1, 0)).map(sin);
+requireEmmy("clj__GT_js");
+clj__GT_js(up(1, 0)).map(sin);
     </code></pre>
 
     <p>Sure, one can call functions inside of other functions,</p>
@@ -104,10 +118,7 @@ cos(sin(0));
     <p>The same result is achieved with function composition.</p>
 
     <pre><code class="language-klipse-eval-js">
-var compose = sicmutils.env.compose;
-    </code></pre>
-
-    <pre><code class="language-klipse-eval-js">
+requireEmmy("compose");
 compose(cos, sin).call(null, 0);
     </code></pre>
 
@@ -207,6 +218,5 @@ jsonToJs(JSON.parse(textToJson(expr))) + ";";
      window.eval = newEval;
     </script>
 
-<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
 </html>
