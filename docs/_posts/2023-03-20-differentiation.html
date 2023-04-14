@@ -15,9 +15,29 @@ categories: HamiltonMechanics
          selector_eval_js: '.language-klipse-eval-js'
      };
     </script>
+
+    <script id="loadKlipse">
+     function loadKlipse() {
+         var el = document.createElement('script');
+         el.src = "https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js";
+         el.type = 'text/javascript';
+         document.getElementsByTagName('head')[0].appendChild(el);
+     }
+    </script>
+
+    <script type="module">
+     import * as emmy from "https://kloimhardt.github.io/blog/js/emmy-module/out/main.js";
+     window.requireEmmyRename = (name, newname) =>
+         window[newname] = emmy[name];
+     window.requireEmmy = (name) =>
+         window.requireEmmyRename(name, name);
+    </script>
+
+    <script src="/blog/js/compiler_config.js"></script>
+    <script>compiler_config_patchEvalOnce();</script>
 </head>
 
-<body>
+<body onload = "loadKlipse();">
 
     <h1>Differentiation in SICM</h1>
 
@@ -30,11 +50,6 @@ categories: HamiltonMechanics
     (It should show how the differentiation algorithm of Sicmutils works)
 
     <p>We include the Sicmutils library and the transpiler</p>
-
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
-
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
-    <script src="/blog/js/compiler_config.js"></script>
 
     <pre><code class="language-klipse-eval-js">
 var insertCommas = (txt) =>
@@ -60,10 +75,6 @@ jsonToJs(JSON.parse(textToJson(expr))) + ";";
 
     </code></pre>
 
-    <script>
-     compiler_config_patchEvalOnce();
-    </script>
-
     <p>
 Converting the Scheme syntax into a nested JavaScript array (the so called AST).
     </p>
@@ -83,8 +94,8 @@ Some JS imports
     </p>
 
     <pre><code class="language-klipse-eval-js">
-["up","cos","sin","square","compose"].map(loadEnv);
-var Drv = sicmutils.env.D;
+["up","cos","sin","square","compose"].map(requireEmmy);
+requireEmmyRename("D","Drv");
     </code></pre>
 
     <p>Scheme syntax executed</p>
@@ -109,6 +120,5 @@ var Drv = sicmutils.env.D;
 (Drv (compose square sin))) 1) 
     </code></pre>
 
-<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
 </html>

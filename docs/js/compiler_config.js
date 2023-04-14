@@ -1,8 +1,3 @@
-var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
-    return name;
-};
-
 function compiler_config_patchEvalOnce() {
     var oldEval = window.eval;
     var newEval = (txt) =>

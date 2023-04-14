@@ -26,12 +26,9 @@ categories: HamiltonMechanics
     </script>
 
     <script type="module">
-     import * as emmy from "/blog/js/emmy-module/out/main.js";
-     var requireEmmy = (name) => {
+     import * as emmy from "https://kloimhardt.github.io/blog/js/emmy-module/out/main.js";
+     window.requireEmmy = (name) =>
          window[name] = emmy[name];
-         return name;
-     };
-     window.requireEmmy = requireEmmy;
     </script>
 
 </head>
@@ -42,12 +39,14 @@ categories: HamiltonMechanics
 
     <p>We include Emmy as described <a href="https://github.com/kloimhardt/emmy-module">here</a> </p>
 
+    <p>The source code for this post can be found <a href="https://github.com/kloimhardt/blog/blob/main/docs/_posts/2023-03-20-up-compose.html">here</a>, you can copy paste to a local html-file.</p>
+
     <p>Some abbreviations</p>
 
     <pre><code class="language-klipse-eval-js">
 requireEmmy("up");
 var cos = Math.cos;
-var sin = Math.sin;
+var sin = Math.sin; null;
     </code></pre>
     <p>JavaScript arrays are a nice way to combine numbers and calculate.</p>
 

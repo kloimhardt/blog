@@ -7,8 +7,10 @@ categories: HamiltonMechanics
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
     <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
     <style>
      .CodeMirror { max-height: 150px; }
@@ -24,8 +26,19 @@ categories: HamiltonMechanics
      };
     </script>
 
+    <script type="module">
+     import * as emmy from "/blog/js/emmy-module/out/main.js";
+     window.requireEmmyRename = (name, newname) =>
+         window[newname] = emmy[name];
+     window.requireEmmy = (name) =>
+         window.requireEmmyRename(name, name);
+    </script>
+
     <script src="/blog/js/blog_helper.js"></script>
     <script>setKlipseUrl("https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js");</script>
+
+    <script src="/blog/js/compiler_config.js"></script>
+    <script>compiler_config_patchEvalOnce();</script>
 
 </head>
 
@@ -47,22 +60,18 @@ categories: HamiltonMechanics
 
     <p></p>
 
-    <script src="/blog/js/main.js"></script>
-    <script src="/blog/js/compiler_config.js"></script>
-
     <pre id="klipse-scheme"></pre>
     <script>
      addSnippet('book-part3','klipse-scheme');
     </script>
 
-    <pre id="compiler"></pre>
+    <pre id="scheme160"></pre>
     <script>
-     addSnippet('book-part3','compiler');
+     addSnippet('book-part3','scheme160');
     </script>
 
     <pre id="prefix-123"></pre>
     <script>
-     compiler_config_patchEvalOnce();
      addSnippet('book-part3','prefix-123');
     </script>
 
