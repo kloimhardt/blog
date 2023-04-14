@@ -31,20 +31,32 @@ categories: HamiltonMechanics
          window[name] = emmy[name];
     </script>
 
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt.substr(0, 2) === ";("
+         ? "Transpiled JS: " + expressionToJs(txt.substr(1))
+         : txt[0] === "(" && txt[txt.length - 1] != " "
+         ? "AST: " + textToJson(txt)
+         : txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
 </head>
 
 <body onload = "loadKlipse();">
 
+    <p>The following examples use the <a href="https://github.com/kloimhardt/emmy-module">Emmy</a> computer algebra system. The source of this post can be found <a href="https://github.com/kloimhardt/blog/blob/main/docs/_posts/2023-03-20-up-compose.html">here</a>, you can copy-paste the html-code to a local file.</p>
+
     <h1>Arrays and Vectors in JavaScript</h1>
-
-    <p>We include Emmy as described <a href="https://github.com/kloimhardt/emmy-module">here</a> </p>
-
-    <p>The source code for this post can be found <a href="https://github.com/kloimhardt/blog/blob/main/docs/_posts/2023-03-20-up-compose.html">here</a>, you can copy paste to a local html-file.</p>
 
     <p>Some abbreviations</p>
 
     <pre><code class="language-klipse-eval-js">
-requireEmmy("up");
 var cos = Math.cos;
 var sin = Math.sin; null;
     </code></pre>
@@ -54,9 +66,10 @@ var sin = Math.sin; null;
  [1, 0].map(sin);
     </code></pre>
 
-    <p>In the same manner, the Sicmutils function <code>up</code> is a way to combine numbers to a vector.</p>
+    <p>In the same manner, the function <code>up</code> of the algebra package Emmy is a way to combine numbers to a vector.</p>
 
     <pre><code class="language-klipse-eval-js">
+requireEmmy("up");
  up(1, 0);
     </code></pre>
 
@@ -182,40 +195,6 @@ jsonToJs(JSON.parse(textToJson(expr))) + ";";
     <pre><code class="language-klipse-eval-js">
 ((up cos (compose cos sin)) 0) 
     </code></pre>
-
-    <h1>Eval patch</h1>
-
-    <p>For all this we had to patch the JavaScript <code>eval</code> function: 1. the code is transpiled and executed whenever the text starts with a <code>(</code> and ends with a <code>blank</code> 2. the transpiled code is shown when the text starts with <code>;(</code> 3. the text is executed as JS when it starts with some letter and ends with a <code>;</code></p>
-
-    <pre>&lt;script&gt;
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-        txt.substr(0, 2) === ";("
-        ? "Transpiled JS: " + expressionToJs(txt.substr(1))
-        : txt[0] === "(" && txt[txt.length - 1] != " "
-        ? "AST: " + textToJson(txt)
-        : txt[0] === "("
-        ? oldEval(expressionToJs(txt))
-        : txt[txt.length - 1] != ";"
-        ? "Add ; to JS: " + txt
-        : oldEval(txt);
-     window.eval = newEval;
-&lt;/script&gt;</pre>
-
-    <script>
-     var oldEval = window.eval;
-     var newEval = (txt) =>
-         txt.substr(0, 2) === ";("
-         ? "Transpiled JS: " + expressionToJs(txt.substr(1))
-         : txt[0] === "(" && txt[txt.length - 1] != " "
-         ? "AST: " + textToJson(txt)
-         : txt[0] === "("
-         ? oldEval(expressionToJs(txt))
-         : txt[txt.length - 1] != ";"
-         ? "Add ; to JS: " + txt
-         : oldEval(txt);
-     window.eval = newEval;
-    </script>
 
 </body>
 </html>
