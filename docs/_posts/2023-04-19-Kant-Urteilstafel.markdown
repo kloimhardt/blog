@@ -40,7 +40,9 @@ Man muss sich entscheiden welcher der beiden Möglichkeiten nun der Fall ist. Au
 
 Basierend auf den Axiomen der Aussagenlogik stellt Kant die Tafel seiner berühmten Kategorien vor. Er meint, dass alle Menschen schon immer in Urteilen der Aussagenlogik gedacht und diese automatisch nach seiner Tafel klassifiziert haben.
 
-Bei Kant gibt es zuersteinmal mehr als ein Prädikat: Stillstand, Rollen, Beschleunigung, Rasen.
+Bei Kant gibt es zuersteinmal mehr als ein Prädikat: "Stillstand", "Rollen", "Beschleunigung", "Rasen". Soweit ich sehe, müssen sich die Prädikate nicht unbedingt ausschliessen. Mein Begriff "Rasen" kann auch je nach Rennsituation zusätzlich "Beschleunigung" bedeuten.
+
+Kant geht es um das Erkennen eines Gegenstandes (in logischer Sprache nennt man den Gegenstand ja "Subjekt"). Hat man die Prädikate richtig zugewiesen, ist der Gegenstand richtig erkannt und die Wahrheit gefunden.
 
 ### Die ersten drei Kategorien
 
@@ -48,15 +50,17 @@ Jedes Urteil fällt in eine der folgenden drei Kategorien, sie werden die Katego
 
 - Kategorisches Urteil
 
-Das Urteil ist eine einfache Aussage: "Das Auto - steht ja!". Diese Kategorie entspricht Punkt 1 der Logik.
+Das Urteil ist eine einfache Aussage: "Das Auto - steht ja!". Diese Kategorie entspricht Punkt 1 der Logik. Aus dem Subjekt wird auf ein Prädikat geschlossen.
 
 - Hypothetisches Urteil
 
-Entspricht Punkt 3 der Logik. Wenn das Auto beschleunigt, dann stehts nicht. "Das Auto - beschleunigt ja!", darum folgt "Das Auto - steht nicht!". Jede Schlussfolge fällt also in die Kategorie "Hypothetisches Urteil". Es ist ein Urteil über zwei einfachere Urteile.
+Entspricht Punkt 3 der Logik. Wenn das Auto beschleunigt, dann stehts nicht. "Das Auto - beschleunigt ja!", darum folgt "Das Auto - steht nicht!". Jede Schlussfolge fällt also in die Kategorie "Hypothetisches Urteil". Es ist ein Urteil über zwei einfachere Urteile, Subjekt - Prädikat spielen keine Rolle.
 
 - Disjunktives Urteil
 
-Entspricht Punkt 2 der Logik. Es handelt sich um die Angaben von dem, was überhaupt möglich ist. Das Auto steht oder rollt oder beschleunigt. Irgendwas davon muss das Auto grad tun. Auch wenn man nicht weiss was jetzt genau. Das Disjunktive Urteil ist wieder ein Urteil über andere Urteile, diesmal über viel mehr als bloss zwei. Autos die rasen lassen wir, die zahlenden Zuschauer, jedenfalls nicht zu in einem Oldtimerrennen.
+Entspricht Punkt 2 der Logik. Es handelt sich um die Angaben von dem, was überhaupt möglich ist. Das Auto steht oder rollt oder beschleunigt. Irgendwas davon muss das Auto grad tun. Auch wenn man nicht weiss was jetzt genau. Das Disjunktive Urteil ist wieder ein Urteil über andere Urteile, diesmal über viel mehr als bloss zwei.
+
+Im disjunktiven Urteil schliessen sich die Prädikate gegenseitig aus. Autos die rasen lassen wir, die zahlenden Zuschauer, jedenfalls nicht zu in einem Oldtimerrennen.
 
 ### Weitere drei Kategorien: Qualitäten
 
