@@ -9,6 +9,14 @@ categories: Literatur
 Zitat aus der [Kritik der reinen Vernunft](https://www.gutenberg.org/cache/epub/6343/pg6343.html)
 
 "Die Metaphysik hat zum eigentlichen Zwecke ihrer Nachforschung nur drei Ideen: Gott, Freiheit und Unsterblichkeit".
+Wir widmen uns hier vorerst der Unsterblichkeit der Seele.
+
+## Kurzfassung von Kants Lösung
+Beginnen wir mit dem Offensichtlichen. Wenn ein Auto auf der Strasse steht, dann beschleunigts nicht. Wenn ein Auto beschleunigt, dann stehts nicht auf der Strasse. Denn: beides gleichzeitig kanns nicht sein. Aber: ein Auto kann sowohl nicht-stehend als auch unbeschleuningt sein. Das wird oft übersehen. Denn es gibt ein Drittes: "gleichmässig auf der Strasse dahinfahren".
+
+Nun soweit so einfach. Was ist aber, wenn ich den Begriff "gleichmässig auf der Strasse dahinfahren" nicht direkt benennen kann weil mir die Worte fehlen? Wenn ich nur so einen diffusen Eindruck davon habe, dass ein Auto sich auf viele Arten bewegen kann, ich aber nur "beschleuningt" und "stehend" sagen kann? Wie beweise ich dann den Satz: "ein Auto kann sowohl unbeschleuningt als auch nicht stehend sein"?
+
+Falls ich diesen Beweis zusammenbring, wirds spannend. Am Ende kommt nämlich raus, dass es denkbar ist, dass die Seele sowohl nicht sterblich als auch nicht unsterblich sein kann. Oder anders: logisch kommen wir der Seele nicht auf die Spur. So Kant.
 
 ## Die Basis: klassische Aussagenlogik
 
