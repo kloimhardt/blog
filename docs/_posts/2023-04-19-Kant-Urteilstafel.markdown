@@ -12,11 +12,57 @@ Zitat aus der [Kritik der reinen Vernunft](https://www.gutenberg.org/cache/epub/
 Wir widmen uns hier vorerst der Unsterblichkeit der Seele.
 
 ## Kurzfassung von Kants Lösung
-Beginnen wir mit dem Offensichtlichen. Wenn ein Auto auf der Strasse steht, dann beschleunigts nicht. Wenn ein Auto beschleunigt, dann stehts nicht auf der Strasse. Denn: beides gleichzeitig kanns nicht sein. Aber: ein Auto kann sowohl nicht-stehend als auch unbeschleuningt sein. Das wird oft übersehen. Denn es gibt ein Drittes: "gleichmässig auf der Strasse dahinfahren".
+Beginnen wir mit dem Offensichtlichen. Wenn ein Auto auf der Strasse steht, dann beschleunigt's nicht. Wenn ein Auto beschleunigt, dann steht's nicht. Denn: beides gleichzeitig kann's nicht sein. Aber: ein Auto kann sowohl "nicht stehend" als auch "unbeschleunigt" sein. Das wird oft übersehen. Denn es gibt ein Drittes: "gleichmässig fahrend".
 
-Nun soweit so einfach. Was ist aber, wenn ich den Begriff "gleichmässig auf der Strasse dahinfahren" nicht direkt benennen kann weil mir die Worte fehlen? Wenn ich nur so einen diffusen Eindruck davon habe, dass ein Auto sich auf viele Arten bewegen kann, ich aber nur "beschleuningt" und "stehend" sagen kann? Wie beweise ich dann den Satz: "ein Auto kann sowohl unbeschleuningt als auch nicht stehend sein"?
+Kant führt solche Gedanken derart weiter, so dass am Ende für ihn die Seele sowohl "nicht sterblich" als auch "nicht unsterblich" sein kann. Oder anders: logisch kommen wir der Seele nicht auf die Spur.
 
-Falls ich diesen Beweis zusammenbring, wirds spannend. Am Ende kommt nämlich raus, dass es denkbar ist, dass die Seele sowohl nicht sterblich als auch nicht unsterblich sein kann. Oder anders: logisch kommen wir der Seele nicht auf die Spur. So Kant.
+Und die Geschichte der fortgeführten Gedanken erzähl ich jetzt.
+
+## Die Vorgschichte
+
+Im folgenden eine Erzählung aus unbestätigten Quellen. Sie beginnt vor viertausend Jahren.
+
+### Paola, Astrid und die Lobbygruppe der Männer
+
+Die Philosophin Paola kam nach langem Nachdenken drauf, dass Kutschen in einem von drei Zuständen sein können: "gleichmässig stehend", "gleichmässig fahrend", "ungleichmässig fahrend". Ihre große Leistung war das Gleichmässige, denn das war praktisch nie zu beobachten, weil die Kutschen zu ihrer Zeit immer unkontrolliert herumruckelten.
+
+Auch sah sie sofort (oder war das überhaupt das Erste) dass das Leben an und für sich, aus sich heraus, ohne äußere Erfahrung, weiß, wann es steht, beschleunigt usw. ist. Gleichmass wäre das Erstrebenswerteste fürs Leben selbst, nach ihrer Meinung. Das war ja grad das Neue.
+
+Nun, ihre Schülerin Astrid war eher praktisch veranlagt und wollte den Leuten beibringen, dass es gut ist, wenn eine Kutsche auch mal steht, weil man dann Sachen hineinpacken kann. Z.B. solle man Haltezonen vor Kindergärten einrichten und so.
+
+Astrid wollte ihre Texte einfach halten. Den Zustand "gleichmässig fahrend" hat sie rausgestrichen. Astrid wusste natürlich, dass ihre Lehrerin lange um Gleichmass gerungen hatte. Vielleicht hatte sie deswegen auch das "ungleichmässig fahrend" rausgestrichen, wir wissen es nicht. Weitgehend unstrittig ist, dass sie  aus "gleichmässig stehend" (denn wer sagt sowas?) einfach "stehend" machte. Das war für ihre Zwecke ausreichend.
+
+Am Ende gabs für Astrid nur die einfache Frage: "Ist die Kraxen stehend oder un-stehend?". Ums nochmal zu sagen, sie wusste natürlich genau um die Gedanken Paolas über Leben und Beschleunigung, aber das durfte ihr nicht wichtig sein, und den Leuten war es das auch nicht. Haltezonen war das Thema.
+
+Nun gabs eine Gruppe von Männern, die wollten die Diskussion "stehend oder un-stehend" selbst entscheiden. Denn deren Kutschen hatten viel zu kleine Ladeflächen als dass man da hätte was aufladen können, stehend oder unstehend.
+
+Und so gründeten sie eine Lobbygruppe, die behauptete, dass es zwar oft so aussieht als stünde eine Kutsche ganz gut, aber in Wahrheit wären alle Kutschen un-stehend. Im Grunde glaubte ihnen niemand, aber sie waren recht schnell unterwegs im Land, weil unbelastet, und konnten ihre Lehre deshalb gut verbreiten. Den anderen war das alles zu mühsam und wenn, dann diskutierten alle die nächsten dreieinhalb tausend Jahre nur über stehend und un-stehend.
+
+Aus ursprünglich drei waren also zwei Zustände geworden, die sich auch noch strickt widersprachen. Ausserdem wurde das herumruckeln der Kutschen als mehr oder weniger gleichförmig empfunden, die Ideen Paolas waren ja noch da irgendwie. So richtig Fahrt nahmen Kutschen eh nie auf.
+
+Soweit die Überlieferung über Paola, Astrid und die Lobbygruppe der Männer.
+
+### Newton und Kant
+
+Erst ein Mann namens Sir Isaac Newton nahm sich der Sache wieder näher an und brachte sie weiter. Oder besser gesagt zuerst wieder auf den Punkt zurück. Er beschäftigte sich mit den Planetenbahnen die Kopernikus und Kepler beobachtet und beschrieben hatten und mit den Fallexperimenten des Galilei. Er liess sich von der Erfahrung, die diese Männer vor ihm gemacht hatten, belehren.
+
+Er kam wieder auf drei Zustände und darauf, dass es auf die Beschleunigung ankommt. Stehend oder un-stehend, wenn eine Kraft auf einen Körper wirkt, dann beschleunigt er. Mit diesem Gedanken hat Newton uns in die Neuzeit katapultiert, er hat die Physik zur Wissenschaft gemacht.
+
+Nun aber was ist mit dem Leben an sich? Über Fragen dieser Arte äußerte sich Newton nicht, zumindest nicht in seinem Amt als Physiker. Aussagen über das Leben selbst sind seit ihm bis heute nicht Teil der Physik sondern der Metaphysik.
+
+Und jetzt setzt Kant ein. Er schreibt: "Der Metaphysik, die sich (erstens) gänzlich über Erfahrungsbelehrung erhebt, wo (zweitens) also Vernunft selbst ihr eigener Schüler sein soll, (der Metaphysik also) ist das Schicksal bisher noch so günstig nicht gewesen, daß sie den sicheren Gang einer Wissenschaft einzuschlagen vermocht hätte". Wir erinnern uns: "Die Metaphysik hat zum eigentlichen Zwecke ihrer Nachforschung nur drei Ideen: Gott, Freiheit und Unsterblichkeit". Und: "So verschafften Newtons Zentralgesetze dem, was Kopernikus anfänglich nur als Hypothese annahm, ausgemachte Gewißheit und bewiesen zugleich die unsichtbare, den Weltbau verbindende Kraft (der Newtonischen Anziehung)".
+
+Newtons große Leistung war zu erkennen, dass die unsichtbare Schwerkraft die Ursache ist von der Beschleunigung beim Fall nach unten. Soweit, so unbestritten. Ich behaupte, dass Kant erkannt hat, dass Newton die Beschleunigung als eigene Bewegungsart erst als wichtig und richtig neu hineindenken hat müssen damit dann eine ebenso gedachte Kraft die Ursache sein kann.
+
+Kant eifert Newton nach. Nur ist Kant gescheit genug um so bescheiden wie nötig zu bleiben. Den hohen Grad der Sicherheit einer Newtonischen Physik kann er auf dem Gebiet der Metaphysik nicht erreichen. Er weist deswegen fast Stolz mehrmalig darauf hin, dass die Metaphysik nicht den Vorteil der "Erfahrungsbelehrung" haben darf, es gibt ja nur den Verstand, Experimente wären ja grad nicht Meta.
+
+So fährt er fort um zu retten was zu retten ist: er zeigt, dass die Seele weder als sterblich noch als unsterblich erkannt werden kann, weil man immer eine von vielen dritten Möglichkeiten mitdenken muss. Etwa so, wie wenn wir nur "gleichmässig stehend" und “ungleichmässig fahrend” denken können, aber irgendwo ein Gleichmass herrscht, das wir uns nicht vorstellen können, keine Worte dafür haben und deswegen nur von "stehend" und "fahrend" als Gegensätze reden.
+
+Auch zeigt Kant, dass Gott (die Kraft?) weder bewiesen noch widerlegt werden kann. Aber da verwendet er andere Argumente.
+
+Positiv ausgedrückt ist es für Kant denkbar, dass die Seele in einem von Gott verursachten dritten Zustand von nicht fassbarer Unendlichkeit ist.
+
+Ich glaub das ist Kant. Ich versuche im Folgenden jenen Gedankenweg zu zeichnen, den ich glaube dass er in Wahrheit gegangen ist. Es ist meine extatische Wahrheit.
 
 ## Die Basis: klassische Aussagenlogik
 
@@ -40,7 +86,7 @@ Das ist das Prinzip der Zweiwertigkeit eines Urteils. Es kann erfreulich oder en
 Gelangweilt gibts nicht, sagt der Logiker. Wir dürfen nicht sagen: "Das Auto - beschleunigt halbwegs". Ausser erfreut und enttäuscht (also ja und nicht), gibts nichts. Das ist der Satz vom ausgeschlossenen Dritten.
 
 ### Punkt 3: nicht beides gleichzeitig
-Wenn das Auto beschleunigt dann beschleunigts. Und wenns nicht beschleunigt, dann beschleuningts nicht. Wir können nicht gleichzeitig erfreut und enttäuscht sein, sagt der Logiker. So nach dem Motto: "Das Auto - beschleunigt ja - eigentlich nicht wirklich".
+Wenn das Auto beschleunigt dann beschleunigt's. Und wenns nicht beschleunigt, dann beschleuningt's nicht. Wir können nicht gleichzeitig erfreut und enttäuscht sein, sagt der Logiker. So nach dem Motto: "Das Auto - beschleunigt ja - eigentlich nicht wirklich".
 
 Man muss sich entscheiden welcher der beiden Möglichkeiten nun der Fall ist. Aus nicht beschleunigt dann doch irgendwie auf beschleunigt zu schliessen ist verboten. Das ist der Satz vom Widerspruch.
 
@@ -152,7 +198,7 @@ Nun weiter meine Lesart von Kant. Sehen wir uns ein Verneinendes Urteil an:
 
 Ich glaube, das Urteil "Die Verfolgergruppe - beschleunigt nicht!" meint dasselbe wie "Manche Autos der Verfolgergruppe - beschleunigen nicht!". Beim verneinenden Urteil sind mit Gruppe nur mehr Manche gemeint (nicht mehr Alle).
 
-Und jetzt kommts, das Unendliche- (Mechaniker-) Urteil:
+Und jetzt kommt's, das Unendliche- (Mechaniker-) Urteil:
 
 Das Urteil "Die Verfolgergruppe - ist erfreulicherweise unbeschleunigt" wird in zwei Schritten aufgedröselt. (1) "Die Verfolgergruppe - steht oder rollt ja!", (2) "Alle Autos der Verfolgergruppe - stehen oder rollen ja!". Die Gruppe sind hier wieder Alle.
 
@@ -190,4 +236,7 @@ Ich glaub Kant hat seine Urteilstafel von Aristoteles kommend genau so erweitert
 
 ### Ps: Gott
 
-Nur eine kleine Anmerkung. "Gott ist allmächtig" ist vom Titel der Relation her kein kategorisches Urteil, sondern ein hypothetisches. Man muss lesen: "Wenn Gott existiert, dann ist Gott allmächtig". Nur weil Gott als allmächtig gedacht wird muss er nicht gleich existieren. Kann aber. Wir wissens nicht.
+Nur eine kleine Anmerkung. "Gott ist allmächtig" ist vom Titel der Relation her kein kategorisches Urteil, sondern ein hypothetisches. Man muss lesen: "Wenn Gott existiert, dann ist Gott allmächtig". Nur weil Gott als allmächtig gedacht wird muss er nicht gleich existieren. Kann aber. Wir wissen's nicht.
+
+### PPs: Und nochmal drei
+In seinem Buch Philosophie des Abendlandes behauptet Russel, dass es in Kants "Kritik der reinen Vernunft" um eine einzige Frage geht: was sind "synthetische Urteile apriori"? Das will ich nicht ausführen. Ich will nur darauf hinweisen, dass es vor Kant im Denken zwei Arten gab: "analytisch" und "synthetisch". Kant machte drei daraus.
