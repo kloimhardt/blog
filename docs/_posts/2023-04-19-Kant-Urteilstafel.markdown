@@ -50,9 +50,9 @@ Er kam wieder auf drei Zustände und darauf, dass es auf die Beschleunigung anko
 
 Nun aber was ist mit dem Leben an sich? Über Fragen dieser Arte äußerte sich Newton nicht, zumindest nicht in seinem Amt als Physiker. Aussagen über das Leben selbst sind seit ihm bis heute nicht Teil der Physik sondern der Metaphysik.
 
-Und jetzt setzt Kant ein. Er schreibt: "Der Metaphysik, die sich (erstens) gänzlich über Erfahrungsbelehrung erhebt, wo (zweitens) also Vernunft selbst ihr eigener Schüler sein soll, (der Metaphysik also) ist das Schicksal bisher noch so günstig nicht gewesen, daß sie den sicheren Gang einer Wissenschaft einzuschlagen vermocht hätte". Wir erinnern uns: "Die Metaphysik hat zum eigentlichen Zwecke ihrer Nachforschung nur drei Ideen: Gott, Freiheit und Unsterblichkeit". Und: "So verschafften Newtons Zentralgesetze dem, was Kopernikus anfänglich nur als Hypothese annahm, ausgemachte Gewißheit und bewiesen zugleich die unsichtbare, den Weltbau verbindende Kraft (der Newtonischen Anziehung)".
+Und jetzt setzt Kant ein. Er schreibt: "Der Metaphysik, die sich (erstens) gänzlich über Erfahrungsbelehrung erhebt, wo (zweitens) also Vernunft selbst ihr eigener Schüler sein soll, (der Metaphysik also) ist das Schicksal bisher noch so günstig nicht gewesen, daß sie den sicheren Gang einer Wissenschaft einzuschlagen vermocht hätte". Wir erinnern uns: "Die Metaphysik hat zum eigentlichen Zwecke ihrer Nachforschung nur drei Ideen: Gott, Freiheit und Unsterblichkeit". Und: "So verschafften Newtons Gesetze dem, was Kopernikus anfänglich nur als Hypothese annahm, ausgemachte Gewißheit und bewiesen zugleich die unsichtbare, den Weltbau verbindende Kraft (der Newtonischen Anziehung)".
 
-Newtons große Leistung war zu erkennen, dass die unsichtbare Schwerkraft die Ursache ist von der Beschleunigung beim Fall nach unten. Soweit, so unbestritten. Ich behaupte, dass Kant erkannt hat, dass Newton die Beschleunigung als eigene Bewegungsart erst als wichtig und richtig neu hineindenken hat müssen damit dann eine ebenso gedachte Kraft die Ursache sein kann.
+Newtons große Leistung war zu erkennen, dass die unsichtbare Schwerkraft die Ursache ist und zwar von der Beschleunigung eines Körpers beim Fall nach unten. Ich behaupte, dass Kant erkannt hat, dass Newton die Beschleunigung als eigene Bewegungsart erst als wichtig und richtig neu hineindenken hat müssen damit dann eine ebenso gedachte Kraft die Ursache sein kann.
 
 Kant eifert Newton nach. Nur ist Kant gescheit genug um so bescheiden wie nötig zu bleiben. Den hohen Grad der Sicherheit einer Newtonischen Physik kann er auf dem Gebiet der Metaphysik nicht erreichen. Er weist deswegen fast Stolz mehrmalig darauf hin, dass die Metaphysik nicht den Vorteil der "Erfahrungsbelehrung" haben darf, es gibt ja nur den Verstand, Experimente wären ja grad nicht Meta.
 
@@ -114,7 +114,7 @@ Entspricht Punkt 3 der Logik. Wenn das Auto beschleunigt, dann stehts nicht. "Da
 
 Entspricht Punkt 2 der Logik. Es handelt sich um die Angaben von dem, was überhaupt möglich ist. Das Auto steht oder rollt oder beschleunigt. Irgendwas davon muss das Auto grad tun. Auch wenn man nicht weiss was jetzt genau. Das Disjunktive Urteil ist wieder ein Urteil über andere Urteile, diesmal über viel mehr als bloss zwei.
 
-Im disjunktiven Urteil schliessen sich die Prädikate gegenseitig aus. Autos die rasen lassen wir, die zahlenden Zuschauer, jedenfalls nicht zu in einem Oldtimerrennen.
+Im disjunktiven Urteil schliessen sich die Prädikate gegenseitig aus. Autos die rasen lassen wir, die zahlenden Zuschauer, jedenfalls nicht zu in einem Oldtimerrennen. Und "rollen" bedeutet ab jetzt dasselbe wie "gleichmässig fahren".
 
 ### Weitere drei Kategorien: Qualitäten
 
