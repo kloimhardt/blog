@@ -192,7 +192,9 @@ Warum tat er das? Ich hab einen Verdacht.
 
 Kategorisieren wir mal das Urteil "Die Verfolgergruppe - beschleunigt ja!" als Quantität (alle, manche, eines). Ich glaube es ist wichtig zu verstehen, dass es sich um ein Allgemeines und kein Einzelnes Urteil handelt. Obwohl hier von der Einzahl die Rede ist. Es heisst also besser "Alle Autos der Verfolgergruppe - beschleunigen ja!"
 
-Ich glaube Kant hat das Einzelne Urteil explizit mit aufgenommen, damit man sich die Bedeutung des Sprachgebrauchs "Gruppe" klar machen kann. Rein logisch wär's wohl nicht notwendig gewesen. Kant: "ein einzelnes Urteil ... verdient in einer vollständigen Tafel der Momente des Denkens überhaupt (obzwar freilich nicht in der bloß auf den Gebrauch der Urteile untereinander eingeschränkten Logik) eine besondere Stelle." Diese besondere Stelle wird von einer Gruppe eben grad nicht beansprucht.
+Ich glaube Kant hat das Einzelne Urteil explizit mit aufgenommen, damit man sich die Bedeutung des Sprachgebrauchs "Gruppe" klar machen kann. Rein logisch wär's wohl nicht notwendig gewesen. Kant: "ein einzelnes Urteil ... verdient in einer vollständigen Tafel der Momente des Denkens überhaupt (obzwar freilich nicht in der bloß auf den Gebrauch der Urteile untereinander eingeschränkten Logik) eine besondere Stelle." Diese besondere Stelle wird von einer Gruppe als solche eben grad nicht beansprucht.
+
+Also nochmal: wenn von "der Verfolgergruppe" die Rede ist, handelt es sich noch nicht um ein Urteil über etwas Einzelnes. Und das obwohl von der Grammatik her eine Einzahl dasteht. Und obwohl man sich vielleicht schon gefreut hat mehr zu wissen als Aristoteles weil man kurz das "Einzelne Urteil" vor sich wähnte, das von Kant ja extra eingeführt wurde.
 
 Nun weiter meine Lesart von Kant. Sehen wir uns ein Verneinendes Urteil an:
 
@@ -224,7 +226,9 @@ Ich hoffe Schritt (2) ist glaubwürdig, an dem hängt alles... Das heuristische 
 
 Die Verneinung ist dann "Manche Seelen - sind nichts ausser sterblich" oder auch (N3) "Manche Seelen - sterben ja!".
 
-N2 und N3 widersprechen sich NICHT. In Summe entsteht also KEIN Widerspruch wenn beide Urteile "Die Seele - ist erfreulicherweise unsterblich." und "Die Seele - stirbt ja!" als falsch gesetzt werden. Es muss keine der beiden Aussagen richtig sein. Wir wissen einfach nicht ob die Seele unsterblich ist. Und das ist Aufklärung.
+Der Clou ist nun, dass sich N2 und N3 grad nicht widersprechen. In Summe entsteht also kein Widerspruch wenn beide Urteile "Die Seele - ist erfreulicherweise unsterblich." und "Die Seele - stirbt ja!" als falsch gesetzt werden. Es muss keine der beiden Aussagen richtig sein. Wir wissen einfach nicht ob die Seele unsterblich ist.
+
+Der Trick dabei war, dass beide Aussagen positiv formuliert sind. Einerseits freut sich der Katholik dass die Seele unsterblich ist, andererseits freut sich der Atheist, dass die Seele stirbt (er hat lieber kurz einen Haidenspass als ewiges Harfenspiel). Die Vernunft sagt: beide können falsch liegen. Das ist Aufklärung.
 
 ### Freiheit
 
@@ -232,7 +236,7 @@ Dasselbe Spiel kann man treiben mit "Der Mensch ist unfrei".
 
 ## Fazit
 
-Ich glaub Kant hat seine Urteilstafel von Aristoteles kommend genau so erweitert, dass die metaphysischen Fragen von der reinen Vernunft als unentscheidbar erkannt werden. Ob meine einfachen paar Zeilen ganz genau stimmen weiss ich nicht. Ich bin mir aber sicher, dass es bei Kant im Kern darum geht dass er die Seele von der reinen Vernunft in die praktische Vernunft verlagern will. Und dass er "Unendliche Urteile" eingeführt hat kann jeder nachlesen.
+Ich glaub Kant hat seine Urteilstafel von Aristoteles kommend genau so erweitert, dass die metaphysischen Fragen für die reine Vernunft unentscheidbar werden. Ob meine einfachen paar Zeilen ganz genau stimmen weiss ich nicht. Ich bin mir aber sicher, dass es bei Kant im Kern darum geht dass er die Seele von der reinen Vernunft in die praktische Vernunft verlagern will. Und dass er "Unendliche Urteile" eingeführt hat kann jeder nachlesen.
 
 ### Ps: Gott
 
