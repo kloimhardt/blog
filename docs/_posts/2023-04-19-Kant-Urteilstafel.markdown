@@ -230,9 +230,17 @@ Der Clou ist nun, dass sich N2 und N3 grad nicht widersprechen. In Summe entsteh
 
 Der Trick dabei war, dass beide Aussagen positiv formuliert sind. Einerseits freut sich der Katholik dass die Seele unsterblich ist, andererseits freut sich der Atheist, dass die Seele stirbt (er hat lieber kurz einen Haidenspass als ewiges Harfenspiel). Die Vernunft sagt: beide können falsch liegen. Das ist Aufklärung.
 
-### Freiheit
+### Freiheit des Menschen
 
-Dasselbe Spiel kann man treiben mit "Der Mensch ist unfrei".
+Dasselbe Spiel kann man treiben mit "Der Mensch ist unfrei". Mit "Der Mensch" ist natürlich "Alle Menschen" gemeint.
+
+### Sinn der Welt
+
+Dasselbe Spiel kann man treiben mit "Die Welt ist unsinnig". Hier braucht man allerdings zwingend den Begriff der Zeit. Dann kann man den Ausdruck "Die Welt" übersetzen mit "Alle zukünfitg möglichen Welten".
+
+Sofern es in der Zeit aufeinanderfolgende Zustände der Welt gibt, können also beide Urteile 1) "Die Welt ist sinnvoll" und 2) "Die Welt ist unsinnig" ohne Widerspruch als falsch gedacht werden. Jeder Einzelne kann daher versuchen manchmal ein bischen Sinn zu machen.
+
+Falls es keine Zeit gibt wird's schwierig den Verstand überhaupt zu gebrauchen. Denn nach Kant ist Zeit, als "Form der inneren Anschauung", eine "Bedingung der möglichen Erkenntnis". Genau wie die Logik des Aristoteles eine Voraussetzung ist, die man nicht wegdenken darf, wenn man denken will.
 
 ## Fazit
 
