@@ -164,7 +164,7 @@ Damit haben wir folgende Kategorien der Qualität:
 
 ### Quantitäten
 
-Diese Kategorien sind Einfach
+Diese Kategorien sind Einfach.
 
 - Allgemeines Urteil
 
@@ -177,6 +177,16 @@ Diese Kategorien sind Einfach
 - Einzelnes Urteil
 
 "Das führende Auto - beschleunigt ja!"
+
+Hier kommt nochmal eine Spezialität von Kant. Es gibt nämlich eine zweite Tafel wo er die Kategorien nochmal mit knappen Oberbegriffen bezeichnet. Ein "Allgemeines Urteil" wird mit dem Oberbegriff "Einheit" bezeichnet. Ein "Einzelnes Urteil" wird mit dem Oberbegriff "Allheit" bezeichnet. Der gesunde Mensch würde das gerade umgekehrt machen.
+
+Das Ganze macht aber Sinn. Zum Verständnis verlangen wir, dass das Subjekt als Wort immer nur in der Einzahl auftreten darf. "Alle Autos des Rennens - beschleunigen ja" würde dann aufgeteilt werden müssen in zwei Aussagen: 1) "Der Tross - ist ja alle Autos des Rennens" 2) "Der Tross - beschleunigt ja".
+
+Nun ordnet Kant dem Subjekt "der Tross" eben merkwürdigerweise den Oberbegriff "Einheit" zu. Hingegen ordnet er einem Begriff wie "der Spitzenreiter" (= führendes Auto) den Oberbegriff "Allheit" zu. Die Erklärung dafür ist, dass "der Tross" als Begriff viel weniger Eigenschaften hat als "der Spitzemreiter". Weil "der Tross" so viele Gegenstände gleichzeitig bezeichnet ist er ein ziemlich leerer Begriff, deswegen "Einheit" (denke vielleicht auch: Einfachheit). Mit Kant gesprochen: "Tross" hat viel Umfang, viel unter sich, aber wenig Inhalt, wenig in sich. Auf der anderen Seite hat der Begriff "Spitzenreiter" voll viele Eigenschaften, deswegen "Allheit". Das Induviduum hat zwar wenig unter sich aber viel in sich. Ein hoch auf die "Allheit" des Individuums!
+
+### In Summe
+
+Man muss sich klar machen: die Quantität kategorisiert das Subjekt. Die Qualität kategorisiert das Prädikat. Die Relation kategorisiert die grammatikalische Form des Urteils selbst.
 
 ### Unendliche Einzelne
 
