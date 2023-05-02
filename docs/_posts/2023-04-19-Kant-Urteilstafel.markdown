@@ -178,11 +178,15 @@ Diese Kategorien sind Einfach.
 
 "Das führende Auto - beschleunigt ja!"
 
-Hier kommt nochmal eine Spezialität von Kant. Es gibt nämlich eine zweite Tafel wo er die Kategorien nochmal mit knappen Oberbegriffen bezeichnet. Ein "Allgemeines Urteil" wird mit dem Oberbegriff "Einheit" bezeichnet. Ein "Einzelnes Urteil" wird mit dem Oberbegriff "Allheit" bezeichnet. Der gesunde Mensch würde das gerade umgekehrt machen.
+Hier kommt nochmal eine Spezialität von Kant. Es gibt nämlich eine zweite Tafel wo er jede Kategorie nochmal mit einem knappen Wort bezeichnet, mit einem Kategorielabel versieht. Ein "Besonderes Urteil" wird von Kant mit dem Label "Vielheit" versehen. So weit, so klar.
 
-Das Ganze macht aber Sinn. Zum Verständnis verlangen wir, dass das Subjekt als Wort immer nur in der Einzahl auftreten darf. "Alle Autos des Rennens - beschleunigen ja" würde dann aufgeteilt werden müssen in zwei Aussagen: 1) "Der Tross - ist ja alle Autos des Rennens" 2) "Der Tross - beschleunigt ja".
+Nun kommts: ein "Allgemeines Urteil" wird mit dem Kategorielabel "Einheit" versehen, hingegen ein "Einzelnes Urteil" wird mit dem Kategorielabel "Allheit" versehen. Der gesunde Mensch würde das gerade umgekehrt machen.
 
-Nun ordnet Kant dem Subjekt "der Tross" eben merkwürdigerweise den Oberbegriff "Einheit" zu. Hingegen ordnet er einem Begriff wie "der Spitzenreiter" (= führendes Auto) den Oberbegriff "Allheit" zu. Die Erklärung dafür ist, dass "der Tross" als Begriff viel weniger Eigenschaften hat als "der Spitzemreiter". Weil "der Tross" so viele Gegenstände gleichzeitig bezeichnet ist er ein ziemlich leerer Begriff, deswegen "Einheit" (denke vielleicht auch: Einfachheit). Mit Kant gesprochen: "Tross" hat viel Umfang, viel unter sich, aber wenig Inhalt, wenig in sich. Auf der anderen Seite hat der Begriff "Spitzenreiter" voll viele Eigenschaften, deswegen "Allheit". Das Induviduum hat zwar wenig unter sich aber viel in sich. Ein hoch auf die "Allheit" des Individuums!
+Das Ganze macht aber Sinn. Und obwohl wir die Kategorielabel dann nicht mehr weiter brauchen, ist es für das Weitere wichtig, Kants Denkweise für die Zuordnung der Label "Einheit" und "Allheit" zu verstehen.
+
+Zum Verständnis verlangen wir, dass das Subjekt als Wort immer nur in der Einzahl auftreten darf. "Alle Autos des Rennens - beschleunigen ja" würde dann aufgeteilt werden müssen in zwei Aussagen: 1) "Der Tross - ist ja alle Autos des Rennens" 2) "Der Tross - beschleunigt ja".
+
+Nun ordnet Kant dem Subjekt "der Tross" eben merkwürdigerweise das Label "Einheit" zu. Hingegen ordnet er einem Begriff wie "der Spitzenreiter" (= führendes Auto) das Label "Allheit" zu. Die Erklärung dafür ist, dass "der Tross" als Begriff viel weniger Eigenschaften hat als "der Spitzenreiter". Weil "der Tross" so viele Gegenstände gleichzeitig bezeichnet ist er ein ziemlich leerer Begriff, deswegen "Einheit" (denke vielleicht auch: Einfachheit). Mit Kant gesprochen: "Tross" hat viel Umfang, viel unter sich, aber wenig Inhalt, wenig in sich. Auf der anderen Seite hat der Begriff "Spitzenreiter" voll viele Eigenschaften, deswegen "Allheit". Das Induviduum hat zwar wenig unter sich aber viel in sich. Ein hoch auf die "Allheit" des Individuums!
 
 ### In Summe
 
@@ -200,11 +204,11 @@ Aristoteles kannte auch Qualitäten und Quantitäten. Kant hat also einfach Aris
 
 Warum tat er das? Ich hab einen Verdacht.
 
-Kategorisieren wir mal das Urteil "Die Verfolgergruppe - beschleunigt ja!" als Quantität (alle, manche, eines). Ich glaube es ist wichtig zu verstehen, dass es sich um ein Allgemeines und kein Einzelnes Urteil handelt. Obwohl hier von der Einzahl die Rede ist. Es heisst also besser "Alle Autos der Verfolgergruppe - beschleunigen ja!"
+Kategorisieren wir mal das Urteil "Die Verfolgergruppe - beschleunigt ja!" als Quantität (alle, manche, eines). Ich glaube es ist wichtig zu verstehen, dass es sich um ein Allgemeines und kein Einzelnes Urteil handelt. Obwohl hier von der Einzahl die Rede ist. Oben hatten wir ja genau diesen Punkt besprochen, wir erinnern uns an die etwas verquerte Zuordnung der beiden Label "Einheit" und "Allheit". Ich meine, Verfolgergruppe fällt hier unter das Label "Einheit" und ist damit das Subjekt eines allgemeinen Urteils. Das Urteil heisst also besser verständlich "Alle Autos der Verfolgergruppe - beschleunigen ja!"
 
 Ich glaube Kant hat das Einzelne Urteil explizit mit aufgenommen, damit man sich die Bedeutung des Sprachgebrauchs "Gruppe" klar machen kann. Rein logisch wär's wohl nicht notwendig gewesen. Kant: "ein einzelnes Urteil ... verdient in einer vollständigen Tafel der Momente des Denkens überhaupt (obzwar freilich nicht in der bloß auf den Gebrauch der Urteile untereinander eingeschränkten Logik) eine besondere Stelle." Diese besondere Stelle wird von einer Gruppe als solche eben grad nicht beansprucht.
 
-Also nochmal: wenn von "der Verfolgergruppe" die Rede ist, handelt es sich noch nicht um ein Urteil über etwas Einzelnes. Und das obwohl von der Grammatik her eine Einzahl dasteht. Und obwohl man sich vielleicht schon gefreut hat mehr zu wissen als Aristoteles weil man kurz das "Einzelne Urteil" vor sich wähnte, das von Kant ja extra eingeführt wurde.
+Also nochmal: wenn von "der Verfolgergruppe" die Rede ist, handelt es sich noch nicht um ein Urteil über etwas Einzelnes. Und das obwohl von der Grammatik her eine Einzahl dasteht. Und obwohl man sich vielleicht schon gefreut hat mehr zu wissen als Aristoteles weil man kurz das "Einzelne Urteil" vor sich wähnte, das von Kant ja auch extra eingeführt wurde, aber eben nicht für diesen Fall einer Gruppe.
 
 Nun weiter meine Lesart von Kant. Sehen wir uns ein Verneinendes Urteil an:
 
@@ -215,6 +219,10 @@ Und jetzt kommt's, das Unendliche- (Mechaniker-) Urteil:
 Das Urteil "Die Verfolgergruppe - ist erfreulicherweise unbeschleunigt" wird in zwei Schritten aufgedröselt. (1) "Die Verfolgergruppe - steht oder rollt ja!", (2) "Alle Autos der Verfolgergruppe - stehen oder rollen ja!". Die Gruppe sind hier wieder Alle.
 
 Meine Ansicht ist also: ein ja! macht die Gruppe zu Allen, ein nicht! macht die Gruppe zu Manchen. Und Kant hat das Unendliche (Mechaniker-) Urteil eingeführt, damit klar wird, dass im Sprachgebrauch eine Verneinung sehr oft (als eigentlich großes Ja!) für Alle Mitglieder einer Gruppe geltend gemacht wird.
+
+Nochmal dasslbe gesagt: Ist in einem Urteil das Subjekt eine Gruppe, dann trägt das Subjekt genau dann das Label "Einheit" wenn es sich entweder um ein Bejahendendes oder ein Unendliches Urteil handelt. Es sind alle Mitglieder der Gruppe gemeint. Im Fall eines verneinenden Urteils trägt das Subjekt (das eben eine Gruppe bezeichnet) das Label "Vielheit", es sind also bloss manche Mitglieder der Gruppe gemeint.
+
+So meine Auslegung.
 
 ### Seele
 
