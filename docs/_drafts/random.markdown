@@ -37,3 +37,16 @@ Pinoccio - nicht kügen kann (Nase) -- Authist -- Reudiger Hund/ Strassenkater -
 --------
 
 Mein Scheme Compiler eigentlich OO nötig wegen Ersetzung von Funktionen.
+
+---------
+Zu Kants Begriff vom Zugleichsein, an den niemand gedacht hat.
+
+"Dinge sind zugleich, sofern sie in einer und derselben Zeit existieren. Woran erkennt man aber: daß sie in einer und derselben Zeit sind? Wenn die Ordnung in der Synthesis der Apprehension dieses Mannigfaltigen gleichgültig ist, d.i. von A durch B, C, D auf E, oder auch umgekehrt von E zu A gehen kann."
+
+"Also kann das Zugleichsein der Substanzen im Raume nicht anders in der Erfahrung erkannt werden, als unter Voraussetzung einer Wechselwirkung derselben untereinander;"
+
+"In Ermanglung dieser Methode, und bei dem Wahne, synthetische Sätze, welche der Erfahrungsgebrauch des Verstandes als seine Prinzipien empfiehlt, dogmatisch beweisen zu wollen, ist es denn geschehen, daß von dem Satze des zureichenden Grundes so oft, aber immer vergeblich ein Beweis ist versucht worden. An die beiden übrigen Analogien hat niemand gedacht, ob man sich ihrer gleich immer stillschweigend bediente*, weil der Leitfaden der Kategorien fehlte, der allein jede Lücke des Verstandes, sowohl in Begriffen als Grundsätzen, entdecken und merklich machen kann."
+
+Mit "beiden übrigen Analogien" meint Kant A) "Grundsatz der Beharrlichkeit der Substanz"; und C) "Grundsatz des Zugleichseins, nach dem Gesetze der Wechselwirkung, oder Gemeinschaft"
+
+Satz vom zureichenden Grunde ist B) "Grundsatz der Zeitfolge nach dem Gesetze der Kausalität"
