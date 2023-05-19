@@ -38,13 +38,15 @@ Nun gab's eine Gruppe von Männern, die wollten die Diskussion "stehend oder un-
 
 Und so gründeten sie eine Lobbygruppe, die behauptete, dass es zwar oft so aussieht als stünde eine Kutsche ganz gut, aber in Wahrheit wären alle Kutschen un-stehend. Im Grunde glaubte ihnen niemand, aber sie waren recht schnell unterwegs im Land, weil unbelastet, und konnten ihre Lehre deshalb gut verbreiten. Den anderen war das alles zu mühsam und wenn, dann diskutierten alle die nächsten dreieinhalb tausend Jahre nur über stehend und un-stehend.
 
-Aus ursprünglich drei waren also zwei Zustände geworden, die sich auch noch strickt widersprachen. Ausserdem wurde das herumruckeln der Kutschen als mehr oder weniger gleichförmig empfunden, die Ideen Paolas waren ja noch da irgendwie. So richtig Fahrt nahmen Kutschen eh nie auf.
+Aus den ursprünglich drei Zuständen der Paola waren also zwei Zustände geworden. Zur Erinnerung Paola: 1) gleichmässig stehend 2) gleichmässig fahrend 3) ungleichmässig fahrend. Daraus wurden stehend und un-stehend, zwei Begriffe die sich einerseits gegenseitig ausschlossen, andererseits gabs aber nix Drittes mehr, eins der beiden musste es sein.
+
+Im Übrigen wurde das herumruckeln der Kutschen als mehr oder weniger gleichförmig empfunden, die Ideen Paolas waren schon noch da, irgendwie. Aber eben vergraben. So richtig Fahrt nahmen Kutschen ja eh nie auf.
 
 Soweit die Überlieferung über Paola, Astrid und die Lobbygruppe der Männer.
 
 ### Newton und Kant
 
-Erst ein Mann namens Sir Isaac Newton nahm sich der Sache wieder näher an und brachte sie weiter. Oder besser gesagt zuerst wieder auf den Punkt zurück. Er beschäftigte sich mit den Planetenbahnen die Kopernikus und Kepler beobachtet und beschrieben hatten und mit den Fallexperimenten des Galilei. Er liess sich von der Erfahrung, die diese Männer vor ihm gemacht hatten, belehren.
+Erst ein Mann namens Sir Isaac Newton nahm sich der Sache wieder näher an und brachte sie weiter. Oder besser gesagt zuerst wieder auf den Punkt zurück. Er beschäftigte sich mit den Planetenbahnen die Kopernikus und Kepler beobachtet und beschrieben hatten und mit den Fallexperimenten des Galilei. Er liess sich von der Erfahrung und den Experimenten, die diese Männer vor ihm gemacht hatten, belehren.
 
 Er kam wieder auf drei Zustände und darauf, dass es auf die Beschleunigung ankommt. Stehend oder un-stehend, wenn eine Kraft auf einen Körper wirkt, dann beschleunigt er. Mit diesem Gedanken hat Newton uns in die Neuzeit katapultiert, er hat die Physik zur Wissenschaft gemacht.
 
@@ -52,11 +54,17 @@ Nun aber was ist mit dem Leben an sich? Über Fragen dieser Arte äußerte sich 
 
 Und jetzt setzt Kant ein. Er schreibt: "Der Metaphysik, die sich (erstens) gänzlich über Erfahrungsbelehrung erhebt, wo (zweitens) also Vernunft selbst ihr eigener Schüler sein soll, (der Metaphysik also) ist das Schicksal bisher noch so günstig nicht gewesen, daß sie den sicheren Gang einer Wissenschaft einzuschlagen vermocht hätte". Wir erinnern uns: "Die Metaphysik hat zum eigentlichen Zwecke ihrer Nachforschung nur drei Ideen: Gott, Freiheit und Unsterblichkeit". Und: "So verschafften Newtons Gesetze dem, was Kopernikus anfänglich nur als Hypothese annahm, ausgemachte Gewißheit und bewiesen zugleich die unsichtbare, den Weltbau verbindende Kraft (der Newtonischen Anziehung)".
 
-Newtons große Leistung war zu erkennen, dass die unsichtbare Schwerkraft die Ursache ist für die Beschleunigung eines Körpers beim Fall nach unten. Ich behaupte, dass Kant erkannt hat, dass Newton die Beschleunigung als eigene Bewegungsart erst als wichtig und richtig neu hineindenken hat müssen damit dann eine ebenso gedachte Kraft die Ursache sein kann.
+Newtons große Leistung war zu erkennen, dass die unsichtbare Schwerkraft die Ursache ist für die Beschleunigung eines Körpers beim Fall nach unten. Ich behaupte, dass Kant erkannt hat, dass Newton die Beschleunigung als eigene Bewegungsart erst als wichtig und richtig neu hineindenken hat müssen damit dann eine Kraft (auch neu hineingedacht) die Ursache sein kann.
 
-Kant eifert Newton nach. Nur ist Kant gescheit genug um so bescheiden wie nötig zu bleiben. Den hohen Grad der Sicherheit einer Newtonischen Physik kann er auf dem Gebiet der Metaphysik nicht erreichen. Er weist deswegen fast mit Stolz mehrmalig darauf hin, dass die Metaphysik nicht den Vorteil der "Erfahrungsbelehrung" haben darf, es gibt ja nur den Verstand, Experimente wären ja grad nicht Meta.
+Kant eifert Newton nach. Hier ein kleiner Einschub. Zu Kants Zeiten gab es zwei Denkrichtungen: Empirismus und Rationalismus. Der Empirist war der englische Gentleman, vielleicht adelig, der mit Hut und Stock durch die Lanschaft wandert, beobachtet und sich wie zum Zeitvertreib logische Regelmässigkeiten für das Geschehen ausdachte. Auch halfen erdachte Kausalzusammenhänge um bequemer von A nach B zu kommen, ein Pferd galloppiert eben besser wenn es vorher trinkt. Der Rationalist wusste, genau wie der Gentleman, dass uns die Sinne täuschen und suchte, vielleicht als Mönch, die Wahrheit im rein logischen Diskurs mit alten Schriften.
 
-So fährt er fort um zu retten was zu retten ist: er zeigt, dass die Seele weder als sterblich noch als unsterblich erkannt werden kann, weil man immer eine von vielen dritten Möglichkeiten mitdenken muss. Etwa so, wie wenn wir nur "gleichmässig stehend" und “ungleichmässig fahrend” denken können, aber irgendwo ein Gleichmass herrscht, das wir uns nicht vorstellen können, keine Worte dafür haben und deswegen nur von "stehend" und "fahrend" als Gegensätze reden.
+Kant erkennt im Vorgehen des Galilei aber eine dritte Art des Denkens: das Austüfteln eines Experiments. Das hat etwas Bürgerliches an sich, denn der Bürger handelt nach dem Motto "put your money where your mouth is", und bevor er seine sauer verdiente Kohle auf etwas beobachtetes oder geglaubtes setzt, erarbeitet er lieber noch vorher einen keinen Testballon nach eigenen Vorstellungen.
+
+Kant also eifert Newton nach. Nur ist Kant gescheit genug um so bescheiden wie nötig zu bleiben. Den hohen Grad der Sicherheit einer Newtonischen Physik kann er auf dem Gebiet der Metaphysik nicht erreichen. Er weist deswegen fast mit Stolz mehrmalig darauf hin, dass die Metaphysik nicht den Vorteil der "Erfahrungsbelehrung" haben darf, es gibt ja nur den Verstand, Experimente wären ja grad nicht Meta.
+
+Aber Kant will das empirische Experiment doch mit hineinnehmen. Er tut dies, in dem er nach "Bedingungen für die Möglichkeit" des Experiments sucht. Denn manche "Bedingungen für die Möglichkeit" liegen im Denken selbst. Kausalität und Gleichzeitigkeit sind für Kant beispielsweise reine Denkformen die nicht aus der Erfahrung stammen, sondern die wir in die Erfahrung hineindenken. Während für den Gentleman die Kausalität eine bequeme Sache ist, wird sie für Kant zur notwendig gesetzten Tatsache des experimentierenden Bürgers.
+
+Die Seele ist nach Kant dem Experiment grade nicht zugänglich. Und so fährt Kant fort um vom Gentleman zu retten was zu retten ist: er zeigt, dass die Seele weder als sterblich noch als unsterblich erkannt werden kann, weil man immer eine von vielen dritten Möglichkeiten mitdenken muss. Eine dritte Möglichkeit, die wir eben nicht erfahren können und deswegen oft übersehen. Etwa so, wie wenn wir nur "gleichmässig stehend" und “ungleichmässig fahrend” denken können, aber irgendwo ein Gleichmass herrscht, das wir uns nicht vorstellen können, keine Worte dafür haben und deswegen nur von "stehend" und "fahrend" als Gegensätze reden.
 
 Auch zeigt Kant, dass Gott (die Kraft?) weder bewiesen noch widerlegt werden kann. Aber da verwendet er andere Argumente.
 
@@ -83,7 +91,7 @@ Wir, die Zuschauer, können enttäuscht sein: "Das Auto - beschleunigt nicht!"
 Das ist das Prinzip der Zweiwertigkeit eines Urteils. Es kann erfreulich oder enttäuschend sein.
 
 ### Punkt 2: es gibt keine drei
-Gelangweilt gibts nicht, sagt der Logiker. Wir dürfen nicht sagen: "Das Auto - beschleunigt halbwegs". Ausser erfreut und enttäuscht (also ja und nicht), gibts nichts. Das ist der Satz vom ausgeschlossenen Dritten.
+Gelangweilt gibts nicht, sagt der Logiker. Wir dürfen nicht sagen: "Das Auto - beschleunigt halbwegs". Ausser erfreut und enttäuscht (also ja und nicht), gibts nichts. Das ist der Satz vom ausgeschlossenen Dritten. Es ist mit dem Gesagten aber noch nicht ausgeschlossen, dass beides gleichzeitig geht, darum kommen wir zu ...
 
 ### Punkt 3: nicht beides gleichzeitig
 Wenn das Auto beschleunigt dann beschleunigt's. Und wenns nicht beschleunigt, dann beschleuningt's nicht. Wir können nicht gleichzeitig erfreut und enttäuscht sein, sagt der Logiker. So nach dem Motto: "Das Auto - beschleunigt ja - eigentlich nicht wirklich".
