@@ -6,7 +6,7 @@ categories: Literatur
 ---
 Let's take a simple example: you go into a grocery store in Italy. You look where the fridge is and grab a piece of butter. You go to the cashier, pay and leave.
 
-You know the universal rules: butter must be in a fridge, one needs to pay before getting out.
+You know the universal rules: butter must be in a fridge, one needs to pay before getting out. One does not have to speak Italian to get by in Italy.
 
 Rules are first of all something you need to understand. You do not necessarily have to know their reasons. You learn and subsequently understand the rules by standing by, you grasp them by watching your parents or people etc.
 
@@ -34,6 +34,8 @@ Two more hints to avoid pifalls of pure reasoning: the world as a whole (like go
 
 So, sticking to best practice can be rewarding. I think one is in a good place when one encounters a new situation and one is given some simple rules to understand. One can start to do something successful immediately.
 
-On the other hand, it is important to not get complacent by a comfortable situation: the one who does not go with the time, goes -- with time. After all, the rules for estimating the bang of colliding protons were not known 200 years ago (that went via principled reasoning). But we are not that type of complacent person, because we strive for comprehension, right?
+On the other hand, it is important to not get complacent by a comfortable situation: the one who does not go with the time, goes -- with time. After all, the rules for estimating the bang of colliding protons were not known 200 years ago. Not even the rules, that is, far from knowing the prnciples. The rules were, in this case, only establiched by principled reasoning.
+
+But we are not that type of complacent person, because we strive for comprehension, right?
 
 So, being thus not afraid of best practice as a convenient first step, competence it is. We want ways to learn by first understanding without the burdon of arduous reasoning. That is hard enough already in itself. Let that be the slogan of our preferred way of learning: "First the rules, then the principles: Competence before Comprehension".
