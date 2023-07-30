@@ -46,14 +46,14 @@ The interface is intended to be usable for any C++ library, not only ROOT. Howev
 
 The alias name `ROO` might seem awkward, but this results in the name `ROO/T` for calling the interface, as seen blow. This is as close as we could get.
 
-### Defining the function to be plotted
+### Defining the function to be plot
 
 ```
-class Linear:                         | (defn Linear [[x] [d k]]
-    def __call__(self, arr, par):     |   (+ d (* x k)))
-        return par[0] + arr[0]*par[1] |
-                                      |
-l = Linear()                          |
+class Linear:                    | (defn Linear [[x] [d k]]
+ def __call__(self, arr, par):   |   (+ d (* x k)))
+  return par[0] + arr[0]*par[1]  |
+                                 |
+l = Linear()                     |
 ```
 
 `class Linear ...`: Already here we encounter the bedrock of object oriented programming, namely the definition of a class. The main reason this article was written is that we believe that a scientist should not be required to define classes as it takes a lot of space to explain their rationale. In practice, one is led to just accept that the line
@@ -72,7 +72,7 @@ The notation for the signature of the function, `[[x] [d k]]` is also easily exp
 
 ### Setting up the canvas
 ```
-c = ROOT.TCanvas()                    | (def c (ROO/T (new TCanvas)))
+c = ROOT.TCanvas()               | (def c (ROO/T (new TCanvas)))
 ```
 
 Here is our first contact with ROOT proper. A canvas object is registered in the internal state of the ROOT system, every `Draw` command will resort to this instance.
@@ -89,10 +89,12 @@ Looking at the code, the left side is simpler and easier to read. Not least beca
 
 ### Drawing the function
 ```
-f = ROOT.TF1('pyf2', l, -1., 1., 2)   | (ROO/T ((new TF1) "pyf2" Linear -1 1 2)
-f.SetParameters(5., 2.)               |        (SetParameters 5. 2.)
-f.Draw()                              |        Draw)
+f = ROOT.TF1('f', l, -1., 1., 2) | (ROO/T ((new TF1 :XR2) "f" Linear -1. 1.)
+f.SetParameters(5., 2.)          |        (SetParameters 5. 2.)
+f.Draw()                         |        Draw)
 ```
+
+A ROOT TF1 object is created. "A TF1 object is a 1-Dim function defined between a lower and upper limit." [6]. The TF1 warps the functions `Linear` which was created before. This enables the Parameters `d` and `k` to be set and the function to be drawn on the canvas.
 
 Statements in Lisp usually span several lines and are thus better called "top level forms". This is in contrast to Phython where most of the time there is one statement per line.
 
@@ -100,7 +102,8 @@ Statements in Lisp usually span several lines and are thus better called "top le
 [2] https://www.clojure.org  
 [3] https://ferret-lang.org  
 [4] https://github.com/kloimhardt/LisRoot  
-[5] https://cppyy.readthedocs.io/en/latest/
+[5] https://cppyy.readthedocs.io/en/latest/  
+[6] https://root.cern.ch/doc/master/classTF1.html
 
 ## Development
 
@@ -117,6 +120,9 @@ clang++ foo.cpp $(root-config --glibs --cflags --libs) -o foo
  The first line transfiles the source file `foo.clj` to C++. The second line, being independent from Ferret, is the standard call to compile code with the ROOT library.
 
 Ferret is a Java program and distributed as one single .jar file. So besides Java, nothing needs to be installed or buildt on the local machine. The C++ code generated is self contained, it does not import anything in addition to the libraries imported by the user (which of course is ROOT in this case).
+
+## Random
+fist make lots of one letter variables and get rid of them. Use Clojure not Fettet directly to write code.
 
 ## Blabla
 
