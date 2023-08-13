@@ -6,9 +6,9 @@ categories: Software
 ---
 
 ## The Example
-This article is about showing on a computer screen the simplest mathematical function conceivable, i.e. plotting a straight line. For doing this, we use a certain software which is maintained by the European center for particle research (CERN), namely the library called ROOT.
+This article is about showing on a computer screen the simplest mathematical function conceivable, i.e. plotting the graph of a straight line. For doing this, we use a certain software which is maintained by the European center for particle research (CERN), namely the library called ROOT.
 
-The most common way of calling into functions of the ROOT library is through the popular Python programming language. The following code, nine lines of Python, is taken from CERN's online tutorial [1]. The code of this tutorial, which draws a line on the screen, only makes use of common Python features: defining a class, instantiating objects, calling methods. It is not necessary to understand the code in detail as in the next sections we will explain all important aspects.
+The most common way of calling into functions of the ROOT library is through the popular Python programming language. The following code, nine lines of Python, is taken from CERN's online tutorial [1]. The code of this tutorial, which draws the graph of a straight line onto the screen, only makes use of common Python features: defining a class, instantiating objects, calling methods. It is not necessary to understand the code in detail as in the next sections we will explain all important aspects.
 
 ```
 import ROOT
@@ -39,7 +39,7 @@ In order to use ROOT within Python, the PyROOT module needs to be imported. From
 import ROOT
 ```
 
-While the script to plot a straight line is written in Python, the ROOT library is written in the programming language C++. The necessary interoperation between the scripting language and the library is done via PyROOT, an “automatic, run-time, Python-C++ bindings generator” [4]. This very flexible and feature rich bridge software operates behind the scenes as the users' Python code is interpreted and executed.
+While the script to plot the graph is written in Python, the ROOT library is written in the programming language C++. The necessary interoperation between the scripting language and the library is done via PyROOT, an “automatic, run-time, Python-C++ bindings generator” [4]. This very flexible and feature rich bridge software operates behind the scenes as the users' Python code is interpreted and executed.
 
 Moving on to Lisp, we do not use a runtime bridge software to access ROOT. Instead, we transpile Lisp code to C++ ahead of time, i.e. before running it. For transpilation we use Ferret, a free software Lisp implementation supporting a subset of Clojure designed to generate executable binaries for "systems with as little as 2KB of RAM" [5].
 
@@ -61,7 +61,7 @@ The code for the interop functionality, some 400 lines of self contained Ferret 
 
 ## Defining the function to be plot
 
-The mathematical function we are going to plot is the very simple. It is represented by the usual formula for a straight line.
+The mathematical function we are going to plot is very simple. It is represented by the usual formula for a straight line.
 
 f<sub>d, k</sub>(x) = d + k * x
 
@@ -118,7 +118,7 @@ The unnamed function which `Linear` returns has the signature `[[x] [d k]]`. Thi
 
 We just explained the two major building blocks of functional programming. For connection to the literature, we give the technical terms of those two building blocks just explained: `Linear` is termed a "higher order function", because it does not return a number but a "Lambda".
 
-The authors hope that by explaining functional concepts, the reader will regard the Python code in a new way: through this one-to-one translation, Python can be seen as functional in disguise.
+The authors hope that by having explained functional concepts, the reader will regard the Python code in a new way: through this one-to-one translation, Python can be seen as functional in disguise.
 
 ## Setting up the canvas for drawing
 
@@ -154,7 +154,7 @@ The creation process for the ROOT object `f` might be pictured as follows: our f
 
 But before being plot, the object `f` is mutated using `SetParameters`: as a kind of an afterthought, we set the parameters d and k of the already digested formula to the numbers 5 and 2 respectively.
 
-In the third statement of the code, containing the command `Draw`, the final goal is achieved, the straight line is plot. Note that the statement, like all three statements for plotting, starts with the one letter variable `f`. This starting with a variable is idiomatic in the OO paradigm which consequently insists that `Draw` is not to be termed a function but a "method of the class TF1". As before, we do not elaborate this but explain further details by moving on to the functional paradigm.
+In the third statement of the code, containing the command `Draw`, the final goal is achieved, the graph is plot. Note that the statement, like all three statements for plotting, starts with the one letter variable `f`. This starting with a variable is idiomatic in the OO paradigm which consequently insists that `Draw` is not to be termed a function but a "method of the class TF1". As before, we do not elaborate this but explain further details by moving on to the functional paradigm.
 
 A one-to-one translation of the three Python plot statements to Lisp looks awful because it contains nested expressions.
 
@@ -172,7 +172,7 @@ While `ROO/T` results in a function, everything that is within a `ROO/T` express
 (def Draw (ROO/T Draw TF1))
 ```
 
-With this binding, `Draw` becomes a valid Lisp function. By consecutively creating an extra binding for every `ROO/T` expression in the three plot statements, and thus doubling the number of statements from three to six, we get an improved notation for plotting the straight line.
+With this binding, `Draw` becomes a valid Lisp function. By consecutively adding another two bindings for `SetParameters` and respectively `new TF1` in the same way, and thus doubling the number of statements from three to six, we get an improved notation for plotting the graph.
 
 ```
 (def f (newTF1 "pyf2" l -1. 1. 2))
@@ -181,7 +181,7 @@ With this binding, `Draw` becomes a valid Lisp function. By consecutively creati
 ```
 
 
-The doubling of statements induced by the bindings seems worse than is actually the case. This is because all the introduced bindings, just like the one for `Draw`, are completely generic. Thus they could be isolated from the user's code by separating them into an extra Lisp file. Taking this generic property of the bindings further, one could imagine that such an extra source file is written before any specific task (like plotting a line) is undertaken, written either by the user, another engineer or even, as elaborated below, by an automated process.
+The doubling of statements induced by the three bindings seems worse than is actually the case. This is because all the introduced bindings, just like the one for `Draw`, are completely generic. Thus they could be isolated from the user's code by separating them into an extra Lisp file. Taking this generic property of the bindings further, one could imagine that such an extra source file is written before any specific task (like plotting a graph) is undertaken, written either by the user, another engineer or even, as elaborated below, by an automated process.
 
 ## From statements to top level expressions
 
@@ -203,7 +203,7 @@ The disadvantage of this combining process is that computer memory is in general
 
 ## Runtime checks and dispatches
 
-The Lisp function which is bound to the name `Draw` takes only one single argument, the variable `f`. But ROOT's C++ library function Draw, supporting e.g. drawing of dotted lines, can take additional arguments. To hand down those optional arguments to ROOT, we need to help the interop macro `ROO/T` with its C++ code-generation.
+The Lisp function which is bound to the name `Draw` takes only one single argument, the variable `f`. But ROOT's C++ library function Draw, supporting e.g. drawing of dotted graphs, can take additional arguments. To hand down those optional arguments to ROOT, we need to help the interop macro `ROO/T` with its C++ code-generation.
 
 This help comes in the form of a type hint named `:my-hint`, which states that the Draw method of class TF1 has a variant that takes an additional argument of type `string`.
 
@@ -212,13 +212,13 @@ This help comes in the form of a type hint named `:my-hint`, which states that t
         [:string])
 ```
 
-With this definition for `:my-hint`, the line can be plot point by point, the value of the respective argument being the letter "P".
+With this definition for `:my-hint`, any graph can be plot point by point, the value of the respective argument being the letter "P".
 
 ```
 ((ROO/T Draw TF1 :my-hint) f "P")
 ```
 
-The type hint `:my-hint` needs to be part of the call. In fact, `ROO/T` always needs a hint to generate C++ code, we just did not up to now encounter them because of appropriate defaults.
+The type hint `:my-hint` needs to be part of the call. In fact, `ROO/T` always needs a hint to generate C++ code, we just did not up to now encounter them because the interop system loads appropriate default settings.
 
 The high level Lisp-C++ interop software additionally provides an important sophistication of this type-hint concept: runtime value validation. We can go on to specify a sophisticated type hint that does not only contain the information that ROOT's Draw accepts an additional argument of type string, but that at runtime we want this option to have the name "style" and that its value always only contains one letter.
 
@@ -238,13 +238,13 @@ The specification of such a runtime checked data Schema has the following far re
     ((ROO/T Draw TF1) f)))
 ```
 
-To draw the dotted line, we do just as expected: we call the just created fallback-enabled function by its name, resulting in the execution of the according ROOT C++ code.
+To plot the dotted graph, we do just as expected: we call the just created fallback-enabled function by its name, resulting in the execution of the according ROOT C++ code.
 
 ```
 (fallbackDraw f {:style "P"})
 ```
 
-While in all cases up to now, calling a specific function name always resulted in the execution of the same C++ code, calling the same name twice now can result in the execution of different parts of pre-compiled C++ code. For example, when we draw not a dotted but a full line by calling the same name with different arguments, a different portion of compiled code is executed.
+While in all cases up to now, calling a specific function name always resulted in the execution of the same C++ code, calling the same name twice now can result in the execution of different parts of pre-compiled C++ code. For example, when we draw not a dotted but a continuous graph by calling the same name with different arguments, a different portion of compiled code is executed.
 
 ```
 (fallbackDraw f {:style "unknown"})
@@ -258,11 +258,11 @@ The interop system presented here is a generic tool intended to access arbitrary
 
 While, as shown above, it is possible to add Schemas within the user's code, more importantly Schemas are stored in a separate machine- as well as human-readable text-file called "malli_types.edn". There, the Schemas are specified as a Malli [7] data structure, Malli being a standard tool in Clojure for data Schema definition.
 
-With some library being covered by such a Malli structure, its method and classes can be readily accessed, but in general it is necessary to provide, within the user code, hints that refer to the respective pre-defined Schemas. But as shown in the fallback example, when suitable Lisp multimethod functions are provided, the user does not have to specify any type hints at all.
+With some library being covered by such a Malli structure, its methods and classes can be readily accessed, but in general it is necessary to provide, within the user code, hints that refer to the respective pre-defined Schemas. But as shown in the fallback example, when additional suitable Lisp multimethod functions are provided, the user does not have to specify any type hints at all when accessing a particular library functionality.
 
 ## Outlook
 
-Given that all necessary information about classes and methods are contained in the machine readable Malli text file, it is conceivable to create multimethods automatically. Also, if the specification of the C++ classes of some library is accessible in machine readable format, even the automatic generation of the Malli file itself does not look completely out of range.
+Given that all necessary information about classes and methods is contained in the machine readable Malli text file, it is conceivable to create multimethods automatically. Also, if the specification of the C++ classes of some library is accessible in machine readable format, even the automatic generation of the Malli file itself does not look completely out of range.
 
 ## References
 [1]  https://root.cern/manual/python/#passing-python-callables-to-c  
