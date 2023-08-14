@@ -43,7 +43,7 @@ While the script to plot the graph is written in Python, the ROOT library is wri
 
 Moving on to Lisp, we do not use a runtime bridge software to access ROOT. Instead, we transpile Lisp code to C++ ahead of time, i.e. before running it. For transpilation we use Ferret, a free software Lisp implementation supporting a subset of Clojure designed to generate executable binaries for "systems with as little as 2KB of RAM" [5].
 
-Every C++ library grants access to its functionality through respective header files. The first line of our Lisp code starts with a basic Ferret command that imports a header file providing access to ROOT.
+As every C++ library grants access to its functionality through respective header files, the first line of our Lisp code starts with a basic Ferret command that imports such a header file providing access to ROOT.
 
 ```
 (native-header "ROOT.h")
@@ -51,7 +51,7 @@ Every C++ library grants access to its functionality through respective header f
 
 This statement sizes the compiled binary to 500KB. Also, it already shows the ubiquitous way of starting a statement in Lisp, namely with an open bracket `(`.
 
-Because Ferret only provides low level library access, the second line of our example takes in the Lisp file `cxx.clj`, which provides higher level interop functionality.
+The second line of our translation takes in the Lisp file `cxx.clj`, which based on Ferret's interop features provides higher level acces to C++ libraries.
 
 ```
 (require '[cxx :as ROO])
@@ -59,7 +59,7 @@ Because Ferret only provides low level library access, the second line of our ex
 
 The code for the interop functionality, some 400 lines of self contained Ferret code, is made available by the authors free and open source [6].
 
-## Defining the function to be plot
+## Defining the function to be plotted
 
 The mathematical function we are going to plot is very simple. It is represented by the usual formula for a straight line.
 
@@ -94,7 +94,7 @@ We do not go further into the details of OO programming. We rather try to shed l
 
 ## Lisp implementation of the function
 
-The Lisp code to implement this function looks comparatively similar to its textbook notation.
+The Lisp code to implement the function representing a straight line looks comparatively similar to its textbook notation.
 
 ```
 (defn Linear []
@@ -112,13 +112,13 @@ In our translated Lisp code, `Linear` is such a named function that takes no arg
 
 To return this unnamed function, `Linear` needs to be called. The syntax for calling `Linear` is not `Linear()` but `(Linear)`, keeping the Lisp tradition of putting the parentheses in the wrong place. By calling `Linear` in this way, we bind the resulting unnamed function to the name `l`.
 
-So again like in the Python code, `l` is our desired function.
+So again like in the Python code, `l` is our desired function representing a straight line.
 
 The unnamed function which `Linear` returns has the signature `[[x] [d k]]`. This means that this function  expects two arguments A and B, both being vectors, with A = `[x]` and B = `[d k]` denoting that the elements `x` and `d, k` are extracted out of the vectors already within the signature.
 
 We just explained the two major building blocks of functional programming. For connection to the literature, we give the technical terms of those two building blocks just explained: `Linear` is termed a "higher order function", because it does not return a number but a "Lambda".
 
-The authors hope that by having explained functional concepts, the reader will regard the Python code in a new way: through this one-to-one translation, Python can be seen as functional in disguise.
+The authors hope that by having explained functional concepts, the reader will regard the Python code in a new way: the given Python example can be seen as functional in disguise because a Python class plays the role of a higher order function which is indeed the reason that the one-to-one translation could in this case be penned down in a more succinct way than the original.
 
 ## Setting up the canvas for drawing
 
@@ -142,7 +142,7 @@ Like in Python, also a variable named `c` is created. Technically it is not an o
 There is one additional element: the keyword `new`. The reason is that Lisp is transpiled using one main interop macro, Roo-slash-T, generating all interop code. This means that during the process of generating the C++ code, the macro `ROO/T` completely disappears. This disappearing property is the reason why `ROO/T` is not termed function but "macro" instead. In contrast, `new` (and of course ROOT's `TCanvas`) does not disappear but transfers over to C++ code.
 
 ## Plotting the function
-The reader might remember that when stating the textbook notation for a mathematical function, we used the letter `f` for the function's name while in the computer code the letter `l` is used. The reason is that the colloquial name `f`  was reserved for the final ROOT object, an instance of some class `TF1`.
+The reader might remember that when stating the textbook notation for a mathematical function, we used the letter `f` for the function's name while in the computer code the letter `l` is used. The reason is that the colloquial name `f` has been reserved for the final ROOT object, an instance of some class `TF1`.
 
 ```
 f = ROOT.TF1('pyf2', l, -1., 1., 2)
@@ -164,7 +164,7 @@ A one-to-one translation of the three Python plot statements to Lisp looks awful
 ((ROO/T Draw TF1) f)
 ```
 
-We can improve the notation of this nested structure by binding names to those inner expressions that start with the `ROO/T` macro. Those names then represent functions because by the macro's construction, all expressions starting with `ROO/T` result in an unnamed function.
+We can improve the notation of this nested structure by binding names to those inner expressions that start with the `ROO/T` macro. Because of the way this macro is constructed, all expressions starting with `ROO/T` result in an unnamed function, so the names to be bound are going to represent functions.
 
 While `ROO/T` results in a function, everything that is within a `ROO/T` expression is just a string that is handed down to C++, so is the string `Draw`.  But the result of a `ROO/T` expression, a function, can be bound to any name and thus just as well to the name `Draw`.
 
@@ -180,8 +180,7 @@ With this binding, `Draw` becomes a valid Lisp function. By consecutively adding
 (Draw f)
 ```
 
-
-The doubling of statements induced by the three bindings seems worse than is actually the case. This is because all the introduced bindings, just like the one for `Draw`, are completely generic. Thus they could be isolated from the user's code by separating them into an extra Lisp file. Taking this generic property of the bindings further, one could imagine that such an extra source file is written before any specific task (like plotting a graph) is undertaken, written either by the user, another engineer or even, as elaborated below, by an automated process.
+The doubling of statements induced by the three bindings seems worse than is actually the case. This is because all the introduced bindings, just like the one for `Draw`, are completely generic, i.e. do not pertain to the particular plotting problem at hand. Thus they could be isolated from the user's code by separating them into an extra Lisp file. Taking this generic property of the bindings further, one could imagine that such an extra source file is written up front, either by the user, another engineer or even, as elaborated below, by an automated process.
 
 ## From statements to top level expressions
 
@@ -212,7 +211,7 @@ This help comes in the form of a type hint named `:my-hint`, which states that t
         [:string])
 ```
 
-With this definition for `:my-hint`, any graph can be plot point by point, the value of the respective argument being the letter "P".
+With this definition for `:my-hint`, any graph can be dotted point by point, the value of the respective argument being the letter "P".
 
 ```
 ((ROO/T Draw TF1 :my-hint) f "P")
@@ -256,9 +255,9 @@ At first glance, the fallback function just presented looks very innocent, but i
 
 The interop system presented here is a generic tool intended to access arbitrary C++ libraries. As explained, to expose a library to Lisp in the presented high level style, there need to be Schemas for every class and method the library makes public. However, Schemas are not part of the codebase of the interop system.
 
-While, as shown above, it is possible to add Schemas within the user's code, more importantly Schemas are stored in a separate machine- as well as human-readable text-file called "malli_types.edn". There, the Schemas are specified as a Malli [7] data structure, Malli being a standard tool in Clojure for data Schema definition.
+While, as shown above, it is possible to add Schemas within the user's code, more importantly Schemas are stored in a separate machine- as well as human-readable text file called "malli_types.edn". There, the Schemas are specified as a Malli [7] data structure. Malli is a standard tool in Clojure for data Schema definition, the abundant colons, like e.g. for the type `:string`, are idiomatic for Malli (and ideed Clojure itself).
 
-With some library being covered by such a Malli structure, its methods and classes can be readily accessed, but in general it is necessary to provide, within the user code, hints that refer to the respective pre-defined Schemas. But as shown in the fallback example, when additional suitable Lisp multimethod functions are provided, the user does not have to specify any type hints at all when accessing a particular library functionality.
+With some library being covered by such a Malli structure, its methods and classes can be readily accessed, but in general it is necessary to provide, within the user code, hints that refer to the respective pre-defined Schemas. But as shown in the fallback example, when additional suitable Lisp multimethod functions are provided, a user wanting to access some particular library function does not have to specify any type hints at all.
 
 ## Outlook
 
