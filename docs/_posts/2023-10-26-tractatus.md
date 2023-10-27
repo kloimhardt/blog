@@ -163,7 +163,7 @@ Und nur in einer Kunstsprache kann gelten:
 
 Das ist deswegen, weil in der gewählten Kunstsprache die Anzahl der möglichen Dinge und ihrer möglichen Eigenschaften von vornherein definiert sind.
 
-Eine Analogie wäre die Luft der Atmosphäre. Ein Gas aus Stickstoff, Sauerstoff, Kohlenstoff, Wasserstoff. Ein geschlossenes System. Die Elemente N, O, C, und H sind gegeben. Auch die jeweilige Anzahl der Atome ist gegeben, riesig gross aber fix. Die möglichen Kombinationen (die möglichen Moleküle) sind damit auch gegeben.
+Eine Analogie wäre die Luft der Atmosphäre. Ein Gas aus Stickstoff, Sauerstoff, Kohlenstoff, Wasserstoff. Stellen wir uns die Atmosphäre als ein geschlossenes System vor, etwa ähnlicher der Venus als der Erde (keine Autos und Rindviecher). Die Elemente N, O, C, und H sind gegeben. Auch die jeweilige Anzahl der Atome ist gegeben, riesig gross aber fix. Die möglichen Kombinationen (die möglichen Moleküle) sind damit auch gegeben.
 
 6.45 Die Anschauung der Welt sub specie aeterni ist ihre Anschauung als – begrenztes – Ganzes.  
 Das Gefühl der Welt als begrenztes Ganzes ist das mystische.
@@ -230,8 +230,7 @@ Die folgenden Aussagen illustrieren weiter, unübersetzt, Wittgensteins enge Anl
 
 3.41 Das Satzzeichen und die logischen Koordinaten: Das ist der logische Ort.
 
-3.42 Obwohl der Satz nur einen Ort des logischen Raumes bestimmen darf, so muss doch durch ihn schon der ganze logische Raum gegeben sein.
-
+3.42 Obwohl der Satz nur einen Ort des logischen Raumes bestimmen darf, so muss doch durch ihn schon der ganze logische Raum gegeben sein.  
 (Sonst würden durch die Verneinung, die logische Summe, das logische Produkt, etc. immer neue Elemente – in Koordination – eingeführt.)  
 (Das logische Gerüst um das Bild herum bestimmt den logischen Raum. Der Satz durchgreift den ganzen logischen Raum.)
 
