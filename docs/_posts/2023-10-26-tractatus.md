@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wovon man nicht sprechen kann, darüber wird gestritten"
+title:  "Wovon man nicht sprechen kann, darüber wird man streiten"
 date:   2023-10-26 06:00:01 +0100
 categories: Literatur
 ---
@@ -296,4 +296,6 @@ Manche würden "Sinn" vielleicht mit der Frage "welchen Weg zu Gott?" übersetze
 
 Wenn wir den Sinn des Lebens nicht definieren können, wird's auch schwierig eine Ethik zu definieren. Ein Spartaner oder Wikinger wird eine andere Ethik vertreten als Kant. Der Rahmen ist ein anderer, die Tür dreht sich um eine andere Angel.
 
-Drum lässt sich Krieg so schön mit Moral und Werten begründen: weil niemand einen zwingen kann über den Rahmen zu sprechen, in dem man sich bewegt. Schweigen ist die Lösung. Sonst wird gestritten.
+Drum lässt sich Krieg so schön mit Moral und Werten begründen: weil niemand einen zwingen kann über den Rahmen zu sprechen, in dem man sich bewegt. Schweigen ist die Lösung.
+
+Wovon man nicht sprechen kann, darüber muss man schweigen sonst wird man streiten.
