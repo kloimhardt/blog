@@ -29,7 +29,7 @@ I have seen some uses of this with regard to music creation, but that didn't qui
 
 We can see this when I jump into a Clojure-code file [opens an editor showing lots of code, i.e. many Clojure functions]. I connect the n-Repl session in my editor via localhost [in-editor window appears on top right]. This Repl session, it has nothing, it doesn't have any of my functions. It does not have anything but I can just send it whatever I want on the fly.
 
-In this partricular bit of code [moves cursor in code-file] I have a web server. Let me actually show there's no web server running just right now [opens new terminal, curl localhost:3000, connection refuses]. However, I'm going to send this whole buffer to the Repl and each of these top level expressions was evaluated and we can see the result from each of these evaluations in the top right window.
+In this particular bit of code [moves cursor in code-file] I have a web server. Let me actually show there's no web server running just right now [opens new terminal, curl localhost:3000, connection refuses]. However, I'm going to send this whole buffer to the Repl and each of these top level expressions was evaluated and we can see the result from each of these evaluations in the top right window.
 
 [note: within the editor, "buffer" means the whole code-text of the code-file, "sending the buffer" means typing some keystroke, e.g. ctrl-s, "top level expression" means the code-text of one single Clojure function]
 
