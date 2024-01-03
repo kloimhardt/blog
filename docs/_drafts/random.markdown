@@ -50,3 +50,5 @@ Zu Kants Begriff vom Zugleichsein, an den niemand gedacht hat.
 Mit "beiden übrigen Analogien" meint Kant A) "Grundsatz der Beharrlichkeit der Substanz"; und C) "Grundsatz des Zugleichseins, nach dem Gesetze der Wechselwirkung, oder Gemeinschaft"
 
 Satz vom zureichenden Grunde ist B) "Grundsatz der Zeitfolge nach dem Gesetze der Kausalität"
+
+In einer pluralistischen Gesellschaft hat jeder verrückte seine eigene Theorie. Wenn eine Staatsideologie herrscht, werden alle Verrückten in diese hineingezwungen. D.h. die Verrückten können, wie eine Gewerkschaft, Mehrheiten bilden. In einer pluralistischen Gesellschaft zersprageln sich die Verrückten
