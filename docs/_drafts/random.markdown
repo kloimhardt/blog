@@ -50,3 +50,15 @@ Zu Kants Begriff vom Zugleichsein, an den niemand gedacht hat.
 Mit "beiden übrigen Analogien" meint Kant A) "Grundsatz der Beharrlichkeit der Substanz"; und C) "Grundsatz des Zugleichseins, nach dem Gesetze der Wechselwirkung, oder Gemeinschaft"
 
 Satz vom zureichenden Grunde ist B) "Grundsatz der Zeitfolge nach dem Gesetze der Kausalität"
+
+In einer pluralistischen Gesellschaft hat jeder verrückte seine eigene Theorie. Wenn eine Staatsideologie herrscht, werden alle Verrückten in diese hineingezwungen. D.h. die Verrückten können, wie eine Gewerkschaft, Mehrheiten bilden. In einer pluralistischen Gesellschaft zersprageln sich die Verrückten
+
+Die klassische Physik nimmt eine Testladung an: etwas das so klein ist, dass es die Kraft spürt aber keine Gegenwirkung hat. Die Quantenphysik fragt genau das umgekehrte: welche Wirkung hat das kleine auf den grossen Apparat.
+
+In der QED ist die SRT nicht wegzudenken, die SRT steckt in der QED drin. Nun sagt auch die ART als Postulat: lokal, im kleinen gilt die SRT. Im Grossen gilt sie niemals, denn die Gravitation ist aus Prinzip nicht wegzuschalten da immer anzihend. Ein Minkowski Universum ist also zwar denkbar, aber nirgends realisiert. Nun könnte es sein, dass die SRT wirklich nur mikroskopisch gilt, mesoskopisch gar nicht und die ART im Grossen nur eine Näherung ist. Wir haben keine SRT-Hamiltonmechanik, noch niemand hat es geschafft sie zu konstruieren.
+
+# Management vs Wissenschaft
+Wissenschaft und Management haben die gleiche Methode: sie suchen nach Information die dem bekannten Ergebnis widerspricht. Nur: der Wissenschaftler nutzt seine Kontakte um die Info zu publizieren, der Manager nutzt Kontakte um die Information zu verstecken.
+
+# Im Cyberspace riechts nicht
+und Frauen riechen besser, drum funktioniert Cybersex nicht.
