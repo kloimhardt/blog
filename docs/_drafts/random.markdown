@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Random"
+title:  "Draft - Random"
 date:   2023-01-10 21:00:00 +0100
 categories: Literatur
 ---
@@ -89,3 +89,6 @@ die Uhren sind Ereignisblitze, drum sind die Uhren eben nicht dieselben, die Erd
 # Ad wahrscheinlich objektiv vs. worüber man nicht sprechen kann
 Im ersten schreib ich noch, dass der Tractatus unverständlich ist.
 Im zweiten dass er leicht verständlich ist.
+
+# Ad der wahre Katzengrund
+sollte etwas gekürzt werden. Und erwähnt werden, dass es das Buch "When we cease to understanfd the world" von Benjamin Labatut gibt. Wo er zwar über Blausäure schreibt und über die Katze, aber nicht erwähnt, dass die Katze mit Blausäure getötet wird.
