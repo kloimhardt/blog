@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bernard und Schottky gehen"
+title:  "Draft - Bernhard und Schottky gehen"
 date:   2022-12-14 23:00:00 +0100
 categories: Physik
 ---
