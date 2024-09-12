@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kants Urteilstafel"
+title:  "Draft - Kants Urteilstafel"
 date:   2023-04-19 06:00:01 +0100
 categories: Literatur
 ---
