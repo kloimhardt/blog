@@ -82,6 +82,8 @@ Bosonen sind wie zwei Münzen in drei Zuständen
 Fermionen wie zwei Münzen in nur einem Zustand.
 
 # Ad Glaube und Hoffnung
+in Draft verschoben, zu kompliziert und auch falsch. Das Ziffernblatt muss als verschwommen gedacht werden, Denkverbote gibt die Wissenschaft nicht auf.
+Ein neuer Post wäre angebracht hier.
 die Uhren sind Ereignisblitze, drum sind die Uhren eben nicht dieselben, die Erden und Raumbruder sehen. Raumbruder spricht ins Mikrophon, was er als Gleichzeitig sieht, ein Dateneintrag sozusagen, Ziffer zeigt 5. Für den Erdenbruder hat die Ziffer gar keine Zahl am Display, er muss sich das Display verschwomen vorstellen.
 
 # Ad wahrscheinlich objektiv vs. worüber man nicht sprechen kann
