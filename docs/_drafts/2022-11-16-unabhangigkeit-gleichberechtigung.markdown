@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Unabhängigkeit und Gleichberechtigung"
+title:  "Draft-Unabhängigkeit und Gleichberechtigung"
 date:   2022-12-03 21:00:00 +0100
 categories: Physik
 ---

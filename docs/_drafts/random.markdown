@@ -62,3 +62,28 @@ Wissenschaft und Management haben die gleiche Methode: sie suchen nach Informati
 
 # Im Cyberspace riechts nicht
 und Frauen riechen besser, drum funktioniert Cybersex nicht.
+
+# ad unzählige Fakten
+Einstein hat tatsächlich die Klassische-ED ignoriert
+Seine Herleitung der SRT beruht intrinsisch auf dem Teilchencharakter dr Photonen.
+Seine Photonen sind auch noch ganz klassisch, laut Photoeffekt Paper
+Und die Annahme von klassischen Photonen war entscheidend.
+
+# Ontologischer Status von Bosonen anders als von Fermionen
+Weil existieren tut nur was in einer Menge von gleichartigen Möglichkeiten ist.
+Diese Menge nennt Markus Gabriel Sinnfeld.
+Und wenn man eine Wahrscheinlichkeit angeben kann, dann wirds noch "Existenter"
+Und bei Bosonen werden nicht die Teichen gezählt, sondern die Zustände.
+Also sind die Zustände existent, nicht die Bosonen selber.
+Fermionen sind auch nicht t untescheibar, aber sie nehmen nicht den selben Platz ein.
+Sie werden anders gezählt.
+Und genau dieses Zählen macht die Existenz.
+Bosonen sind wie zwei Münzen in drei Zuständen
+Fermionen wie zwei Münzen in nur einem Zustand.
+
+# Ad Glaube und Hoffnung
+die Uhren sind Ereignisblitze, drum sind die Uhren eben nicht dieselben, die Erden und Raumbruder sehen. Raumbruder spricht ins Mikrophon, was er als Gleichzeitig sieht, ein Dateneintrag sozusagen, Ziffer zeigt 5. Für den Erdenbruder hat die Ziffer gar keine Zahl am Display, er muss sich das Display verschwomen vorstellen.
+
+# Ad wahrscheinlich objektiv vs. worüber man nicht sprechen kann
+Im ersten schreib ich noch, dass der Tractatus unverständlich ist.
+Im zweiten dass er leicht verständlich ist.
