@@ -89,6 +89,9 @@ die Uhren sind Ereignisblitze, drum sind die Uhren eben nicht dieselben, die Erd
 # Ad wahrscheinlich objektiv vs. worüber man nicht sprechen kann
 Im ersten schreib ich noch, dass der Tractatus unverständlich ist.
 Im zweiten dass er leicht verständlich ist.
+Im zweiten kann man noch schreiben, dass ein Satz nicht einen Punkt im Phasenblatt angibt, sondern teile des Blatts schraffiert. Der Satz lässt alle Punkte im weissen bereich gelten, die grauen nicht. Eine Tautologie lässt alles weiss, eine Kontradiktion malt alles an und lässt nix mehr übrig.
+Beispiel zwei Münzen Kopf/Kopf K/Z Z/K Zahl/Zahl. Der Satz zwei Münzen zeigen Kopf schraffiert die anderen drei Möglichkeiten aus. Die Welt sind eben nicht die Münzen, sonder die Tatasche wie sie liegen. Denn irgendwie müssen sie liegen.
+ad Dige/ Tatsache. Nicht die Fermionen (=Dinge) sind die Welt, sondern die Enrgieniveaus die sie besetzen (=Tatsache). Die möglichen Tatsachen sind für Fermionen anders, als für Bosonen.
 
 # Ad der wahre Katzengrund
 sollte etwas gekürzt werden. Und erwähnt werden, dass es das Buch "When we cease to understanfd the world" von Benjamin Labatut gibt. Wo er zwar über Blausäure schreibt und über die Katze, aber nicht erwähnt, dass die Katze mit Blausäure getötet wird.
