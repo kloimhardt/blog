@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sicmutils as JavaScript library (3)"
+title:  "Emmy as JavaScript library (3)"
 date:   2023-02-22 06:00:01 +0100
 categories: Software
 ---
@@ -21,12 +21,12 @@ categories: Software
     (This post is part of a series, all with the same title)
     (and needs lots of work for text to actually explain things)
 
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js&quot;&gt;&lt;/script&gt;</pre>
 
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+    <script src="/blog/js/emmy.js/build/emmy_bundle.js"></script>
 
     <pre><code class="language-klipse-eval-js">
-var div = sicmutils.env._SLASH_;
+var div = emmy.div;
 
 var replaceMath = (txt) => txt.replace(/\//g,"div");
 
@@ -82,7 +82,7 @@ expr[expr.length-1] === " "
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var mul = sicmutils.env._STAR_;
+var mul = emmy.mul;
 
 mul(3, div(1, 2)).toString();
     </code></pre>
@@ -102,9 +102,9 @@ var replaceMath = __replaceMath;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var sub = sicmutils.env._;
-var add = sicmutils.env._PLUS_;
-var expt = sicmutils.env.expt;
+var sub = emmy.sub;
+var add = emmy.add;
+var expt = emmy.expt;
 
 var replaceMath = (txt) => // new
 __replaceMath(txt)
@@ -120,7 +120,7 @@ add(1, mul(sub(div(2, 3), 4), 5)).toString();
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-expt.call(null,2,3);
+expt(2,3);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -131,7 +131,7 @@ j.constructor == Array
 
 var jsonToJs = (j) => // new
 j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+? jsonToJs(j[0]) + "(" + j.slice(1).map(jsonToJs) + ")"
 : _jsonToJs(j);
 
 expressionToJs("(2 ^ 3) ");
@@ -154,14 +154,14 @@ expressionToJs("(0 cos) ");
 
     <pre>&lt;script&gt;
  var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
+    window[name] = emmy[name];
     return name;
  }
 
 &lt;/script&gt;</pre>
     <script>
      var loadEnv = (name) => {
-         window[name] = sicmutils.env[name];
+         window[name] = emmy[name];
          return name;
      }
     </script>

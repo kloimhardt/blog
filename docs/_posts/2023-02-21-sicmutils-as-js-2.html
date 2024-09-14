@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sicmutils as JavaScript library (2)"
+title:  "Emmy as JavaScript library (2)"
 date:   2023-02-21 06:00:01 +0100
 categories: Software
 ---
@@ -60,20 +60,20 @@ var div = (x, y) => x/y;
 div(x, 2);
     </code></pre>
     <p>
-        and whereas the notation becomes clumsier, the result remains the same floating point number. But we can do better and get to rational numbers if we import the right JavaScript library: <a href="https://github.com/sicmutils/sicmutils">Sicmutils</a>.
+        and whereas the notation becomes clumsier, the result remains the same floating point number. But we can do better and get to rational numbers if we import the right JavaScript library: <a href="https://github.com/mentat-collective/emmy">Emmy</a><sup>1</sup>.
     </p>
 
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js&quot;&gt;&lt;/script&gt;</pre>
 
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+    <script src="/blog/js/emmy.js/build/emmy_bundle.js"></script>
     <p>
 
     </p>
     <p>
-        With the help of Sicmutils, we can redefine the calculation function
+        With the help of Emmy, we can redefine the calculation function
     </p>
     <pre><code class="language-klipse-eval-js">
-var div = sicmutils.env._SLASH_;
+var div = emmy.div;
 
 div(x, 2).toString();
     </code></pre>
@@ -255,6 +255,8 @@ expressionToJs(formula);
     <pre><code class="language-klipse-eval-js">
 ((x / 2) / 2) 
     </code></pre>
+
+    <sup>1</sup>: We used <a href="https://github.com/mentat-collective/emmy.js">emmy.js</a> and <a href="https://browserify.org">Browserify</a> to create <code>emmy_bundle.js</code>
 
 <script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 </body>
