@@ -24,30 +24,26 @@ categories: Software
 
     (it also does not use Emmy but the older sicmutils library)
 
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js&quot;&gt;&lt;/script&gt;</pre>
 
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+    <script src="https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js"></script>
 
     <pre>&lt;script&gt;
  var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
+    window[name] = emmy[name];
     return name;
  }
 &lt;/script&gt;</pre>
 
     <script>
      var loadEnv = (name) => {
-         window[name] = sicmutils.env[name];
+         window[name] = emmy[name];
          return name;
      }
     </script>
 
     <pre><code class="language-klipse-eval-js">
-var div = sicmutils.env._SLASH_;
-var mul = sicmutils.env._STAR_;
-var sub = sicmutils.env._;
-var add = sicmutils.env._PLUS_;
-["expt", "sin", "cos"].map(loadEnv);
+["div", "mul", "sub", "add", "expt", "sin", "cos"].map(loadEnv);
 
 var _replaceMath = (txt) =>
 txt.replace(/\//g,"div")
@@ -73,7 +69,7 @@ JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
 var _jsonToJs = (j) =>
 j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+? jsonToJs(j[0]) + "("  +  j.slice(1).map(jsonToJs) + ")"
 : j;
 
 var jsonToJs = _jsonToJs;
@@ -134,7 +130,7 @@ var expressionToJs = _expressionToJs; null;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var symbol = cljs.core.symbol;
+var symbol = emmy.symbol;
 
 cos.call(null, symbol("x")).toString();
     </code></pre>
@@ -154,9 +150,9 @@ j.constructor == String && j.substring(0, 7) == "symbol_"
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-loadEnv("__GT_infix");
+loadEnv("to_infix");
 
-var _preAmble = (j) => ["__GT_infix", j];
+var _preAmble = (j) => ["to_infix", j];
 var preAmble = _preAmble;
 
 var _modifyJson = (j) => preAmble(swapFirst(j));
@@ -190,7 +186,7 @@ loadEnv("up");
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var drv = sicmutils.env.D;
+var drv = emmy.D;
 var f = mul(3, expt.call(null, sin, 2));
 var x = symbol("x");
 drv.call(null, f).call(null, x).toString();

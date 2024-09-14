@@ -24,34 +24,35 @@ categories: Software
 
     (it also does not use Emmy but the older sicmutils library)
 
-    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js&quot;&gt;&lt;/script&gt;</pre>
 
-    <script src="https://kloimhardt.github.io/blog/js/main.js"></script>
+    <script src="https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js"></script>
 
     <pre>&lt;script&gt;
  var loadEnv = (name) => {
-    window[name] = sicmutils.env[name];
+    window[name] = emmy[name];
     return name;
  }
 &lt;/script&gt;</pre>
 
     <script>
      var loadEnv = (name) => {
-         window[name] = sicmutils.env[name];
+         window[name] = emmy[name];
          return name;
      }
     </script>
+
     <pre><code class="language-klipse-eval-js">
 var mathfns =
-[["_SLASH_", /\//g],
-["_STAR_", /\*/g],
-["_", /\-/g],
-["_PLUS_", /\+/g],
+[["div", /\//g],
+["mul", /\*/g],
+["sub", /\-/g],
+["add", /\+/g],
 ["expt", /\^/g]]
 
 mathfns.map(x=> x[0]).map(loadEnv);
 
-var symbol = cljs.core.symbol;
+var symbol = emmy.symbol;
 
 var _replaceMath = (txt) =>
 mathfns.reduce((s,r) => s.replace(r[1],r[0]),
@@ -79,16 +80,16 @@ txt.trim()
 var textToJson = (txt) =>
 JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
 
-var drv = sicmutils.env.D;
+var drv = emmy.D;
 
 var replaceD = (j) =>
 j.constructor == Array
 ? j.map(replaceD)
 : j == "D" ? "drv" : j;
 
-["__GT_infix", "simplify"].map(loadEnv);
+["to_infix", "simplify"].map(loadEnv);
 
-var _preAmble = (j) => ["__GT_infix", ["simplify", j]];
+var _preAmble = (j) => ["to_infix", ["simplify", j]];
 var preAmble = _preAmble;
 
 var modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
@@ -97,7 +98,7 @@ var _jsonToJs = (j) =>
 j.constructor == String && j.substring(0, 7) == "symbol_"
 ? 'symbol("' + j.substring(7, j.length) + '")'
 :j.constructor == Array
-? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+? jsonToJs(j[0]) + "("  +  j.slice(1).map(jsonToJs) + ")"
 : j;
 
 var jsonToJs = _jsonToJs;
@@ -147,9 +148,6 @@ expr[expr.length-1] === " "
         New stuff
     </p>
 
-    <p>
-        I took the liberty to clean the code regarding elementary math functions a bit, the changes are purely compiler internal namings. Forexample, the <code>add</code> is now called <code>_PLUS_</code> and the minus sign is internally represented by an underscore, not <code>sub</code>.
-    </p>
     <pre><code class="language-klipse-eval-js">
 [textToJson("(1 + 1)")," and " , textToJson("(1 - 1)")].toString()
     </code></pre>
@@ -277,7 +275,21 @@ _replaceMath(txt.replace(/(\d+)\/(\d+)/g, "[ / $1 $2 ],"));
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
+var __replaceMath = replaceMath
+var replaceMath = (txt) =>
+__replaceMath(txt.replace(/(\w+)\-(\w+)/g, "$1_$2"));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+textToJson("(a - b)");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+textToJson("(a-b)");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var L_free_particle = emmy.L_free_particle;
 ["velocity", "dot_product", "up"].map(loadEnv); null;
     </code></pre>
 
@@ -288,7 +300,7 @@ var L_free_particle = sicmutils.mechanics.lagrange.L_free_particle;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-var literal_function = sicmutils.abstract$.function$.literal_function;
+var literal_function = emmy.literal_function;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">

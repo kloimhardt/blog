@@ -4,102 +4,256 @@ title:  "Draft - de Broglie"
 date:   2024-09-13 06:00:01 +0100
 categories: HamiltonMechanics
 ---
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
-    <style>
-     .CodeMirror { max-height: 150px; }
-    </style>
 
     <script>
      window.klipse_settings = {
-         selector_eval_js: '.language-klipse-eval-js',
-         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
-         codemirror_options_in: {
-             mode: 'scheme'
-         }
+         selector_eval_js: '.language-klipse-eval-js'
      };
     </script>
-
-    <script type="module">
-     import * as emmy from "/blog/js/emmy-module/out/main.js";
-     window.requireEmmyRename = (name, newname) =>
-         window[newname] = emmy[name];
-     window.requireEmmy = (name) =>
-         window.requireEmmyRename(name, name);
-    </script>
-
-    <script src="/blog/js/blog_helper.js"></script>
-    <script>setKlipseUrl("https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js");</script>
-
-    <script src="/blog/js/compiler_config.js"></script>
-    <script>compiler_config_patchEvalOnce();</script>
-
 </head>
 
-<body onload = "loadKlipse();">
-    <h1>Purpose of this post</h1>
-    <p>
-    Unsuccessful Translation of deBroglie part of
-    https://2.maria.cloud/gist/39e81f931737ea7032991c796f93c020
-    </p>
-
-    <p>
-    even https://github.com/mentat-collective/emmy.js
-    does not help with this
-    </p>
-
-    <p>
-        Nevertheless, this post uses /blog/html/sicmutils-as-js-book-part3.html which in turn uses Emmy https://github.com/kloimhardt/emmy-module (not sicmutils, like part1) and part3 should be upgraded to emmy.js
-    </p>
-    <h1>The Compiler</h1>
-
-    <iframe id="book-part3" sandbox="allow-same-origin"
-            src="/blog/html/sicmutils-as-js-book-part3.html"
-            width="735" height="100"
-            scrolling="no">
-    </iframe>
-
-    <pre id="scheme160"></pre>
-    <script>
-     addSnippet('book-part3','scheme160');
+<body>
+    <script src="https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js">
     </script>
 
+    <script>
+     var loadEnv = (name) => {
+         window[name] = emmy[name];
+         return name;
+     }
+    </script>
+    <p>
+The following compiler is destilled from the "Emmy as JS part (5)" post. It should enter in part 6, but the mathfunctions need refactoring from regexps to simple replacements.
+    </p>
+    <pre><code class="language-klipse-eval-js">
+var symbol = emmy.symbol;
 
+var specialchars =
+[["_SYMBOL_$1", /\'(\w+)/g],
+["[ / $1 $2 ],", /(\d+)\/(\d+)/g],
+["$1_$2", /(\w+)\-(\w+)/g]];
+
+var mathfns =
+[["div", /\//g],
+["mul", /\*/g],
+["sub", /\-/g],
+["add", /\+/g],
+["expt", /\^/g]]
+
+mathfns.map(x=> x[0]).map(loadEnv);
+
+var replaceMath = (txt) =>
+specialchars.concat(mathfns)
+.reduce((s,r) => s.replace(r[1],r[0]), txt);
+
+var swapFirst = (j) =>
+j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array
+? j.map(swapFirst)
+: j;
+
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+JSON.parse(insertCommas(replaceMath(makeBrackets(txt))));
+
+var drv = emmy.D;
+
+var _replaceD = (j) =>
+j.constructor == Array
+? j.map(replaceD)
+: j == "D" ? "drv" : j;
+
+replaceD = _replaceD;
+
+["to_infix", "simplify"].map(loadEnv);
+
+var preAmble = (j) =>
+j[0] != "define"
+? ["to_infix", ["simplify", j]]
+: j;
+
+var _modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+var modifyJson = _modifyJson;
+
+var makeFun = (j, callBack) =>
+"var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
++ callBack(j[2]) +";";
+
+var makeFunFun = (j, callBack) =>
+"var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
++ "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
+
+var smap = (f, v) =>
+v.length === 1
+? f(v[0]) +";"
+: f(v[0]) +"; "  + smap(f, v.slice(1));
+
+var makeLet = (j, callBack) =>
+"{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
++ " return " +  callBack(j[2]) + "; }"
+
+var _jsonToJs = (j) =>
+j.constructor == Array && j[0] === "let"
+? makeLet(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+&& j[1][0].constructor == Array
+? makeFunFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+? makeFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == String
+? "var " + j[1] + " = " + jsonToJs(j[2]) + ";"
+:j.constructor == String && j.substring(0, 8) == "_SYMBOL_"
+? 'symbol("' + j.substring(8, j.length) + '")'
+:j.constructor == Array
+? jsonToJs(j[0]) + ".call(null,"  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var jsonToJs = _jsonToJs;
+
+var expressionToJs = (expr) =>
+expr[expr.length-1] === " "
+? jsonToJs(modifyJson(textToJson(expr)))
+: "'add blank'";
+
+var literal_function = emmy.literal_function;
+
+["sin", "cos", "velocity", "dot_product",
+"up", "Gamma", "compose"].map(loadEnv); null;
+    </code></pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
     <h1>
         Start
         <pre><code class="language-klipse-eval-js">
-(define c 'c) 
+(define (E1 m) (* m 'c 'c )) 
         </code></pre>
-
-        <pre><code class="language-klipse-eval-js">
-E0 = (m) => (m * c * c);
-        </code></pre>
-
-        <pre><code class="language-klipse-eval-js">
-(E0 3) 
-        </code></pre>
-
-        <pre><code class="language-klipse-eval-js">
-;(define (E1 m) (* m c c ))
-        </code></pre>
-
-        <pre><code class="language-klipse-eval-js">
-(define (E1 m) (* m c c )) 
-        </code></pre>
-
 
         <pre><code class="language-klipse-eval-js">
 (E1 3) 
         </code></pre>
 
     </h1>
+
+<h1>What we have up to now: tests for the compiler</h1>
+
+    <pre><code class="language-klipse-eval-js">
+((1 / 2) / 2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (1 / 2)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (((2 / 3) - 4) * 5)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(2 ^ 3) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ 1 (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((sin ^ 2) (314 / 100)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (cos (sin 0)) (* (- (/ 2 3) 4) (expt 5 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * cos) 0) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(cos 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * (sin ^ 2)) 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((D (3 * (sin ^ 2))) 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define value 6) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + value) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (funame x) (x + 1)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((ffuname x) y) (x + y)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+((ffuname 4) 5) 
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+(define (fulet x) (let ((y 1)) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fulet 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + 1/2) 
+    </code></pre>
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
 
 </body>
 </html>
