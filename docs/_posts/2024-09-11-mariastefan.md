@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Stefan's Law and de Broglie's Waves"
+title:  "Stefan's Law"
 date:   2024-09-11 06:00:01 +0100
 categories: HamiltonMechanics
 ---
 
-I wrote up one essay about two topics: Josef Stefan's T^4 law and de Broglie wavelengths. The idea has been to take the original papers and translate them into an executable notebook (reference [1]).
+I wrote up one essay about Josef Stefan's T^4 law. The idea has been to translate the original paper into an executable notebook (reference [1]).
 
-While I have used my own notebook implementation before (in other posts of category "HamiltonMechanics" and also in [2]), this time I have used the splendid maria.cloud platform.
+While I usually use my own notebook implementation (as in other posts of category "HamiltonMechanics" and also in [2]), this time I have used the splendid maria.cloud platform.
 
 One innovation lies in the presentation of the formulae. I tried to render them in a way where one can read them out loud, even if one does not understand them. Note that the formulae are all rendered AND executed out of the same underlying notation.
 
