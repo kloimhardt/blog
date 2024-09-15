@@ -36,14 +36,6 @@ as always with Einstein, we start with E = mc^2
     </code></pre>
 
     <p>
-        (and remember that you can check the JS-code by adding a ; up front)
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-;(define (E0 m) (m * ('c ^ 2)))
-    </code></pre>
-
-    <p>
         deBroglies first hypothesis was to assume that every particle has a hypothetical
         internal vibration at frequency nu0 which relates to the rest energy
         in rest frame of particle (only there this energy-frequency relation holds)
@@ -87,7 +79,11 @@ this is the conundrum deBroglie solved. so hang on.
 
     <pre><code class="language-klipse-eval-js">
 (define ((internal-swing nu_one) t)
-   (sin ((2 * 'pi) * (nu_one * t)))) 
+   (sin (* '2pi nu_one t))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((internal-swing 'nu_one) 't) 
     </code></pre>
 
     <p>
@@ -95,7 +91,7 @@ calculate the phase of the internal swing at particle point x = v * t
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define (internal-phase nu_one x v)
+(define ((internal-phase nu_one v) x)
   (asin ((internal-swing nu_one) (x / v)))) 
     </code></pre>
 
@@ -105,8 +101,8 @@ calculate the phase of the internal swing at particle point x = v * t
     </script>
 
     <pre><code class="language-klipse-eval-js">
-(is-equal ((2 * 'pi) * ('nu_one * ('x / 'v)))
-           (internal-phase 'nu_one 'x 'v)) 
+(is-equal (* '2pi 'nu_one ('x / 'v))
+           ((internal-phase 'nu_one 'v) 'x)) 
     </code></pre>
 
     <p>
@@ -131,7 +127,7 @@ with the usual definition of omega
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define (omega nu) ((2 * 'pi) * nu)) 
+(define (omega nu) ('2pi * nu)) 
     </code></pre>
 
     <p>
@@ -144,17 +140,26 @@ with the usual definition of omega
     </code></pre>
 
     <p>
+I think here is a good place for a reminder that you can check the JS code by adding a ; up front
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+;(define (k omega V) (omega / V)) 
+    </code></pre>
+
+
+    <p>
         calculate the phase of the wave
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define (wave-phase nu x t V)
+(define ((wave-phase nu V) x t)
   (asin ((wave (omega nu) (k (omega nu) V)) x t))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(is-equal ((2 * 'pi) * ('nu * ('t - ('x / 'V))))
-           (wave-phase 'nu 'x 't 'V)) 
+(is-equal (* '2pi 'nu ('t - ('x / 'V)))
+           ((wave-phase 'nu 'V) 'x 't)) 
     </code></pre>
 
     <h1>
@@ -168,14 +173,14 @@ with the usual definition of omega
     </p>
 
     <pre><code class="language-klipse-eval-js">
-(define ((phase-difference ratio) x v nu V)
-  ((internal-phase (ratio * nu) x v)
-    - (wave-phase nu x (x / v) V))) 
+(define ((phase-difference x v nu V) ratio)
+  (((internal-phase (ratio * nu) v) x)
+    - ((wave-phase nu V) x (x / v)))) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-(is-equal ((2 * 'pi) * ('nu * ((('ratio - 1) * ('x / 'v)) + ('x / 'V))))
-          ((phase-difference 'ratio) 'x 'v 'nu 'V)) 
+(is-equal (* '2pi 'nu ((('ratio - 1) * ('x / 'v)) + ('x / 'V)))
+          ((phase-difference 'x 'v 'nu 'V) 'ratio)) 
     </code></pre>
 
     <p>
@@ -185,7 +190,9 @@ with the usual definition of omega
     </p>
 
     <script>
-     const solves = (a, f) => emmy.eq(emmy.simplify(f(a)),0) ? a : "does not solve"
+     const solves = (a, f) => emmy.eq(emmy.simplify(f(a)),0)
+                            ? emmy.mul(emmy.symbol("root:"), a)
+                            : "does not solve"
     </script>
 
     <pre><code class="language-klipse-eval-js">
@@ -194,15 +201,7 @@ with the usual definition of omega
 
     <pre><code class="language-klipse-eval-js">
 (solves (phase-ratio 'v 'V)
-        (lambda (r) ((phase-difference r) 'x 'v 'nu 'V))) 
-    </code></pre>
-    <p>
-        solves means that the lambda-function indeed vanishes at the given point, a simple example might explain:
-    </p>
-
-    <pre><code class="language-klipse-eval-js">
-(solves ('pi / 2)
-        (lambda (p) (cos p))) 
+        (phase-difference 'x 'v 'nu 'V)) 
     </code></pre>
 
     <p>
@@ -266,7 +265,7 @@ the relativistic momentum is defined as
 
     <pre><code class="language-klipse-eval-js">
 (define (p m v gamma)
-  ((m * v) * gamma)) 
+  (* m v gamma)) 
     </code></pre>
 
     <p>

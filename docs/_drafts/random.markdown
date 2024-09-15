@@ -4,6 +4,46 @@ title:  "Draft - Random"
 date:   2023-01-10 21:00:00 +0100
 categories: Literatur
 ---
+# todo
+## The deBroglie Wavelength
+ein (define ...) sollte die formel zurückgeben, also eine Definition hat immer einen Aufruf dabei mit Symbolen für die Argumente
+möglichkeit von (define ...) und is-equal in der gleichen box
+soll auch am Handy gut ausschauen -> manchmal mehr Zeilen machen.
+
+## ad unzählige Fakten
+Einstein hat tatsächlich die Klassische-ED ignoriert
+Seine Herleitung der SRT beruht intrinsisch auf dem Teilchencharakter dr Photonen.
+Seine Photonen sind auch noch ganz klassisch, laut Photoeffekt Paper
+Und die Annahme von klassischen Photonen war entscheidend.
+
+## Ontologischer Status von Bosonen anders als von Fermionen
+Weil existieren tut nur was in einer Menge von gleichartigen Möglichkeiten ist.
+Diese Menge nennt Markus Gabriel Sinnfeld.
+Und wenn man eine Wahrscheinlichkeit angeben kann, dann wirds noch "Existenter"
+Und bei Bosonen werden nicht die Teichen gezählt, sondern die Zustände.
+Also sind die Zustände existent, nicht die Bosonen selber.
+Fermionen sind auch nicht t untescheibar, aber sie nehmen nicht den selben Platz ein.
+Sie werden anders gezählt.
+Und genau dieses Zählen macht die Existenz.
+Bosonen sind wie zwei Münzen in drei Zuständen
+Fermionen wie zwei Münzen in nur einem Zustand.
+
+## Ad Glaube und Hoffnung
+in Draft verschoben, zu kompliziert und auch falsch. Das Ziffernblatt muss als verschwommen gedacht werden, Denkverbote gibt die Wissenschaft nicht auf.
+Ein neuer Post wäre angebracht hier.
+die Uhren sind Ereignisblitze, drum sind die Uhren eben nicht dieselben, die Erden und Raumbruder sehen. Raumbruder spricht ins Mikrophon, was er als Gleichzeitig sieht, ein Dateneintrag sozusagen, Ziffer zeigt 5. Für den Erdenbruder hat die Ziffer gar keine Zahl am Display, er muss sich das Display verschwomen vorstellen.
+
+## Ad wahrscheinlich objektiv vs. worüber man nicht sprechen kann
+Im ersten schreib ich noch, dass der Tractatus unverständlich ist.
+Im zweiten dass er leicht verständlich ist.
+Im zweiten kann man noch schreiben, dass ein Satz nicht einen Punkt im Phasenblatt angibt, sondern teile des Blatts schraffiert. Der Satz lässt alle Punkte im weissen bereich gelten, die grauen nicht. Eine Tautologie lässt alles weiss, eine Kontradiktion malt alles an und lässt nix mehr übrig.
+Beispiel zwei Münzen Kopf/Kopf K/Z Z/K Zahl/Zahl. Der Satz zwei Münzen zeigen Kopf schraffiert die anderen drei Möglichkeiten aus. Die Welt sind eben nicht die Münzen, sonder die Tatasche wie sie liegen. Denn irgendwie müssen sie liegen.
+ad Dige/ Tatsache. Nicht die Fermionen (=Dinge) sind die Welt, sondern die Enrgieniveaus die sie besetzen (=Tatsache). Die möglichen Tatsachen sind für Fermionen anders, als für Bosonen.
+
+## Ad der wahre Katzengrund
+sollte etwas gekürzt werden. Und erwähnt werden, dass es das Buch "When we cease to understanfd the world" von Benjamin Labatut gibt. Wo er zwar über Blausäure schreibt und über die Katze, aber nicht erwähnt, dass die Katze mit Blausäure getötet wird.
+
+# some points
 Giulini Straumann Zürich: Plancks ungerader Weg zur Strahlenformel https://onlinelibrary.wiley.com/doi/abs/10.1002/phbl.20000561214
 
 "war Plancks Grundgedanke folgender: Nach Kirchhoff stellt sich im thermodynamischen Gleichgewicht ein von der Beschaffenheit der Materie unabhängiges Energiespektrum ein. Also ist es zulässig, zu dessen theoretischer Berechnung die Materie so zu idealisieren, dass sie der genauen Berechnung von Prozessen der Emission und Absorption zugänglich wird. Dabei ist es ganz unerheblich, ob solche idealisierten Oszillatoren in der Natur überhaupt realisiert werden; es kommt lediglich darauf an, dass sie mit den Naturgesetzen in Einklang stehen."
@@ -63,35 +103,3 @@ Wissenschaft und Management haben die gleiche Methode: sie suchen nach Informati
 # Im Cyberspace riechts nicht
 und Frauen riechen besser, drum funktioniert Cybersex nicht.
 
-# ad unzählige Fakten
-Einstein hat tatsächlich die Klassische-ED ignoriert
-Seine Herleitung der SRT beruht intrinsisch auf dem Teilchencharakter dr Photonen.
-Seine Photonen sind auch noch ganz klassisch, laut Photoeffekt Paper
-Und die Annahme von klassischen Photonen war entscheidend.
-
-# Ontologischer Status von Bosonen anders als von Fermionen
-Weil existieren tut nur was in einer Menge von gleichartigen Möglichkeiten ist.
-Diese Menge nennt Markus Gabriel Sinnfeld.
-Und wenn man eine Wahrscheinlichkeit angeben kann, dann wirds noch "Existenter"
-Und bei Bosonen werden nicht die Teichen gezählt, sondern die Zustände.
-Also sind die Zustände existent, nicht die Bosonen selber.
-Fermionen sind auch nicht t untescheibar, aber sie nehmen nicht den selben Platz ein.
-Sie werden anders gezählt.
-Und genau dieses Zählen macht die Existenz.
-Bosonen sind wie zwei Münzen in drei Zuständen
-Fermionen wie zwei Münzen in nur einem Zustand.
-
-# Ad Glaube und Hoffnung
-in Draft verschoben, zu kompliziert und auch falsch. Das Ziffernblatt muss als verschwommen gedacht werden, Denkverbote gibt die Wissenschaft nicht auf.
-Ein neuer Post wäre angebracht hier.
-die Uhren sind Ereignisblitze, drum sind die Uhren eben nicht dieselben, die Erden und Raumbruder sehen. Raumbruder spricht ins Mikrophon, was er als Gleichzeitig sieht, ein Dateneintrag sozusagen, Ziffer zeigt 5. Für den Erdenbruder hat die Ziffer gar keine Zahl am Display, er muss sich das Display verschwomen vorstellen.
-
-# Ad wahrscheinlich objektiv vs. worüber man nicht sprechen kann
-Im ersten schreib ich noch, dass der Tractatus unverständlich ist.
-Im zweiten dass er leicht verständlich ist.
-Im zweiten kann man noch schreiben, dass ein Satz nicht einen Punkt im Phasenblatt angibt, sondern teile des Blatts schraffiert. Der Satz lässt alle Punkte im weissen bereich gelten, die grauen nicht. Eine Tautologie lässt alles weiss, eine Kontradiktion malt alles an und lässt nix mehr übrig.
-Beispiel zwei Münzen Kopf/Kopf K/Z Z/K Zahl/Zahl. Der Satz zwei Münzen zeigen Kopf schraffiert die anderen drei Möglichkeiten aus. Die Welt sind eben nicht die Münzen, sonder die Tatasche wie sie liegen. Denn irgendwie müssen sie liegen.
-ad Dige/ Tatsache. Nicht die Fermionen (=Dinge) sind die Welt, sondern die Enrgieniveaus die sie besetzen (=Tatsache). Die möglichen Tatsachen sind für Fermionen anders, als für Bosonen.
-
-# Ad der wahre Katzengrund
-sollte etwas gekürzt werden. Und erwähnt werden, dass es das Buch "When we cease to understanfd the world" von Benjamin Labatut gibt. Wo er zwar über Blausäure schreibt und über die Katze, aber nicht erwähnt, dass die Katze mit Blausäure getötet wird.
