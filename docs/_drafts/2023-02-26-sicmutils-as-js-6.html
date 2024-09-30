@@ -1,0 +1,478 @@
+---
+layout: post
+title:  "Draft Emmy as JavaScript library (6)"
+date:   2023-02-26 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js'
+     };
+    </script>
+</head>
+
+<body>
+    <p>
+    (This post is part of a series, all with the same title)
+
+    (and needs lots more text to actually explain things)
+
+    </p>
+
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js"></script>
+
+    <pre>&lt;script&gt;
+ var loadEnv = (name) => {
+    window[name] = emmy[name];
+    return name;
+ }
+&lt;/script&gt;</pre>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = emmy[name];
+         return name;
+     }
+    </script>
+
+    <p>
+        Refactor symbol and 1/2 into specialchars. Move JSON.parse from textToJson to expressionToJs. Move the "blank" out of code into newEval
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+var symbol = emmy.symbol;
+
+var specialchars =
+[["symbol_$1", /\'(\w+)/g],
+["[ / $1 $2 ],", /(\d+)\/(\d+)/g]];
+
+var mathfns =
+[["div", /\//g],
+["mul", /\*/g],
+["sub", /\-/g],
+["add", /\+/g],
+["expt", /\^/g]]
+
+mathfns.map(x=> x[0]).map(loadEnv);
+
+var replaceMath = (txt) =>
+specialchars.concat(mathfns)
+.reduce((s,r) => s.replace(r[1],r[0]), txt);
+
+var swapFirst = (j) =>
+j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array
+? j.map(swapFirst)
+: j;
+
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+insertCommas(replaceMath(makeBrackets(txt)));
+
+var drv = emmy.D;
+
+var replaceD = (j) =>
+j.constructor == Array
+? j.map(replaceD)
+: j == "D" ? "drv" : j;
+
+["to_infix", "simplify"].map(loadEnv);
+
+var preAmble = (j) =>
+j[0] != "define"
+? ["to_infix", ["simplify", j]]
+: j;
+
+var modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+
+var makeFun = (j, callBack) =>
+"var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
++ callBack(j[2]) +";";
+
+var makeFunFun = (j, callBack) =>
+"var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
++ "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
+
+var smap = (f, v) =>
+v.length === 1
+? f(v[0]) +";"
+: f(v[0]) +"; "  + smap(f, v.slice(1));
+
+var makeLet = (j, callBack) =>
+"{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
++ " return " +  callBack(j[2]) + "; }"
+
+var jsonToJs = (j) =>
+j.constructor == Array && j[0] === "let"
+? makeLet(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+&& j[1][0].constructor == Array
+? makeFunFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+? makeFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == String
+? "var " + j[1] + " = " + jsonToJs(j[2]) + ";"
+:j.constructor == String && j.substring(0, 7) == "symbol_"
+? 'symbol("' + j.substring(7, j.length) + '")'
+:j.constructor == Array
+? jsonToJs(j[0]) + "("  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var expressionToJs = (expr) =>
+jsonToJs(modifyJson(JSON.parse(textToJson(expr))));
+
+var literal_function = emmy.literal_function;
+
+["sin", "cos", "velocity", "dot_product",
+"up", "Gamma", "compose"].map(loadEnv); null;
+    </code></pre>
+
+    <pre>&lt;script&gt;
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt.substr(0, 2) === ";("
+         ? expressionToJs(txt.substr(1))
+         : txt[0] === "(" && txt[txt.length - 1] != " "
+         ? textToJson(txt)
+         : txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
+         : oldEval(txt);
+     window.eval = newEval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt.substr(0, 2) === ";("
+         ? expressionToJs(txt.substr(1))
+         : txt[0] === "(" && txt[txt.length - 1] != " "
+         ? textToJson(txt)
+         : txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+<h1>What we have up to now</h1>
+
+    <pre><code class="language-klipse-eval-js">
+((1 / 2) / 2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (1 / 2)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (((2 / 3) - 4) * 5)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(2 ^ 3) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ 1 (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((sin ^ 2) (314 / 100)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (cos (sin 0)) (* (- (/ 2 3) 4) (expt 5 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * cos) 0) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(cos 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * (sin ^ 2)) 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((D (3 * (sin ^ 2))) 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define value 6) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + value) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (funame x) (x + 1)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((ffuname x) y) (x + y)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+((ffuname 4) 5) 
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+(define (fulet x) (let ((y 1)) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fulet 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + 1/2) 
+    </code></pre>
+
+    <h1>Implementation of new functionality</h1>
+
+    <p>
+        Make floating point and negative numbers possible.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+;(define (f-1 x) x)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var _specialchars = specialchars.concat(
+  [["$1_$2", /(\w+)\-(\w+)/g]]);
+
+var specialchars = _specialchars;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+;(define (f-1 x) x)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var __specialchars = specialchars.concat(
+[["$1_dot_$2", /(\d+)\.(\d+)/g],
+ ["minus_$1", /\-(\d+)/g]]);
+
+var specialchars = __specialchars;
+
+var post_specialchars =
+[["$1.$2", /(\d+)_dot_(\d+)/g],
+["-$1", /minus_(\d+)/g]]
+
+var _replaceD = replaceD;
+
+var replaceD = (j) =>
+j.constructor == String && j == "D"
+? "drv"
+: j.constructor == String
+? post_specialchars.reduce((s,r) => s.replace(r[1],r[0]), j)
+: _replaceD(j);
+
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(-1.7 + 2.9) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var identity = x => x;
+
+var edgeCases = (j) =>
+j[0] === "define"
+&& j[2].constructor == Array && j[2][0] === "let"
+&& j[1].constructor == String
+? ["identity", "'let not allowed in variable definition'"]
+: j;
+
+var letFlat2 = (j) =>
+j[0] === "let"
+? j[1].concat(letFlat2(j[2]))
+: [j];
+
+var constructLet = (j) =>
+["let", j.slice(0, j.length - 1), j[j.length - 1]]
+
+var letFlat = (j) =>
+j.constructor == Array && j[0] === "let"
+? constructLet(letFlat2(j))
+: j.constructor == Array
+? j.map(letFlat)
+: j;
+
+var _modifyJson = modifyJson
+var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(identity 1/2) 
+    </code></pre>
+
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu z) (let ((x 1)) (let ((y 2)) (+ x y z)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fu 7) 
+    </code></pre>
+
+    <p>
+ (define value1 (let ...)) is excluded explicitely.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define value1 (let ((x 1)) (+ x 1))) 
+    </code></pre>
+
+    <h1> 30.9.24 TODO, continue here</h1>
+
+    <pre><code class="language-klipse-eval-js">
+["pi", "_pi"].map(loadEnv);
+
+_COLON_pi = pi;
+__COLON_pi = _pi;
+
+var _3_specialchars =
+   [["__COLON_$1", /\-:(\w+)/g],
+   ["_COLON_$1", /:(\w+)/g],
+   ["[ / -$1 $2 ],", /-(\w+)\/(\d+)/g],
+   ["[ / $1 $2 ],", /(\w+)\/(\d+)/g]].concat(__specialchars);
+
+var specialchars = _3_specialchars;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(identity -:pi/2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var _4_specialchars = _3_specialchars
+.concat([["$1-_GT_$2", /(\w+)->(\w+)/g]]);
+
+var specialchars = _4_specialchars
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define F->G 3) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(identity F->G) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var _5_specialchars = _4_specialchars
+.concat([["state__GT_t", /(\s+)time(\s+)/g]]);
+
+var specialchars = _5_specialchars;
+
+loadEnv("state__GT_t");
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(time (up 't (up 'r 'phi) (up 'rdot 'phidot))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var jsonCode = textToJson("(lambda (x y) (+ x y))");
+
+var makeLambda = (j, callBack) =>
+"(" + j[1] + ") => " + callBack(j[2]) +";";
+
+makeLambda(jsonCode, e => "<" + e + ">")
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var _jsonToJs = jsonToJs;
+var jsonToJs = (j) =>
+j.constructor == Array && j[0] === "lambda"
+? makeLambda(j, jsonToJs)
+: _jsonToJs(j);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define funame (lambda (x y) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 1 2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu x)
+  (let ((ffu (lambda (y)
+               (let ((r 1))
+                 (+ y x r)))))
+    ffu)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((fu 3) 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var __specialchars_2 =
+    [["_SYMBOL_$1^$2", /_SYMBOL_(\w+)expt(\w+)/]].concat(_specialchars_2);
+
+specialchars_2 = __specialchars_2;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+('v_r^x ^ 4) 
+    </code></pre>
+
+    <h1>Examples in the SICMechanics book</h1>
+
+    <p>
+        The compiler now is in a state to run <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">all 109 examples</a> of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>.
+    </p>
+
+
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script>
+</body>
+</html>
