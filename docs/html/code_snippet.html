@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
-<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/prolog.css">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/klipse@7.11.4/dist/codemirror.css">
+<!-- prolog.css was linked here, do not know the reason anymore, so removed -->
 
 <script>
     window.klipse_settings = {
@@ -29,11 +29,12 @@
 4 + 5 + 6
     </code></pre>
 
+    <!-- this is BiwasScheme, needs full klipse_plugin.js, min.js wount do -->
     <pre><code class="language-klipse-scheme">
-(+ 23 42)
+(define (f x) (+ x 3))
+(f 2)
     </code></pre>
 
-    <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js?v=8.0.1"></script>
-
+    <script src="https://unpkg.com/klipse@7.11.4/dist/klipse_plugin.js"></script>
 </body>
 </html>
