@@ -388,22 +388,61 @@ var specialchars = __specialchars;
 (identity F->G) 
     </code></pre>
 
-    <h1> 1.10.24 TODO, continue here</h1>
-
     <pre><code class="language-klipse-eval-js">
-var _3_specialchars =
-[["state__GT_t", /(\s+)time(\s+)/g]].concat(specialchars);
-
-var specialchars = _3_specialchars;
-
-loadEnv("state__GT_t");
+loadEnv("nth");
+var time = x => nth(x, 0);
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 (time (up 't (up 'r 'phi) (up 'rdot 'phidot))) 
     </code></pre>
+    <pre><code class="language-klipse-eval-js">
+var jsonCode = textToJson("(lambda (x y) (+ x y))");
+
+var makeLambda = (j, callBack) =>
+"(" + j[1] + ") => " + callBack(j[2]) +";";
+
+makeLambda(jsonCode, e => "<" + e + ">");
+    </code></pre>
 
     <pre><code class="language-klipse-eval-js">
+var _jsonToJs = jsonToJs;
+
+var jsonToJs = (j) =>
+j.constructor == Array && j[0] === "lambda"
+? makeLambda(j, jsonToJs)
+: _jsonToJs(j);
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define funame (lambda (x y) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 1 2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (fu x)
+  (let ((ffu (lambda (y)
+               (let ((r 1))
+                 (+ y x r)))))
+    ffu)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((fu 3) 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+var _post_specialchars =
+    [["symbol_$1^$2", /symbol_(\w+)expt(\w+)/]].concat(post_specialchars);
+
+var post_specialchars = _post_specialchars;
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+('v_r^x ^ 4) 
     </code></pre>
 
     <h1>Examples in the SICMechanics book</h1>
