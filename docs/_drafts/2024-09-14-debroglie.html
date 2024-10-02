@@ -1,0 +1,551 @@
+---
+layout: post
+title:  "Draft The deBroglie Wavelength - JS function"
+date:   2024-09-14 06:00:01 +0100
+categories: HamiltonMechanics
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/klipse@7.11.4/dist/codemirror.css">
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js',
+         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
+         codemirror_options_in: {
+             mode: 'scheme'
+         }
+     };
+    </script>
+</head>
+
+<body>
+    <h1>
+        Internal Vibrations
+    </h1>
+
+    <pre id="klipse-scheme"><code class="language-klipse-scheme">
+#t
+    </code></pre>
+
+    <p>
+        as always with Einstein, we start with E = mc^2
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+function E0(m) {
+  (m * ('c ^ 2))
+}
+    </code></pre>
+    (organisational note: if you like to see a formula nicely formatted, call its according function)
+
+    <pre><code class="language-klipse-eval-js">
+(E0 'm) 
+    </code></pre>
+
+
+
+    <p>
+        deBroglies first hypothesis was to assume that every particle has a hypothetical
+        internal vibration at frequency nu0 which relates to the rest energy
+        in rest frame of particle (only there this energy-frequency relation holds)
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+function nu_naught(E0) {
+(E0 / 'h)
+}
+    </code></pre>
+
+    <p>
+particle travels at velocity vp
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+function vp(beta) {
+(beta * 'c)
+}
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+function beta(v) {
+(v / 'c)
+}
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (gamma beta) (1 / (sqrt (1 - (beta ^ 2))))) 
+    </code></pre>
+
+    <p>
+        time dilation: internal vibration is slower for observer.
+        so the frequency-energy relation does not hold: the frequency indeed decreases
+        instead of increasing with energy.
+        this is the conundrum deBroglie solved. so hang on.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (nu_one nu_naught gamma) (nu_naught / gamma)) 
+    </code></pre>
+
+    <p>
+        sine formula for internal vibration. we do not know what exactly vibrates
+        so we set the amplitude to one
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((internal-swing nu_one) t)
+   (sin (* '2pi nu_one t))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((internal-swing 'nu_one) 't) 
+    </code></pre>
+
+    <p>
+calculate the phase of the internal swing at particle point x = v * t
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((internal-phase nu_one v) x)
+  (asin ((internal-swing nu_one) (x / v)))) 
+    </code></pre>
+
+    <script>
+     const is_equal = (a, b) =>
+        emmy.eq(emmy.simplify(emmy.sub(a, b)), 0) ? a : "not equal"
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+(is-equal (* '2pi 'nu_one ('x / 'v))
+           ((internal-phase 'nu_one 'v) 'x)) 
+    </code></pre>
+
+    <p>
+personal note: to me, this is the sine-part of a standing wave, the standing vibration.
+    </p>
+
+    <h1>
+        A general Wave
+    </h1>
+
+    <p>
+        now for something completely different: general definition of a wave
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((wave omega k) x t)
+  (sin ((omega * t) - (k * x)))) 
+    </code></pre>
+
+    <p>
+with the usual definition of omega
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (omega nu) ('2pi * nu)) 
+    </code></pre>
+
+    <p>
+        and the simplest possible definition for the wave-vector k:
+        a dispersion free wave traveling at phase-velocity V
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (k omega V) (omega / V)) 
+    </code></pre>
+
+    <p>
+I think here is a good place for a reminder that you can check the JS code by adding a ; up front
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+;(define (k omega V) (omega / V)) 
+    </code></pre>
+
+
+    <p>
+        calculate the phase of the wave
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((wave-phase nu V) x t)
+  (asin ((wave (omega nu) (k (omega nu) V)) x t))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(is-equal (* '2pi 'nu ('t - ('x / 'V)))
+           ((wave-phase 'nu 'V) 'x 't)) 
+    </code></pre>
+
+    <h1>
+        Phase difference
+    </h1>
+
+    <p>
+        calculate the phase difference between the vibration
+        and some wave at time t = x / v
+        as a function of the ratio of the frequencies
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((phase-difference x v nu V) ratio)
+  (((internal-phase (ratio * nu) v) x)
+    - ((wave-phase nu V) x (x / v)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(is-equal (* '2pi 'nu ((('ratio - 1) * ('x / 'v)) + ('x / 'V)))
+          ((phase-difference 'x 'v 'nu 'V) 'ratio)) 
+    </code></pre>
+
+    <p>
+        state the general ratio of frequencies that keeps
+        the vibration of the particle in phase with some wave of velocity V
+        in terms of the velocity of the particle
+    </p>
+
+    <script>
+     const solves = (a, f) => emmy.eq(emmy.simplify(f(a)),0)
+                            ? emmy.mul(emmy.symbol("root:"), a)
+                            : "does not solve"
+    </script>
+
+    <pre><code class="language-klipse-eval-js">
+(define (phase-ratio v V) (1 - (v / V))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(solves (phase-ratio 'v 'V)
+        (phase-difference 'x 'v 'nu 'V)) 
+    </code></pre>
+
+    <p>
+ the Energy of the particle for the observer
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (Ev E0 gamma) (E0 * gamma)) 
+    </code></pre>
+
+    <p>
+        we assume the deBroglie wave has the frequency: energy divided by Planck's constant.
+        reminder: this relation holds in every frame of reference,
+        especially for the observer who is not in the rest frame.
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (nu Ev) (Ev / 'h)) 
+    </code></pre>
+
+    <p>
+        now that nu is set, calculate the physically viable ratio of the frequencies
+        in terms of beta
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (physical-ratio beta)
+  ((nu_one (nu_naught 'E0) (gamma beta))
+   / (nu (Ev 'E0 (gamma beta))))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(is-equal (1 - ('beta ^ 2))
+          (physical-ratio 'beta)) 
+    </code></pre>
+
+    <p>
+        state, in terms of the particle velocity beta,
+        the value of the physical phase-velocity V
+        that keeps the vibration and the deBroglie wave in phase
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (phase-velocity beta) ('c / beta)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(solves (phase-velocity 'beta)
+  (lambda (V) ((physical-ratio 'beta)
+               - (phase-ratio (vp 'beta) V)))) 
+    </code></pre>
+
+    <p>
+note: the phase-velocity is always greater than the speed of light.
+It is independent of the position x and the mass of the particle
+    </p>
+
+    <p>
+the relativistic momentum is defined as
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define (p m v gamma)
+  (* m v gamma)) 
+    </code></pre>
+
+    <p>
+calculate the deBroglie wavelength (by dividing the phase-velocity by the frequency)
+and show that it indeed is h divided by the momentum
+    </p>
+
+    <pre><code class="language-klipse-eval-js">
+(define de-broglie-wavelength
+  ((phase-velocity (beta 'v))
+    / (nu (Ev (E0 'm) 'gamma)))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(is-equal ('h / (p 'm 'v 'gamma))
+           de-broglie-wavelength) 
+    </code></pre>
+
+    <p>
+        personal note: one can see this upside down. V and nu define not only the deBroglie phase wave but also a standing wave (standing vibration). and the intersection of the two waves gives the trajectory of the particle (and hence its velocity v). Intersection meaning the points where the phase of the wave and the sine-part of the standing vibration-wave have the same value. The mass of the particle is then given by the deBroglie-wavelength and the v. Mass is thus a constant of the motion, the same value in every frame.
+    </p>
+
+<h1>Appendix: some formulas to test the Scheme compiler</h1>
+
+    <pre><code class="language-klipse-eval-js">
+((1 / 2) / 2) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (1 / 2)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (((2 / 3) - 4) * 5)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(2 ^ 3) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ 1 (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((sin ^ 2) (314 / 100)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((cos (sin 0)) + (((2 / 3) - 4) * (5 ^ 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(+ (cos (sin 0)) (* (- (/ 2 3) 4) (expt 5 2))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * (cos 0)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * cos) 0) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(cos 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((3 * (sin ^ 2)) 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((D (3 * (sin ^ 2))) 'x) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define value 6) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + value) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define (funame x) (x + 1)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(funame 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(define ((ffuname x) y) (x + y)) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+
+((ffuname 4) 5) 
+    </code></pre>
+    <pre><code class="language-klipse-eval-js">
+(define (fulet x) (let ((y 1)) (+ x y))) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(fulet 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(1 + 1/2) 
+    </code></pre>
+    <script src="https://kloimhardt.github.io/blog/js/emmy.js/build/emmy_bundle.js">
+    </script>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = emmy[name];
+         return name;
+     }
+    </script>
+
+    <!--
+         The following compiler is distilled from the "Emmy as JS part (5)" post. It should in this form enter in part 6 which is still based on sicmutils, but the mathfunctions need refactoring from regexps to simple replacements. I added support for (lambda (x)) in comparison to part 5 and a view symbols ("sqrt", "asin", "eq").
+    -->
+
+    <script>
+var symbol = emmy.symbol;
+
+var specialchars =
+[["_SYMBOL_$1", /\'(\w+)/g],
+["[ / $1 $2 ],", /(\d+)\/(\d+)/g],
+["$1_$2", /(\w+)\-(\w+)/g]];
+
+var mathfns =
+[["div", /\//g],
+["mul", /\*/g],
+["sub", /\-/g],
+["add", /\+/g],
+["expt", /\^/g]]
+
+mathfns.map(x=> x[0]).map(loadEnv);
+
+var replaceMath = (txt) =>
+specialchars.concat(mathfns)
+.reduce((s,r) => s.replace(r[1],r[0]), txt);
+
+var swapFirst = (j) =>
+j.constructor == Array && mathfns.map(x=> x[0]).includes(j[1])
+? [j[1], j[0]].concat(j.slice(2)).map(swapFirst)
+: j.constructor == Array
+? j.map(swapFirst)
+: j;
+
+var insertCommas = (txt) =>
+txt.replace(/(\w+)/g,'"$1",')
+.replace(/\,\s+\]/g," ]");
+
+var makeBrackets = (txt) =>
+txt.trim()
+.replace(/\(/g,"[ ")
+.replace(/\)/g," ],")
+.replace(/,$/,"");
+
+var textToJson = (txt) =>
+insertCommas(replaceMath(makeBrackets(txt)));
+
+var drv = emmy.D;
+
+var _replaceD = (j) =>
+j.constructor == Array
+? j.map(replaceD)
+: j == "D" ? "drv" : j;
+
+replaceD = _replaceD;
+
+["to_infix", "simplify"].map(loadEnv);
+
+var preAmble = (j) =>
+j[0] != "define"
+? ["to_infix", j]
+: j;
+
+var _modifyJson = (j) => preAmble(replaceD(swapFirst(j)));
+var modifyJson = _modifyJson;
+
+var makeFun = (j, callBack) =>
+"var " + j[1][0] + " = (" + j[1].slice(1) + ") => "
++ callBack(j[2]) +";";
+
+var makeFunFun = (j, callBack) =>
+"var " + j[1][0][0] + " = (" + j[1][0].slice(1) + ") => "
++ "(" + j[1].slice(1) +") => " + callBack(j[2]) + ";";
+
+var smap = (f, v) =>
+v.length === 1
+? f(v[0]) +";"
+: f(v[0]) +"; "  + smap(f, v.slice(1));
+
+var makeLet = (j, callBack) =>
+"{" + smap((l) => "let " + l[0] + " = " + callBack(l[1]), j[1])
++ " return " +  callBack(j[2]) + "; }";
+
+var _jsonToJs = (j) =>
+j.constructor == Array && j[0] === "let"
+? makeLet(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+&& j[1][0].constructor == Array
+? makeFunFun(j, jsonToJs)
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == Array
+? makeFun(j, jsonToJs)
+: j.constructor == Array && j[0] === "lambda"
+? "(" + j[1] + ") => " + jsonToJs(j[2])
+:j.constructor == Array && j[0] === "define"
+&& j[1].constructor == String
+? "var " + j[1] + " = " + jsonToJs(j[2]) + ";"
+:j.constructor == String && j.substring(0, 8) == "_SYMBOL_"
+? 'symbol("' + j.substring(8, j.length) + '")'
+:j.constructor == Array
+? jsonToJs(j[0]) + "("  +  j.slice(1).map(jsonToJs) + ")"
+: j;
+
+var jsonToJs = _jsonToJs;
+
+var expressionToJs = (expr) =>
+jsonToJs(modifyJson(JSON.parse(textToJson(expr))));
+
+var literal_function = emmy.literal_function;
+
+["sin", "cos", "velocity", "dot_product",
+"up", "Gamma", "compose", "sqrt", "asin", "eq"].map(loadEnv); null;
+    </script>
+
+    <script>
+     function splt(x) {
+         let y = x.split("\n");
+         return [y.slice(0,-2).join(" "),y[y.length - 2]];
+     }
+     var oldEval = window.eval;
+     var newEval = (txt) =>
+         txt.substr(0, 2) === ";("
+         ? expressionToJs(txt.substr(1))
+         : txt[0] === "(" && txt[txt.length - 1] != " "
+         ? textToJson(txt)
+         : txt[0] === "("
+         ? oldEval(expressionToJs(txt))
+         : txt[txt.length-1] === "}"
+         ? oldEval(splt(txt)[0] +
+                   "return " +
+                   expressionToJs(splt(txt)[1]) +"}")
+         : txt[txt.length - 1] != ";"
+         ? "Add ; to JS: " + txt
+         : oldEval(txt);
+     window.eval = newEval;
+    </script>
+
+<script src="https://unpkg.com/klipse@7.11.4/dist/klipse_plugin.min.js"></script>
+
+</body>
+</html>
