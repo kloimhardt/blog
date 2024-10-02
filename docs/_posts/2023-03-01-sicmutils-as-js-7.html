@@ -32,7 +32,7 @@ categories: Software
 <body onload = "loadKlipse();">
     <p>
         (This post is part of a series, all with the same title)
-        (it does not use Emmy but the older sicmutils library)
+        (This post does not use Emmy but, as a legacy, the older sicmutils library which, however does not differ for the purposes at hand)
     </p>
 
     <h1>Executable examples of the SICMechanics book within an HTML page</h1>
@@ -42,18 +42,18 @@ categories: Software
     </p>
 
     <p>
-        The according html-file with the original Scheme examples is embedded below as an IFrame.</p>
+        The according html-file with the original Scheme examples is embedded below as an IFrame. (for technical reasons an older version of that file, that is)</p>
 
-    <pre>&lt;iframe id="book-part1" sandbox="allow-same-origin" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" scrolling="no"&gt;&lt;/iframe&gt;</pre>
+    <pre>&lt;iframe id="book-part1" sandbox="allow-same-origin" src="/blog/html/sicmutils-as-js-book-part1-old.html" width="600" height="100" scrolling="no"&gt;&lt;/iframe&gt;</pre>
 
     <iframe id="book-part1" sandbox="allow-same-origin"
-            src="/blog/html/sicmutils-as-js-book-part1.html"
+            src="/blog/html/sicmutils-as-js-book-part1-old.html"
             width="735" height="100"
             scrolling="no">
     </iframe>
 
     <p>
-        <a href="/blog/html/sicmutils-as-js-book-part1.html">Click here</a> to see the full html page with the examples executed online. We also mention that they can be viewed as a <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/sicm-book-vscheme-part1.org">visual version in clj-tiles</a>.
+        <a href="/blog/html/sicmutils-as-js-book-part1.html">Click here</a> to see the full html page (new version) with the examples executed online. We also mention that they can be viewed as a <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/sicm-book-vscheme-part1.org">visual version in clj-tiles</a>.
    </p>
 
    <p>
@@ -255,7 +255,7 @@ var _COLON_pi = pi;
 </p>
 
    <p>
-       [1] To build sicmutils as JavaScript library, follow the instrunctions of its <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">demo directory</a>. The command <code>shadow-cljs release sicm-browser</code> is used. There is one additonal thing to do before you use this command: you need to change the compiler-options in <code>shadow-cljs.edn</code> from <code>:advanced</code> to <code>:simple</code>. The resulting js-file size is 6MB, which means it can take up some downlload time in our html-file.
+       [1] To build this (old version-) sicmutils as JavaScript library, follow the instrunctions of its <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">demo directory</a>. The command <code>shadow-cljs release sicm-browser</code> is used. There is one additonal thing to do before you use this command: you need to change the compiler-options in <code>shadow-cljs.edn</code> from <code>:advanced</code> to <code>:simple</code>. The resulting js-file size is 6MB, which means it can take up some downlload time in our html-file.
    </p>
 
 </body>
