@@ -1,0 +1,262 @@
+---
+layout: post
+title:  "Draft Emmy as JavaScript library (7)"
+date:   2023-03-02 06:00:01 +0100
+categories: Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/klipse@7.11.4/dist/codemirror.css">
+    <style>
+     .CodeMirror { max-height: 150px; }
+    </style>
+
+    <script>
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js',
+         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
+         codemirror_options_in: {
+             mode: 'scheme'
+         }
+     };
+    </script>
+
+    <script src="/blog/js/blog_helper.js"></script>
+    <script>setKlipseUrl("https://unpkg.com/klipse@7.11.4/dist/klipse_plugin.min.js");</script>
+
+</head>
+
+<body onload = "loadKlipse();">
+    <p>
+        (This post is part of a series, all with the same title)
+        (it does not use Emmy but the older sicmutils library)
+    </p>
+
+    <h1>Executable examples of the SICMechanics book within an HTML page</h1>
+
+    <p>
+        Our little Scheme syntax to JS compiler (developed in the last few blog posts) is now in a state to run all 109 examples of the first part of the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICMechanics book</a>.
+    </p>
+
+    <p>
+        The according html-file with the original Scheme examples is embedded below as an IFrame.</p>
+
+    <pre>&lt;iframe id="book-part1" sandbox="allow-same-origin" src="/blog/html/sicmutils-as-js-book-part1.html" width="600" height="100" scrolling="no"&gt;&lt;/iframe&gt;</pre>
+
+    <iframe id="book-part1" sandbox="allow-same-origin"
+            src="/blog/html/sicmutils-as-js-book-part1.html"
+            width="735" height="100"
+            scrolling="no">
+    </iframe>
+
+    <p>
+        <a href="/blog/html/sicmutils-as-js-book-part1.html">Click here</a> to see the full html page with the examples executed online. We also mention that they can be viewed as a <a href="https://kloimhardt.github.io/cljtiles.html?org=https://raw.githubusercontent.com/kloimhardt/clj-tiles/master/public/org/sicm-book-vscheme-part1.org">visual version in clj-tiles</a>.
+   </p>
+
+   <p>
+       The html file is not only meant to be changed on-line, but also to be read as source code for both the Scheme examples and their tailor-made syntax compiler. This blog post helps with that reading, giving an outline of the technical implementation of that file. However, it is not the goal of this post to explain Theoretical Physics, which is the specific topic of SICM (and its showcase being the purpose of the html-file).
+   </p>
+
+   <p>
+       Every example in that html file is a <a href="https://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html">Klipse</a> snippet. To give a simple preview, we import a small JavaScript snippet from the source.</p>
+
+   <pre id="one-2-3"></pre>
+   <script>
+    addSnippet('book-part1','one-2-3');
+   </script>
+
+   <p>You can modify every piece of code directly in the page to immediate effect, maybe change 3 to 4 directly above and see what happens.
+   </p>
+
+       <p>We already mention here that even the Scheme syntax compiler is just such a JavaScript snippet. In fact, the compiler does exist only as Klipse snippet within an html file. There is no other source file for it.
+   </p>
+
+    <h1>Header of the HTML file</h1>
+    <p> Lets start with the file content. In the header we do four things: (1) prepare for mobile devices (2) load the stylesheet for <a href="https://codemirror.net">Codemirror</a>, (3) configure Klipse to allow execution of JavaScript (4) set the Klipse+Codemirror mode to Scheme-Language code formatting.
+    </p>
+    <p>
+Note that these are all just settings and no JavaScript code is executed just yet. In fact, Klipse+Codemirror is only executed in the footer of the html file.
+    </p>
+
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="https://unpkg.com/klipse@7.11.4/dist/codemirror.css"&gt;
+
+        &lt;script&gt;
+     window.klipse_settings = {
+         selector_eval_js: '.language-klipse-eval-js',
+         selector_eval_scheme: '.language-klipse-scheme, .language-eval-scheme',
+         codemirror_options_in: {
+             mode: 'scheme'
+         }
+     };
+        &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;</pre>
+
+    <p>
+        Then <a href="https://github.com/sicmutils/sicmutils">Sicmutils</a> is loaded as a JavaScript library.
+    </p>
+
+    <pre>&lt;script src=&quot;https://kloimhardt.github.io/blog/js/main.js&quot;&gt;&lt;/script&gt;</pre>
+
+    <script src="/blog/js/main.js"></script>
+
+    <p>
+        This specific library was compiled according to the instructions found <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">here</a>[1].
+    </p>
+
+    <p>
+Next comes a helper function for loading variables from the Sicmutils environment.
+    </p>
+
+    <pre>&lt;script&gt;
+    var loadEnv = (name) => {
+    window[name] = sicmutils.env[name];
+    return name;
+    }
+&lt;/script&gt;</pre>
+
+    <script>
+     var loadEnv = (name) => {
+         window[name] = sicmutils.env[name];
+         return name;
+     }
+    </script>
+
+    <h1>The rest of the HTML file</h1>
+
+    <p>Next comes a speciality: in order to activate the Scheme-Language formatting of Codemirror, we need to execute once some code using Klipse's very own Scheme interpreter (yes, it also has one, albeit of no further use). Consequently, <code>class="language-klipse-scheme"</code> is never used  again afterwards in the file.</p>
+
+    <pre>    &lt;pre id="klipse-scheme"&gt&lt;code class="language-klipse-scheme"&gt
+#t
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre id="klipse-scheme"></pre>
+    <script>
+     addSnippet('book-part1','klipse-scheme');
+    </script>
+
+    <p></p>
+
+    <p>Then our little Scheme syntax compiler is added, it is just another Klipse JavaScript snippet. Here we show the first lines, it has in total about 160 lines of code only. It is tailor-made (e.g. no if-then clause) and depends heavily on Sicmutils' functionality.</p>
+
+    <pre>    &lt;pre id="compiler"&gt;&lt;code class="language-klipse-eval-js"&gt;
+["pi", "_pi", "state__GT_t"].map(loadEnv);
+
+var symbol = cljs.core.symbol;
+var _COLON_pi = pi;
+...
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre id="compiler"></pre>
+    <script>
+     addSnippet('book-part1','compiler');
+    </script>
+
+    <p>The code just loaded exposes the function <code>expressionToJs</code>. We patch the JavaScript <code>eval</code> function to invoke <code>expressionToJs</code> whenever some code starts with a round bracket <code>(</code>.</p>
+
+    <pre>&lt;script&gt;
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
+         txt[0] === "("
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
+&lt;/script&gt;</pre>
+
+    <script>
+     var _2_eval = window.eval;
+     var _3_eval = (txt) =>
+         txt[0] === "("
+         ? _2_eval(expressionToJs(txt))
+         : _2_eval(txt);
+     window.eval = _3_eval;
+    </script>
+
+    <p>
+        Finally, we want to try out our brand new Scheme compiler. 
+    </p>
+
+    <pre>    &lt;pre id="prefix-123"&gt&lt;code class="language-klipse-eval-js"&gt
+(+ 1 2 3) 
+    &lt;/code&gt;&lt;/pre&gt</pre>
+
+    <pre id="prefix-123"></pre>
+    <script>
+     addSnippet('book-part1','prefix-123');
+    </script>
+
+    <p>
+        Also this Scheme code can be changed to immediate effect. Maybe change the 3 to 4. Make sure that the <code>blank</code> character is at the end of a Scheme code snippet (omitting it is a feature that turns off compilation).
+    </p>
+
+    <p>
+        Next, let's calculate the cosine of pi, which results in minus one.
+    </p>
+
+    <pre id="cos-pi"></pre>
+    <script>
+     addSnippet('book-part1','cos-pi');
+    </script>
+
+    <p>
+        Now, modify the compiler itself. Go up and change <code> _COLON_pi = pi;</code> to <code> _COLON_pi = 3.0;</code>. Then come back and add another blank to the snippet<code>(cos :pi)</code> to see that the result indeed changes (to a wrong value).
+    </p>
+
+    <p>
+        As noted above, we do not use Klipse in its own Scheme mode, but in (eval-patched) JavaScript mode. You could easily write some JavaScript in the above (or any) box, just make sure not to start with a <code>(</code>. Remember, the <code>(</code> triggers our syntax compiler -- the one that you just put a pi bug into (fortunatelly only locally and until you browser-reload this blog).
+    </p>
+
+    <p>
+        What follows is a bit more of an interesting example. The code is not manually written. Like the Scheme compiler itself, it is automatically imported from the IFRame of the <a href="https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html">source html</a> above. The <code>addSnippet</code> command used to import code is demonstrated in the previous blog.
+    </p>
+
+    <pre id="polar2d"></pre>
+    <script>
+     addSnippet("book-part1", "polar2d");
+    </script>
+
+    <p>
+        To finish up, we execute another example of the SICMechanics book, an even juicier one.
+    </p>
+
+    <pre id="define-L-equations"></pre>
+    <script>
+     addSnippet("book-part1", "define-L-equations");
+    </script>
+
+    <pre id="define-L-central-rectangular"></pre>
+    <script>
+     addSnippet("book-part1", "define-L-central-rectangular");
+    </script>
+
+
+    <pre id="calc-L-eqs-central-rect"></pre>
+    <script>
+     addSnippet("book-part1", "calc-L-eqs-central-rect");
+    </script>
+
+    <p>The footer of the html file finally loads Klipse.</p>
+
+   <pre>
+&lt;script src="https://unpkg.com/klipse@7.11.4/dist/klipse_plugin.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>
+   This ends the exposition.
+</p>
+
+   <p>
+       [1] To build sicmutils as JavaScript library, follow the instrunctions of its <a href="https://github.com/sicmutils/sicmutils/tree/main/demo">demo directory</a>. The command <code>shadow-cljs release sicm-browser</code> is used. There is one additonal thing to do before you use this command: you need to change the compiler-options in <code>shadow-cljs.edn</code> from <code>:advanced</code> to <code>:simple</code>. The resulting js-file size is 6MB, which means it can take up some downlload time in our html-file.
+   </p>
+
+</body>
+</html>

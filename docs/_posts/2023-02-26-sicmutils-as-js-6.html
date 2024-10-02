@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Draft Emmy as JavaScript library (6)"
+title:  "Emmy as JavaScript library (6)"
 date:   2023-02-26 06:00:01 +0100
 categories: Software
 ---
@@ -279,23 +279,23 @@ var literal_function = emmy.literal_function;
     </p>
 
     <pre><code class="language-klipse-eval-js">
-;(define (f-1 x) x)
+;(define (f-1-2 x) x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 var _specialchars =
-[["$1", /\:(\w+)/g],
+[["", /\:/g],
  ["symbol_$1", /\'(\w+)/g],
  ["$1_dot_$2", /(\d+)\.(\d+)/g],
  [" minus_$2", /(\s+)\-(\w+)/g],
- ["$1_$2", /(\w+)\-(\w+)/g],
+ ["$1_", /(\w+)\-/g],
  ["[ / $1 $2 ],", /(\w+)\/(\d+)/g]];
 
 var specialchars = _specialchars;
 
 var post_specialchars =
-[["$1.$2", /(\d+)_dot_(\d+)/g],
-["-$1", /minus_(\w+)/g]]
+[["$1.$2", /(\d+)_dot_(\d+)/],
+["-$1", /minus_(\w+)/]]
 
 var _replaceD = replaceD;
 
@@ -309,7 +309,7 @@ j.constructor == String && j == "D"
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
-;(define (f-1 x) x)
+;(define (f-1-2 x) x)
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
@@ -375,7 +375,7 @@ var modifyJson = (j) => _modifyJson(letFlat(edgeCases(j)));
 
     <pre><code class="language-klipse-eval-js">
 var __specialchars =
-[["$1__gt_$2", /(\w+)->(\w+)/g]].concat(specialchars);
+[["__gt_", /->/g]].concat(specialchars);
 
 var specialchars = __specialchars;
     </code></pre>
@@ -436,13 +436,18 @@ j.constructor == Array && j[0] === "lambda"
 
     <pre><code class="language-klipse-eval-js">
 var _post_specialchars =
-    [["symbol_$1^$2", /symbol_(\w+)expt(\w+)/]].concat(post_specialchars);
+    [["symbol_$1^$2", /symbol_(\w+)expt(\w+)/],
+     ["$1e-$2", /(\d+)e_(\d+)/]].concat(post_specialchars);
 
 var post_specialchars = _post_specialchars;
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
 ('v_r^x ^ 4) 
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+(3 * 1.0e-11) 
     </code></pre>
 
     <h1>Examples in the SICMechanics book</h1>
