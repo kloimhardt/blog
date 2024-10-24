@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html>
+    <a href="https://kloimhardt.github.io/blog/html/emmysquint.html">Click and open browser Console</a>
+
+    <script type="importmap">
+     {
+         "imports": {
+             "squint-cljs": "https://unpkg.com/squint-cljs@0.6.88/index.js",
+             "squint-cljs/core.js": "https://cdn.jsdelivr.net/npm/squint-cljs@0.4.81/src/squint/core.js",
+             "emmy.js/main.js": "https://cdn.jsdelivr.net/npm/@littleredcomputer/emmy.js@0.1.0-SNAPSHOT.3/build/main.js"
+         }
+     }
+    </script>
+    <script type="module">
+     import * as squint_core from 'squint-cljs/core.js';
+     var sres = squint_core.reduce(squint_core._PLUS_, [1, 1]);
+     console.log("results in the number 2")
+     console.log(sres);
+    </script>
+
+    <script type="module">
+     import * as emmy_main from 'emmy.js/main.js';
+     var eres = emmy_main.pi;
+     console.log("results in undefined")
+     console.log(eres);
+    </script>
+
+    <script type="module">
+     var squint = await import("squint-cljs")
+     console.log(squint.compileString("(reduce + [1 1])"))
+     // => squint_core.reduce(squint_core._PLUS_, [1, 1]);
+    </script>
+
+</html>
