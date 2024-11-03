@@ -22,7 +22,7 @@
         This html-file covers the first chapter of the SICM book [1], using the great Emmy computer algebra system [2]. The examples are also available via visual programming [3].  Further details can be found in part 7 of my blog series [4].
     </p>
 
-    <p>[1] <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICM book</a> </p>
+    <p>[1] <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html">SICM book</a> <a href="https://tgvaughan.github.io/sicm"> (unofficial version with nice rendering) </a> </p>
     <p>[2] <a href="https://github.com/mentat-collective/emmy">Emmy</a> </p>
     <p>[3] <a href="https://kloimhardt.github.io/cljtiles.html?page=SICM001">Visual programming with clj-tiles</a> </p>
     <p>[4] <a href="https://kloimhardt.github.io/blog/software/2023/03/01/sicmutils-as-js-7.html">Blog post</a></p>
@@ -240,6 +240,13 @@ var get = (obj, field) => obj[field.toString()]; null;
     (* 'R (sin 'phi))) 
     </code></pre>
 
+    <p>Remember that the generated Javascript is shown by adding a semicolon at the beginning</p>
+    <pre id="polar2d"><code class="language-klipse-eval-js">
+;(up (* 'R (cos 'phi))
+    (* 'R (sin 'phi)))
+    </code></pre>
+
+
     <h1>1 Lagrangian Mechanics</h1>
 
     <h2>1.4   Computing Actions</h2>
@@ -312,6 +319,10 @@ var get = (obj, field) => obj[field.toString()]; null;
    (up sin cos square)
     0.0 10.0)
   -2.0 1.0) 'value)
+    </code></pre>
+
+    <pre><code class="language-klipse-eval-js">
+((make-path 0 0 10 5 (up -1 2 -3 4)) 6) 
     </code></pre>
 
     <pre><code class="language-klipse-eval-js">
