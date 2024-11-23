@@ -18,7 +18,7 @@ Der Rettungsanker aus dem ganzen Wirrwarr von Traum und Ironie liegt eben darin,
 Ein weiterer Rettungsanker ist, dass Moderne und Postmoderne in ein und derselben Person koexistieren. Ein Märchen kann an einem Tag unverstanden als Märchen bleiben, am nächsten Tag als moderne Handlungsanleitung gelesen werden.
 
 ## Das Märchen
-Die Sieben Zwerge feiern fröhlich vor sich hin. Als es Zeit wird machen sich alle auf ihren Lebensweg, ein harter Kern kommt immer wieder mal in die Hütte, jetzt nur mehr Sommerhütte, und hält die Fahne hoch.
+Die Siebezehn-Plus Zwerge feiern fröhlich vor sich hin. Als es Zeit wird machen sich alle auf ihren Lebensweg, ein harter Kern kommt immer wieder mal in die Hütte, jetzt nur mehr Sommerhütte, und hält die Fahne hoch.
 
 Dem ein oder anderen seine Leber streikt mit der Zeit, aber er telefoniert regelmässig. Die andern finden das bissl feig, weil birschtln via Draht nicht wirklich pirschtln. Wir verlassen hier unsere Kernzwerge und folgen dem Glück eines anderen.
 
@@ -40,11 +40,13 @@ Einige Zwerge waren begeistert: juhuuu, prischtln. Jedoch kam, das Schneewittche
 
 Einem Zwerg, dem einzigen mit langen Haaren, viel plötzlich ein, dass er öfter versucht hatte mit dem Prinz zu telefonieren, aber nie durchkam. Auch hatte man in den Jahren immer Einladungen zu den Sommerhüttenfesten geschickt, es hatte aber konsequente Funkstille von der Kanzlei aus geherrscht.
 
-Als man die Sache so beim nächsten Fässchen durchwog, klingelte das Telefon: "Also hier gibts erstmal zwei Möglichkeiten", platze es herein, "entweder alle sehen die Sache als netten Schwank ohne weitere Aufklärung, oder wir wollen dem Spiel auf den Grund gehen."
+Als man die Sache so beim nächsten Fässchen durchwog, klingelte das Telefon: "Also hier gibts erstmal zwei Möglichkeiten", platze es knackend über die Muschel, "entweder alle sehen die Sache als netten Schwank ohne weitere Aufklärung, oder wir wollen dem Spiel auf den Grund gehen."
 
-"Telefon gilt nicht. Der soll", ein schwerer Humpen fuhr zu Munde "schrüberschieben, sssubito."
+"Telefon gilt nicht. Du solltest", ging es zurück durchs Kabel "schrüberschieben, sssubito." Er zog den Hörer zum Humpen dafür diesen zum Munde, während die andern über das Erlauschte nachdachten.
 
-"Naja, die Sache aufzuklären wär an Sich kein Problem, weil ich bin nächste Woche beim Steering in der Kanzlei dabei, da führt der Prinz den Vorsitz, da könnt ich nachfragen was Sache ist".
+"Ich weiss, ich weiss, es ist ...", den ganzen Rest verschluckte die alte Kupferleitung für immer.
+
+"Naja, unrecht hat er nicht und die Sache aufzuklären wär an Sich kein Problem, weil ich bin nächste Woche beim Steering in der Kanzlei dabei, da führt der Prinz den Vorsitz, da könnt ich nachfragen was Sache ist".
 
 "Neeeeiiiiiin", kam es da aus der bisher stillsten Ecke, "meine Frau wär fuchsteufelswild wenn sie draufkäm' dass ich ihre Überraschungen im Vorhinein kennte, oh là là, der kommt in Teufels Küche wenn alles offen im Meeting besprochen wird. Die Feier ist eine Überraschung, schon vergessen?"
 
@@ -52,9 +54,9 @@ Da ging ein Murmeln und Bärtezupfen los. Man könne vielleicht in einem Nebenge
 
 "Irgendwie sind wir jetzt zu Komplizen vom Schneewittchen geworden", meinte einer. Der Langhaarzwerg antwortete: "was mir gar nicht gefällt, weil ich hab nie Antwort gekriegt, trotz oftiger Anfragen, eigentlich sollten die für mich gestorben sein, und jetzt soll ich plötzlich Komplize einer Geheimaktion sein, wo ich nichtmal den Mund aufmachen dürfte?"
 
-Aus dem Telefon drang es dringlich: "Falls das Ganze als Schwank aufgefasst werden soll, müssen alle damit fein sein, es geht nicht dass sich alle einig sind mit Schwamm drüber und runter den Fluss und Fässer auf und einer hat dann doch ein Problem. Alle müssen fein mit dem Schwank sein, keiner darf dabei ein ungutes Gefühl haben".
+Aus dem doch wieder tüchtigen Telefon drang es dringlich: "Falls das Ganze als Schwank aufgefasst werden soll, müssen alle damit fein sein, es geht nicht dass sich alle einig sind mit Schwamm drüber und runter den Fluss und Fässer auf und einer hat dann doch ein Problem. Alle müssen fein mit dem Schwank sein, keiner darf dabei ein ungutes Gefühl haben".
 
-"Schlaumeier", führte der Stämmigste gerade wieder den Humpen zu Munde, "so übers Telefon, das wirst du mille volte büssen!"
+"Schlaumeier", führte der Stämmige gerade wieder den Humpen zu Munde, "so übers Telefon, das wirst du mille volte büssen!"
 
 Einige wiegten die Köpfe über dem Prospekt einer saftigen Strafaktion. Ein Exempel in Punkto Anwesenheitspflicht war sicher überlegenswert.
 
@@ -66,6 +68,50 @@ Das machte die Sache noch verwickelter. Alle wissen davon und keiner darf drübe
 
 "Den Mund halten! Ha! Gestorben!"
 
-Und was war wenn der Vorsitzende wirklich nur über einen Vorwand im Wirtshaus landet obwohl er eigentlich in Wahrheit keine Zeit hätte und lieber auf dem Sofa rasten, aber um der Ruhe halber sich halt doch trotz unvermeidlichen Verdachts reinlegen hat lassen?
+... ist auch bis heute niemand aber was wär wenn der Vorsitzende wirklich nur über einen Vorwand im Wirtshaus landet obwohl er eigentlich in Wahrheit keine Zeit hätte und lieber auf dem Sofa rasten, aber um der Ruhe halber sich halt doch trotz unvermeidlichen Verdachts reinlegen hat lassen?
 
-Verzwickt, Verzwickt, zum Bartraufen. Man öffnete, naja, nicht das nächste Fenster und liess die Sache (fast) auf sich beruhen. Fürs Erste. Schlaumeier hin oder her, das "Alle müssen fein mit dem Schwank sein, keiner darf dabei ein ungutes Gefühl haben" hallte in ihnen nach.
+"Bon, Bon", kam es aus der stillen Ecke "das ist schon richtig so bei Geburtstagen, man möchte doch überraschen, ein bischen den Spass komplettieren, die Feier zu etwas besonderem machen. Wir sind ja keine Schweizeruhren."
+
+"Aber vielleicht will er gar nicht aus seiner Kanzlei raus!"
+
+"Ah oui, sesa, drum brauchts auch die Surprisation, sonst gibts keine Fete."
+
+Da war wieder das Telefon: "Also ich find die Zeiten von Aprilscherz und Schweigeauflagen sind wirklich vorbei."
+
+"Ganz konträr, ein bischen Jux wollen wir uns schon machen."
+
+"Telefon gilt nicht!"
+
+"Ich versteh Euch schlecht an meinem Ende der Leitung, es wär besser ich würd bei Euch sitzen."
+
+"Finalmente gibt er's zu, wann kommst endlich wieder mal vorbei?"
+
+"Mich wird man länger nicht sehen."
+
+"Was soll das heissen, ich hab einen viel weiteren Weg als du. Wenn das jeder machen würd, einfach mit Telefon"
+
+"Ja, dass du einfach immer nur auf der Leitung redest lässt nicht nur meine Haare ungrad wachsen, sondern allen die noch welche haben. Wichtig ist schon auch dass die Leute echt da sind."
+
+"Mir geht's grad nicht so gut."
+
+"Das kannst dann so nicht lassen, avanti zum Dottore, lass dich g'sunduntersuchen, wer weiss was da ist."
+
+"Naja, irgendwie hab ich eh einen Verdacht wo bei mir der Schuh drückt."
+
+"Verdacht, Verdacht. Da muss g'scheit diagnostiziert werden, empirische Daten auf den Tisch."
+
+"Na gut, dann erzähl ich halt wo's bei mir hakt, aber es muss ein Geheimnis unter uns bleiben."
+
+Und so erzählte der Telefonzwerg von seinen ganzen Wehwehchen über die man nicht gern spricht, aber was sollte er auch machen, die Leute wundern sich ja weshalb er nie dabei war in letzter Zeit.
+
+"Aber bitte erzählt's nicht rum, ich will dass die Sachen unter uns bleiben", scholss er.
+
+"Wegen der paar Sachen! Das ist jetzt kein Grund ganz weg zu bleiben. Musst ja nicht das Fass allein aussaufen, bleibt uns mehr, umso besser."
+
+"Und vor allem, was soll ich nächste Woche in der Kanzlei sagen? Ich nehm an du bist Flussabwärts auch nicht dabei und da wird man fragen warum. Jetzt bin ich Komplize bei einem Doppelgeheimnis."
+
+"Anrufen werd ich selbst in der Kanzlei. Du solltest bitte nicht von dir aus über mich rumerklären."
+
+"Da kommst du nie durch, habs ja oft probiert wie gesagt. Überhaupt ist diese ganze Geheimnistuerei noch dazu übers Telefon nicht pragmatisch. Wann tauchst du jetzt mal wirklich auf?"
+
+Mitten im Satz kam grad einer vom Platzmachen fürs nächste Fässchen zurück und steuerte seinen Stuhl an. Die Art des Lachens, welches jetzt unvermutet übers Telefon schallte, verwunderte ihn ziemlich und er merkte, dass es die anderen leicht ärgerte: "Die Frage ist unzulässig, denn Komplizen müssen ein Geheimnis für sich bewahren und wenn sie drüber reden ist das gemeiner Missbrauch des geschenkten Vertrauens. Doppelbindung nach Watzlawick". "Oder ein schlechtes Märchen", dachte er sich beim hinsetzen.
