@@ -9,9 +9,9 @@ Ich als alte Snowflake wär gern etwas sophisticateter, aber mein liebster Roman
 
 Nun gibt es eine "Nachschrift zum Namen der Rose". Darin wird erstmal festgestellt, dass "Postmoderne" alles heissen kann und der Manirismus die Postmoderne der Renaissance ist. Postmoderne war immer.
 
-Dann folgt eine Arbeitsdefinition vom "Postmoderne": wir verstehen zwar das Spiel nicht, nehmen es aber ernst, und zwar via Kontext. Wir betten das Spiel ein in Ironie, lesen es als Traum etc., wobei sich das Spiel auch als faktisch ernst rausstellen kann weil es das immer war. Auch kann man den ironischen Diskurs selbst ernst nehmen.
+Dann folgt eine Arbeitsdefinition vom "Postmoderne": wir verstehen zwar das Spiel nicht, nehmen es aber ernst. Wir betten das Spiel ein in Ironie, lesen es als Traum etc., wobei sich das Spiel auch als faktisch ernst rausstellen kann weil es das immer war. Auch kann man den ironischen Diskurs selbst ernst nehmen.
 
-Die Moderne hingegen lehnt einfach alles ab, was sie nicht versteht. Über den Ort des Elektrons kann die Moderne gar nicht reden, weil nicht ernsthaft reden. Die Postmoderne nimmt hi und da an, nur mal für Spass, es hätte einen Ort. Ich bin da ganz Postmodern.
+Die Moderne hingegen lehnt einfach alles ab, was sie nicht versteht. Über den Ort des Elektrons kann die Moderne gar nicht reden, weil nicht ernsthaft reden. Die Postmoderne nimmt hi und da an, nur mal für Spass, es hätte einen Ort. Ich bin da ganz postmodern.
 
 Der Rettungsanker aus dem ganzen Wirrwarr von Traum und Ironie liegt eben darin, dass das Alte nicht negiert wird. Der Ort des Elektrons wird nicht negiert obwohl es an einer Lösung des Rätsels fehlt, entlang welcher Bahn denn das Ding nun wirklich geflogen ist.
 
@@ -68,7 +68,7 @@ Das machte die Sache noch verwickelter. Alle wissen davon und keiner darf drübe
 
 "Den Mund halten! Ha! Gestorben!"
 
-... ist auch bis heute niemand aber was wär wenn der Vorsitzende wirklich nur über einen Vorwand im Wirtshaus landet obwohl er eigentlich in Wahrheit keine Zeit hätte und lieber auf dem Sofa rasten, aber um der Ruhe halber sich halt doch trotz unvermeidlichen Verdachts reinlegen hat lassen?
+... ist bis heute niemand soweit der Erzähler weiss, aber was wäre wenn der Vorsitzende wirklich nur über einen Vorwand im Wirtshaus landet obwohl er eigentlich in Wahrheit keine Zeit hätte und lieber auf dem Sofa rasten, aber um der Ruhe halber sich halt doch trotz unvermeidlichen Verdachts reinlegen hat lassen?
 
 "Bon, Bon", kam es aus der stillen Ecke "das ist schon richtig so bei Geburtstagen, man möchte doch überraschen, ein bischen den Spass komplettieren, die Feier zu etwas besonderem machen. Wir sind ja keine Schweizeruhren."
 
@@ -90,7 +90,7 @@ Da war wieder das Telefon: "Also ich find die Zeiten von Aprilscherz und Schweig
 
 "Was soll das heissen, ich hab einen viel weiteren Weg als du. Wenn das jeder machen würd, einfach mit Telefon"
 
-"Ja, dass du einfach immer nur auf der Leitung redest lässt nicht nur meine Haare ungrad wachsen, sondern allen die noch welche haben. Wichtig ist schon auch dass die Leute echt da sind."
+"Ja, dass du einfach immer nur auf der Leitung redest lässt nicht nur meine Haare ungrad wachsen, sondern allen die noch welche haben. Wichtig ist schon dass die Leidln hult auch da sind, so ist der gute Brauch."
 
 "Mir geht's grad nicht so gut."
 
@@ -104,7 +104,7 @@ Da war wieder das Telefon: "Also ich find die Zeiten von Aprilscherz und Schweig
 
 Und so erzählte der Telefonzwerg von seinen ganzen Wehwehchen über die man nicht gern spricht, aber was sollte er auch machen, die Leute wundern sich ja weshalb er nie dabei war in letzter Zeit.
 
-"Aber bitte erzählt's nicht rum, ich will dass die Sachen unter uns bleiben", scholss er.
+"Aber bitte erzählt's nicht rum, ich will dass die Sachen unter uns bleiben", schloss er.
 
 "Wegen der paar Sachen! Das ist jetzt kein Grund ganz weg zu bleiben. Musst ja nicht das Fass allein aussaufen, bleibt uns mehr, umso besser."
 
@@ -114,4 +114,6 @@ Und so erzählte der Telefonzwerg von seinen ganzen Wehwehchen über die man nic
 
 "Da kommst du nie durch, habs ja oft probiert wie gesagt. Überhaupt ist diese ganze Geheimnistuerei noch dazu übers Telefon nicht pragmatisch. Wann tauchst du jetzt mal wirklich auf?"
 
-Mitten im Satz kam grad einer vom Platzmachen fürs nächste Fässchen zurück und steuerte seinen Stuhl an. Die Art des Lachens, welches jetzt unvermutet übers Telefon schallte, verwunderte ihn ziemlich und er merkte, dass es die anderen leicht ärgerte: "Die Frage ist unzulässig, denn Komplizen müssen ein Geheimnis für sich bewahren und wenn sie drüber reden ist das gemeiner Missbrauch des geschenkten Vertrauens. Doppelbindung nach Watzlawick". "Oder ein schlechtes Märchen", dachte er sich beim hinsetzen.
+Mitten im Satz kam grad einer vom Platzmachen fürs nächste Fässchen zurück und steuerte seinen Stuhl an. Er hatte die Diskussion nicht mitbekommen, weil er die Angewohnheit hatte auf dem Aussenhäuschen die vom publikum eingesendeten kolumnen der radieschenzeitschrift runterzulesen und das hatte sich wiedermal länger hingezogen als erwartet weil er wie so oft vergessen hatte die Kontaktlinsen zu nehmen.
+
+Die Art des Lachens, welches jetzt unvermutet übers Telefon schallte, verwunderte ihn ziemlich und er merkte, dass es die anderen leicht ärgerte: "Die Frage ist unzulässig, denn Komplizen müssen ein Geheimnis für sich bewahren und wenn sie drüber reden ist das gemeiner Missbrauch des geschenkten Vertrauens. Doppelbindung nach Watzlawick". "Oder ein schlechtes Märchen", dachte er sich beim hinsetzen.

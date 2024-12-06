@@ -60,3 +60,66 @@ Der auch dann nicht aufhören wird
 Wenn die Nächte schwarz  
 und lang und schlaflos  
 Und die Tage endlos sind.
+
+---
+Ein zweites hab ich auch noch gefunden:
+
+Grad beim Brucknerhören  
+Bin ich ihm ziemlich verbunden.  
+Er verfehlt immer  
+nur um ein Haarbreit.  
+Drum fühl ich den Schmerz  
+Seiner toten Gedärme.  
+
+Wenn wir alle nur  
+Einen Zahn zulegen könnten,  
+Wenn nötig.  
+Aber wir schaffen’s nicht.  
+Ich erinner mich  
+An meine Schlägerei im Regen  
+An ‘nem Samstag Abend in  
+Der Gasse mit  
+Harry Tabor  
+Seine Augen rollten in  
+Diesem enorm verblödeten  
+Plutzer,  
+Noch ein Schlag,  
+Und er gehörte mir -  
+Ich haute daneben.  
+
+Oder die wunderschöne Frau  
+Die mich besuchte für einen  
+Abend  
+Die auf meiner Couch saß  
+Und mir sagte, sie wäre  
+“Dein, ein Geschenk”  
+Aber ich soff Whiskey,  
+Stolzierte herum,  
+Nahm den Mund voll  
+Über mich  
+Und am Ende  
+Nachdem ich zurückkam  
+Aus der Küche  
+Fand ich sie  
+Nirgends mehr.  
+
+So oft haarscharf daneben,  
+Und dann wieder haarscharf daneben.  
+
+Oh, Bruckner, ich versteh’s!  
+
+Ich höre Bruckner,  
+Grad jetzt und  
+Ich fühle den Schmerz  
+Seiner toten Gedärme  
+Und meiner lebenden  
+Seele.  
+
+Wir alle brauchen  
+Etwas das wir drauf haben,  
+Weisst eh.  
+Wie Unterwassertauchen  
+Oder die Morgenpost  
+öffnen.  
+
+Wer's braucht, [die englische Version](https://www.abruckner.com/editorsnote/BrucknerFiction/poemsbycharlesbuko/).
