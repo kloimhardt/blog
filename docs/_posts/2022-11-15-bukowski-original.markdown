@@ -64,11 +64,11 @@ Und die Tage endlos sind.
 ---
 Ein zweites hab ich auch noch gefunden:
 
-Grad beim Brucknerhören  
-Bin ich ihm ziemlich verbunden.  
+Grad beim Brucknerhören.  
+Bin ihm ziemlich verbunden.  
 Er verfehlt immer  
 nur um ein Haarbreit.  
-Drum fühl ich den Schmerz  
+Ich fühle den Schmerz  
 Seiner toten Gedärme.  
 
 Wenn wir alle nur  
