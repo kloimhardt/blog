@@ -5,7 +5,7 @@ date:   2024-12-30 06:00:01 +0100
 categories: Software
 ---
 ## Intro
-This blog is an excerpt of the talk "Clojure for Java Programmers" [part 1](https://www.youtube.com/watch?v=P76Vbsk_3J0and)  and [part 2](https://www.youtube.com/watch?v=hb3rurFxrZ8). In a nutshell it says: "Clojure is the better Java", which I think is true. Nevertheless, at the end of this blog, I deliver the opinion that this can only be argued in good faith by the creator of Clojure, Rich Hickey.
+This blog is an excerpt of the talk "Clojure for Java Programmers" [part 1](https://www.youtube.com/watch?v=P76Vbsk_3J0and)  and [part 2](https://www.youtube.com/watch?v=hb3rurFxrZ8). It is taken from [the full transcript](https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/ClojureForJavaProgrammers.md). In a nutshell the talk says: "Clojure is the better Java", which I think is true. Nevertheless, at the end of this blog, I deliver the opinion that this can only be argued in good faith by the creator of Clojure, Rich Hickey.
 
 ## Excerpt from: Clojure for Java Programmers
 [0:10] This talk is oriented towards people who program in Java or C or C++. In particular I'm not going to presume any knowledge of Lisp.
@@ -211,7 +211,7 @@ So how do we fake change? We know it's a persistent data structure. I am trying 
 [2-0:40:30] Clojure, I think, is a pretty nice Java library too. All the data structures are written in Java, the atomic update is in Java. You can use it all. I mean when I was building it, I had to test it, and before I had Clojure the language I had Clojure the library.
 
 ## Personal Note
-The talk is from 2012. The year 2025 is different. For example the popular JVM language [Kotlin](https://kotlinlang.org) appeared. Concurrency did not turn out to be the big thing. There is popular [Go](https://go.dev).
+The talk seems to be from 2008. The year 2025 is different. For example the popular JVM language [Kotlin](https://kotlinlang.org) appeared. Concurrency did not turn out to be the big thing. There is popular [Go](https://go.dev).
 
 But here I want to specifically mention two points that make the talk hard to replicate: 1) the authentic voice of the language-creator and 2) his deep knowledge of both Java and Lisp.
 
