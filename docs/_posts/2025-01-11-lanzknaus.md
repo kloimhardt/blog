@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Gerald Knaus bei Markus Lanz"
-date:   2024-01-11 06:00:00 +0100
+date:   2025-01-11 06:00:00 +0100
 categories: Politik
 ---
 ## Einleitung
