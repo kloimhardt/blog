@@ -4,9 +4,11 @@ title:  "Gerald Knaus bei Markus Lanz"
 date:   2025-01-11 06:00:00 +0100
 categories: Politik
 ---
-## Einleitung
+Im Folgenden ein Interview des Österreichers Gerald Knaus über die Situation Europas in 2025 [(youtube-video)](https://www.youtube.com/watch?v=951hwd7kxpo).
 
-Im Folgenden ein Interview des Österreichers Gerald Knaus über die Situation Europas in 2025 [(youtube-video)](https://www.youtube.com/watch?v=951hwd7kxpo). Im Grunde ist seine Lösung eine grosse Koalition zwischen Christ- und Sozialdemokraten, welche schon vor jeder Wahl ausverhandelt ist. So eine Art Sun-Tsu: den Krieg gewonnen haben, bevor er begonnen hat. Oder: die gute alte österreichische Sozialpartnerschaft.
+Im Grunde ist seine Lösung eine grosse Koalition zwischen Christ- und Sozialdemokraten, welche schon vor jeder Wahl ausverhandelt ist. So eine Art Sun-Tsu: den Krieg gewonnen haben, bevor er begonnen hat. Oder: die gute alte österreichische Sozialpartnerschaft. In Italien ist dieses "als Koalition in die Wahl" wohl Praxis, aber auch nicht immer erfolgreich. Ich find die Idee hat trotzdem was.
+
+Seine entscheidende Analyse aber ist, dass man es geschafft hat, dass Rechts sexy ist; jetzt muessten wir halt irgendwie ein Narrativ aufbauen in dem die EU und die Menschenrechte sexy werden.
 
 ## Transkript
 [Knaus] Ich glaube was wir in Österreich erleben ist ein politisches Erdbeben. Es gab noch nie einen Kanzler der FPÖ. Einer FPÖ, die aus der EU raus will und Putin unterstützt. Das ist für Europa ein Präzedenzfall, es gab noch nie so eine Regierung.
@@ -45,9 +47,9 @@ In diesem Narrativ, Viktor Orban war eigentlich in vieler Hinsicht ein Erfinder.
 [Knaus] Das kam aus Frankreich diese Ideen. Aber das waren dort radikale ultrarechte am Rand der Gesellschaft. Und das ist durch Orban in die Mitte der Diskussion gewandert. Und Elon Musk teilt
 seit Monaten auch im Wahlkampf gegen Joe Biden aus.
 
-Biden hat in der Migrationspolitik versagt. Wir hatten 9 Millionen Aufgriffe an der Grenze, 7 Millionen mehr als unter Trump ... [mir nicht klar, was Knaus genau meint hier].
+Biden hat in der Migrationspolitik versagt. Wir hatten 9 Millionen Aufgriffe an der Grenze, 7 Millionen mehr als unter Trump ... [ich find's schade, dass Knaus das Vesagen Bidens nicht näher erklärt].
 
-Aber was Musk daraus macht ist eine Verschwörungstheorie: das war nicht schlechte Politik das war ein Versuch Amerika im Kern zu zerstören. Jetzt sagt Musk das gleiche über Großbritannien. Und dieser Diskurs, den finden wir in Denkfabriken die gegründet wurden.
+Aber was Musk daraus macht ist eine Verschwörungstheorie, [Musk sagt]: "das war nicht schlechte Politik, das war ein Versuch Amerika im Kern zu zerstören". Jetzt sagt Musk das gleiche über Großbritannien. Und dieser Diskurs, den finden wir in Denkfabriken die gegründet wurden.
 
 Anfang September 2015, am Beginn der Flüchtlingskrise, hat Viktor Orban eine Rede gehalten und gesagt "das ist die Chance für uns, die illiberalen Kräfte. Denn die liberalen Kräfte werden bei der Migrationspolitik versagen. Wir sind keine Heuchler, wir sagen offen: dieses leere Reden über Menschenrechte spielt für uns keine Rolle. Das ist die erste kulturelle Revolution die ich gut finde", hat er gesagt.
 
@@ -63,7 +65,7 @@ Und umgekehrt also wir sehen einen Gert Wilders der immerhin einen historischen 
 
 Ich habe das Gefühl dass die Parteien in der Mitte, die Zentristen, die Liberalen, Sozialdemokraten, Christdemokraten, Grünen, nicht erkannt haben wie gefährlich durchdacht und strategisch dieser Angriff läuft. Und dass man auf die Geschichten die gerade die jungen erreichen, die irgendwie neu klingen, keine guten Antworten hat. Und Antworten nicht nur im Sinne von reden sondern Antworten im Sinne von Handeln.
 
-[L] Ist ist das was sie meinen wenn sie sagen, ich sehe bei den Wahlkämpfen in Deutschland die gleichen Fehler wie in Österreich, nur die FPÖ macht sie nicht.
+[L] Ist das was sie meinen wenn sie sagen, ich sehe bei den Wahlkämpfen in Deutschland die gleichen Fehler wie in Österreich, nur die FPÖ macht sie nicht.
 
 [K] Ja. Ja. Also ein Beispiel, Umfragen in seriösen Medien. Die Zeit hatte eine im letzten Herbst. 85% der Deutschen wollen weniger irreguläre Migration. Oder Dreiviertel (Umfrage ARD) wollen eine andere Politik für Migration. Jetzt ist sehr wichtig was macht man mit so einer Botschaft. Wir sind Demokraten wir glauben an den Rechtsstaat. Also braucht man natürlich Vorschläge die machbar sind im Rahmen des Europarechts im Rahmen der Menschenrechte.
 
@@ -84,7 +86,7 @@ Eine große Koalition, die das AFD Argument "egal was die sagen, am Ende passier
 
 Die Zahlen waren niedriger bevor sie Ministerpräsidentin war. Bei Meloni sind die Zahlen zuerst ganz hoch gegangen. Aber in dieser Zeit hatte sie eine Sache: sie hatte einen Plan. Und ich meine, in der Politik ist das sehr viel. Sie hat gesagt ich mache was mit Albanien.
 
-Dieser Plan ist bis heute nicht erfolgreich. Ich habe den oft genug kritisiert. Nicht das Prinzip, irgendwie Verfahren in einem anderen Staat zu machen wo es sicher ist. Das ist nicht das Problem. Das Problem in dem Plan ist: die Leute werden hingebracht, dann werden sie wieder nach Italien gebracht, das funktioniert nicht, das ändert nichts. Er hat auch nicht funktioniert. Aber das ist nicht das Problem für Meloni. Sie hatte ein Jahr lang auf jede Frage die Antwort "ich habe einen Plan, wir bauen was". Und das hat es erlaubt, dass ihr das Wachstum der Zahlen nicht vorgeworfen wurde.
+Dieser Plan ist bis heute nicht erfolgreich. Ich habe den oft genug kritisiert. Nicht das Prinzip, irgendwie Verfahren in einem anderen Staat zu machen wo es sicher ist. Das ist nicht das Problem. Das Problem in dem Plan ist: die Leute werden hingebracht, dann werden sie wieder nach Italien gebracht. Das funktioniert nicht, das ändert nichts. Er hat auch nicht funktioniert. Aber das ist nicht das Problem für Meloni. Sie hatte ein Jahr lang auf jede Frage die Antwort "ich habe einen Plan, wir bauen was". Und das hat es erlaubt, dass ihr das Wachstum der Zahlen nicht vorgeworfen wurde.
 
 Dann sind die Zahlen gesunken zum durch zum Teil wirklich - also das Abkommen mit Tunesien ist brutal. Also die Tunesier haben Leute in die Wüste geschleppt. Die Zahlen sind gefallen aus Tunesien. Nachdem sie Rekord groß waren. Aber sie sind immer noch hoch, in diesem Jahr sind 60.000 nach Italien gekommen über das Meer.
 
@@ -100,7 +102,7 @@ Ab 2021, weil das Abkommen nicht mehr funktioniert hat, weil es nicht erneuert w
 
 Also eigentlich, analytisch, waren die letzten 10 Jahre nicht so "wir hatten da einen Fehler, wir waren zu großzügig 2015". Nein, Angela Merkel und die große Koalition, auch die SPD in der Koalition, haben gesagt wir wollen es reduzieren, aber human. Die Zahlen sanken, ab 2021 sind sie stark gestiegen und darauf gab es dann keine überzeugende Antwort.
 
-[Lanz ] Migration das ist etwas was man versteht wenn man sich mal ein bisschen damit beschäftigt ist nicht nur ein multimilliarden Dollar Business, ein globales Multimilliardeneschäft, ist auch eine Waffe. Ich höre von Korrespondenten die in Syrien sich auskennen die sagen es gab Zeiten in Syrien und genau die Zeit über die sie sprechen da gab es russische Kommandooperation, Geheimdienst Operation offensichtlich, wo Leute rumgelaufen sind, Flugblätter verteilt haben, Leuten gesagt haben: "pass auf, das ist die Information für dich, geh irgendwie nach Deutschland, du kriegst dort ein Haus eine Wohnung ein Auto du hast ein sorgenfreies Leben. Komplette Agitation, geschürt von Leuten im Kreml.
+[Lanz ] Migration das ist (etwas was man versteht wenn man sich mal ein bisschen damit beschäftigt), ist nicht nur ein multimilliarden Dollar Business, ein globales Multimilliardeneschäft, ist auch eine Waffe. Ich höre von Korrespondenten die in Syrien sich auskennen die sagen es gab Zeiten in Syrien und genau die Zeit über die sie sprechen da gab es russische Kommandooperation, Geheimdienst Operation offensichtlich, wo Leute rumgelaufen sind, Flugblätter verteilt haben, Leuten gesagt haben: "pass auf, das ist die Information für dich, geh irgendwie nach Deutschland, du kriegst dort ein Haus eine Wohnung ein Auto du hast ein sorgenfreies Leben. Komplette Agitation, geschürt von Leuten im Kreml.
 
 [Knaus] Wenn Sie im Kreml sitzen und sich die europäische Politik die letzten 10 Jahre ansehen, sagen Sie, welche Art von Politik führt dazu dass meine Freunde Macht gewinnen, die FPÖ. Parteien, ich bin konkreter, die sagen, wir wollen die Sanktionen aufheben. Wir wollen Russland als Freund sehen. Wir schenken Russland die Ukraine. Wenn Sie das Analysieren, da brauchen Sie kein Einstein zu sein um zu sagen, Migration. Angst vor Migration. Kontrollverlust. Das schwächt alle Parteien in der Mitte. Das schwächt Christdemokraten wie Sozialdemokraten.
 
