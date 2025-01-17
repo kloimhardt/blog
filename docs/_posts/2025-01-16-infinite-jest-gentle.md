@@ -6,6 +6,8 @@ categories: Politik
 ---
 The Johnny Gentle, Chief Executive who pounds a rubber-gloved fist on the podium so hard it knocks the Seal askew and declares that Dammit there just must be some people besides each other of us to blame. To unite in opposition to. And he promises to eat light and sleep very little until he finds them — in the Ukraine, or the Teutons, or the wacko Latins. Or — pausing with that one arm up and head down in the climactic Vegas way — closer to right below our nose. He swears he'll find us some cohesion-renewing Other. And then make some tough choices. Alludes to a whole new North America for a crazy post-millennial world. First U.S. President ever to use boss as an adjective.
 
+---
+
 Dialogue between the architects and hard-choice-makers of a new millennial era:
 
 Pres. Mexico and P.M. Cananda [in unison and green-mask-muffled]: It is tremendously flattering to be invited to sit on the cabinet of the leadership of our beloved neighbor to the [choose one].
