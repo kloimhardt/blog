@@ -6,9 +6,9 @@ categories: Literatur
 ---
 Das Buch „Gödel, Escher, Bach“ (GEB) ist als Standardwerk der Artificial Intelligence (zu deutsch: „gekünstelte Intelligenz“) bekannt. Es wurde 1979 von Douglas R. Hofstadter veröffentlicht. Ich hab es nie ganz gelesen, es hat aber was. Mir ist nicht ganz klar, was.
 
-Diesem „was“ bin ich aber vor einiger Zeit etwas näher gekommen. Nämlich über das Buch „Le Ton Beau de Marot“ (LTBM) vom selben Autor aus 1997. Darin schreibt er so nebenbei über die Arbeit an den verschiedenen Übersetzungen seines GEB. So lernte ich zumindest etwas mehr über ein paar wenige der sicher ewig vielen seiner Ebenen. Jede Übersetzung aus dem Englischen muss notwendig einen mehr oder weniger großen Rest übriglassen, aber der Übersetzer muss auf jeden Fall mehr verstehen als er in die Übersetzung reinschreiben kann. Er muss also über diesen Rest bescheid wissen (vielleicht durch Rücksprache mit dem Autor). Und dieser Übersetzungs-Rest von GEB wird in LTBM erläutert. Die Beste denkbare Erläuterung zu GEB selbst ist die Erläuterung der Übersetzungeversuche. Hofstadter ist selbstverständlich polyglot.
+Diesem „was“ bin ich aber vor einiger Zeit etwas näher gekommen. Nämlich über das Buch „Le Ton Beau de Marot“ (LTBM) vom selben Autor aus 1997. Darin schreibt er so nebenbei über die Arbeit an den verschiedenen Übersetzungen seines GEB. So lernte ich zumindest etwas mehr über ein paar wenige der sicher ewig vielen seiner Ebenen. Jede Übersetzung aus dem Englischen muss notwendig einen mehr oder weniger großen Rest übriglassen, aber der Übersetzer muss auf jeden Fall mehr verstehen als er in die Übersetzung reinschreiben kann. Er muss also über diesen Rest bescheid wissen (vielleicht durch Rücksprache mit dem Autor). Und dieser Übersetzungs-Rest von GEB wird in LTBM erläutert. Die Beste denkbare Erläuterung zu GEB selbst ist die Erläuterung der Übersetzungsversuche. Hofstadter ist selbstverständlich polyglot.
 
-LTBM selbst, weil meta-meta, ist komplett unübersetzbar, das Englisch an sich ist aber nicht übermässig schwer zu lesen. Auf Seite 154 zitiert er einen Germanisten der Weimarer Republik, Friedrich Gundolf, mit der Behauptung, Shakespeares Seelenstoff liege in der deutschen Sprache von Schlegel-Tieck. Und weil Shakespeares Stiel für Hofstadter eine gewaltige Hemmnis („formidable barrier“) darstellt, findet er die Idee des versehentlich in England geborenen Geistes, der dann nach langer Wanderung heim nach Deutschland kommt… er findet’s lustig.
+LTBM selbst, weil meta-meta, ist komplett unübersetzbar, das Englisch an sich ist aber nicht übermässig schwer zu lesen. Auf Seite 154 zitiert er einen Germanisten der Weimarer Republik, Friedrich Gundolf, mit der Behauptung, Shakespeares Seelenstoff liege in der deutschen Sprache von Schlegel-Tieck. Und weil Shakespeares Stiel für Hofstadter ein gewaltiges Hemmnis („formidable barrier“) darstellt, findet er die Idee des versehentlich in England geborenen Geistes, der dann nach langer Wanderung heim nach Deutschland kommt… er findet’s lustig.
 
 Wobei doch jeder weiss, dass du Shakespeare nicht gelesen hast, ausser im originalen Klingon (Kanzler Gorkon , „Star Trek VI: Das unentdeckte Land.“).
 
@@ -46,7 +46,7 @@ Dass sie nur zweitklassig sind.
 
 Hier hast du deinen Lokalmatador  
 Den Ersatzstürmer  
-Den exotischen Abfahrer  
+Den Exoten-Abfahrer  
 der die Streif hie und da  
 Unter zwei Minuten schafft.
 
@@ -77,8 +77,8 @@ Wenn nötig.
 Aber wir schaffen’s nicht.  
 Ich erinner mich  
 An meine Schlägerei im Regen  
-An ‘nem Samstag Abend in  
-Der Gasse mit  
+An ‘nem Samstag Abend  
+In der Gasse mit  
 Harry Tabor  
 Seine Augen rollten in  
 Diesem enorm verblödeten  
@@ -87,7 +87,7 @@ Noch ein Schlag,
 Und er gehörte mir -  
 Ich haute daneben.  
 
-Oder die wunderschöne Frau  
+Oder die bildschöne Frau  
 Die mich besuchte für einen  
 Abend  
 Die auf meiner Couch saß  
@@ -103,8 +103,8 @@ Aus der Küche
 Fand ich sie  
 Nirgends mehr.  
 
-So oft haarscharf daneben,  
-Und dann wieder haarscharf daneben.  
+So viele beinahe Davors,  
+So viele andere beinahe Davors.  
 
 Oh, Bruckner, ich versteh’s!  
 
