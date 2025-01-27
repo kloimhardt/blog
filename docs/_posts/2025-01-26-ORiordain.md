@@ -11,7 +11,7 @@ The EU cannot just stand for our values when it is easy. It matters most when it
 And standing up to Trump will come with a cost, but it is much less than the cost of letting this poison win.
 And I am done with the niceties from EU leaders to Trump, while his tech bro buddies call for our laws to be
 undermined. I am done with the Taoiseach [Prime Minister] of Ireland, with our historic understanding of immigration oppression,
-promoting [Trump's golf links](https://www.gov.ie/en/press-release/422df-statement-by-taoiseach-simon-harris-on-the-inauguration-of-president-trump/)
+[promoting Trump's golf links](https://www.gov.ie/en/press-release/422df-statement-by-taoiseach-simon-harris-on-the-inauguration-of-president-trump/)
 in [county Clare](https://en.wikipedia.org/wiki/County_Clare) in response to his inauguration.
 And I am done with the so-called strong men, who - if they had to live for one day in the shoes of an immigrant,
 a woman, or a transgender person - would quiver with fear. Anyone who believes in the founding
