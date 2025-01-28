@@ -8,11 +8,11 @@ Wittgensteins [Tractatus](https://www.wittgensteinproject.org/w/index.php?title=
 
 Und manchmal taucht dem Unerschrockenen dann etwas auf, was ihm voll die Augen öffnet. Bei mir ist es die Passage mit der Nummer 5.154 des Tractatus:
 
-„In einer Urne seien gleichviel weisse und schwarze Kugeln (und keine anderen). Ich ziehe eine Kugel nach der anderen und lege sie wieder in die Urne zurück. […]
+> "In einer Urne seien gleichviel weisse und schwarze Kugeln (und keine anderen). Ich ziehe eine Kugel nach der anderen und lege sie wieder in die Urne zurück. […]
 
-Wenn ich nun sage: Es ist gleich wahrscheinlich, dass ich eine weisse Kugel wie eine schwarze ziehen werde, so heisst das: Alle mir bekannten Umstände (die hypothetisch angenommenen Naturgesetze mitinbegriffen) geben dem Eintreffen des einen Ereignisses nicht mehr Wahrscheinlichkeit als dem Eintreffen des anderen. Das heisst, sie geben – wie aus den obigen Erklärungen leicht zu entnehmen ist – jedem die Wahrscheinlichkeit ½.
+> Wenn ich nun sage: Es ist gleich wahrscheinlich, dass ich eine weisse Kugel wie eine schwarze ziehen werde, so heisst das: Alle mir bekannten Umstände (die hypothetisch angenommenen Naturgesetze mitinbegriffen) geben dem Eintreffen des einen Ereignisses nicht mehr Wahrscheinlichkeit als dem Eintreffen des anderen. Das heisst, sie geben – wie aus den obigen Erklärungen leicht zu entnehmen ist – jedem die Wahrscheinlichkeit ½.
 
-Was ich durch den Versuch bestätige ist, dass das Eintreffen der beiden Ereignisse von den Umständen, die ich nicht näher kenne, unabhängig ist.“
+> Was ich durch den Versuch bestätige ist, dass das Eintreffen der beiden Ereignisse von den Umständen, die ich nicht näher kenne, unabhängig ist.“
 
 Der letzte Satz hat mir die Augen geöffnet. Wahrscheinlichkeit ½ heisst: Die erwarteten Ereignisse sind komplett unabhängig von den weiters nicht bekannten Umständen. Abhängigkeit besteht nur von den allgemein bekannten Rahmenbedingungen (natürliche und nationale Gesetze inklusive): es gibt eine Urne, es gibt Kugeln, es sind gleichviel weisse wie schwarze usw.
 

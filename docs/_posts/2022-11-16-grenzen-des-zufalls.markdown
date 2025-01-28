@@ -12,6 +12,10 @@ Und trotzdem: Oma war im Irrtum. Wir wissen sehr viel über das Lotto.
 
 Es ist eben Lotto 6 aus 45. Wir wissen verdammt viel schon vor dem Beginn der Ziehung. Und nach der Ziehung wissen wir komplett alles was es zu wissen gibt. Der Notar trägt das Ergebnis in seinen Katalog ein, die Gewinner werden festgestellt und steuerfrei ausbezahlt. Darauf hätte der Opa damals sein Fahrrad verwettet das es schon lang nicht mehr gibt.
 
+Aus all dem folgt, dass die Angabe der Wahrscheinlichkeit eines Einzelereignisses für sich allein gar keine sinnvolle Zahl ist. Das ist wie die Angabe von Gramm Zucker ohne Gramm Mehl bei einem Kuchenrezept. Damit Wahrscheinlichkeit Sinn macht, muss man angeben was prinzipiell alles rauskommen kann (z.B eine Kugel mit einer Zahl zwischen 1 und 45 drauf). Und: die Wahrscheinlichkeiten müssen sich auf 1 summieren.
+
+Wenn die erste Zahl der Lottoziehung 33 ist, dann war in der Vergangenheit ihre Wahrscheinlichkeit ein Fünfundvierzigstel. Jetzt nicht mehr, weil die Grundmenge neu gemischt wurde, nämlich jetzt ohne 33. Das neue Spiel lautet jetzt "5 aus 44".
+
 Obwohl wir bei Lotto oder Wettervorhersage den Zufall ohne weiteres akzeptieren, tun wir uns in der Quantenphysik schwer damit. Dabei wissen wir sooo viel im Vorhinein. Eine grundlegende Wahrheit ist, dass wir bei den Zwischenrechnungen der Quantentheorie neuartige Zahlen hinzunehmen müssen, nämlich die Menge der imaginären Zahlen (für Spezialisten: das sind die wo das Quadrat negativ ist). In einem hinkenden aber doch Vergleich wissen wir also, dass in der Quantenphysik bei der Mittwochsziehung Lotto 12 aus 90 gespielt wird, wobei die Hälfte der Bälle durchsichtig mit schwer lesbaren Zahlen sind.
 
 Sind die Zwischenrechnungen also ziemlich verworren (wer kann sich schon wirklich was g’scheites unter einer imaginären Zahl vorstellen), so sind die Endergebnisse doch recht einfach. Wir wissen z.B, dass die Energien der Elektronen des Atoms immer ganzzahlige Werte annehmen werden. In einem diesmal absolut zutreffenden Vergleich wissen wir also, dass bei einer Ziehung nie 3,1415 sondern immer nur entweder 3 oder 4 oder sowas rauskommen kann (Endergebnisse sind natürlich Sonntagsziehungen ohne durchsichtige Kugeln). Dass hinten immer nur was Ganzzahliges rauskommen kann, ist jedoch in der Physik gar nicht selbstverständlich.
@@ -22,13 +26,15 @@ Auf Eines möchte ich gern hinweisen: beim Asteroiden interessiert uns überhaup
 
 Und irgendwie liegt es in unserer Wolle, dass wir auch von der Quantenphysik verlangen, dass sie uns Vorhersagen bis zum jüngsten Gericht liefert. Dabei ist es doch oft viel interessanter herauszufinden was dazwischen, also zwischen zwei Beobachtungen, passiert ist.
 
-Bei einem Gerichtsverfahren, nehmen wir Steuerhinterziehung, ist es doch gerade interessant in welchen Kanälen der Vergangenheit die Gelder gelandet sind. Wen interessiert die Zukunft der Täter und Verdächtigen des Sherlock Holmes oder Hercule Poirot? U.s.w. u.s.f.
+Bei einem Gerichtsverfahren, nehmen wir Steuerhinterziehung, ist es doch gerade interessant in welchen Kanälen der Vergangenheit die Gelder gelandet sind. Nehmen wir Sherlock Holmes oder Hercule Poirot: wen interessiert da die Zukunft der Täter und Verdächtigen? Es geht um das Dazwischen.
 
 Obwohl es das Gerichtsverfahren als Denkvorlage gäbe, lässt uns beim Elektron der Gedanke an ein ewiges Leben nicht los. Eine Folge davon ist, dass wir von Dualismus sprechen, wo keiner versteht was Welle-Teilchen Dualismus heissen soll. Denken wir uns ein konkretes Elektron aber einmal als ausschliesslich etwas, das nur zwischen zwei Beobachtungen lebte. Wir lesen beispielsweise Anfangs- und Endposition in seiner Geburts- und Todesurkunde. Dann lässt sich im Nachruf ein eindeutiges Bild für die Zeitspanne zwischen Geburt und Tod drucken: entweder Welle oder Teilchen, je nach konkreter Position in den zwei Urkunden. Dieser Nachruf, er wurde mithilfe der Quantentheorie erstellt, kennt keine Dualität.
 
-Die Formeln der Quantentheorie geben keine Auskunft über die Natur des Elektrons beim Tod. Der Tod gehört nicht zum Leben. Die Quantentheorie ist eben eine irdische Gerichtsbarkeit. Sie stösst uns mit der Nase darauf, dass nichts und niemand ewig lebt. Darin liegt vielleicht der Grund, dass ich diese Theorie zuallererst als Rechenwerkzeug zur Erklärung der Mikrowelt und nur sehr schwer als Vollständig akzeptieren will.
+Die Formeln der Quantentheorie geben keine Auskunft über die Natur des Elektrons beim Tod. Der Tod gehört nicht zum Leben. Die Quantentheorie ist eben eine irdische Gerichtsbarkeit. Sie stösst uns mit der Nase darauf, dass nichts und niemand ewig lebt.
 
-Aber vielleicht erklärt sich unsere sichtbare Welt tatsächlich aus genauen Computerberechnungen und Aufsummierungen des Verhaltens einer großen Menge der Bestandteile der Mikrowelt. Berechnungen, die zwar bekannt und möglich aber einfach nur noch niemand vollständig, wegen zu großem Aufwand, unternommen hat. Wer weiss?
+Und doch: ich will die Quantentheorie nicht als vollständig akzeptieren. Genau aus diesem Grund. Sie ist zuallererst Rechenwerkzeug.
+
+Aber: vielleicht erklärt sich unsere sichtbare Welt tatsächlich aus genauen Computerberechnungen. Einfache Aufsummierungen des Verhaltens der Mikrowelt. Berechnungen, die bereits bekannt und möglich sind. Aber einfach nur noch niemand vollständig, wegen zu großem Aufwand, unternommen hat. Wer weiss? Vollständige Erklärung durch einfache Hochrechnung.
 
 Aber es hinnehmen werde ich nicht! Ich lasse zum Schluss Ivan Karamasow von 1880 sprechen (ich erinnere dass 1916 Einstein gezeigt hat, dass zwei parallele Linien sich irgendwo doch überschneiden):
 
