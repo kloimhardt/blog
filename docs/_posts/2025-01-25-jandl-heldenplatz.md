@@ -4,7 +4,6 @@ title:  "Ernst Jandl, Wien: Heldenplatz"
 date:   2025-01-29 06:00:00 +0100
 categories: Politik
 ---
-## Ernst Jandl
 
 der glanze heldenplatz zirka  
 versaggerte in maschenhaftem männchenmeere  
@@ -22,4 +21,4 @@ Mehr als 40% der Wähler von Präsident Donald Trump waren Frauen. Und das, obwo
 
 Donald Trump wird beraten von Elon Musk, dem zumindest im Moment reichsten Mann der Welt. Am 25.1.2025 zeigte eine grosse Videowall das Sechs-Meter-Gesicht von [Elon Musk beim Wahlkampfauftakt der AfD](https://www.youtube.com/watch?v=BmV4sVWQLyQ). Seine Message: "Preserve German culture. You want more self-determination for Germany and for the countries in Europe. And less from Brussels. There's too much bureaucracy from Brussels. Too much control from global Elite. There should be less global government. There should be more determination by individual countries". Das ist nicht gut, was Musk sagt. Die Volksrepublik China hat dreimal mehr Leute als die EU, viermal mehr als die USA. Die EU ist die genialste Erfindung seit der Österreichischen Verfassung.
 
-Was mich mit Schauder erfüllt ist nicht das Bild und die Meinung von Musk. Mir schauderte während dieser Zuschaltung vor dem Bild von Alice Weidel, Co-Vorsitzende der AfD-Bundestagsfraktion. Ihr "ward so pfingstig ums heil". Mich irritierte ihr Bild umso mehr, weil sie in einer lesbischen Beziehung lebt. Diese Irritation und die folgende Frage zeigen, dass ich selbst noch irgendeinen (mir bisher unzugänglichen) Aufholbedarf habe. Meine Frage ist: Warum gehört (gerade die lesbische) Frau Weidel sie zu den "frauen die ans maskelknie zu heften heftig sich versuchten"?
+Was mich mit Schauder erfüllt ist nicht das Bild und die Meinung von Musk. Mir schauderte während dieser Zuschaltung vor dem Bild von Alice Weidel, Co-Vorsitzende der AfD-Bundestagsfraktion. Ihr "ward so pfingstig ums heil". Mich irritierte ihr Bild umso mehr, weil sie in einer lesbischen Beziehung lebt. Diese Irritation und die folgende Frage zeigen, dass ich selbst noch irgendeinen (mir bisher unzugänglichen) Aufholbedarf habe. Meine Frage ist: Warum gehört Frau Weidel, gerade sie zu den "frauen die ans maskelknie zu heften heftig sich versuchten"?
