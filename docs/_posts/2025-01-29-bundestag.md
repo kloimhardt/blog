@@ -35,7 +35,7 @@ Die Debatte am 29.1. im Bundestag geht um Drucksache [20/14698](https://dserver.
 
 16:40 Die CDU meint, sie werbe um die Zustimmung aus der Mitte, nicht der AfD.
 
-17:40 Bekanntgabe zu Antrag 20/14698: 703 Stimmen insgesamt / 348 Ja / 345 Nein / 10 Enthaltungen. Antrag angenommen [mit Mehrheit von CDU/CSU+AfD+FDP+BSW].
+17:40 Bekanntgabe zu Antrag 20/14698: 703 Stimmen insgesamt / 348 Ja / 345 Nein / 10 Enthaltungen. Antrag angenommen [mit Mehrheit von CDU/CSU+AfD+FDP, Enthaltungen von BSW].
 
 17:42 Grüne beantragen Unterbrechung der Sitzung, wollen nicht zur Tagesordnung zurückkehren, die CDU hätte die Mitte der Demokratie verlassen.
 
@@ -58,6 +58,8 @@ Die Sonderausgabe der Sendung ["Berlin Code" aus dem ARD Hauptstadtstudio](https
 26:00 Olaf Scholz kommt von der rationalen Seite. Er sagt: es gibt Recht, er verweist auf das Grundgesetz, Recht auf Asyl, das im Grundgesetz steht. Er verweist auf europäisches Recht, er sagt, was dieser Friedrich Merz da macht [vorschlägt], das bricht EU Recht.
 
 ---
+
+Angela Merkel: "Für falsch halte ich es ... eine Mehrheit mit den Stimmen der AfD zu ermöglichen" [(Zitat)](https://www.buero-bundeskanzlerin-ad.de/erklaerungen/erklaerung-von-bundeskanzlerin-a-d-dr-angela-merkel-zur-abstimmung-im-/)
 
 Manfred Weber, CSU + Parteivorsitzender EVP, sagt bei Markus Lanz am 28.1., Min 33:00: "Friedrich Merz hat klar formuliert, dass er an den Aussengrenzen zurückweisen will, auch wenns eventuell einen Anlass gibt dass ein Flüchtlingsgrund dahintersteht. Und das steht genau in unserem Grundgesetz drinnen, in den 90er Jahren überarbeitet, mit der Überlegung, sichere Drittstaaten, Österreich, Polen, da kann ich zurückweisen, natürlich ist das rechtlich möglich.
 
