@@ -109,4 +109,10 @@ Ich betone: in Streitkultur, nicht in diesem Geschrei.
 
 Und übrigens, darf ich das auch noch sagen, wir Journalisten könnten jetzt auch wieder besser werden.
 
-https://www.youtube.com/watch?v=nN4gfsPlUwk
+[Link zum Zeit youtube-video](https://www.youtube.com/watch?v=nN4gfsPlUwk)
+
+Nachtrag 30.1.25: [Michel Friedman tritt aus der CDU aus](https://www.hessenschau.de/politik/wegen-asyl-abstimmung-mit-der-afd-michel-friedman-tritt-aus-der-cdu-aus-v8,friedman-114.html)
+
+"Demokratische Parteien suchen ihre Mehrheiten unter Demokraten. Die AfD ist eine antidemokratische Partei".
+
+In der Parlamentarischen Gedenkstunde des Saarländischen Landtags [sagte Friedman am 27.1. prophetisch](https://www.youtube.com/watch?v=4b-8PLktdN0&t=2160s): "Wir lösen keine politischen Konflikte, und selbst die Besten Lösungen sind keine, wenn das WIE wir darüber reden uns mehr vergiftet als die Lösung uns helfen wird."
