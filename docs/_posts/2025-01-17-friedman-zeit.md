@@ -116,3 +116,5 @@ Nachtrag 30.1.25: [Michel Friedman tritt aus der CDU aus](https://www.hessenscha
 "Demokratische Parteien suchen ihre Mehrheiten unter Demokraten. Die AfD ist eine antidemokratische Partei".
 
 In der Parlamentarischen Gedenkstunde des Saarländischen Landtags [sagte Friedman am 27.1. prophetisch](https://www.youtube.com/watch?v=4b-8PLktdN0&t=2160s): "Wir lösen keine politischen Konflikte, und selbst die Besten Lösungen sind keine, wenn das WIE wir darüber reden uns mehr vergiftet als die Lösung uns helfen wird."
+
+Im [Interview beim Wiesbadener Merkur](https://www.youtube.com/watch?v=6m2mEk-yNmY) vom 2.2.: "Friedrich Merz ist ein Demokrat der einen großen Fehler gemacht hat ein großen Schaden hervorgerufen hat. Die Gegner sind nicht die CDU sondern die AFD. Denn sie ist eben keine demokratische Partei und dass sie demokratisch gewählt wurde macht sie dadurch ja nicht noch zu einer demokratischen Partei."
