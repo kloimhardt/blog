@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Graphik und Gemälde"
-date:   2025-02-19 00:00:01 +0100
+date:   2025-02-19 06:00:01 +0100
 categories: Physik
 ---
 
@@ -21,22 +21,32 @@ Er fährt nun fort in seinem Buch und stellt fest, dass die "denknotwendigen Fol
 
 Aber sind die Barbapapas, die aus Hilmas Kreisen folgen, "denknotwendig"?
 
-Der endgültigen Bruch aber zwischen Hilma und Hertz ist seine nächste Forderung: die "denknotwendigen" Kopfbilder seien auch  gleichzeitig die "naturnotwendigen Folgen der abgebildeten Gegenstände".
+Der endgültige Bruch aber zwischen Hilma und Hertz ist seine nächste Forderung: die "denknotwendigen" Kopfbilder seien auch  gleichzeitig die "naturnotwendigen Folgen der abgebildeten Gegenstände".
 
 Das geht nicht. Eine "naturnotwendige Folge" von natürlichen Eltern ist, dass sie Beine haben. Aber Barbapapas, die "denknotwendigen Folgen", haben keine Beine.
 
 Hier sehen wir den Unterschied zwischen Graphik und Gemälde. Hilma af Klint hat ein abstraktes Bild, man könnte hier besser sagen, eine Graphik, gezeichnet. Hertz will Gemälde von realistischen Malern, so wie Newton einer war.
 
-Das Bild der Newton'schon Physik war für Hertz halbwegs ok. Kugeln die über Spiralfedern oder Gummibänder miteinander verbunden sind. Nur kam er drauf, dass das mit den Gummibändern nicht ganz passt, wenn man sich's genau durchüberlegt.
+Das Bild der Newton'schon Physik war für Hertz halbwegs ok. Kugeln die über Spiralfedern oder Gummibänder miteinander verbunden sind. Nur kam er drauf, dass das mit den Gummibändern nicht ganz passt, wenn man sich's genau durchüberlegt. Sie bringen "das klare Denken unzweifelhaft in Verlegenheit".
 
-Das hatten andere vor ihm auch schon bemerkt. Die Antwort war das Prinzip der kleinsten Wirkung. Die Kugeln bewegen sich so, dass über ihren Weg der Austausch zwischen Bewegungsenergie und Lageenergie minimal ist. Aber so ein ökonomisches Energiesparprinzip gibt kein deutliches Bild ab. Deswegen hat Hertz (nach langer Beschäftigung) das ad Acta gelegt.
+Das hatten andere vor ihm auch schon bemerkt. Die Antwort war das Prinzip der kleinsten Wirkung. Die Kugeln bewegen sich so, dass über ihren Weg der Austausch zwischen Bewegungsenergie und Lageenergie minimal ist. So ein ökonomisches Energiesparprinzip wäre zwar klar durchdacht, gäbe aber kein deutliches Bild ab. Deswegen hat Hertz (nach langer Beschäftigung) das ad Acta gelegt.
 
-Hertz schlägt starre Verbindungen zwischen den Kugeln vor. Und damit das klappt lässt er Kugeln zu, die sich im Verborgenen bewegen. Als alter Kantianer hat er damit kein Problem, weil die Kugeln sind eben nur ein Bild der Gegenstände, das "Ding an sich" können wir sowieso nicht erkennen. Am Ende muss das an und für sich deutliche Bild nur durch die Erfahrung bestätigt werden, die "denknotwendigen Folgen" müssen gleich den "naturnotwendigen Folgen" sein.
+Hertz schlägt starre Verbindungen zwischen den Kugeln vor. Und damit das klappt lässt er Kugeln zu, die sich im Verborgenen bewegen. Verborgene Nebenbeziehungen seien unvermeidbar und bei "weiser Besonnenheit in ihrem Gebrauch" täten sie der Deutlichkeit eines Bildes auch keinerlei Abbruch. Im Übrigen wäre die noch dazu undeutliche Einführung der potentiellen Energie (Lageenergie) ja auch nix anderes gewesen.
 
-Seine Darstellung ist ein Meisterwerk das sich als solches nie durchgesetzt hat. Was er aber im Vorwort schreibt ist, dass seine Darstellung "ein helles Licht auf die von HAMILTON erfundene Behandlungsweise mechanischer Probleme mit Hilfe charakteristischer Funktionen wirft."
+Seine starren Verbindungen stellen sicher dass keine sprunghaften Verhältnisse auftreten, denn "dass die Natur im Unendlichkleinen überall und in jedem Sinne Stetigkeit aufweise, [ist] eine Erfahrung, die sich in dem alten Satze,,natura non facit saltus", zu fester Überzeugung verdichtet hat." Es stört ihn nicht, "dass die fraglichen Verbindungen in der Natur nur angenähert verwirklicht sind". Ganz im Gegenteil, man muss von jedem System nur verlangen, "dass es angewandt auf angenäherte Verhältnisse immer noch angenähert richtige Resultate gebe, nicht aber gänzlich falsche."
 
-Er wirft sein Licht auf jene rein geometrische Behandlung der Physik, die damals bekannt aber gar nicht in Mode war, wegen der Energieökonomie. Dreissig Jahre später wurde aber genau diese Geometrie der goldene Weg zur Wellenmechanik des Atoms, Schrödinger hatte seinen Hertz sehr genau gelesen. Wäre Hertz doch nur nicht gleich nach seiner Abhandlung gestorben...
+Am Ende muss die Rechnung halt aufgehen. Die gemessene Umlaufzeit des Mars muss nahe der errechneten Zahl der Sekunden sein. Dasselbe gilt z.B in der Alpakazucht für die Laufmeter Tweed. Die "denknotwendigen Folgen" müssen gleich den "naturnotwendigen Folgen" sein, dann ist das Bild auch richtig.
 
-Hertz hält fest, dass seine Mechanik bewusst so starr gewählt wurde, dass sie niemals das Leben selbst erklären wird können. Ganz Kantianer wollte er Geist, Seele, Freiheit und Leben weiterhin dem Bereich des Unbeweisbaren überlassen.
+Ich fasse Hertz wie folgt zusammen: wenn ein Bild "klar" ist, dann findet unsere Hirnstruktur keinen Widerspruch, wenn etwas "richtig" ist dann entspricht es der Erfahrung, aber ob's "deutlich" ist kann zur Geschmacksfrage werden.
+
+Hertz' Darstellung ist ein Meisterwerk das sich als solches nie durchgesetzt hat. Was er aber im Vorwort schreibt ist, dass seine Darstellung "ein helles Licht auf die von HAMILTON erfundene Behandlungsweise mechanischer Probleme mit Hilfe charakteristischer Funktionen wirft."
+
+Er wirft sein Licht auf jene rein geometrische Behandlung der Physik, die damals bekannt aber gar nicht in Mode war, wegen der Energieökonomie. Dreissig Jahre später wurde aber genau aus dieser Geometrie der goldene Weg zur Wellenmechanik des Atoms.
+
+Schrödinger hatte seinen Hertz sehr genau gelesen: denn die Unbestimmtheit seines eigenen Wellenbildes hindere uns "in so naiver Weise ein ,,verwaschenes Modell" als Abbild der Wirklichkeit gelten zu lassen. An sich enthielte es nichts Unklares oder Widerspruchsvolles. Es ist ein Unterschied zwischen einer verwackelten oder unscharf eingestellten Photographie und einer Aufnahme von Wolken und Nebelschwaden". Klar durchdacht (und empirisch richtig sowieso) sei sein Bild, aber eben undeutlich. Zur Zeit dieses Verdikts wäre Hertz 78 gewesen, aber weil er gleich nach Abfassung seiner Abhandlung gestorben ist, fehlt uns die Beurteilung seines Erbes jetzt bitterlich.
+
+Er hielt noch fest, dass seine Mechanik bewusst so starr gewählt wurde, dass sie niemals das Leben selbst erklären wird können. Ganz Kantianer wollte er Geist, Seele, Freiheit und Leben weiterhin dem Bereich des Unbeweisbaren überlassen.
 
 Hier können wir uns wieder an Hilma af Klint wenden, die zwar 40 Jahre nach ihrem Meisterwerk noch lebte, deren Energie aber erst in den 80er Jahren begann der Welt das Prinzip Leben zu zeigen.
+
+![barbapapa](/blog/images/barbapapa.png)
