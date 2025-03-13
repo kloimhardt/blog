@@ -61,3 +61,16 @@ Jetzt sagst du: haha, nur weil die Blitze bei mir hintereinander ankommen, heiss
 Nun: das wirklich Komische ist, dass von dieser Ungleichzeitigkeit der bewegten Blitze aller Erfahrung nach irgendwas auf Dauer hängenbleibt. Denn eine Uhr, die wie ein Boomerang wieder zum Ursprung zurückkehrt, geht immer etwas nach. Die Uhr gleicht dieses Blitzdingsda nicht mehr aus beim zurückfliegen. Da bleibt was hängen. Was keiner versteht. Selbst wenn wir alles rausrechnen, von Anfang an müssen wir den Zeiger uns immer weiter hinten geblitzdingsbumst denken. So wie wir uns die Unterseite eines Stuhls dazudenken müssen. Wir sind Fledermäuse des Lichts.
 
 Ps: Die Boomerang Uhr bleibt nicht geschrumpft. Wenn sie langsamer wird und dann stehenbleibt dann dehnt sie sich wieder genau auf die Ursprungsgröße aus. Bei der Ausdehnung bleibt nix hinten. Die Uhr ist nur jünger, nicht schlanker.
+
+## Details
+### Da bleibt was hängen
+Wenn sich eine Uhr bewegt, geht sie langsamer, so wurde gesagt. Aber von sich aus gesehen, gehen alle anderen Uhren langsamer. Die Sache mit der langsamen Uhr ist symmetrisch. Es gab viele Erklärungsversuche, und glaub's mir, egal wie gefinkelt eine jede Erklärung auch war, diese Symmetrie ist und bleibt unverständlich.
+
+Es gibt auch noch andere Effekte. Z.B. geht eine Uhr am Berg oben langsamer als am Fuß. Aber damit tut man sich leicht. Eine geht langsamer als die andere. Basta. Isso. Akzeptabel, weil diese blöde Symmetrie nicht besteht.  Alle sind sich einig.
+
+Diese Symmetrie, dass der eine jeweils vom anderen denkt, dass er langsamer tickt, und beide recht haben, das hat einen Namen: Lorentz-Invarianz. Diese Lorentz-Invarianz ist das profundeste Rätsel der Physik. Alles Andere ist Kinderkram dagegen.
+
+### Nur von außen eine Galaxie
+Eine Galaxie besteht aus Sternen. Aber wir müssen nicht so weit gehen, es reicht ein Blick auf die Saturnringe in Wikipedia.  "Die Ringe bestehen aus einer ungeheuren Anzahl einzelner kleiner Materialbrocken, die den Saturn umkreisen. Die Größe dieser Partikel, die im Wesentlichen aus Eis und Gestein bestehen, reicht von Staubteilchen bis zu einigen Metern. Aus der Ferne betrachtet erscheinen sie als geschlossener ringscheibenförmiger Körper."
+
+Existieren nun die Ringe oder die Brocken? Beides. Denn Ringe gibt's auch anderswo, in der rhythmischen Sportgymnastik vielleicht. Und Brocken auch.

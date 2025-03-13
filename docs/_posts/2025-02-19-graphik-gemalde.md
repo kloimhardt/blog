@@ -9,11 +9,11 @@ Im Jahr 1907 schuf die Schwedin Hilma af Klint das erste große abstrakte Bild d
 
 ![Hilma](/blog/images/Hilma_af_Klint_Die_zehn_Groessten_Nr._2.jpg)
 
-Im Jahr 1894 veröffentlichte Heinrich Hertz seine Prinzipien der Mechanik. Dort steht der Satz
+Mehr als ein Jahrzehnt zuvor, im Jahr 1894, veröffentlichte Heinrich Hertz seine Prinzipien der Mechanik. Dort steht der Satz
 
 "Wir machen uns innere Scheinbilder oder Symbole der äußeren Gegenstände".
 
-Das hätte Hilma voll unterschrieben. Weil sie in ihrem Bild Gegenstände abgebildet hat, "äußere Gegenstände". Weil der Titel des Werks folgendermassen lautet: "Die zehn Größten, Nr. 2, Kindheit". Weil die beiden unteren Kreise "Symbole" von etwas echtem sind. Symbole für die Eltern einer Familie, die sich küssen.
+Das hätte Hilma voll unterschrieben. Weil es Gegenstände sind, die sie in ihrem Bild abgebildet hat, "äußere Gegenstände". Weil der Titel des Werks folgendermassen lautet: "Die zehn Größten, Nr. 2, Kindheit". Weil die beiden unteren Kreise "Symbole" von etwas echtem sind. Symbole für die Eltern einer Familie, die sich küssen.
 
 "Symbole der äußeren Gegenstände", Hilma und Hertz gehen also bisher gleich.
 
@@ -25,9 +25,13 @@ Der endgültige Bruch aber zwischen Hilma und Hertz ist seine nächste Forderung
 
 Das geht nicht. Eine "naturnotwendige Folge" von natürlichen Eltern ist, dass sie Beine haben. Aber Barbapapas, die "denknotwendigen Folgen", haben keine Beine.
 
-Hier sehen wir den Unterschied zwischen Graphik und Gemälde. Hilma af Klint hat ein abstraktes Bild, man könnte hier besser sagen, eine Graphik, gezeichnet. Hertz will Gemälde von realistischen Malern, so wie Newton einer war.
+Hier sehen wir den Unterschied zwischen Gemälde und Graphik. Hilma af Klint hat ein Bild gezeichnet, das noch als Typus "Gemälde" durchgehen kann. Hertz will die Bilder noch schärfer, noch mehr Richtung "Graphik".  Newton aus 1687 ist hier ein Vorbild:
 
-Das Bild der Newton'schon Physik war für Hertz halbwegs ok. Kugeln die über Spiralfedern oder Gummibänder miteinander verbunden sind. Nur kam er drauf, dass das mit den Gummibändern nicht ganz passt, wenn man sich's genau durchüberlegt. Sie bringen "das klare Denken unzweifelhaft in Verlegenheit".
+![Newton](/blog/images/newton_principia.jpg)
+
+Das Bild der Newton'schon Physik war für Hertz halbwegs ok. Gegenstände die über Spiralfedern oder Gummibänder miteinander verbunden sind. Die Gegenstände sind bei Newton mit Buchstaben bezeichnet (man kann sich hier beispielsweise Metallkugeln denken), die Bänder sind die gepunktelten Linien.
+
+Nur kam Hertz mit der Zeit drauf, dass das mit den Gummibändern nicht ganz passt, wenn man sich's genau durchüberlegt. Sie bringen "das klare Denken unzweifelhaft in Verlegenheit".
 
 Das hatten andere vor ihm auch schon bemerkt. Die Antwort war das Prinzip der kleinsten Wirkung. Die Kugeln bewegen sich so, dass über ihren Weg der Austausch zwischen Bewegungsenergie und Lageenergie minimal ist. So ein ökonomisches Energiesparprinzip wäre zwar klar durchdacht, gäbe aber kein deutliches Bild ab. Deswegen hat Hertz (nach langer Beschäftigung) das ad Acta gelegt.
 
