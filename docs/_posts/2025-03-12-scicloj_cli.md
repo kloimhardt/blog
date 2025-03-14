@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The SciCloj CLI and the return of the REPL-prompt"
-date:   3025-03-12 06:00:01 +0100
+title:  "Friday version: The SciCloj CLI and the return of the REPL-prompt"
+date:   2025-03-12 06:00:01 +0100
 categories: Software
 ---
 
