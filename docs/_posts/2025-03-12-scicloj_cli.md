@@ -5,7 +5,33 @@ date:   3025-03-12 06:00:01 +0100
 categories: Software
 ---
 
-by Markus Agwin Kloimwieder
+by Markus Agwin Kloimwieder [source](https://github.com/kloimhardt/blog/blob/main/docs/_posts/2025-03-12-scicloj_cli.md)
+
+## SciCloj caters for smart beginners
+The message of SciCloj is: "Clojure is the best and most natural language for science and to this aim, the SciCloj community provides Noj as a  framework for data science in Clojure."
+
+The target audience for Noj are scientists. That means we deal with people who are beginners with Clojure. But as much as any software developer, scientists are highly trained in logical thinking. Beginners, yes, rookies, no. This makes scientists a special bunch to cater for.
+
+Scientist will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas. That Clojure is mathy poses the main reason to use Clojure in science.
+
+At this point it is important to realize that not every Lisp is functional. S-expression does not necessarily mean "functional". While It is important to have this in mind when communicating, it is not helpful for SciCloj to argue and dwell on the notion of S-expressions. The message must be: "Clojure is a functional language on the JVM".
+
+## Make SciCloj visible among Clojurians
+Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciCloj does is alien. Let's face it, to them we are boffins. As things stand at 2025, because we are aliens, we are not visible within the Clojure community. The goal is to become visible.
+
+My purpose is to draw attention to the idea that when we cater for Python scientists, SciCloj will become more visible within the Clojure community. The argument here is that if we can draw more users to Clojure, Clojurians will notice. If there are biologists who give biology talks using Clojure, the community will notice.
+
+There is also another view, and that I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a Lispy talk, SciCloj would not add any value. Lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciCloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
+
+My proposal for becoming visible is to become good at hammering through one message: "Clojure is a functional language on the JVM".
+
+This serves two aims: The first aim is  indeed to become visible among Pythonists through this message. Please notice that the JVM is central. Fact is that the Java machine is stronger than the Python VM, the JVM is meant for science. While this JVM argument is very important, it is so simple that I cannot say anything more than repeat that the JVM is central to SciCloj.
+
+Clojurians will become interested when we demonstrate that in order to deliver the message "Clojure is functional", SciCloj is the perfect use-case. So the second aim, next to impress Pythonists with "functional on the JVM", is to show to Clojurians how to use SciCloj. Not as a way to do science but as a way to isolate and present with simple examples the functional part of Clojure.
+
+And here I humbly put forward that, in order to present Noj, dispense with the IDE because its bells and whistles draw attention away from the simplicity of the Clojure syntax. The IDE does not serve the message of SciCloj, which is: "Clojure is a functional language on the JVM". The argument is that for a beginner, an unknown IDE draws away his attention form the functional design of Clojure.
+
+The proposal here is to present Noj by using Notepad++, a proposal that indeed is abominable to Clojurians and needs more explanation. There needs to be given a full counterweight to this deliberate acceptance of such a  no-IDE disadvantage. Of course such a counterweight cannot be given in general. But I think in the narrow field of "science without Python", the sum of the facts presented below indeed form this counterweight.
 
 ## Make SciCloj independent of any IDE
 All software developers use integrated IDEs, and that day to day. Scientists, on the other hand are not software developers, they are spaghetti-coders. They spend weeks in their labs gathering data. After they reappear from the basement, their brains are completely reset. Muscle memory from day to day usage of an IDE? Nada. Remembering keystrokes? Nope.
@@ -19,51 +45,67 @@ So should the Clojure Community provide tooling, provide IDEs for scientists? By
 So should SciCloj provide more videos and manuals for IDE usage? My answer is: certainly not.
 The reason is: time. It takes a lot of effort to produce videos and manuals. Time spent on presenting IDEs is not well spent, because scientists do not want to spend the time to learn an IDE anyway. It does not improve their self-efficacy enough. This is why Python is so successful, it does not need an IDE.
 
-So my suggestion is to accept that Clojure has a disadvantage over Python in that Python is easy to use in Notepad++. But instead of trying to coerce scientists into IDEs, I will henceforth suggest to use the Figwheel way pioneered by Clojure. In other words: present SciCloj and Noj using live-reolad via the CLI, and write code in Notepad++. This argument is abominable to Clojurians and therefore needs explanation and most of all the presentation of a counterweight to that deliberately accepted no-IDE disadvantage over Python in science.
-
-## SciCloj caters for smart beginners
-Despite dispensing IDEs, our message still is: Clojure is the best and most natural language for science and to this aim, the SciCloj community provides Noj as a  framework for data science in Clojure.
-
-The target audience for Noj are scientists. That means we deal with people who are beginners with Clojure. But as much as any software developer, scientists are highly trained in logical thinking. Beginners, yes, rookies, no. This makes scientists a special bunch to cater for.
-
-Scientist will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas. That Clojure is mathy is the first counterweight to Python and the main reason to use Clojure in science.
-
-In communicating this, it is important to realize that not every Lisp is functional, i.e. S-expression does not necessarily mean "functional". It is important to have that in mind when communicating but it is not helpful for SciCloj to argue and dwell on the topic "functional not necessarily S-expressions". The message must be: "Clojure is a functional language on the JVM".
-
-## Make SciCloj visible among Clojurians
-Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciCloj does is alien. Let's face it, to them we are boffins. As things stand at 2025, because we are aliens, we are not visible within the Clojure community. The goal is to become visible.
-
-My purpose is to draw attention to the idea that when we cater for Python scientists, SciCloj will become more visible within the Clojure community.  The argument is that id we can draw more users to Clojure, Clojurians will notice. If there are biologists who give biology talks using Clojure, the community will notice.
-
-There is also another view, and that I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that with such a  Lispy talk, SciCloj would not add any value. Lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciCloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers.
-
-My proposal for becoming visible is to become good at hammering through one message: "Clojure is a functional language on the JVM".
-
-This serves two aims: The first aim is  indeed to become visible among Pythonists through this message. And next to the already mentioned functional argument, the JVM is central. Fact is that the Java machine is stronger than the Python VM, the JVM is meant for science, the JVM is the second counterweight to Python.
-
-While all attempts to impress Pythonists with the JVM will become noticed, Clojurians will become even more interested when we show that, in order to deliver the message "Clojure is functional on the JVM", the most perfect Clojure use-case is indeed the SciCloj use-case. So the second aim, next to impress Pythonists, is to show to Clojurians how to use SciCloj. Not as a way to do science but as a way to isolate and present with simple examples the functional part of Clojure.
-
-And here I humbly put forward that dispensing with the IDE and using Notepad++ can be turned into an advantage. Notepad++ isolates the functional part of Clojure.
+So my suggestion is to accept that Clojure has a disadvantage over Python in that Python is easy to use in Notepad++. But instead of trying to coerce scientists into the IDEs of general software engineering, I will henceforth suggest to use the Figwheel way pioneered by Clojure. In other words: present SciCloj and Noj using live-reolad via the CLI, and present code by typing in Notepad++.
 
 ## The two ways of Clojure
-Noj makes Notepad++ viable because it supports a live reload feature via the CLI. Here, it needs to be clearly recognised that the live-reload feature of Noj/Clay is in full Clojure tradition, i.e. that of Figwheel/shadow-cljs. Not only does this need to be recognised by the SciCloj community, it needs to be communicated when presenting the functional parts of Clojure. This is not to alienate the people who rightly say that giving up the IDE puts Clojure into a disadvantage. Yes, it does, but it also highlights a Clojure tradition.
+Noj makes Notepad++ viable because it supports a live reload feature via the CLI. Here, it needs to be clearly recognised that the live-reload feature of Noj/Clay is in full Clojure tradition, i.e. that of Figwheel/shadow-cljs. Not only does this need to be recognised by the SciCloj community, it actually needs to be communicated when presenting the functional parts of Clojure. This is in order to not alienate the people who rightly say that giving up the IDE puts Clojure into a disadvantage. Yes, it does, but it also highlights a Clojure tradition.
 
 What is this tradition? It is that Bruce Hauman, the inventor of Figwheel, started to put the file as the primitive notion of Clojure-coding. This is opposed to the usual way of Clojure which puts not the "file" but the "namespace" front and center. But Bruce says: "When we have a workflow where our files are being watched ... as we work on them, we have an opportunity to detect syntax/compile errors earlier".
 
-So switching to a file perspective is not only a makeshift, because next to serving as a method to highlight the functional part, it also has the potential of tackling the problem of error messages in Clojure. While this is a long lasting topic with Clojurians, and even more important for Pythonists, this long lasting and potentially highly fruitful place for SciCloj is not the topic of this post.
+So switching to a file perspective is not only a makeshift. Next to put the spotlight on Clojure's simplicity, it also has the potential of tackling the problem of error messages. This old Clojure topic will certainly become more pronounced for Pythonists and is a highly fruitful place for SciCloj to tackle. More on that further below.
 
 Within this file-tradition, the REPL turns into the background.  [Thomas Heller](https://code.thheller.com/blog/shadow-cljs/2024/10/18/fullstack-cljs-workflow-with-shadow-cljs.html): "I personally only switch to the CLJS REPL occasionally, since most of the time hot-reload is enough." [Bruce Hauman](https://figwheel.org/docs/hot_reloading.html) was keen not to "take your focus out of the file you are editing."
 
-As opposed to that file-tradition, the first Clojure tradition is to navigate namespaces with the REPL. The file turns into the background - with the REPL, what is on disk in not what is in memory. While Clay was designed with the REPL in mind from the beginning, my argument also says that SciCloj should in a first step put the file front and center.
+As opposed to that file-tradition, the original Clojure tradition has been to navigate namespaces with the REPL. The file turns into the background - with the REPL, what is on disk in not what is in memory. While from the beginning on, Clay was designed with the REPL in mind, my argument says that SciCloj should put the file front and center.
 
-## What is on disc is in memory
-With the Figwheel approach, one can make sure that what it on disc is always what is in memory. I know that in Clojure this disc=memory equation never holds exactly, but with "tools.namespace" and libraries like "cljs-reload" this memory=disc can be achieved for all practical purposes.
+## What is on disk is in memory
+With the Figwheel approach, one can make sure that what it on disk is always what is in memory. I know that in Clojure this disk=memory equation never holds exactly, but with `tools.namespace` and libraries like `cljs-reload` this memory=disk can be achieved for all practical purposes.
 
-In communication from SciCloj to the wider Clojure community, this requirement memory=disc can be labeled as the Figwheel-reloaded approach. To Python people it does not need a name, memory=disc is the normal situation. This is the reason we provide the Noj-CLI with live-reload as default.
+In communication to the wider Clojure community, this requirement memory=disk can be labeled as the Figwheel-reloaded approach. In talking to Python people it does not need a name, memory=disk is the normal situation. In the same way you do not ask a fish "how is the water today", you do not ask a Pythonist "how is your disk=memory today". It is exactly for this reason, namely to be relatable to Pythonists, that we provide the Noj-CLI with live-reload as default.
 
-Now some Clojurians will say: "I would never work like this". Other Clojurians can relate to this, because they use IntelliJ with the "sync the file" feature. In any case, all Clojurians will agree, that Figwheel-reload is a tradition within Clojure, whether a particular person lives within this tradition or not.
+Now some Clojurians will say: "I would never work like this". Other Clojurians on the other hand would not say that in this strong form, because they use IntelliJ with the "sync the file" feature. In any case, all Clojurians will agree that Figwheel-reload is a tradition within Clojure, whether a particular person lives within this tradition or not.
 
-"But you are giving away the superpower of Lisp!", I hear. My answer is: The role of SciCloj cannot be to evangelise S-expressions. SciCloj should never speak of "Superpower" because amongst scientists, anyone who speaks of magic will meet condemnation. Rather it is the role of SciCloj is to hammer through  the fact that Clojure is a functional language on the JVM, if that argument does not convince some scientist, no other will.
+"But you are giving away the superpower of Lisp!", I hear. My answer is: The role of SciCloj cannot be to evangelise the REPL because this is done enough by other great Lisp figures. Moreover, SciCloj should never speak of "Superpower" because amongst scientists anyone who speaks of magic will meet condemnation. Rather, while not every Lisp is functional, the role of SciCloj is to hammer through  the fact that Clojure is a functional language on the JVM.
 
-## Outtakes
-I think with the decisions made in this thread, ScCloj made sure that Clay connects both Clojure traditions 1) Repl-namespace and 2) reload-file within one new symbol ,,. I think it is very important for SciClojurians to have clearly in mind that Clay is not some "boffin idea" but reflects the roots of Clojure.
+## Error Messages
+Improving the error messages of Clojure is a prominent topic in every user survey. I am not sure how serious the survey participants are when they chip in this topic riddled with ambiguity.
+
+On the one hand there are voices who say "I want the whole stacktrace as it is" (probably being happy with their IDE middleware formatting those stacktraces). On the other hand there is the opinion "you do not need error messages", because learning REPL driven development means starting to think in a kind of Sherlock Holmes way which is impaired by focusing on error messages.
+
+Despite all this ambiguity, Figwheel with its focus on the file was a pioneer with its "heads up" display for error messages. Another interesting project is "Babel" form Uni Minnesota, because it connects this "error message" topic back to academia, fitting SciCloj perfectly. Also "maria.cloud" has its innovative approach and there is "virhe" by Metosin.
+
+However, none of those efforts have gained wider traction. A possible solution has been given in the most recent [Clj-together survey](https://www.clojuriststogether.org/news/call-for-proposals.-feb.-2025-member-survey/) with the following request: "consensus as to how to create “quickstart” applications for various usecases ... Otherwise, we risk fragmenting the efforts ... more usable error messages".
+
+So, in order to avoid the mentioned ambiguities in user expectations, error messages need to depend on 1) use-case and 2) user experience level. And SciCloj can nail down both: Clojure beginners who use Clay with "live-reload" in the Figwheel-reload tradition.
+
+SciCloj could introduce already existing linters like clj-kondo, independent of any IDE. And because everything is displayed in the browser, which offers more space than an IDE, there can be all sorts of additional information. Even statically inferred type information is a possibility. Also a sophisticated debugger like Flowstorm could be included into the Clay experience.
+
+## Printline debgging
+Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. But here, working within the S-expression paradigm is cumbersome. For this, Clojure since long has a solution: reader conditionals. I call this the "double-comma" solution to printline debugging. Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
+
+Sometimes it is stated that one disadvantage of always processing a whole file is how to deal with "slow calculations". I think the chances of creating something slow are greatly overestimated, one can always avoid that situation by reading some pre-calculated data from files. Also, science already has its own more sophisticated solution for this problem: Jupyter notebooks. For this reason, SciCloj provides a Jupyter kernel.
+
+At this point, I'd like to warn against a certain kind of REPL-ish concept that must never be introduced within the Figwheel-reload approach.
+
+This is the concept of earmarking some part of the code as "special", so that only this part of the code is evaluated when the full source file is read and processed. I call this the "triple-comma fallacy", which is a monstrosity.
+
+That monstrosity is outright harmful to SciCloj. Because any teacher coming from Python, maybe even a professor, sees this approach in some obscure video and finds it valuable. And then, as any user of the proper REPL method knows, he will make a complete mess. And then he remembers that he likes Python better anyway and demonstrates this monstrosity as an argument against Clojure. And then the wider Clojure community will rightly shake their heads and say: "we condemn those SciCloj boffins, we never understood those aliens and their crazy ideas anyway". SciCloj must stick to Clojure tradition to become visible within the Clojure community.
+
+## The REPL prompt
+In order to introduce the REPL concept after having presented Noj (using the Figwheel-reload approach), it is best to show Noj in a Jupyter notebook. That means to dispense with Clay for introducing the REPL. This might be a tough step but it serves the purpose of introducing the notion of the REPL using an already established tradition in science, namely the notebook concept.
+
+Nontheless, a Lisper will never leave the podium without having presented his own concept of the REPL, which is the Lisp concept. And the urge is to show his cherished workflow based on the IDE connected to the REPL. Still, this kind of proud presentation has already been done by prominent Lisp figures and I argue that it does not serve SciCloj's mission to become visible within both the Python and Clojure communities. I argue that SciCloj's task is to refer to already existing videos and blogs that show the Clojure way of the IDEs, to connect Noj to the great Lisp figures, to establish the connection to tradition, but not to be yet another Lisp community which evangelises the full workflow.
+
+Rather, I propose to show a concept that has been neglected up to now: the REPL prompt. The prompt is also well known to Python users and has nothing to do with an IDE.
+
+The REPL is awesome and awful both at the same time. This is because when using the REPL, what is on disk is not what is in memory. The equation "disk=memory", the cornerstone of the Figwheel-reload approach, does not hold anymore. In other words: one can make a complete mess.
+
+But that is ok, because one can use the REPL also to great advantage. And to show both the awesome and awful aspects of the REPL, it can make sense to use the REPL prompt to override the behaviour of the above described double-comma, which as described is used colloquially for printline debugging.
+
+This is the concept of earmarking some part of the code as "special", so that only this part of the code is evaluated when the full source file is read and processed. I call this the "rich-comment comprehension", which is a great invention.
+
+The astute reader will now undoubtedly say: Hang on a minute, just before, you were condemning this "earmarking of code as special" and called it the "triple-comma fallacy". Now you praise this same "earmarking of code as special" as the "rich-comment comprehension". Just renaming things does not make them better. Thus your argument is not understandable.
+
+The all important difference between the "rich-comment comprehension" and the "triple-comma fallacy" is not that they are technically different. Indeed the two names denote the same technical fact. But the fallacy is committed by mentally working within the Figwheel-reload tradition. The lapse is to skip performing the act of leaving the Figwheel-reload tradition before using "rich-comment comprehension", thereby committing the "triple-comma fallacy". Naive users will find this fallacy convenient, make a mess and blame Clojure the language for that. And the Clojure community will rightly blame the SciCloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure with the triple-comma fallacy.
+
+In order to activate the "rich-comment comprehension", on the contrary, a user must be able to open the REPL prompt, thereby acknowledging to leave the file-based Figwheel-reload tradition and enter the namespace-based REPL tradition. He demonstrates that he is not a naive user anymore. He knows and shows - by typing at the REPL prompt - that the equation "disk=memory" does not hold anymore and is willing to take full responsibility. When making a mess, which he undoubtedly will, he cannot blame Clojure the language but has to admit that he has been using the REPL in a wrong way. And that not only is perfectly ok amongst Clojurians, but indeed messing with the REPL is the way to actually become a Clojurian.
