@@ -17,7 +17,7 @@ Scientist will eventually understand that Clojure is best. Because in their role
 ## Make SciCloj visible among Clojurians
 Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciCloj does is alien. As things stand in 2025, because we are aliens, we are not exactly invisible but also not seen in the best possible light within the Clojure community. My goal here is to make SciCloj visible in a new light.
 
-My purpose is to draw attention to the idea that in order to become more visible within the Clojure community, SciCloj needs to cater for Python scientists. The argument here is that if we can draw more users to Clojure, Clojurians will notice. If there are biologists who give biology talks using Clojure, the community will notice.
+I'd like to draw attention to the idea that in order to become more visible within the Clojure community, SciCloj needs to cater for Python scientists. The argument here is that if we can draw more users to Clojure, Clojurians will notice. If there are biologists who give biology talks using Clojure, the community will notice.
 
 There is also another view, and that I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciCloj would not add any value. Lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciCloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
 
@@ -41,7 +41,7 @@ So should the Clojure Community provide tooling, provide IDEs for scientists? By
 So should SciCloj provide more videos and manuals for IDE usage? My answer is: certainly not.
 The reason is: time. While it is easy to refer to existing content of the wider community, it takes a lot of effort to produce new videos and manuals. Time spent on presenting IDEs is not well spent, because scientists do not want to spend the time to learn an IDE anyway. It does not improve their self-efficacy enough. This is why Python is so successful, it does not need an IDE.
 
-So my suggestion is to accept that Clojure has a disadvantage over Python in that Python is easy to use in Notepad++. But instead of trying to coerce scientists into the IDEs of general software engineering, I suggest to choose the Figwheel way for conveying the single one argument that I think holds currency for scientists: "Clojure is mathy, Clojure is functional".
+So my suggestion is to accept that Clojure has a disadvantage over Python in that Python is easy to use in Notepad++. But instead of trying to coerce scientists into the IDEs of general software engineering, I suggest to choose the Figwheel way described below for conveying the single one argument that I think holds currency for scientists: "Clojure is mathy, Clojure is functional".
 
 ## The two ways of Clojure
 That Notepad++ is viable for Noj at all is because Noj/Clay supports a live reload feature via the CLI. Here, it needs to be clearly recognised that the live-reload feature of Noj/Clay is in full Clojure tradition, i.e. that of Figwheel/shadow-cljs.
@@ -55,7 +55,7 @@ As opposed to that file-tradition, the original Clojure tradition has been to na
 Within this file-tradition, the REPL turns into the background.  [Thomas Heller](https://code.thheller.com/blog/shadow-cljs/2024/10/18/fullstack-cljs-workflow-with-shadow-cljs.html): "I personally only switch to the CLJS REPL occasionally, since most of the time hot-reload is enough." [Bruce Hauman](https://figwheel.org/docs/hot_reloading.html) was keen not to "take your focus out of the file you are editing."
 
 ## What is on disk is in memory
-Although not being the standard in Clojure, with libraries like `cljs-reload`, one can always make sure that what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reloaded" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
+Although not being the standard in Clojure, with libraries like `cljs-reload`, one can always make sure that what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
 
 Now some Clojurians will say: "I would never work like this". Other Clojurians on the other hand would not say that in this strong form, because they use IntelliJ with the "sync the file" feature. In any case, all Clojurians will agree that Figwheel-reload has a certain tradition within Clojure, whether a particular person lives within this tradition or not.
 
