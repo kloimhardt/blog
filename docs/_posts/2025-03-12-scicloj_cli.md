@@ -8,39 +8,39 @@ categories: Software
 a post by Markus Agwin Kloimwieder
 
 ## Preface: the aim of SciCloj
-The ScCloj community puts a lot of effort into being inclusive and making the [ScliCloj](https://scicloj.github.io) website talk to the target audience -- anybody who has some data to explore.
+The SciCloj community puts a lot of effort into being inclusive and making the [SciCloj](https://scicloj.github.io) website talk to the target audience -- anybody who has some data to explore.
 
-The following post does not talk to SciCloj's target audience, but rather it talks about them. Thus the author puts himself in a meta position which yours truly is not entitled to. Maybe the reader should consider to stop reading, all the more so because things are getting worse.
+The following post does not talk to SciCloj's target audience. But rather it tries to talk about its target audience. This poses the first problem: the author puts himself in a meta position which yours truly is not entitled to. The second problem is that the SciCloj audience is so multifaceted that I found it impossible to talk about it in the first place.
 
-I do not talk about SciCloj as it really exists. This blog post puts as a premise two assumptions that are simply wrong. I paint a picture about a fictional SciCloj, a straw man I call SciKloj.
+I solve both problems with one trick: I talk about a blank slate called SciKloj. It has no target audience yet. Since SciKloj is my fictional invention, I am now entitled to assume that this SciKloj is not yet established within the Clojure community. Indeed, I even paint it as an alien within the wider Clojure community.
 
-The first assumption is that I talk about a SciKloj that caters for Python scientists only. Second I talk about a SciKloj that is an alien within the wider Clojure community, a SciKloj that is seen as a community of boffins.
-
-If you are still with me, I'll start the old trickery that depends on the readers suspension of disbelieve.
+I'll now start my trickery that depends on your, the readers, suspension of disbelieve. But this makes me think: who would be the reader of the following essay? Here I assume my reader to be, like me, an early adopter of SciKloj who intends to present SciKloj to some curious outside audience.
 
 ## An essay à clef
 
-The following essay argues that if SciKloj caters for Pythonists in the right way, it will be seen in a better light within the Clojure community.
+This essay assumes that if SciKloj caters mainly for Python scientists, it will gain a sharpened profile that makes it easier to present SciKloj to any other curious audience. Especially, SciKloj will be seen in an improved light within the Clojure community.
 
 ### SciKloj caters for a subset of beginners
 The message of SciKloj is: "Clojure is the best and most natural language for science and to this aim, the SciKloj community provides Noj as a  framework for data science in Clojure."
 
-The target audience for Noj are scientists. That means we deal with people who are beginners with Clojure. But as much as any software developer, scientists are highly trained in logical thinking. Beginners, yes, rookies, no. This makes scientists a special bunch to cater for.
+The target audience for Noj are data analysts. That means we deal with people who are most probably beginners with Clojure. But we can assume that they are highly trained in logical inference. Beginners, yes, rookies, no. This makes Noj users a special bunch to cater for.
 
-Scientist will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas. That Clojure is mathy poses the main reason to use Clojure in science.
+Data analysts will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas. That Clojure is mathy poses the main reason to use Clojure in science.
 
 ### Make SciKloj visible among Clojurians
 Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciKloj does is alien. Because we are aliens, we are not exactly invisible but also not seen in the best possible light within the Clojure community. My goal here is to make SciKloj visible in a new light.
 
-I'd like to draw attention to the idea that in order to become more visible within the Clojure community, SciKloj needs to continue to cater mainly for Python scientists. The argument here is that if we can draw more users to Clojure, Clojurians will notice. If there are biologists who give biology talks using Clojure, the community will notice.
+For this, I'd like to draw the attention to Python, the most popular language out there. My argument is that if we can draw some of the many Python users to Clojure, Clojurians will notice.
 
-There is also another view, and that I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciKloj would not add any value. Lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciKloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
+Informed by this argument, I make the following assumption: in order to become more visible within the Clojure community, SciKloj should mainly cater for Python scientists.
 
-My proposal for becoming visible is to become good at one thing: hammering through the message: "Clojure is a functional language on the JVM". Please notice that the JVM is central. Fact is that the Java machine is stronger than the Python VM, the JVM is meant for science. While this JVM argument is very important, it is so simple that I cannot say anything more than repeat that the JVM is central to SciKloj.
+There is a related view which I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciKloj would not add any value. Lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciKloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
+
+My proposal for becoming visible is to become good at one thing: hammering through the message "Clojure is a functional language on the JVM". Please notice that the JVM is central. Fact is that the Java machine is stronger than the Python VM, the JVM is meant for science. While this JVM argument is very important, it is so simple that I cannot say anything more than repeat that the JVM is central to SciKloj.
 
 Over time, Clojurians will realise that for delivering the message "Clojure is functional", SciKloj is the perfect use-case. We need to show to Clojurians how to use SciKloj not to do science but as the way to isolate and present the functional part of Clojure.
 
-And here I humbly put forward that, in order to present Noj, we should dispense with the IDE. That is because the IDE's bells and whistles draw attention away from the simplicity of the Clojure syntax. The IDE does not serve the message of SciKloj, which is: "Clojure is functional". The argument is that when talking to beginners, an unknown IDE draws away attention form the functional design of Clojure.
+So the idea is to become visible within Clojure by successfully introducing SciKloj to Pythonists. And here I humbly put forward that, in order to present Noj, we should dispense with the IDE. That is because the IDE's bells and whistles draw attention away from the simplicity of the Clojure syntax. The IDE does not serve the message of SciKloj, which is: "Clojure is functional". The argument is that when talking to beginners, an unknown IDE draws away attention form the functional design of Clojure.
 
 Taking this proposal to its end means to present Noj with Notepad++. This no-IDE approach is abominable to Clojurians. The following thoughts try to put further weight behind Notepad++, not for general Clojure developers, but only for the narrow field of presenting "science without Python", for presenting SciKloj.
 
@@ -89,12 +89,14 @@ With its narrow use-case and a file-based Figwheel-reload approach, SciKloj coul
 
 Clay's browser window offers lots of space for additional linting information, e.g. statically inferred types. Also a sophisticated debugger like Flowstorm could be part of the Clay experience.
 
-### Printline debgging
+### Printline debugging
 Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. For this, S-expressions are cumbersome. But Clojure since long has a solution: reader conditionals. I call this the "double-comma" solution to printline debugging. Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
 
-Sometimes "slow calculations" are held against executing whole files. I think the chances of creating something slow are greatly overestimated and one can always store away pre-calculated data. Also, science already has its own more sophisticated solution for this problem: Jupyter notebooks. And SciKloj provides a Jupyter kernel.
+Sometimes "slow calculations" are held against executing whole files. I think the chances of creating something slow are greatly overestimated and one can always store away pre-calculated data.
 
-At this point, I'd like to warn against a certain kind of REPL-ish concept that must never be introduced within Clay and the Figwheel-reload approach.
+If a new user experiences slow execution, the first advice should be to use a temporary data-file. In case of further problems, a minimal use-case isolates a possible bug in Clay. In case the problem persists, as SciKloj (next to Clay) also provides a Jupyter kernel, it is best for the user to switch to Jupyter notebooks. In a last step, learning to configure an IDE is certainly valuable, but more on that below.
+
+At this point, I'd rather like to warn against a certain kind of REPL-ish concept that must never be introduced within Clay and the Figwheel-reload approach.
 
 This is the concept of earmarking some part of the code as "special", so that only this part of the code is evaluated when the full source file is read and processed. I call this the "triple-comma fallacy", which is a monstrosity.
 
