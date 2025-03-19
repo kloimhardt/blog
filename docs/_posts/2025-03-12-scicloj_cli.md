@@ -12,13 +12,11 @@ The SciCloj community puts a lot of effort into being inclusive and making the [
 
 The following post does not talk to SciCloj's target audience. But rather it tries to talk about its target audience. This poses the first problem: the author puts himself in a meta position which yours truly is not entitled to. The second problem is that the SciCloj audience is so multifaceted that I found it impossible to talk about it in the first place.
 
-I solve both problems with one trick: I talk about a blank slate called SciKloj. It has no target audience yet. Since SciKloj is my fictional invention, I am now entitled to assume that this SciKloj is not yet established within the Clojure community. Indeed, I even paint it as an alien within the wider Clojure community.
+I solve both problems with one trick: I talk about a blank slate called SciKloj. It has no target audience yet. Since SciKloj is my fictional invention, I am now entitled to assume that this SciKloj is not yet established within the Clojure community either.
 
 I'll now start my trickery that depends on your, the readers, suspension of disbelieve. But this makes me think: who would be the reader of the following essay? Here I assume my reader to be, like me, an early adopter of SciKloj who intends to present SciKloj to some curious outside audience.
 
 ## An essay à clef
-
-This essay assumes that if SciKloj caters mainly for Python scientists, it will gain a sharpened profile that makes it easier to present SciKloj to any other curious audience. Especially, SciKloj will be seen in an improved light within the Clojure community.
 
 ### SciKloj caters for a subset of beginners
 The message of SciKloj is: "Clojure is the best and most natural language for science and to this aim, the SciKloj community provides Noj as a  framework for data science in Clojure."
@@ -32,7 +30,7 @@ Most Clojurians are software developers, working on REST, say. To the typical Cl
 
 For this, I'd like to draw the attention to Python, the most popular language out there. My argument is that if we can draw some of the many Python users to Clojure, Clojurians will notice.
 
-Informed by this argument, I make the following assumption: in order to become more visible within the Clojure community, SciKloj should mainly cater for Python scientists.
+Informed by this argument, I make the following proposal: in order to become more visible within the Clojure community, SciKloj should mainly cater for Python scientists.
 
 There is a related view which I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciKloj would not add any value. Lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciKloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
 
