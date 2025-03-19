@@ -20,7 +20,7 @@ If you are still with me, I'll start the old trickery that depends on the reader
 
 ## An essay à clef
 
-The following essay argues that if SciKloj cater for Pythonists in the right way, it will be seen in a better light within the Clojure community.
+The following essay argues that if SciKloj caters for Pythonists in the right way, it will be seen in a better light within the Clojure community.
 
 ### SciKloj caters for a subset of beginners
 The message of SciKloj is: "Clojure is the best and most natural language for science and to this aim, the SciKloj community provides Noj as a  framework for data science in Clojure."
@@ -100,12 +100,25 @@ This is the concept of earmarking some part of the code as "special", so that on
 
 That monstrosity is outright harmful to SciKloj. Because any teacher coming from Python, maybe even a professor, sees this approach in some obscure video and finds it valuable. And then, as any user of the proper REPL method knows, he will make a complete mess. And then he remembers that he likes Python better anyway and demonstrates this monstrosity as an argument against Clojure. And then the wider Clojure community will rightly shake their heads and say: "we condemn those SciKloj boffins, we never understood those aliens and their crazy ideas anyway". SciKloj must stick to Clojure tradition to become visible within the Clojure community.
 
+### Against the REPL
+For Clay, the REPL is not needed because of its file reload capabilities. There are many advocates of REPL driven development for good reasons. Here, I present three reasons why I think it makes sense to avoid the REPL in a first step:
+
+1) The man reason for using Clojure in science is because it is a functional language on the JVM. Usually, the REPL and functional programming are mentioned in the same breath. Noting could be more wrong. Functional programming is about immutable data. A pure function does not change the data it is given to, it calculates new data. Functional programming is mathy. REPL driven development, on the contrary, is based on mutation of code and data, which is exactly the opposite of demonstrating immutability. For this reason, the REPL is confusing for anyone trying to understand Clojure.
+
+2) The REPL has its own learning curve. The replacing or adding of code in a running program, because of being mutation, needs advanced knowledge and care. One can easily get to a state where what's in memory does not match up to what's on disk. As a result, a perfectly well functioning program can refuse to work after restart. A frustration to be avoided in a first step.
+
+3) The REPL is in development practice not used without a properly configured development environment. As said in this influential [video](https://www.youtube.com/watch?v=Qx0-pViyIDU&feature=youtu.be&t=740) on the topic: "you work in your favourite tool", i.e. IntelliJ, Calva, Chlorine or Cider. This last tool is presented [here](https://www.youtube.com/watch?v=NDrpclY54E0), which demonstrates that one has to prepare a few things before using the REPL in its intended way.
+
+Now that I argued that one should avoid the REPL in a first step, I continue to describe how to introduce this important concept in the SciKloj context.
+
 ### The REPL prompt
 In order to introduce the REPL concept (after having presented Noj using the Figwheel-reload approach), it is best to show Noj in a Jupyter notebook. That means to dispense with Clay for introducing the REPL. This might be a tough step but it serves the purpose of using an already established tradition for introducing the notion of the REPL.
 
 Nonetheless, a Lisper will never leave the podium without having presented his own concept of the REPL. And there, the urge is to show his cherished workflow based on his preferred IDE connected to the REPL. He wants to show his superpower. This is a good thing.
 
-I argue that SciKloj's core task is to refer to already existing videos and blogs of the wider Clojure community. Also, encourage the wider Clojure community to watch Clay videos. Of course within the Clay window we have nicely formatted, code-highlighted, colour and all, line numbers, indentation, linted code with wiggled underlining, light- and dark-mode (because we can), FiraCode font (look at that thread-first!), fifty shades of grey. Never would we expect Clojurians to look into the bleak window of a plain editor, instead our Perseus shield of Clay will prevent him from turning into stone. In this way, the existing Clay examples themselves will become little stones in the powers users' mosaic of videos that flash out their IDEs and Clojure's superpowers. SciKloj should leave that open space, generously leave the fun to acquaintances from the wider Clojure community.
+When introducing the REPL, I argue that SciKloj's core task is to refer to already existing videos and blogs of the wider Clojure community.
+
+Also, encourage the wider Clojure community to watch Clay videos. Of course within the Clay window we have nicely formatted, code-highlighted, colour and all, line numbers, indentation, linted code with wiggled underlining, light- and dark-mode (because we can), FiraCode font (look at that thread-first!), fifty shades of grey. Never would we expect Clojurians to look into the bleak window of a plain editor, instead our Perseus shield of Clay will prevent him from turning into stone. In this way, the existing Clay examples themselves will become little stones in the powers users' mosaic their of own videos that flash out their IDEs and Clojure's superpowers. SciKloj should leave that open space, generously leave the fun of presenting an IDE to acquaintances from the wider Clojure community.
 
 That said, SciKloj best uses the REPL in its plain form: the prompt. It has been neglected up to now. The prompt is well known to Python users and has nothing to do with an IDE.
 
@@ -122,3 +135,6 @@ The all important difference between the "rich-comment comprehension" and the "t
 Naive users will find the "triple-comma" fallacy convenient, make a mess and blame Clojure the language for that. And the Clojure community will rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
 
 In order to activate the "rich-comment comprehension", a user must be able to open the REPL prompt, thereby acknowledging to leave the file-based Figwheel-reload tradition and enter the namespace-based REPL tradition. He demonstrates that he is not a naive user anymore. He knows and shows - by typing at the REPL prompt - that the equation "disk=memory" does not hold anymore and is willing to take full responsibility. When making a mess, which he undoubtedly will, he cannot blame Clojure the language but has to admit that he has been using the REPL in a wrong way. And that not only is perfectly ok amongst Clojurians, but indeed messing with the REPL is the way to actually become a Clojurian.
+
+## Afterword
+This concludes my essay à clef. I had to invent SciKloj because SciCloj proper is so multifaceted that it is next to impossible to talk about SciCloj. I am of the opinion that from the ideas presented for SciKloj, as many as possible should become part of the real SciCloj.
