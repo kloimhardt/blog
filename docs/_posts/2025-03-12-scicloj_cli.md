@@ -21,7 +21,11 @@ The message of SciKloj is: "Clojure is the best and most natural language for sc
 
 The target audience for Noj are data analysts. Most data analysts out there have never heard of Clojure which means we deal with people who are most probably beginners with Clojure. But we can assume that they are highly trained in logical inference. Beginners, yes, rookies, no.
 
-Data analysts will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas. That Clojure is mathy poses the main reason to use Clojure in science.
+Data analysts will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas.
+
+One important feature that gives Clojure this mathy appeal is that it is dynamically typed. In fact, most other functional languages are statically typed, a feature which disturbs succinctness of notation.
+
+That Clojure is mathy poses the main reason to use Clojure in science.
 
 ### Make SciKloj visible among Clojurians
 Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciKloj does is alien. We are not exactly invisible but also not seen in the best possible light within the Clojure community. My goal here is to make SciKloj visible in its best light.
@@ -30,9 +34,13 @@ For this, I'd like to draw the attention to Python, the most popular language ou
 
 Informed by this argument, I make the following proposal: in order to become more visible within the Clojure community, SciKloj should mainly cater for Python scientists.
 
-My proposal for becoming visible is to become good at one thing: hammering through the message "Clojure is a functional language on the JVM". Please notice that the JVM is central. The Java machine is stronger than the Python VM. While this JVM argument is very important, it is so simple that I cannot say anything more than repeat that the JVM is central to SciKloj.
+My proposal for becoming visible is to become good at one thing: hammering through the message "Clojure is a dynamically typed functional language on the JVM".
 
-There is a related view which I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciKloj would not add any value because lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciKloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
+Please notice that the JVM is central. The Java machine is stronger than the Python VM. While this JVM argument is very important, it is so simple that I cannot say anything more than repeat that the JVM is central to SciKloj.
+
+That Clojure is a dynamically typed language is also central. This is because dynamic typing is a given for Python scientists. That, coming from Python, Clojure is an alternative at all hinges on the fact that it is dynamically typed.
+
+There is a view view, related to dynamic types, which I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciKloj would not add any value because lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciKloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
 
 So SciKloj will tell Pythonists that "Clojure is functional". And by so doing, the whole Clojure community will realise that for delivering this message "Clojure is functional", SciKloj is the perfect use-case.
 
@@ -68,7 +76,7 @@ As opposed to that file-tradition, the original Clojure tradition has been to na
 Within this file-tradition, the REPL turns into the background.  [Thomas Heller](https://code.thheller.com/blog/shadow-cljs/2024/10/18/fullstack-cljs-workflow-with-shadow-cljs.html): "I personally only switch to the CLJS REPL occasionally, since most of the time hot-reload is enough." [Bruce Hauman](https://figwheel.org/docs/hot_reloading.html) was keen not to "take your focus out of the file you are editing."
 
 ### What is on disk is in memory
-Although not being the standard in Clojure, with libraries like `cljs-reload`, one can always make sure that what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
+Although not being the standard in Clojure, with libraries like [clj-reload](https://github.com/tonsky/clj-reload), one can always make sure that what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
 
 Now some Clojurians will say: "I would never work like this". Other Clojurians on the other hand would not say that in this strong form, because they use IntelliJ with the "sync the file" feature. In any case, all Clojurians will agree that Figwheel-reload has a certain tradition within Clojure, whether a particular person lives within this tradition or not.
 
@@ -85,12 +93,14 @@ No effort has gained wider traction. This opens a possible role for SciKloj, a r
 
 With its narrow use-case and a file-based Figwheel-reload approach, SciKloj could tailor customize linters like clj-kondo. This linting will mellow the general Lisp problem of unbalanced parentheses. It will not go away and will always be a problem for beginners and a disadvantage over Python. Within SciKloj, I argue this to accept and trust that users will eventually master slurping and barfing within an IDE later on.
 
-Clay's browser window offers lots of space for additional linting information, e.g. statically inferred types. Also a sophisticated debugger like Flowstorm could be part of the Clay experience.
+Clay's browser window offers lots of space for additional linting information. That Clojure is both dynamically typed and functional puts it in a unique position for science, but with proper instrumentation of its functions there is no reason why in certain cases it shouldn't be possible to display statically inferred types. Also a sophisticated debugger like Flowstorm could be part of the Clay experience.
 
 ### Printline debugging
-Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. For this, S-expressions are cumbersome. But Clojure since long has a solution: reader conditionals. I call this the "double-comma" solution to printline debugging. Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
+Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. For this, S-expressions are cumbersome. But Clojure since long has a solution: reader conditionals. I call this solution to printline debugging the "double-comma" solution (capturing this name from a concept that in reality has a related but slightly different purpose). Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
 
 Sometimes "slow calculations" are held against executing whole files. I think the chances of creating something slow are greatly overestimated. Just in case, the first advice should be to use temporary data-files. In case of further problems, maybe there is a bug in Clay so a minimal use-case is needed. Or maybe a switch to Jupyter notebooks is best (next to Clay, SciKloj also provides a Jupyter kernel).
+
+There is also the "Clerk" method which in a way can be said to automate this use of temporary data-files. It caches all calculations persistently, so even after JVM restart the cache will be hit in case of unchanged code.
 
 There is a certain other idea for dealing with "slow calculations" which I am opposed to. It is a certain kind of REPL-ish concept that must never be introduced within Clay and the Figwheel-reload approach.
 
