@@ -12,6 +12,8 @@ The SciCloj community puts a lot of effort into being inclusive and making the [
 
 The following post does not talk to the SciCloj target audience. It talks about SciCloj. For this, I use a blank slate called SciKloj which is assumed to have no target audience yet. I also assume that this SciKloj is not yet established within the Clojure community either.
 
+Viewed from a technical side, almost everything that is described in the following essay about SciKloj is already there in reality. So the essay does not primarily aim at immediate technical improvements but tries to cast into words and put into a specific perspective those technical achievements. The most honour can be done to the essay by criticising it. The assumption here is that mere statements about technical facts never lead to anything new, rather the critical reception of viewpoints (put into words) is a necessary step towards improvement.
+
 To whom, finally, does the essay talk to? I assume my reader to be, like me, an early adopter of SciKloj who intends to present SciKloj to some curious outside audience.
 
 ## An essay à clef
@@ -76,7 +78,7 @@ As opposed to that file-tradition, the original Clojure tradition has been to na
 Within this file-tradition, the REPL turns into the background.  [Thomas Heller](https://code.thheller.com/blog/shadow-cljs/2024/10/18/fullstack-cljs-workflow-with-shadow-cljs.html): "I personally only switch to the CLJS REPL occasionally, since most of the time hot-reload is enough." [Bruce Hauman](https://figwheel.org/docs/hot_reloading.html) was keen not to "take your focus out of the file you are editing."
 
 ### What is on disk is in memory
-Although not being the standard in Clojure, with libraries like [clj-reload](https://github.com/tonsky/clj-reload), one can always make sure that what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
+Although not being the standard in Clojure, with a command like `(run! #(ns-unmap *ns* %) (keys (ns-interns *ns*)))`, one can always make sure that (on a reload) what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
 
 Now some Clojurians will say: "I would never work like this". Other Clojurians on the other hand would not say that in this strong form, because they use IntelliJ with the "sync the file" feature. In any case, all Clojurians will agree that Figwheel-reload has a certain tradition within Clojure, whether a particular person lives within this tradition or not.
 
@@ -96,15 +98,15 @@ With its narrow use-case and a file-based Figwheel-reload approach, SciKloj coul
 Clay's browser window offers lots of space for additional linting information. That Clojure is both dynamically typed and functional puts it in a unique position for science, but with proper instrumentation of its functions there is no reason why in certain cases it shouldn't be possible to display statically inferred types. Also a sophisticated debugger like Flowstorm could be part of the Clay experience.
 
 ### Printline debugging
-Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. For this, S-expressions are cumbersome. But Clojure since long has a solution: reader conditionals. I call this solution to printline debugging the "double-comma" solution (capturing this name from a concept that in reality has a related but slightly different purpose). Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
+Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. For this, S-expressions are cumbersome. But Clojure since long has a solution: reader conditionals. I call this solution to printline debugging the "double-comma" solution. Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
 
-Sometimes "slow calculations" are held against executing whole files. I think the chances of creating something slow are greatly overestimated. Just in case, the first advice should be to use temporary data-files. In case of further problems, maybe there is a bug in Clay so a minimal use-case is needed. Or maybe a switch to Jupyter notebooks is best (next to Clay, SciKloj also provides a Jupyter kernel).
+Sometimes "slow calculations" are held against executing whole files. The solution, tailor made to the file-based approach, is to do code experiments in a short file that refers to the main program. So, while the main program starts with the canonical `(ns name ...) (run! #(ns-unmap ...))` expressions, the short coding file starts with `(in-ns 'name)`. In this way, while having access to the functions and calculated data of the main program, only the short file is processed on file-reload.
 
-There is also the "Clerk" method which in a way can be said to automate this use of temporary data-files. It caches all calculations persistently, so even after JVM restart the cache will be hit in case of unchanged code.
+I'd like to mention that one can always switch to Jupyter notebooks, because next to Clay, SciKloj also provides a Jupyter kernel. There is also the "Clerk" method which caches all calculations persistently. Of course, in general any user always has the option to store calculations in data-files to be read afterwards.
 
 There is a certain other idea for dealing with "slow calculations" which I am opposed to. It is a certain kind of REPL-ish concept that must never be introduced within Clay and the Figwheel-reload approach.
 
-This is the concept of earmarking some part of the code as "special", so that only this part of the code is evaluated when the full source file is read and processed. I call this the "triple-comma fallacy", which is a monstrosity.
+This is the concept of earmarking some part of the code as "special", so that only this part of the code is evaluated when the full source file is read and processed. I call this the "triple-comma fallacy", which is a monstrosity. Remember that, as shown above, one can always split a single program into two files.
 
 That monstrosity is outright harmful to SciKloj. Because any teacher coming from Python, maybe even a professor, sees this approach in some obscure video and finds it valuable. And then, as any user of the proper REPL method knows, he will eventually make a complete mess. And then he remembers that he likes Python better anyway and demonstrates this monstrosity as an argument against Clojure.
 
@@ -143,4 +145,6 @@ When being immediately enabled via the CLI to earmark code, naive users will mak
 In order to activate the "rich-comment comprehension", a user must be able to open the REPL prompt, thereby acknowledging to leave the file-based Figwheel-reload tradition and enter the namespace-based REPL tradition. He demonstrates that he is not a naive user anymore. He knows and shows - by typing at the REPL prompt - that the equation "disk=memory" does not hold anymore and is willing to take full responsibility. When making a mess, which he undoubtedly will, he cannot blame Clojure the language but has to admit that he has been using the REPL in a wrong way. And that not only is perfectly ok amongst Clojurians, but indeed messing with the REPL is the way to actually become a Clojurian.
 
 ## Afterword
-This concludes my essay à clef about SciKloj, a fiction that can be seen as one aspect of the whole multifaceted SciCloj project.
+This concludes my essay à clef. In writing this essay, I took some literary license. For example, I captured the name "double-comma", which in reality is not the same as printline debugging, since the real version only prints the evaluation results of top-level forms. But all in all, the features described are technically there already. With one exception: the vast field of handling error messages is still open.
+
+SciKloj is a fiction that can be seen as one aspect of the whole multifaceted SciCloj project. This aspect is the beginner experience for Python users, which cannot cover any heavy real-world data exploration. But if only 10% of Python users try it out for a few hours and of those another 10% eventually switch to a fully fledged IDE like VSCode/Calva, this setup already fulfills its purpose: being a condition for the possibility to become visible. In that sense, the figwheel-reload approach is meant to be shown whenever some example permits it to do so.
