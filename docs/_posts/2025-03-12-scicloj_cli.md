@@ -8,18 +8,18 @@ categories: Software
 a post by Markus Agwin Kloimwieder
 
 ## Preface: the aim of SciCloj
-The SciCloj community puts a lot of effort into being inclusive and making the [SciCloj](https://scicloj.github.io) website talk to the target audience -- anybody who has some data to explore.
+The SciCloj maintainers put a lot of effort into being inclusive and making the [SciCloj](https://scicloj.github.io) website talk to the target audience -- anybody who has some data to explore.
 
-The following post does not talk to the SciCloj target audience. It talks about SciCloj. For this, I use a blank slate called SciKloj which is assumed to have no target audience yet. I also assume that this SciKloj is not yet established within the Clojure community either.
+The following post does not talk to the SciCloj target audience. It talks about SciCloj. For this, I use a blank slate called SciKloj which is assumed to have no target audience yet. I also assume that this SciKloj is not yet known to general Clojure users either.
 
-Viewed from a technical side, almost everything that is described in the following essay about SciKloj is already there in reality. So the essay does not primarily aim at immediate technical improvements but tries to cast into words and put into a specific perspective those technical achievements. The most honour can be done to the essay by criticising it. The assumption here is that mere statements about technical facts never lead to anything new, rather the critical reception of viewpoints (put into words) is a necessary step towards improvement.
+Concerning the technical side of SciKloj, almost everything that is described in the following essay is already there in reality. So the essay does not primarily aim at immediate technical improvements but tries to cast into words and put into a specific perspective those technical achievements. The most honour can be done to the essay by criticising it. The assumption here is that mere statements about technical facts never lead to anything new, rather the critical reception of viewpoints (put into words) is a necessary step towards improvement.
 
 To whom, finally, does the essay talk to? I assume my reader to be, like me, an early adopter of SciKloj who intends to present SciKloj to some curious outside audience.
 
 ## An essay à clef
 
 ### SciKloj caters for a subset of beginners
-The message of SciKloj is: "Clojure is the best and most natural language for science and to this aim, the SciKloj community provides Noj as a  framework for data science in Clojure."
+The message of SciKloj is: "Clojure is the best and most natural language for science and to this aim there is Noj, a  framework for data science in Clojure, which the SciKloj maintainers provide."
 
 The target audience for Noj are data analysts. Most data analysts out there have never heard of Clojure which means we deal with people who are most probably beginners with Clojure. But we can assume that they are highly trained in logical inference. Beginners, yes, rookies, no.
 
@@ -30,11 +30,11 @@ One important feature that gives Clojure this mathy appeal is that it is dynamic
 That Clojure is mathy poses the main reason to use Clojure in science.
 
 ### Make SciKloj visible among Clojurians
-Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciKloj does is alien. We are not exactly invisible but also not seen in the best possible light within the Clojure community. My goal here is to make SciKloj visible in its best light.
+Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciKloj does is alien. We are not exactly invisible but also not seen in the best possible light by general Clojure users. My goal here is to make SciKloj visible in its best light.
 
 For this, I'd like to draw the attention to Python, the most popular language out there. My argument is that if we can draw some of the many Python users to Clojure, Clojurians will notice.
 
-Informed by this argument, I make the following proposal: in order to become more visible within the Clojure community, SciKloj should mainly cater for Python scientists.
+Informed by this argument, I make the following proposal: in order to become more visible for regular Clojure users, SciKloj should mainly cater for Python scientists.
 
 My proposal for becoming visible is to become good at one thing: hammering through the message "Clojure is a dynamically typed functional language on the JVM".
 
@@ -44,7 +44,7 @@ That Clojure is a dynamically typed language is also central. This is because dy
 
 There is a view view, related to dynamic types, which I am opposed to: Let's evangelise Lisp, preach S-expressions to scientists. The reason I am opposed to this approach is that in employing such a lispy talk, SciKloj would not add any value because lots of Lisp people, software developers, already talk about the superiority of S-expressions. They do a great job, SciKloj cannot add anything here but reference those great Lisp figures. And it is not a good strategy to talk about the greatness of Lisp when wanting to become visible among Lispers. They know that already.
 
-So SciKloj will tell Pythonists that "Clojure is functional". And by so doing, the whole Clojure community will realise that for delivering this message "Clojure is functional", SciKloj is the perfect use-case.
+So SciKloj will tell to as many Pythonists as possible that "Clojure is functional". And by so doing, Clojure users will realise that for delivering this message "Clojure is functional", SciKloj is the perfect use-case.
 
 Notice the two fold effect: By showing simple SciCloj examples, we first show Pythonists a way to do science and second give Clojurians a way to demonstrate functional programming to the world, e.g. also PHP users.
 
@@ -59,10 +59,9 @@ Seasoned Clojure developers will not give the IDE away. Quote:
 
 > My take on this is that tooling is much more important on Clojure (and Lisps in general) than say on Python, specially because of interactive programming and s-expressions which is a big part of its super power. So I would be careful when removing tooling to appeal to beginners in the same way I wouldn't write imperative code in Clojure so it is easier for Python data scientists to get.
 
-So should the Clojure Community provide tooling, provide IDEs for scientists? By all means. And the community already does via Slack channels and youtube videos. The problem is that scientists are not in those channels, nor do they have the time to be there. They are certainly not the chat guys. They need a written user's guide to follow, and nothing else (please).
+In accordance with this view, and with lots of effort, gifted Clojurians provide for their fellow developers tools and IDEs, promoted via Slack channels and youtube videos. The problem is that scientists are not in those channels, nor do they have the time to be there. They are certainly not the chat guys. They need one single written user's guide to follow, and nothing else (please).
 
-So should SciKloj provide more videos and manuals for IDE usage? My answer is: certainly not.
-The reason is: time. While it is easy to refer to existing content of the wider community, it takes a lot of effort to produce new videos and manuals. Time spent on presenting IDEs is not well spent, because scientists do not want to spend the time to learn an IDE anyway. It does not improve their self-efficacy enough. This is why Python is so successful, it does not need an IDE.
+So should a SciKloj maintainer provide more videos and manuals for IDE usage? My answer is: certainly not. While it is easy to refer to existing video content, it takes a lot of effort to produce new material. Time spent on presenting IDEs is not well spent, because scientists do not want to spend the time to learn an IDE anyway. It does not improve their self-efficacy enough. This is why Python is so successful, it does not need an IDE.
 
 So my suggestion is to accept that Clojure has a disadvantage over Python in that Python is easy to use in Notepad++. But instead of trying to coerce scientists into the IDEs of general software engineering, I suggest to choose the Figwheel way described below for conveying the single one argument that I think holds currency for scientists: "Clojure is mathy, Clojure is functional".
 
@@ -78,7 +77,7 @@ As opposed to that file-tradition, the original Clojure tradition has been to na
 Within this file-tradition, the REPL turns into the background.  [Thomas Heller](https://code.thheller.com/blog/shadow-cljs/2024/10/18/fullstack-cljs-workflow-with-shadow-cljs.html): "I personally only switch to the CLJS REPL occasionally, since most of the time hot-reload is enough." [Bruce Hauman](https://figwheel.org/docs/hot_reloading.html) was keen not to "take your focus out of the file you are editing."
 
 ### What is on disk is in memory
-Although not being the standard in Clojure, with a command like `(run! #(ns-unmap *ns* %) (keys (ns-interns *ns*)))`, one can always make sure that (on a reload) what it on disk is what is in memory. In communication to the wider Clojure community, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
+Although not being the standard in Clojure, with a command like `(run! #(ns-unmap *ns* %) (keys (ns-interns *ns*)))`, one can always make sure that (on a reload) what it on disk is what is in memory. In communication to a Clojurian, this requirement memory=disk can be labeled the "Figwheel-reload" approach. In talking to Python people, it does not need a name, memory=disk is the normal situation.
 
 Now some Clojurians will say: "I would never work like this". Other Clojurians on the other hand would not say that in this strong form, because they use IntelliJ with the "sync the file" feature. In any case, all Clojurians will agree that Figwheel-reload has a certain tradition within Clojure, whether a particular person lives within this tradition or not.
 
@@ -110,7 +109,7 @@ This is the concept of earmarking some part of the code as "special", so that on
 
 That monstrosity is outright harmful to SciKloj. Because any teacher coming from Python, maybe even a professor, sees this approach in some obscure video and finds it valuable. And then, as any user of the proper REPL method knows, he will eventually make a complete mess. And then he remembers that he likes Python better anyway and demonstrates this monstrosity as an argument against Clojure.
 
-When being immediately enabled via the CLI to earmark code, naive users will make a mess and blame Clojure the language for that. And the Clojure community will rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
+When being immediately enabled via the CLI to earmark code, naive users will make a mess and blame Clojure the language for that. And there will be, I think, many Clojurians who rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
 
 ### Against the REPL
 For Clay, the REPL is not needed because of its file reload capabilities. There are many advocates of REPL driven development for good reasons. Here, I present three reasons why I think it makes sense to avoid the REPL in a first step:
@@ -140,11 +139,11 @@ The astute reader will now undoubtedly say: Hang on a minute! Not long ago you w
 
 The all important difference is that the latter fallacy would have been committed via the CLI, in the Figwheel-reload mindset. The lapse lies in staying within the Figwheel-reload tradition, to avoid starting the REPL-prompt before "earmarking code as special".
 
-When being immediately enabled via the CLI to earmark code, naive users will make a mess and blame Clojure the language for that. And the Clojure community will rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
+When being immediately enabled via the CLI to earmark code, naive users will make a mess and blame Clojure the language for that. And there will be, I think, many Clojurians who rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
 
 In order to activate the "rich-comment comprehension", a user must be able to open the REPL prompt, thereby acknowledging to leave the file-based Figwheel-reload tradition and enter the namespace-based REPL tradition. He demonstrates that he is not a naive user anymore. He knows and shows - by typing at the REPL prompt - that the equation "disk=memory" does not hold anymore and is willing to take full responsibility. When making a mess, which he undoubtedly will, he cannot blame Clojure the language but has to admit that he has been using the REPL in a wrong way. And that not only is perfectly ok amongst Clojurians, but indeed messing with the REPL is the way to actually become a Clojurian.
 
 ## Afterword
-This concludes my essay à clef. In writing this essay, I took some literary license. For example, I captured the name "double-comma", which in reality is not the same as printline debugging, since the real version only prints the evaluation results of top-level forms. But all in all, the features described are technically there already. With one exception: the vast field of handling error messages is still open.
+This concludes my essay à clef. While the vast field of handling error messages is still open, the other SciKloj features described are technically there already. I took some literary license with the name "double-comma", which in reality is not the same as printline debugging, the real version only evaluates top-level forms.
 
-SciKloj is a fiction that can be seen as one aspect of the whole multifaceted SciCloj project. This aspect is the beginner experience for Python users, which cannot cover any heavy real-world data exploration. But if only 10% of Python users try it out for a few hours and of those another 10% eventually switch to a fully fledged IDE like VSCode/Calva, this setup already fulfills its purpose: being a condition for the possibility to become visible. In that sense, the figwheel-reload approach is meant to be shown whenever some example permits it to do so.
+All in all, SciKloj is a fiction that can be seen as a partly concrete aspect of the whole multifaceted SciCloj project.
