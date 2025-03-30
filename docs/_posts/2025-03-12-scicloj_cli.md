@@ -12,7 +12,9 @@ The SciCloj maintainers put a lot of effort into being inclusive and making the 
 
 The following post does not talk to the SciCloj target audience. It talks about SciCloj. For this, I use a blank slate called SciKloj which is assumed to have no target audience yet. I also assume that this SciKloj is not yet known to general Clojure users either.
 
-Concerning the technical side of SciKloj, almost everything that is described in the following essay is already there in reality. So the essay does not primarily aim at immediate technical improvements but tries to cast into words and put into a specific perspective those technical achievements. The most honour can be done to the essay by criticising it. The assumption here is that mere statements about technical facts never lead to anything new, rather the critical reception of viewpoints (put into words) is a necessary step towards improvement.
+Concerning the technical side of SciKloj, almost everything that is described in the following essay is already there in reality. So the essay does not primarily aim at immediate technical improvements but tries to cast into words and put into a specific perspective those technical achievements.
+
+Criticising this essay means doing it the most honour. The assumption here is that mere statements about technical facts never lead to anything new, rather the critical reception of viewpoints (put into words) is a necessary step towards improvement.
 
 To whom, finally, does the essay talk to? I assume my reader to be, like me, an early adopter of SciKloj who intends to present SciKloj to some curious outside audience.
 
@@ -25,12 +27,12 @@ The target audience for Noj are data analysts. Most data analysts out there have
 
 Data analysts will eventually understand that Clojure is best. Because in their role as logicians they will appreciate that Clojure is a functional language. In Clojure, programs have minimum side-effects. As opposed to imperative languages, Clojure programs are like mathematical formulas.
 
-One important feature that gives Clojure this mathy appeal is that it is dynamically typed. In fact, most other functional languages are statically typed, a feature which disturbs succinctness of notation.
+One important feature giving Clojure this mathy appeal is that it is dynamically typed. In fact, most other functional languages are statically typed, a feature which disturbs succinctness of notation.
 
 That Clojure is mathy poses the main reason to use Clojure in science.
 
 ### Make SciKloj visible among Clojurians
-Most Clojurians are software developers, working on REST, say. To the typical Clojurian, what SciKloj does is alien. We are not exactly invisible but also not seen in the best possible light by general Clojure users. My goal here is to make SciKloj visible in its best light.
+A look at any Clojure conference shows that Clojure is used in a diverse set of fields. So to the typical Clojurian, the more sophisticated features of SciKloj are mostly alien. Being aware of that difficulty, my goal here is to make SciKloj visible in its best light.
 
 For this, I'd like to draw the attention to Python, the most popular language out there. My argument is that if we can draw some of the many Python users to Clojure, Clojurians will notice.
 
@@ -83,7 +85,7 @@ Now some Clojurians will say: "I would never work like this". Other Clojurians o
 
 "But you are giving away the superpower of Lisp!", I hear. My answer is: The role of SciKloj cannot be to evangelise the REPL because this is done enough by other great Lisp figures. Moreover, SciKloj should never speak of "superpower" because amongst scientists anyone who speaks of magic will meet condemnation. Rather, while not every Lisp is functional, the role of SciKloj is to hammer through  the fact that "Clojure is functional".
 
-### Error Messages
+### Error messages
 Improving the error messages of Clojure is a prominent topic in every user survey. I am not sure how serious the survey participants are when they chip in this topic. Because when discussed in chats and forums, this topic is riddled with ambiguity.
 
 On the one hand there are voices who say "I want the whole stacktrace as it is" (probably being happy with their IDE middleware formatting those stacktraces). On the other hand there is the opinion "you do not need error messages", because learning REPL driven development meant starting to think in a kind of Sherlock Holmes way which would supposedly be impaired by focusing on error messages.
@@ -94,7 +96,16 @@ No effort has gained wider traction. This opens a possible role for SciKloj, a r
 
 With its narrow use-case and a file-based Figwheel-reload approach, SciKloj could tailor customize linters like clj-kondo. This linting will mellow the general Lisp problem of unbalanced parentheses. It will not go away and will always be a problem for beginners and a disadvantage over Python. Within SciKloj, I argue this to accept and trust that users will eventually master slurping and barfing within an IDE later on.
 
-Clay's browser window offers lots of space for additional linting information. That Clojure is both dynamically typed and functional puts it in a unique position for science, but with proper instrumentation of its functions there is no reason why in certain cases it shouldn't be possible to display statically inferred types. Also a sophisticated debugger like Flowstorm could be part of the Clay experience.
+### Reading vs writing
+Many people, especially beginners, feel they prefer to write code rather than read it. As Python can be easily written in Notepad++ and Clojure cannot, it is another task of SciKloj to show that a preference for writing can be very limiting and that to start reading code can be life-changing. And indeed it is very customary in science to share via email small code snippets which people eventually vary and expand but first of all run and read.
+
+And yet, even when it comes to "just" reading code, Python is at an advantage because it is statement based and object oriented and uses infix notation. In general, people are not used to read expressions, which like Clojure are read from inside out, but prefer to read statements line by line. Also, `1 + 2` or `one.plus(two)` reads more easily than `(+ 1 2)` because in everyday language a sentence is constructed as "subject verb object" ("man eats apple"). But as SciKloj deals with scientists who are used to mentally process quirky formulas, the mathy syntax of Clojure can in our particular purpose provide an entry point for advocating "writing is good, reading is better".
+
+So while I think it is possible to point the focus away from writing towards reading (and varying) existing code, it is a good idea to put some more effort into making Clojure easy to read. Here, Clay offers an opportunity because the code is edited in one place (Notapad++) and displayed in another (the browser).
+
+For example, Lisp with its expression is more than Python susceptible to being displayed in different colors. Also there is no reason why one shouldn't display formulas in a LaTex typesetting embedded within the code. While the possibilities here are not fully explored yet, my own efforts take this idea of reading colored code towards [interactive code exploration using graphical blocks](https://github.com/kloimhardt/clj-tiles).
+
+Also, Clay's browser window offers lots of space for additional linting information. For example even with dynamic types, it should in certain cases be possible to display statically inferred types. Also a sophisticated debugger like [Flowstorm](https://github.com/flow-storm/flow-storm-debugger) offers many new ways for code exploration and presentation, a topic that in sum should become an important part of the Clay experience.
 
 ### Printline debugging
 Despite all sorts of sophisticated debugging tools, the hallmark of the file-based approach is printline debugging. For this, S-expressions are cumbersome. But Clojure since long has a solution: reader conditionals. I call this solution to printline debugging the "double-comma" solution. Bypassing S-expressions for printline debugging with the double-comma approach is a great idea.
@@ -109,7 +120,7 @@ This is the concept of earmarking some part of the code as "special", so that on
 
 That monstrosity is outright harmful to SciKloj. Because any teacher coming from Python, maybe even a professor, sees this approach in some obscure video and finds it valuable. And then, as any user of the proper REPL method knows, he will eventually make a complete mess. And then he remembers that he likes Python better anyway and demonstrates this monstrosity as an argument against Clojure.
 
-When being immediately enabled via the CLI to earmark code, naive users will make a mess and blame Clojure the language for that. And there will be, I think, many Clojurians who rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
+When being immediately enabled (via the CLI) to earmark code so that the evaluation model changes, naive users will end up in a corrupt program state and then will blame Clojure the language for that. And there will be, I think, many Clojurians who rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
 
 ### Against the REPL
 For Clay, the REPL is not needed because of its file reload capabilities. There are many advocates of REPL driven development for good reasons. Here, I present three reasons why I think it makes sense to avoid the REPL in a first step:
@@ -139,7 +150,7 @@ The astute reader will now undoubtedly say: Hang on a minute! Not long ago you w
 
 The all important difference is that the latter fallacy would have been committed via the CLI, in the Figwheel-reload mindset. The lapse lies in staying within the Figwheel-reload tradition, to avoid starting the REPL-prompt before "earmarking code as special".
 
-When being immediately enabled via the CLI to earmark code, naive users will make a mess and blame Clojure the language for that. And there will be, I think, many Clojurians who rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
+When being immediately enabled (via the CLI) to earmark code so that the evaluation model changes, naive users will end up in a corrupt program state and then will blame Clojure the language for that. And there will be, I think, many Clojurians who rightly blame the SciKloj boffins for befouling Clojure by giving naive users the possibility to make a mess in Clojure.
 
 In order to activate the "rich-comment comprehension", a user must be able to open the REPL prompt, thereby acknowledging to leave the file-based Figwheel-reload tradition and enter the namespace-based REPL tradition. He demonstrates that he is not a naive user anymore. He knows and shows - by typing at the REPL prompt - that the equation "disk=memory" does not hold anymore and is willing to take full responsibility. When making a mess, which he undoubtedly will, he cannot blame Clojure the language but has to admit that he has been using the REPL in a wrong way. And that not only is perfectly ok amongst Clojurians, but indeed messing with the REPL is the way to actually become a Clojurian.
 
