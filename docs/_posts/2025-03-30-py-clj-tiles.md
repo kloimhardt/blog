@@ -83,26 +83,69 @@ So my claim is that for some simple Python cases, clj-tiles graphics are more su
 
 clj-tiles does not aspire to cover every syntax construct. It is rather meant to present selected code snippets, it is a tool to present ideas.
 
-## Musings on Jupyter and other Notebooks
+## Purely Web-based
 
-clj-tiles graphics can be executed as Clojure programs within the [clj-tiles website]([clj-tiles website](https://kloimhardt.github.io/cljtiles.html?page=SICM001):). Anyone can use clj-tiles out of the box as the website can read source code text from any given web address. After the code is processed, all further graphical manipulations are reflected in subsequent executions. Below is an example featuring the [Emmy](https://github.com/mentat-collective/emmy) library.
+clj-tiles graphics can be executed as Clojure programs within the [clj-tiles website](https://kloimhardt.github.io/cljtiles.html?page=SICM001). Anyone can use clj-tiles out of the box, the website can read source code text from any given web address. After the code is processed, all further graphical manipulations are reflected in subsequent executions. Below is an example featuring the [Emmy](https://github.com/mentat-collective/emmy) library.
 
 ![cljtiles_harmonic](/blog/images/cljtiles_harmonic.png)
 
-Because clj-tiles is purely web-based and thus without active server backend, clj-tiles graphics need not be restricted to its website. A Python environment like Jupyter can also be used, as demonstrated by the blow notebook example (note that it also shows the [Hissp](https://github.com/gilch/hissp) transpiler next to the clj-tiles graphics).
-
-![jupyter_blockly](/blog/images/jupyter_blockly.png)
-
-
-The above example works because Jupyter supports JavaScript. In this way also Emmy could be accessed as it works even within a plain html file (as shown below with [this online notebook](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html)).
+The textual representations of the above graphics is shown below. The screenshot is taken from a simple website that serves as an  [online notebook](https://kloimhardt.github.io/blog/html/sicmutils-as-js-book-part1.html).
 
 ![scheme150_harmonic](/blog/images/scheme150_harmonic.png)
 
-From all this follows that code snippets written in the different languages of JavaScript, ClojureScript and Python could be presented within one Jupyter notebook in a uniform graphical manner. In such a way, an eventual transition from Python to Clojure could be facilitated within such presentation.
+Because everything is purely web-based and thus without active server backend, clj-tiles graphics need not be restricted to its website. Any environment that supports JavaScript can be used. Here, the Python Jupyter environment is especially interesting.
+
+## A Jupyter Example
+
+Throughout the following, we study one single well known math function: the logarithm.
+
+The log of sixty-four is close to four.
+
+![jupyter_1](/blog/images/jupyter_1.png)
+
+We differentiate log. As a result we get the derivative, which is one over x. So we verify that the function named log is indeed the natural logarithm which has e as its base.
+
+![jupyter_1a](/blog/images/jupyter_1a.png)
+
+We'd like to change the logarithm's base. For this we define our own logarithm function. We make one and the same mathematical definition in two different syntax styles. More precisely, we distribute the parentheses in two different ways. There is no naming conflict, the first definition is for SymPy in a Python environment, the second is for Emmy in the browser. Nonetheless, there is only one Jupyter notebook.
+
+Note that one single graphic represents both textual definitions faithfully.
+
+![jupyter_2](/blog/images/jupyter_2.png)
+
+Indeed, both functions return the number two as result of log-base-eight sixty-four.
+
+Note that the graphics represents both versions faithfully.
+
+![jupyter_3](/blog/images/jupyter_3.png)
+
+We are not happy that eight and sixty-four are on an equal footing here. Whereas eight is a parameter that is more or less part of the function-name, it is the number sixty-four that  we want to crunch. So we define the higher-order function log_base.
+
+![jupyter_4](/blog/images/jupyter_4.png)
+
+We are relieved to get for our new function as well the number two as a result. But we like the new graphics much better, it clearly distinguishes between the parameter b and the variable x.
+
+![jupyter_5](/blog/images/jupyter_5.png)
+
+For calculating the derivative of log_base, there are now two possibilities. The Python way is to first calculate the expression log of x and then take the derivative of this expression:
+
+![jupyter_6](/blog/images/jupyter_6.png)
+
+The Emmy way ist to directly take the derivative of log and then calculate the resulting expression.
+
+![jupyter_7](/blog/images/jupyter_7.png)
+
+This concludes our log example.
 
 ## Special Topics
 
 In a first read, jump to "Summary and Outlook" by omitting this section.
+
+### Another Jupyter
+
+A Clojure to Python compiler like [Hissp](https://github.com/gilch/hissp) can be used to execute the textual definition of clj-tiles graphics not with JavaScript but within a Python environment.
+
+![jupyter_blockly](/blog/images/jupyter_blockly.png)
 
 ### Higher order functions
 The Python code
@@ -136,5 +179,28 @@ Concerning hash-maps, there certainly can be found one solution or another. One 
 
 I would go as far as to say: if the graphical representation of a program cannot be held clean, it has no practical purpose and one should either simplify the code snipped to be presented or switch language altogether. Thus I suggest to avoid striving for completeness of syntax coverage but keep the block representation of Clojure as simple as presented with all in all just three types of blocks.
 
+### Clojurists Together Application
+#### What project are you applying for?
+
+clj-tiles - https://github.com/kloimhardt/clj-tiles
+
+#### Who is applying? How are you related to the project?
+
+Markus "Agwin" Kloimwieder, project creator
+
+#### What are you wanting to achieve with this funding?
+
+clj-tiles is a website for visual programming in Clojure. At its core, clj-tiles parses Clojure code and transforms it into XML for  Google-Blockly, the graphics engine. Since 2021, the codebase and tutorials have grown so that I now consider it feature complete.
+
+I'd like to extract the parser and make it easily accessible for everyone to use. The motivation is detailed in the post https://kloimhardt.github.io/blog/software/2025/03/30/py-clj-tiles.html
+
+#### Why is this project important to the Clojure community?
+
+The clj-tiles website is not used by anyone at all. But I still think that Clojure has an edge here. An open clj-tiles API would empower any Clojurian to experience and show that Clojure has an edge when it comes to visual programming.
+
+#### Do you receive any other funding to work on this project?
+
+No.
+
 ## Summary and Outlook
-For some simple Python cases, clj-tiles is more suitable for Python than BlockPy. In general, with clj-tiles, code snippets written in different languages can  be presented in a uniform graphical manner. In such a way, an eventual transition from Python to Clojure could be facilitated within such presentation.
+For some simple Python cases, clj-tiles is more suitable for Python than BlockPy. In general, with clj-tiles, code snippets written in different languages can  be presented in a uniform graphical manner. Thus, with and within such a presentation, an eventual transition from Python to Clojure can be facilitated by clj-tiles.
