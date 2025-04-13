@@ -77,7 +77,7 @@ Naturally, the according generating text is basically Python (with the usual par
      (return (log x base)))
 ```
 
-So my claim is that for some simple Python cases, clj-tiles graphics are more suitable than BlockPy. The reason is that BlockPy, being a learning tool, needs to cover all Python constructs. clj-tiles graphics, on the other hand, use only two types of blocks, the list and the vector:
+So my claim is that for some simple Python cases, clj-tiles graphics are more suitable than BlockPy. The reason is that BlockPy, being a learning tool, needs to cover all Python constructs. In the examples shown up to now, clj-tiles, on the other hand, uses only two types of blocks, the list and the vector:
 
 ![Clojure-for](/blog/images/clojure_lv_block.png).
 
@@ -85,7 +85,9 @@ Hence clj-tiles does not aspire to cover every syntax construct. It is rather me
 
 ## Musings on Jupyter and other Notebooks
 
-clj-tiles graphics can be executed as Clojure programs within the [clj-tiles website]([clj-tiles website](https://kloimhardt.github.io/cljtiles.html?page=SICM001):). The website can read source code text from any given web address, so everyone can use clj-tiles out of the box. Below is an example featuring the [Emmy](https://github.com/mentat-collective/emmy) library.
+clj-tiles graphics can be executed as Clojure programs within the [clj-tiles website]([clj-tiles website](https://kloimhardt.github.io/cljtiles.html?page=SICM001):). The website can read source code text from any given web address, so everyone can use clj-tiles out of the box.
+
+Within the clj-tiles website, any manipulation of graphical blocks is reflected in their subsequent execution. In short on can say that  the graphics itself is executed. Below is an example featuring the [Emmy](https://github.com/mentat-collective/emmy) library.
 
 ![cljtiles_harmonic](/blog/images/cljtiles_harmonic.png)
 
@@ -102,7 +104,7 @@ From all this follows that code snippets written in the different languages of J
 
 ## Special Topics
 
-This section can be omitted in a first read.
+In a first read, jump to "Summary and Outlook" by omitting this section.
 
 ### Higher order functions
 The Python code
@@ -137,4 +139,4 @@ Concerning hash-maps, there certainly can be found one solution or another. One 
 I would go as far as to say: if the graphical representation of a program cannot be held clean, it has no practical purpose and one should either simplify the code snipped to be presented or switch language altogether. Thus I suggest to avoid striving for completeness of syntax coverage but keep the block representation of Clojure as simple as presented with all in all just three types of blocks.
 
 ## Summary and Outlook
-For some simple Python cases, clj-tiles graphics are more suitable than BlockPy. In the future, clj-tiles graphics might be made executable (not only with Clojure but also) in a Python environment. This would allow to present code snippets written in the different languages of  JavaScript, ClojureScript and Python in a uniform graphical manner.
+For some simple Python cases, clj-tiles is more suitable than BlockPy. As an outlook,, clj-tiles graphics could be made executable (not only with Clojure but also) in a Python environment. This would allow to present code snippets written in different languages in a uniform graphical manner, especially facilitating some transition from Python to Clojure.
