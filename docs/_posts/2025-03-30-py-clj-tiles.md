@@ -4,8 +4,9 @@ title:  "Graphical code exploration"
 date:   2025-03-30 06:00:01 +0100
 categories: Software
 ---
+ [clj-tiles](https://github.com/kloimhardt/clj-tiles) is a website for visual programming I created in 2021. It mkes specific choices for representing code as graphics. The following is a side-by-side comparison with another site of this kind, [BlockPy](https://think.cs.vt.edu/blockpy/load).
 
-With [clj-tiles](https://github.com/kloimhardt/clj-tiles), in 2021 I made a specific choice for representing code as graphics. The following is a side-by-side comparison with [BlockPy](https://think.cs.vt.edu/blockpy/load).
+I compare loops and function definitions and show that clj-tiles can be used to represent both Clojure as well as Python code.
 
 ## The Loop
 
@@ -21,7 +22,7 @@ Usually, visual tools are seen as a means to teach coding. A beginner assembles 
 
 I see graphical blocks in a different way. They are meant to convey ideas, to show essential code snippets to an audience.
 
-In that respect, I think my choice of graphical representation is much cleaner. Can you guess which one of the above two is mine?
+I made my choice of graphical representation to be as clean as possible with that presentation use-case in mind.
 
 ### Python and Clojure Code
 
@@ -97,23 +98,23 @@ Because everything is purely web-based and thus without active server backend, c
 
 ## A Jupyter Example
 
-Throughout the following, we study one single well known math function: the logarithm.
+Throughout the following, we study one single well known math function: the logarithm. We will code this study in two syntax styles: one resembles Clojure (using Clojure-macros), the other is Python. We show that both languages can be represented (and executed) within Jupyter using the same clj-tiles graphics. Let's start.
 
 The log of sixty-four is close to four.
 
 ![jupyter_1](/blog/images/jupyter_1.png)
 
-We differentiate log. As a result we get the derivative, which is one over x. So we verify that the function named log is indeed the natural logarithm which has e as its base.
+We differentiate log. As a result we get the derivative, which is one over x. With this, we verify that the function named log is indeed the natural logarithm which has e as its base.
 
 ![jupyter_1a](/blog/images/jupyter_1a.png)
 
-We'd like to change the logarithm's base. For this we define our own logarithm function. We make one and the same mathematical definition in two different syntax styles. More precisely, we distribute the parentheses in two different ways. There is no naming conflict, the first definition is for SymPy in a Python environment, the second is for Emmy in the browser. Nonetheless, there is only one Jupyter notebook.
+We'd like to change the logarithm's base. For this we define our own logarithm function. We make one and the same mathematical definition in two different syntax styles. More precisely, we distribute the parentheses of Python differently to get Clojure style code. There is no naming conflict, the first definition is for SymPy in a Python environment, the second is for Emmy in the browser. Nonetheless, there is only one Jupyter notebook.
 
 Note that one single graphic represents both textual definitions faithfully.
 
 ![jupyter_2](/blog/images/jupyter_2.png)
 
-Indeed, both functions return the number two as result of log-base-eight sixty-four.
+Indeed, both functions return the number two as the result of log-base-eight sixty-four.
 
 Note that the graphics represents both versions faithfully.
 
@@ -123,7 +124,7 @@ We are not happy that eight and sixty-four are on an equal footing here. Whereas
 
 ![jupyter_4](/blog/images/jupyter_4.png)
 
-We are relieved to get for our new function as well the number two as a result. But we like the new graphics much better, it clearly distinguishes between the parameter b and the variable x.
+We are relieved to also get for our new function the number two as a result. But we like the new graphics much better, it clearly distinguishes between the parameter b and the variable x.
 
 ![jupyter_5](/blog/images/jupyter_5.png)
 
@@ -143,7 +144,7 @@ In a first read, jump to "Summary and Outlook" by omitting this section.
 
 ### Another Jupyter
 
-A Clojure to Python compiler like [Hissp](https://github.com/gilch/hissp) can be used to execute the textual definition of clj-tiles graphics not with JavaScript but within a Python environment.
+A Clojure to Python compiler like [Hissp](https://github.com/gilch/hissp) can be used to execute the textual definition of clj-tiles graphics ()not with JavaScript) but within a Python environment.
 
 ![jupyter_blockly](/blog/images/jupyter_blockly.png)
 
@@ -189,10 +190,7 @@ clj-tiles - https://github.com/kloimhardt/clj-tiles
 Markus "Agwin" Kloimwieder, project creator
 
 #### What are you wanting to achieve with this funding?
-
-clj-tiles is a website for visual programming in Clojure. At its core, clj-tiles parses Clojure code and transforms it into XML for  Google-Blockly, the graphics engine. Since 2021, the codebase and tutorials have grown so that I now consider it feature complete.
-
-I'd like to extract the parser and make it easily accessible for everyone to use. The motivation is detailed in the post https://kloimhardt.github.io/blog/software/2025/03/30/py-clj-tiles.html
+clj-tiles is a website for visual programming in Clojure. At its core, clj-tiles parses Clojure code and transforms it into XML for Google-Blockly, the graphics engine. Since 2021, the codebase and tutorials have grown so that I now consider it feature complete. I'd like to extract the parser and make it easily accessible for everyone to use. The motivation is detailed in the post https://kloimhardt.github.io/blog/software/2025/03/30/py-clj-tiles.html
 
 #### Why is this project important to the Clojure community?
 
@@ -203,4 +201,5 @@ The clj-tiles website is not used by anyone at all. But I still think that Cloju
 No.
 
 ## Summary and Outlook
+
 For some simple Python cases, clj-tiles is more suitable for Python than BlockPy. In general, with clj-tiles, code snippets written in different languages can  be presented in a uniform graphical manner. Thus, with and within such a presentation, an eventual transition from Python to Clojure can be facilitated by clj-tiles.
