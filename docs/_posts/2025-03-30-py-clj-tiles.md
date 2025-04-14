@@ -4,7 +4,7 @@ title:  "Graphical code exploration"
 date:   2025-03-30 06:00:01 +0100
 categories: Software
 ---
- [clj-tiles](https://github.com/kloimhardt/clj-tiles) is a website for visual programming I created in 2021. It mkes specific choices for representing code as graphics. The following is a side-by-side comparison with another site of this kind, [BlockPy](https://think.cs.vt.edu/blockpy/load).
+ [clj-tiles](https://github.com/kloimhardt/clj-tiles) is a website for visual programming I created in 2021. It makes specific choices for representing code as graphics. The following is a side-by-side comparison with another site of this kind, [BlockPy](https://think.cs.vt.edu/blockpy/load).
 
 I compare loops and function definitions and show that clj-tiles can be used to represent both Clojure as well as Python code.
 
