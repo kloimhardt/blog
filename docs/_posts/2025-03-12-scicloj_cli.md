@@ -136,9 +136,17 @@ Now that I argued that one should avoid the REPL in a first step, I continue to 
 ### The REPL prompt
 In order to introduce the REPL concept (after having presented Noj using the Figwheel-reload approach), it is best to show Noj in a Jupyter notebook. That means to dispense with Clay for introducing the REPL. This might be a tough step. But to introduce the new notion of the REPL, Jupyter is great because (as an integral part of Python) it is well known especially in science.
 
+So, I am a fan of Jupyter and its online Colab service. Jupyter is indispensable for publishing scientific results, the most prominent example being the published Jupyter notebooks form the LIGO and VIRGO gravitational wave detectors.
+
 Nonetheless, a Lisper will never leave the podium without having presented his own concept of the REPL. And there, the urge is to show his cherished workflow based on his preferred IDE connected to the REPL. He wants to show his superpower. And, to the great advantage of SciKloj, that has already been done before. I argue that it's best for SciKloj to refer to already existing videos and blogs.
 
-Instead, when for whatever reason Jupyter notebooks are not an option, show the REPL in its plain form: the prompt. The concept of a prompt is well known to Python users and has nothing to do with an IDE.
+Instead, when for whatever reason Jupyter notebooks are not an option, show the REPL in its plain form: in the teletype prompt, a.k.a. terminal. The concept of a prompt is well known to Python users and has nothing to do with an IDE.
+
+Again, I can very much relate to the following statement:
+
+> This might sound harsh, but I think "having the best terminal + notepad++ UX" is the equivalent of "fastest steam locomotive." I don't think we should be setting our benchmarks based on technologies that are a concession to the teletype era of programming if we want to reach a wider audience... especially when compared with beginners who may have used Colab in a class before.
+
+I cannot argue here as I lack data of beginner profiles. So I continue describing the steam locomotive. In those last paragraphs, I'd like to describe especially the boundaries between File and Repl.
 
 The REPL is awesome and awful both at the same time. This is, again, because the equation "disk=memory", the cornerstone of the Figwheel-reload approach, does not hold anymore.
 

@@ -47,10 +47,16 @@ Hertz' Darstellung ist ein Meisterwerk das sich als solches nie durchgesetzt hat
 
 Er wirft sein Licht auf jene rein geometrische Behandlung der Physik, die damals bekannt aber gar nicht in Mode war, wegen der Energieökonomie. Dreissig Jahre später wurde aber genau aus dieser Geometrie der goldene Weg zur Wellenmechanik des Atoms.
 
-Schrödinger hatte seinen Hertz sehr genau gelesen: denn die Unbestimmtheit seines eigenen Wellenbildes hindere uns "in so naiver Weise ein ,,verwaschenes Modell" als Abbild der Wirklichkeit gelten zu lassen. An sich enthielte es nichts Unklares oder Widerspruchsvolles. Es ist ein Unterschied zwischen einer verwackelten oder unscharf eingestellten Photographie und einer Aufnahme von Wolken und Nebelschwaden". Klar durchdacht (und empirisch richtig sowieso) sei sein Bild, aber eben undeutlich. Zur Zeit dieses Verdikts wäre Hertz 78 gewesen, aber weil er gleich nach Abfassung seiner Abhandlung gestorben ist, fehlt uns die Beurteilung seines Erbes jetzt bitterlich.
+Schrödinger hatte seinen Hertz sehr genau gelesen: denn die Unbestimmtheit seines eigenen Wellenbildes hindere uns
+
+> in so naiver Weise ein ,,verwaschenes Modell" als Abbild der Wirklichkeit gelten zu lassen. An sich enthielte es nichts Unklares oder Widerspruchsvolles. Es ist ein Unterschied zwischen einer verwackelten oder unscharf eingestellten Photographie und einer Aufnahme von Wolken und Nebelschwaden.
+
+Klar durchdacht (und empirisch richtig sowieso) sei sein Bild, aber eben undeutlich. Zur Zeit dieses Verdikts wäre Hertz 78 gewesen, aber weil er gleich nach Abfassung seiner Abhandlung gestorben ist, fehlt uns die Beurteilung seines Erbes jetzt bitterlich.
 
 Er hielt noch fest, dass seine Mechanik bewusst so starr gewählt wurde, dass sie niemals das Leben selbst erklären wird können. Ganz Kantianer wollte er Geist, Seele, Freiheit und Leben weiterhin dem Bereich des Unbeweisbaren überlassen.
 
 Hier können wir uns wieder an Hilma af Klint wenden, die zwar 40 Jahre nach ihrem Meisterwerk noch lebte, deren Energie aber erst in den 80er Jahren begann der Welt das Prinzip Leben zu zeigen.
 
 ![barbapapa](/blog/images/barbapapa.png)
+
+Ps vom 15.4.25: Hab grad rausgefunden, dass die Formel "klar und deutlich" ganz alt aus der Scholastik ist und somit nicht von Hertz stammt. Bei Descartes ist die Formel zentral. Leibnitz führt die Formel "klar aber verworren" ein, wenn wir zwar den klaren Begriff für einen Gegenstand als Ganzes, aber keine Vorstellung für die Teilbegriffe dieses Objekts haben. Darauf spielt Hertz an: die Newton Mechanik ist "klar aber verworren". Genau darauf spielt auch Schrödinger an: sein eigener Wellenbegriff ist "klar aber verworren".

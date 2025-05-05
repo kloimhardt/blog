@@ -67,7 +67,9 @@ def myfunction(x, base):
     return log(x, base)
 ```
 
-I do not know why the BlockPy creators were choosing to change `def` into `define`. In any case, I find the following clj-tiles graphics much more suitable for this Python code:
+The BlockPy creators were choosing to change `def` into `define` and I do not know the exact reason for this. But in general, the original idea of Blockly is that graphics is primary. Blockly is originally meant for beginners to start coding with graphical elements and then, as a secondary feature, generate text, be it JS or Python or Lua code. Thus, in standard Blockly, the Blocks represent a language (or kind of meta-language) on its own. This might explain this `def` vs `define` discrepancy.
+
+My approach turns this "graphics first - text second" idea on its head: textual code comes first. The graphics is only secondary, it is used for demonstrating code snippets to experienced coders. The clj-tiles idea is to use graphics for explaining new and difficult logical concepts. A consequence of this upside-down view is that I find the following clj-tiles graphics much more suitable for the above textual Python code:
 
 ![Clojure-fun-1](/blog/images/clojure_fun_block_2.png)
 
