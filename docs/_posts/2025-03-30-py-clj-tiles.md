@@ -12,7 +12,6 @@ I compare loops and function definitions and show that clj-tiles can be used to 
 
 Two versions of the same `for` loop:
 
-
 ![Python-for](/blog/images/python_for_block.png)
 
 ![Clojure-for](/blog/images/clojure_for_block.png)
@@ -96,11 +95,13 @@ The textual representations of the above graphics is shown below. The screenshot
 
 ![scheme150_harmonic](/blog/images/scheme150_harmonic.png)
 
-Because everything is purely web-based and thus without active server backend, clj-tiles graphics need not be restricted to its website. Any environment that supports JavaScript can be used. Here, the Python Jupyter environment is especially interesting.
+Because everything is purely web-based and thus without active server backend, clj-tiles graphics need not be restricted to the clj-tiles website. Any environment that supports JavaScript can be used. More details can be found on the [Twotiles web page](https://kloimhardt.github.io/site/twotiles.html).
 
 ## A Jupyter Example
 
-Throughout the following, we study one single well known math function: the logarithm. We will code this study in two syntax styles: one resembles Clojure (using Clojure-macros), the other is Python. We show that both languages can be represented (and executed) within Jupyter using the same clj-tiles graphics. Let's start.
+JavaScript is also supported by Jupyter notebooks and hence the graphical blocks can be included there as well.
+
+Throughout the following, we study one single well known math function: the logarithm. We will code this study in two syntax styles: one resembles Clojure (using Clojure-macros), the other is Python. We show that both languages can be represented within Jupyter with the same clj-tiles graphics. Let's start.
 
 The log of sixty-four is close to four.
 
@@ -146,7 +147,7 @@ In a first read, jump to "Summary and Outlook" by omitting this section.
 
 ### Another Jupyter
 
-A Clojure to Python compiler like [Hissp](https://github.com/gilch/hissp) can be used to execute the textual definition of clj-tiles graphics ()not with JavaScript) but within a Python environment.
+A Clojure to Python compiler like [Hissp](https://github.com/gilch/hissp) can be used to execute the textual definition of clj-tiles graphics (not with JavaScript) but within a Python environment.
 
 ![jupyter_blockly](/blog/images/jupyter_blockly.png)
 
