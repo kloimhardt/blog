@@ -2,7 +2,7 @@
 layout: post
 title:  "Gleichnis von den zwei fleissigen Söhnen"
 date:   2023-02-08 00:00:01 +0100
-categories: Literatur
+categories: Crônica
 ---
 Zwei Söhne arbeiteten einmal einen Tag lang fleissig. Über den dritten ist dem Erzähler nichts bekannt, er muss ein andermal zur Sache befragt werden.
 

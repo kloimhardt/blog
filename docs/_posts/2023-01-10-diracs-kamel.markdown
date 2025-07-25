@@ -2,11 +2,11 @@
 layout: post
 title:  "Diracs Kamel"
 date:   2023-01-10 21:00:00 +0100
-categories: Physik
+categories: Crônica
 ---
 Ich erzähl hier kurz mein Lieblingsgleichnis:
 
-Papa vererbt 17 Kamele an seine drei Kinder. Der Älteste soll die Hälfte, der zweite ein Drittel und der dritte ein Neuntel des Erbes erhalten. Ratlos stehen sie mit den Kamelen auf der Strasse vorm Notar herum weil Dividieren nicht möglich. Da kommt Beduine ums Eck, gibt ein Kamel dazu, Aufgeteilt wird zu 9 + 6 +2 und Beduine reitet lachend weiter, inklusive seines Kamels.
+Papa vererbt 17 Kamele an seine drei Kinder. Der Älteste soll die Hälfte, der zweite ein Drittel und der dritte ein Neuntel des Erbes erhalten. Ratlos stehen sie mit den Kamelen auf der Strasse vorm Notar herum weil Dividieren von 17 nicht möglich. Da kommt Beduine ums Eck, gibt 18. Kamel dazu. Aufgeteilt wird zu 9 + 6 +2 und Beduine reitet lachend weiter, inklusive seines Kamels.
 
 Das 18. Kamel ist das, was wir in der Chemie einen Katalysator nennen.
 

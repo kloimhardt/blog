@@ -2,7 +2,7 @@
 layout: post
 title:  "Kunst und Tragik"
 date:   2022-11-22 21:00:00 +0100
-categories: Literatur
+categories: Crônica
 ---
 Der Titel von Henry Kissinger’s Buch „Leadership“ wurde mit „Staatskunst“ übersetzt. Tatsächlich hab‘ ich keine wirklich gute Übersetzung für das englische Wort „leadership“ gefunden.
 
@@ -26,6 +26,6 @@ Es gibt eine weitere theatralische Aufführungspraxis, die solche tragischen Sto
 
 Ich schaue mit Begeisterung die legendäre Auseinandersetzung Eddi Guerrero vs. Ray Mysterio aus dem Jahr 2005. In diesem Stück ist Ray der Ziehvater des leiblichen Sohnes von Eddi. Der Sohn ist 7 Jahre alt und kennt nur Ray als seinen Vater. Nun will Eddi den Sohn zurück. Recht steht gegen Recht, ein tragischer Konflikt. Nur der Zweikampf kann eine Lösung bringen. Weil die Schauspieler im wahrsten Sinn des Wortes Skin in the Game haben, kann das Publikum bei diesem Schmunzes so richtig mitgehen (ich auch, falls ich das noch nicht erwähnt haben sollte).
 
-Also bitte beim amerikanischen Wrestling immer die humanistische Seite mitdenken. Ich für meine Teil wüsste jedenfalls, welche Einladung ich annehmen würde, wenn ich zwischen einer live Performance Burgtheater vs. SummerSlam entscheiden könnte.
+Also bitte beim amerikanischen Wrestling immer die humanistische Seite mitdenken. Ich für meinen Teil wüsste jedenfalls, welche Einladung ich annehmen würde, wenn ich zwischen einer live Performance Burgtheater vs. SummerSlam entscheiden könnte.
 
 Nachtrag im Jahr 2025: dieser Essay aus dem Jahr 2022 bekommt einen bitteren Geschmack. Linda McMahon, Wrestlerin der 80er und dann dick im G‘schäft, ist seit 2025 Unterrichtsministerin der USA. So hab ich das nicht gewollt.

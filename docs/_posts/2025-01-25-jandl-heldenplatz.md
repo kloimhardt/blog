@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Ernst Jandl, Wien: Heldenplatz"
+title:  "Ernst Jandl, Wien - Heldenplatz"
 date:   2025-01-29 06:00:00 +0100
-categories: Politik
+categories: Crônica
 ---
 
 der glanze heldenplatz zirka  
