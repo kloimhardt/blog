@@ -5,7 +5,7 @@ date:   2025-07-25 06:00:01 +0100
 categories: Literatur
 ---
 
-![Caravaggio](https://upload.wikimedia.org/wikipedia/commons/9/9d/Judith_Beheading_Holofernes-Caravaggio_%28c.1598-9%29.jpg)
+![Caravaggio](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Judith_Beheading_Holofernes-Caravaggio_%28c.1598-9%29.jpg/960px-Judith_Beheading_Holofernes-Caravaggio_%28c.1598-9%29.jpg)
 
 Bei Herrn Caravaggio, um 1598–1599, ist die Dienerin eine gewaltgeile Schaulustige, die von dem Spektakel trotz ihrer trüben Augen kein blutrünstiges Detail verpassen will.
 
