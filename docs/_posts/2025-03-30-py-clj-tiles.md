@@ -179,6 +179,27 @@ Because the standard `(let [x 2 y (pow x 3)] y)` does not look great in graphics
 
 Concerning hash-maps, there certainly can be found one solution or another. One could maybe think along the lines of the presented solution for higher order functions, another one can be found hidden in the clj-tiles pages. The question here is if one really wants to do keyword destructuring within blocks. My answer is that this should be avoided. Unless having a really good reason, using a list starting with `hash-map` should be sufficient.
 
+### Function definition
+
+Above, I used the following syntax to define a function in Clojure which moreover, I claim, resembles Python as best as possible:
+
+```
+(def (myfunction x base)
+     (return (log x base)))
+```
+Some Clojurian might protest and claim that the following is more idiomatic Clojure (which is true) and allegedly resembles Python even better:
+
+```
+(defn myfunction [x base]
+     (return (log x base)))
+```
+
+I do not mind changing `def` to `defn`. But I do not like, at this basic level, to introduce square brackets as part of the syntax. This is because with the introduction of `[]` as part of the syntax, the whole new notion of "homoiconicity" is brought to the table. And this is a wide field which can be confusing even to seasoned Clojurians and should not be presented to a beginner coming from Python.
+
+The next thing speaking against square brackets is that `(defn myfunction [x base] ...)` in a strict sense violates the Lisp syntax format rule "break for one, break for all". So there should be a line break after `myfunction` to adhere to Lisp rules and when introducing something new, starting with an exception is maybe not a good idea.
+
+Moreover, in Python a function definition looks the same a a function call. I think this should be kept in a transition from Python to Lisp. And as the undisputed transition from Python `log(x, base)` to Clojure `(log x base)` shows, square brackets play no role in function calls no matter which language syntax.
+
 ### Remark
 
 I would go as far as to say: if the graphical representation of a program cannot be held clean, it has no practical purpose and one should either simplify the code snipped to be presented or switch language altogether. Thus I suggest to avoid striving for completeness of syntax coverage but keep the block representation of Clojure as simple as presented with all in all just three types of blocks.

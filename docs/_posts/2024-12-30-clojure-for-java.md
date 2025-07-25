@@ -239,3 +239,10 @@ After watching the talk, my take away messages are the following:
 * Introduce persistent data structures as a means to write those pure functions
 
 And: I only testify to things I really know well enough to defend publicly and hope that other people will cover the rest in a competent way.
+
+## Addendum: Reader's reply in May 2025
+When you write "Concurrency did not turn out to be the big thing" - I believe that's incorrect. Development machines frequently have ~10 cores, cloud machines frequently have ~100 cores, and azul setups with 1000+ cores exist. Being able to deliver results faster by changing map to pmap, for instance, is extremely powerful. Clojure's synchronization primitives (especially thread-local variables, and atom in practice) _dramatically_ simplify developing concurrent/parallel software (when compared with pthreads for example). This part of the Clojure story is important, and should not be dismissed casually.
+
+I agree with you completely that Kotlin appeared. And it very well may be a 'better java than clojure as a java', but it misses out on being functional, dynamically typed, etc... The argument to be made here is, I believe, that the JVM is good, Java the language is less good, and Clojure is a great way to leverage the goodness of the JVM in 21st century software development.
+
+While 'Rich is the best person to give such a talk' could certainly be true, I don't think that implies that 'Rich is the only person who can give such a talk.'
