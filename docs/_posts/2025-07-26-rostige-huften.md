@@ -8,8 +8,8 @@ Am Donnerstag waren Guns’N’Roses im Happelstadion. Soll wohl eine solide Lei
 
 Wie gesagt, ich war nicht dort. Aber ich war am Abend vorher am Rathausplatz. Aerosmith Rocks Donington auf Riesengrossleinwand und gratis. Der Bürgermeister mischt mit.
 
-Wos soi I eich sogn: es is a Trauagspü. Selbstermächtigung der oberen Bünde mit weit gespreizten, dünnen, zottrigen Beinen. Fürwahr. Alter Mann mit Gitarre, Gesichtsausdruck Marke geiler Runzelschlumpf. Und das minutenlang.
+Wos soi I eich sogn: es is a Trauagspü. Selbstermächtigung der oberen Bünde im Solo mit weit gespreizten, dünnen, zottrigen Beinen. Fürwahr. Alter Mann mit Gitarre, Gesichtsausdruck Marke geiler Runzelschlumpf. Und das minutenlang (länger ging's bei mir nicht).
 
-“Mühl simulierte eine Onanierszene”. Ich nehm an der Bürgermeister wollte eine Referenz auf die Aktion “Kunst und Revolution” vom 7. Juni 68 an der Uni Wien setzen.
+“Mühl simulierte eine Onanierszene”. Ich nehm an der Bürgermeister wollte eine Referenz auf die Aktion “Kunst und Revolution” vom 7. Juni 68 an der Uni Wien setzen. Örtlich vom Rathaus nur einen halben Kilometer, zeitlich abwärts aber mehr als ein halbes Jahrhundert.
 
 Aber mit dem Tag an dem Brain May die Gitarre in die Hand genommen hat musste jedem klar werden, dass die Zeiten des breiten Spread schmaler geworden sind. Der Rest ist Lächerlichkeit.
