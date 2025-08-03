@@ -26,9 +26,9 @@ Warum fand sie nur die lahme Schimmelvorstellung gut? Emils Performance ist ein 
 
 Der Sohn Emil würde aus dem Hause verbannt und verschwiegen werden, wer will schon Clown sein.
 
-Nun kam raus, dass Mutter Steinberger aus unbegüterten Verhältnissen stammte, sich aber ein bürgerliches Leben aufgebaut hat (Marke Postbeamter). Die ungelungene Geburt Emil aber hat ihren Traum etwas angetrümmert. Nicht ganz zertrümmert zum kleinen Glück, weil Emil ausgeblendet und Vater Knie und Strand schön, Essen gut.
+Nun kam raus, dass Mutter Steinberger aus unbegüterten Verhältnissen stammte, sich aber ein bürgerliches Leben aufgebaut hat. Ich nehm an sie musste einige Kompromisse eingehen um's auch für ihren Sohn einmal besser zu haben. Die ungelungene Geburt Emil hat dann ihr so erbautes Werk etwas angetrümmert und nicht mehr ganz fraglos gestellt. Zum kleinen Glück auch nicht ganz zertrümmert, weil Emil ausgeblendet und Vater Knie und Strand schön, Essen gut.
 
-Aber nun kommen  zum grossen Unglück (neben Emil) auch noch Onkel Gusti und Tante Frida und zeigen was im Grunde Besucher und Gastgeber wissen. Dass dieser schön schön Kindergarten für alle Zeitvergeudung ist. Die Uhr tickt nämlich. Tick. Tick. Aber Pssssst.
+Aber nun kommen  zum grossen Unglück (neben Emil) auch noch Onkel Gusti und Tante Frida und zeigen was im Grunde Besucher und Gastgeber wissen. Dass dieser schön schön Kindergarten für alle Zeitvergeudung ist. Die Uhr tickt nämlich. Tick. Tick. iiih, oh. Aber Pssssst.
 
 ![Kahlo-Hale](https://upload.wikimedia.org/wikipedia/en/c/c6/Suicide_of_Dorothy_Hale.jpg)
 
