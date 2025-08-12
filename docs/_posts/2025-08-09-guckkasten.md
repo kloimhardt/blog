@@ -12,7 +12,7 @@ Damit kein Druck entsteht hock ich mich auf die Sesseln vorm Kaffeeautomaten. Da
 
 Die Ausstellung beginnt mit einem schön vergoldeten Guckkastentheater. Das Herzstück aber ist das runde Theater.
 
-Es ist ein Loch in der Wand, einen Meter Durchmesser. Das Loch hat eine Glasscheibe die sich nach hinten wölbt. Hinter der Scheibe kommen zuerst die Stabpuppen, dann die bemalte Kulisse in Form eines halbdurchsichtigen Vorhangs hinter welchem die “Stäbchenoffiziere" in schwarzer Kleidung stehen.
+Es ist ein Loch in der Wand, einen Meter Durchmesser. Das Loch hat eine Glasscheibe die sich nach hinten wölbt. Hinter der Scheibe kommen zuerst die Stabpuppen, dann die bemalte Kulisse in Form eines halbdurchsichtigen Vorhangs hinter welchem die “Stäbchenoffiziere" in schwarzer Kleidung agieren.
 
 Wer schon einmal in der Nacht bei aufgedrehtem Licht nach draussen geschaut hat weiss, dass die Fensterscheibe zum Spiegel wird. Diesen "Figurenspiegel" hat sich Herr Teschner um 1920 erdacht. Weil er's kann, wird der Puppenspieler seine Figuren so zwar spiegelverkehrt aber eben immer von vorne anschaun. Wie das Publikum. Konkav ist der Spiegel deshalb, weil man mehr sieht. Prinzip Verkehrsspiegel.
 
@@ -30,7 +30,7 @@ Den Puppenspielern im Theatermuseum wär das alles Egal, denn sie sind so begeis
 
 Freunde, ich ab da einen Freund. Der war bei einer anderen Show. Eine Art Kombination von rund und eckig.
 
-Die Bühne war ein Drehpodium von ca 2 Meter Durchmesser. Die eine Hälfte war von Spiegeln umrahmt, die andere Hälfte von 8 Guckkästen umsäumt. Auf dem Podium war alle drei Minuten eine andere Darstellerin. Die Vorstellungen waren ohne Worte, nur Musik und sparsame Bewegung im Sitzen.
+Die Bühne war ein Drehpodium von ca. 2 Meter Durchmesser. Die eine Hälfte war von Spiegeln umrahmt, die andere Hälfte von 8 Guckkästen umsäumt. Auf dem Podium war alle drei Minuten eine andere Darstellerin. Die Vorstellungen waren ohne Worte, nur Musik und sparsame Bewegung im Sitzen.
 
 In den Guckkästen selbst konnte man nicht sitzen, das halbdurchsichtige Fenster war so niedrig angebracht dass man seinen Körper verbeugen musste. Drinnen war jeweils einer oder keiner, im ersteren Fall leuchtet ein rotes Licht am Kasten.
 
@@ -38,6 +38,6 @@ Es ist anzunehmen, dass wenn überhaupt nirgends ein Licht leuchtet, dass dann a
 
 Hier ist also wiederum der Einpersonenfall interessant. Und der spielte sich so ab. Mein Freund stand also im Kasten als sich nach einer Viertelstunde die aktuelle Spielerin plötzlich direkt an den Kasten wandte und mit ziemlich angepisstem Gesicht schrie: "ist da überhaupt jemand drinnen?!".
 
-Jetzt hatte mein Freund ja die Prepaidkarte (gut für eine halbe Stunde) im Kastenschlitz. Herzig und naiv wie er war, hatte er nicht kapiert dass ab einer gewissen Zeit ("Hätt nicht gedacht dass das so kurz dauert") erwartet wird, dass er zum Kasten mit dem Loch in der Wand wechselt, wo dann das Trinkgeld glatt dargereicht wird.
+Jetzt hatte mein Freund ja die Prepaidkarte (gut für eine gute halbe Stunde) im Kastenschlitz. Herzig und naiv wie er war, hatte er nicht kapiert dass ab einer gewissen Zeit ("Hätt nicht gedacht dass das so kurz dauert") erwartet wird, dass er zum Kasten mit dem Loch in der Wand wechselt, wo dann das Trinkgeld glatt dargereicht wird.
 
 Jedenfalls wollte die Spielerin sich meinen Freund nicht als wach und schlafend inklusive Interferenz vorstellen, wie es die Wissenschaft ja vorgibt. Auch wollte sie nicht, etwa via allerweltlicher Wurschtigkeit, auf ihre Verfeinerung des Denkens verzichten. Und deswegen hat sie das einzig rationale getan: die Kommunikation aufgenommen ins Dunkle hinein.
