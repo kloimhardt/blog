@@ -6,7 +6,7 @@ categories: Crônica
 ---
 Freunde, wir sind im Straussjahr. Darum bin ich ins Theatermuseum zur Ausstellung.
 
-Bei der Kassa teilt mir die nette Dame mit, dass sie grad unpässlich ist wegen Ticket, weil der Computer ein update macht ("Hätt nicht gedacht dass das so lange dauert"). Herzig naiv war sie, hatte sie doch erwartet dass das einfach so glatt abgehen wird. Jetzt das updatetypische Hoffen und Bangen im Gesicht
+Bei der Kassa teilt mir die nette Dame mit, dass sie grad unpässlich ist wegen Ticket, weil der Computer ein update macht ("Hätt nicht gedacht dass das so lange dauert"). Herzig naiv war sie, hatte sie doch erwartet dass das einfach so und glatt abgehen würde. Jetzt das updatetypische Hoffen und Bangen im Gesicht
 
 Damit kein Druck entsteht hock ich mich auf die Sesseln vorm Kaffeeautomaten. Dann bringt sie mir persönlich die gedruckten Karten und meint, dass die Strauss Ausstellung zwar groß, aber ihr Herz für die Puppentheaterausstellung gegenüber schlägt.
 
