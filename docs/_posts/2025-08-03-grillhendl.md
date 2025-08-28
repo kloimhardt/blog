@@ -10,7 +10,9 @@ Es beginnt im Technischen Museum. Da geht man im Subterrain rein und landet dann
 
 Im Vergleich zur Dampflock oben war auch für mich diese Rutsche ja keine wirkliche Verlockung. Aber dann bei den kleinen Kaplanturbinchen steht "bitte nicht berühren / do not touch". Ich mein das ist alles eine Schande für ein Museum im 21. Jahrhundert. Es hat mich ziemlich gejuckt da rumzudrehen. Eine Frechheit, so nettes Drehwerk vor die Nase zu stellen. Vom Mercedes Silberpfeil im Stock darüber will ich gar nicht reden.
 
-Mit der unantastbaren Kaplanturbine ist es wie mit dem Vater Knie am Schimmel. Schön schön. Aber es berührt mich nicht. Es bewegt mich nciht. Sollte es aber. Das ist die Erwartung.
+Mit der unantastbaren Kaplanturbine ist es wie mit dem Vater Knie am Schimmel. Schön schön. Aber es berührt mich nicht. Es bewegt mich nicht. Sollte es aber. Das ist die Erwartung.
+
+Denn das was da ist, ist zu künstlich, zu durchgestyled. Man weiss genau was man anrühren darf und was nicht, weiss genau was passieren wird. Es werden Phrasen bedient. Das sind die Löcher wo Populisten und Extremisten reingrätschen können. Man schadet sich mit Tabuisierungen.
 
 Nun, gut. Ich geh etwas frustriert raus und seh einen Marktstand. "Grillhendl". Dass es sowas noch gibt. Die Hendl waren aber nicht mehr am Grill, es war fünf Uhr, und bei solchen halbkalten Hendln in der Vitrine sollte eigentlich "do not touch" stehen.
 
