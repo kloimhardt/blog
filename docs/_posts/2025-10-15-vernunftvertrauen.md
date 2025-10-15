@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vernunftvertrauen"
-date:   3025-10-15 06:00:00 +0100
+date:   2025-10-15 06:00:00 +0100
 categories: Crônica
 ---
 Freunde, ich fühle mich bemüssigt zu Zitaten von Einstein zu senfen. Sie sind aus dem Piper Buch "Einstein sagt".
