@@ -45,3 +45,5 @@ Und doch: weil der Verstand nach der Ordnung der Welt funktioniert, ist er tats�
 Jedenfalls schlage ich als Breviergebet vor:
 
 > Die kosmischen Ordnung möge jenen Verstand hervorbringen der eine Welt erzeugt welche der kosmischen Ordnung folgt.
+
+Ps.: das Argument geht auch rückwärts: der Verstand projiziert eine Ordnung, warum sollte er selbst nach einer anderen (oder gar keiner) Ordnung funktionieren? Und warum sollte der Kosmos eine andere Ordnung haben als das Gehirn des er erzeugt? Meinung: Nur ein Verstand der einer Ordnung folgt kann eine Ordnung (und nur diese) erzeugen. Nur eine geordnete Welt erzeugt den Verstand der die Ordnung erkennt.
