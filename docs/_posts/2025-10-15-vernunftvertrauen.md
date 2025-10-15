@@ -36,9 +36,11 @@ Ich versuche jetzt in diesem Sinne doch, die unbegreifliche Begreiflichkeit der 
 
 Die Hirnmasse ist physikalisch und damit Teil der "Welt des Seienden", die ein "Kosmos" mit "Harmonie" ist. Und weil mein Hirn derart physikalisch existiert, funktioniert auch der Verstand nach der Ordnung dieser harmonischen Welt.
 
-Wenn überhaupt kann diese Ordnung uns nur teilweise bewusst werden. Zwar erlaubt das Denken wilde Phantasien, doch sind wir im Denken und vor allem in der Kommunikation durch Begriffe und die Regeln der Logik auch stark begrenzt.
+Der Verstand muss eine reale Aussenwelt setzen, die dann nur durch ihre Begreiflichkeit Sinn macht. Wieso sollte der Verstand dann eine andere Ordnung erfinden, wenn er doch schon eine Ordnung in sich trägt? Ich kann keinen Grund finden, daher meine ich dass, wenn eine Ordnung existiert, dann reproduzieren wir auch genau diese Ordnung.
 
-Andererseits: weil der Verstand nach der Ordnung der Welt funktioniert, ist er tatsächlich befähigt und sogar gezwungen, die ihm eigene kosmische Ordnung in der äusseren Welt richtig zu erzeugen. Und richtig erzeugen heisst: erkennen.
+Wenn überhaupt kann diese Ordnung uns aber nur teilweise bewusst werden. Zwar erlaubt das Denken wilde Phantasien, doch sind wir im Denken und vor allem in der Kommunikation durch Begriffe und die Regeln der Logik auch stark begrenzt.
+
+Und doch: weil der Verstand nach der Ordnung der Welt funktioniert, ist er tatsächlich befähigt und sogar gezwungen, die ihm eigene kosmische Ordnung in der äusseren Welt richtig zu erzeugen. Und richtig erzeugen heisst: erkennen.
 
 Jedenfalls schlage ich als Breviergebet vor:
 
