@@ -55,6 +55,6 @@ In diesem Sinne sind die Wörter "subjective", "estimate", "most likely", "expec
 
 Interessant ist, dass gegen die Textbuch-Quantenmechanik zwar alternative Formulierungen heiss diskutiert werden (z.B. Bohm, GRW, Everett), dabei aber die Integration nach der Born-Regel im Grunde nicht angetastet wird. Flapsig formuliert meine ich: während über den objektiven Teil der Quantenmechanik gestritten wird, herrscht Konsens über jenen Teil welcher eine konsensuale Setzung aus sich heraus fordert. Konsens scheint zumindest über jenen Teil zu herrschen, der die Häufigkeiten regelt.
 
-Ich will nochmal wiederholen dass der objektive Teil der Theorie behauptet, dass das Elektron überall sein kann.
+Ich will nochmal wiederholen dass der objektive Teil der Theorie behauptet, dass das Elektron überall sein kann. Das Elektron wird durch keine Barriere komplett behindert. Dieser "Tunneleffekt" ist eine objektive Aussage der Quantenmechanik, da jener Effekt in dieser Theorie erst in einem zweiten Schritt mit Wahrscheinlichkeiten belegt wird. Die Begründung der grundsätzlichen Reisefreiheit erfolgt daher ohne Born-Regel.
 
 Die angenommene Häufigkeit der Blitze entspricht beim Wasserstoff  der gemessenen Lichtintensität einer Spektrallinie. Die Intensität ist natürlich wirklich, kommt aber auf eine Weise zustande, die niemand kennt, jedenfalls auf eine Art und Weise die anders ist als sich das der rationale Agent denken muss. Die Intensität wird von Gott nämlich empirisch integriert.
