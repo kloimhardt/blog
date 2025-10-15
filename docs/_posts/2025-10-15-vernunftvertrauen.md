@@ -6,8 +6,8 @@ categories: Crônica
 ---
 Freunde, ich fühle mich bemüssigt zu Zitaten von Einstein zu senfen. Sie sind aus dem Piper Buch "Einstein sagt".
 
-> Angesichts solcher Harmonie mit dem Kosmos, die ich, mit meinem begrenzten Verstand, wahrnehmen kann, (S 307) [habe ich]  
-> Vertrauen in die Möglichkeit die in der Welt des Seienden geltenden Gesetzmässigkeiten seinen vernünftig, d.h. durch die Vernunft begreifbar. (S 305)
+> Angesichts solcher Harmonie mit dem Kosmos, die ich, mit meinem begrenzten Verstand, wahrnehmen kann, (S 307)  
+> [habe ich] auch das Vertrauen in die Möglichkeit, die in der Welt des Seienden geltenden Gesetzmässigkeiten seien vernünftig, d.h. durch die Vernunft begreifbar. (S 305)
 
 Weiter mit Wittgenstein (Traktatus Satz 3.03ff):
 
@@ -22,15 +22,23 @@ Er gibt aber zu, dass wir Unphysikalisches denken können:
 
 > Wohl können wir einen Sachverhalt räumlich darstellen, welcher den Gesetzen der Physik, aber keinen, der den Gesetzen der Geometrie zuwiderliefe. (3.0321)
 
-Einstein schliesst den Kreis nur fast:
+Wittgenstein weiter zur Physik:
+
+> Der ganzen modernen Weltanschauung liegt die Täuschung zugrunde, dass die sogenannten Naturgesetze die Erklärungen der Naturerscheinungen seien. (6.371)
+
+Bezüglich Physik solle man sowieso eher Einstein zuhören:
+
+> Mein Gefühl ist insoweit religiös als ich erfüllt bin von dem Bewusstesein vom Ungenügen des menschlichen Verstandes, die Harmonie des Universums zu erfassen, welche wir als "Naturgesetze" zu formulieren versuchen. (S 312)
 
 > Das ewig Unbegreifliche an der Welt ist ihre Begreiflichkeit. Dass die Setzung einer realen Aussenwelt ohne jene Begreiflichkeit sinnlos wäre, ist eine der grossen Erkenntnisse Kants. (S 354)
 
-Ich versuche jetzt den Kreis zu schliessen. Ich versuche die unbegreifliche Begreiflichkeit der physischen Welt begreiflich zu machen. Und zwar so:
+Ich versuche jetzt in diesem Sinne doch, die unbegreifliche Begreiflichkeit der physischen Welt begreiflich zu machen. Die Annahmen und Argumente sind folgendermassen:
 
-Die physische Hirnmasse ist Teil der "Welt des Seienden", die ein "Kosmos" mit "Harmonie" ist. Darum ist auch meine Hirnmasse in harmonischer Ordnung, und zwar von der selben Ordnung wie die ganze physikalische Welt.
+Die Hirnmasse ist physikalisch und damit Teil der "Welt des Seienden", die ein "Kosmos" mit "Harmonie" ist. Und weil mein Hirn derart physikalisch existiert, funktioniert auch der Verstand nach der Ordnung dieser harmonischen Welt.
 
-Also hat die kosmische Ordnung mittels Hirnmasse einen geordneten Verstand hervorgebracht der dann von seiner eigenen physikalischen Ordnung befähigt und gezwungen wird, diese kosmische Ordnung zu erkennen.
+Wenn überhaupt kann diese Ordnung uns nur teilweise bewusst werden. Zwar erlaubt das Denken wilde Phantasien, doch sind wir im Denken und vor allem in der Kommunikation durch Begriffe und die Regeln der Logik auch stark begrenzt.
+
+Andererseits: weil der Verstand nach der Ordnung der Welt funktioniert, ist er tatsächlich befähigt und sogar gezwungen, die ihm eigene kosmische Ordnung in der äusseren Welt richtig zu erzeugen. Und richtig erzeugen heisst: erkennen.
 
 Jedenfalls schlage ich als Breviergebet vor:
 
