@@ -2,9 +2,9 @@
 layout: post
 title:  "Competence before Comprehension (1)"
 date:   2023-03-16 06:00:01 +0100
-categories: Literatur
+categories:  Crônica
 ---
-Let's take a simple example: you go into a grocery store in Italy. You look where the fridge is and grab a piece of butter. You go to the cashier, pay and leave.
+Friends, let's assume you go into a grocery store in Italy. You look where the fridge is and grab a piece of butter. You go to the cashier, pay and leave.
 
 You know the universal rules: butter must be in a fridge, one needs to pay before getting out. One does not have to speak Italian to get by in Italy.
 
@@ -39,3 +39,5 @@ On the other hand, it is important to not get complacent by a comfortable situat
 But we are not that type of complacent person, because we strive for comprehension, right?
 
 So, being thus not afraid of best practice as a convenient first step, competence it is. We want ways to learn by first understanding without the burden of arduous reasoning. That is hard enough already in itself. Let that be the slogan of our preferred way of learning: "First the rules, then the principles: Competence before Comprehension".
+
+As the number (1) in the title indicates, there is also another post (2) where I try to give a concrete example.
