@@ -87,7 +87,7 @@ Wir könnten beliebig genau verstehen, weil Begriffe und Sprache dabei nicht im 
 
 ## Mein Breviergebet
 
-Ich für meinen Teil bin gern bereit, es bei "sinnlich wahrnehmbaren Zeichen" zu belassen die mit einer guten Lupe zu erkennen sind, mithin die Erkenntnis schon frühzeitig in klassische Poesie auslaufen zu lassen.
+Ich für meinen Teil bin gern bereit, es bei "sinnlich wahrnehmbaren Zeichen" zu belassen die mit einer guten Lupe zu erkennen sind, mithin die Horizonterweiterung schon frühzeitig in klassische Poesie auslaufen zu lassen.
 
 Jedenfalls schlage ich als Breviergebet vor:
 
