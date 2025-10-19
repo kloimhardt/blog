@@ -57,11 +57,15 @@ Das Argument geht auch rückwärts: der Verstand projiziert eine Ordnung, warum 
 
 Ich bin ein grosser Fan von David Deutsch. In seinem Buch "The Fabrik of Reality", Kapitel 6, meint er:
 
+> The laws of physics may be said to mandate their own comprehensibility.
+
+Er meint also im Einklang mit dem Bisherigen, dass wir verstehen können. Er geht aber noch weiter:
+
 > The laws of Physics ... imply the physical existence ... of entities that understand them arbitrary well.
 
-Er meint also im Einklang mit dem Bisherigen, dass wir verstehen können. Aber im Gegensatz zum Obigen meint er, dass wir "beliebig" genau verstehen könnten.
+Er meint also zusätzlich, dass wir "beliebig" genau verstehen könnten. Das steht im Gegensatz zu meiner obigen Annahme, dass wir wegen der Abhängigkeit von Begriffen im Sprechen und auch Denken auf jeden Fall teilweise begrenzt sind.
 
-Wir könnten beliebig genau verstehen, weil Begriffe und Sprache dabei nicht im Weg stünden, denn wir könnten unsere Hirne und Körper ja direkt verkabeln. Deutsch meint "irgendwie, irgendwo, irgend-Mann" an den Stellen wo bei mir drei Punkte stehen. Frei nach Nena ist seine Poesie:
+Wir könnten beliebig genau verstehen, meint David Deutsch, weil Begriffe und Sprache dabei nicht im Weg stünden, denn wir könnten unsere Hirne und Körper ja direkt verkabeln. David meint "irgendwie, irgendwo, irgend-Mann" (dort wo ich in seinem Zitat drei Punkte gesetzt habe). Frei nach Nena ist seine Poesie:
 
 > Im Sturz durch Raum und Zeit  
 > Richtung Unendlichkeit  
@@ -87,7 +91,7 @@ Wir könnten beliebig genau verstehen, weil Begriffe und Sprache dabei nicht im 
 
 ## Mein Breviergebet
 
-Ich für meinen Teil bin gern bereit, es bei "sinnlich wahrnehmbaren Zeichen" zu belassen die mit einer guten Lupe zu erkennen sind, mithin die Horizonterweiterung schon frühzeitig in klassische Poesie auslaufen zu lassen.
+Ich für meinen Teil bin gern bereit, es bei jenen "sinnlich wahrnehmbaren Zeichen" zu belassen, welche mit einer guten Lupe zu erkennen sind, mithin die Horizonterweiterung schon frühzeitig in klassische Poesie auslaufen zu lassen.
 
 Jedenfalls schlage ich als Breviergebet vor:
 
