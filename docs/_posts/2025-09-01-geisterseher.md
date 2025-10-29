@@ -10,6 +10,8 @@ Eine Übersetzung ist immer eine Interpretation oder Anmerkung. [In eckigen Klam
 
 Diese "Übersetzung" bricht im letzten Drittel ab. Im Anschluss des Textes der "Übersetzung" ist daher das komplette Original zu finden.
 
+Eine kleine Anmerkung: mir kommt vor, in Abhandlungen des Paranormalen findet sich oft die selbe Struktur in drei Schritten. Im ersten Schritt wird eine paranormale Erzählung vorgestellt, im zweiten Schritt wird dann diese Erzählung in ein rational erklärbares Weltbild eingeordnet. Die spezifische Erzählung wird also des Paranormalen entrissen um dann im dritten Schritt die Möglichkeit von paranormalen Phänomenen ganz anderer Art doch offen zu lassen. Ich finde das eine gute Vorgehensweise.
+
 ---
 
 ## Ein Vorbericht

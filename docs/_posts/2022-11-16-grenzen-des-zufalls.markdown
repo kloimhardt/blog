@@ -39,3 +39,13 @@ Aber: vielleicht erklärt sich unsere sichtbare Welt tatsächlich aus genauen Co
 Aber es hinnehmen werde ich nicht! Ich lasse zum Schluss Ivan Karamasow von 1880 sprechen (ich erinnere dass 1916 Einstein gezeigt hat, dass zwei parallele Linien sich irgendwo doch überschneiden):
 
 „Indessen haben sich Geometer und Philosophen gefunden (und finden sich sogar heute noch), und zwar unter den bedeutensten, die Zweifel anmelden, ob das Weltall, oder noch umfassender, das ganze Sein ausschliesslich nach den Gesetzen der euklidischen Geometrie erschaffen ist, die sogar davon zu träumen wagen, dass zwei parallele Linien, die sich nach Euklid auf Erden nie und nimmer überschneiden, sich vielleicht irgendwo in der Unendlichkeit doch überschneiden. … Mögen sich sogar die parallelen Geraden überschneiden, und mag ich dies mit eigenen Augen sehen: ich werde es sehen und sagen dass sie sich schneiden, aber es hinnehmen werde ich nicht.“
+
+## Addendum Oktober 2025:
+
+Im "Theory of Everything" Podcast vom 13.10. sagt Yakir Aharonov:
+
+> In classical physics in order to describe the present, it is enough to know the initial conditions in the past. In quantum mechanics, in order to describe fully the pattern in the present, you must do two experiments.  
+> One before that, one boundary condition, the past. The wave function that you found before propagates to the present. And later you do another experiment that gets different results from one atom to another. That different result gives you another boundary condition, and that new thing that is called the wave is propagated from the future to the present.  
+> Classically, once you know the past, there is no new information in the future. But in quantum mechanics, you have new information in the future, and both informations are relevant in the present.
+
+So gesehen spricht die QM über ein Leben nach dem Tod. Klassisch geht's ewig gleich weiter, die QM bringt Neuigkeiten aus der Zukunft. Diese Sicht fiel mir nicht ein bisher, damit kann ich aber gut leben.

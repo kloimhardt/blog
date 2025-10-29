@@ -58,3 +58,19 @@ Interessant ist, dass gegen die Textbuch-Quantenmechanik zwar alternative Formul
 Ich will nochmal wiederholen dass der objektive Teil der Theorie behauptet, dass das Elektron überall sein kann. Das Elektron wird durch keine Barriere komplett behindert. Dieser "Tunneleffekt" ist eine objektive Aussage der Quantenmechanik, da jener Effekt in dieser Theorie erst in einem zweiten Schritt mit Wahrscheinlichkeiten belegt wird. Die Begründung der grundsätzlichen Reisefreiheit erfolgt daher ohne Born-Regel.
 
 Die angenommene Häufigkeit der Blitze entspricht beim Wasserstoff  der gemessenen Lichtintensität einer Spektrallinie. Die Intensität ist natürlich wirklich, kommt aber auf eine Weise zustande, die niemand kennt, jedenfalls auf eine Art und Weise die anders ist als sich das der rationale Agent denken muss. Die Intensität wird von Gott nämlich empirisch integriert.
+
+Popper meinte irgendwo, dass sich Boltzmann das Leben nahm als ihm seine eigene Komplizenschaft beim  Einbruch des Subjektiven in die Physik dämmerte.
+
+Es gibt aber vielleicht einen Ausweg. Im "Theory of Everything" Podcast vom 13. Oktober sagt Yakir Aharonov:
+
+> In classical physics in order to describe the present, it is enough to know the initial conditions in the past. In quantum mechanics, in order to describe fully the pattern in the present, you must do two experiments.  
+> One before that, one boundary condition, the past. The wave function that you found before propagates to the present. And later you do another experiment that gets different results from one atom to another. That different result gives you another boundary condition, and that new thing that is called the wave is propagated from the future to the present.  
+> Classically, once you know the past, there is no new information in the future. But in quantum mechanics, you have new information in the future, and both informations are relevant in the present.
+
+Aharonov kennt also drei Zeitpunkte: past, present (das Jetzt), future. Die Aufgabe der Physik ist es zu erklären, wie die Tatsachen im Jetzt zustandegekommen sind.
+
+Wenn wir aber einen Blitz im Jetzt sehen, können wir nicht erklären, warum er grad die Farbe hat, die er eben grad hat. Vielleicht hat das Boltzmann fertig gemacht.
+
+Aharonov sagt uns aber, dass Messungen in der Zukunft sehr wohl erklären werden können, warum im Jetzt etwa ein roter und kein blauer Blitz erschienen ist. Wo wir also bisher alle roten Blitze in einen Topf geworfen und dann eine Häufigkeit zugedacht haben, werden wir mit Geduld jeden roten Blitz als Individuum identifizieren können. Es wird eben erst in der Zukunft objektiv festgelegt, was genau den einzelnen Racker dazu getrieben hat, so zu sein wie er jetzt ist.
+
+Tja, Gott hat leicht integrieren. Wir armen Würsteln dagegen müssen viel Geduld haben bis alles Subjektive aus unseren Erklärungen verschwindet. Vielleicht interessieren uns aber eh nur die Häufigkeiten und wir pfeifen nur allzugern auf die Details.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Roter Schwede"
-date:   3025-10-19 06:00:00 +0100
+date:   2025-10-19 06:00:00 +0100
 categories: Crônica
 ---
 Freunde, jetzt ist schon wieder was passiert. In der Rotenturmstrasse wurde ein Mann bei einer Messer-Attacke durch Jugendliche verletzt. ([Standard-Artikel vom 18.10.](https://www.derstandard.at/story/3000000292567/mann-bei-messer-attacke-durch-jugendliche-in-wiener-rotenturmstrasse-verletzt))
@@ -14,7 +14,7 @@ Beim Karls- und Schwedenplatz hat die Stadtverwaltung es geschafft, die Drogensz
 
 Grad der Karlsplatz ist superangenehm zum Bankerlsitzen geworden in den letzten Jahren. Da gibt's das Popfest im Sommer, Radio FM4 hat dort manchmal auch so die eine oder andere DJane am Start. Das renovierte Wien-Museum, das jetzt gratis ist, zieht viele Touristen an, die dann vorn heraussen mit Blick auf alte Bäume und kuppeliger Karlskirche sitzen.
 
-Ein Faktor ist auch die Neueröffnung der Karlsplatzpassage 2013 ([ORF-Artikel](https://wien.orf.at/v2/news/stories/2596568/)). Viele Geschäfte sind dort  verschwunden, sie ist seither breiter und heller und damit freundlicher. Manchmal baut dort der ein oder andere Musiker seinen Stand auf bei dem es sich dann auch lohnt stehenzubleiben. Die dunklen Ecken sind weg, es wurden 2000 Leuchten installiert und viel Glas verbaut.
+Ein Faktor ist auch die Neueröffnung der Karlsplatzpassage 2013 ([ORF-Artikel](https://wien.orf.at/v2/news/stories/2596568/)). Viele Geschäfte sind dort vorab  entfernt worden, der Tunnel ist seither breiter, heller, freundlicher. Manchmal baut dort der ein oder andere Musiker seinen Stand auf bei dem es sich dann auch lohnt stehenzubleiben. Die dunklen Ecken sind weg, es wurden 2000 Leuchten installiert und viel Glas verbaut.
 
 Die damalige mehrmonatige Verzögerung erklärten die Wiener Linien mit zähen Verhandlungen der Geschäftsmieter über die Ablöse. Anstelle der Ramschladenbetreiber steht jetzt eine Kunstinstallation. Mein Lieblingshutladen ist aber kein Ramschladen und auch immer noch dort.
 
@@ -22,9 +22,9 @@ Zurück zu meiner Rotenturmstrasse. Yours Truely hat sich an dieser Stelle (mit 
 
 Vielleicht war ich aber auch etwas zu Milde in meiner Ansicht über den Kitsch im Angesicht der abscheulichen Akkordeon+Schellentrommel Kombos welche im Sommer und hochmobil die Strasse traktieren. Not now, und better never ever bella, ciao.
 
-Und nach dieser Messerattacke bin ich noch etwas ratloser. Vielleicht ein Popfest am Schwedenplatz? Eine Dependence des Albertina-Museums? Das Simon Wiesenthal Museum wär ja schon dort.
+Und nach dieser Messerattacke bin ich noch etwas ratloser. Vielleicht ein Popfest am Schwedenplatz? Eine Dependence des Albertina-Museums? Das Simon Wiesenthal Museum wär ja schon dort und auch die interaktive Dauerausstellung des Europäischen Parlaments. Auch das Taferl einer lokalen Kunstinitiative steht bei den Litfassäulen der Recyclingcontainer. Was will man mehr?
 
-Ich hab noch einen Punkt. Es ist die Beleuchtungsbedrohung. Die "bewährten Motive" der Rotenturmstrasse ([ORF-Artikel](https://wien.orf.at/stories/3277545/)) hängen schon wieder seit Mitte Oktober dort. Es sind diese riesigen roten Kugeln über der Strasse. Diese wirtschaftskammerfinanzierte X-Masbedrohung wird von den übereifrigen Kränen der roten Magistratsabteilung bevorzugt an sonnig-warmen Frühherbsttagen aufhängt. An Tagen an denen man die besten Eisläden der Strasse in diesem Jahr erst noch richtig auskosten will.
+Bis auf einen Punkt. Es ist die Beleuchtungsbedrohung. Die "bewährten Motive" der Rotenturmstrasse ([ORF-Artikel](https://wien.orf.at/stories/3277545/)) hängen jetzt schon wieder seit Mitte Oktober dort. Es ist ein Kreuz mit diesen riesigen roten Kugeln über der Strasse und den Spiralmotiven. Diese wirtschaftskammerfinanzierte X-Masbedrohung wird von den übereifrigen Kränen der roten Magistratsabteilung bevorzugt an sonnig-warmen Frühherbsttagen aufgehängt. An Tagen an denen man die besten Eisläden der Strasse in diesem Jahr erst noch richtig auskosten will.
 
 Warum müssen die Kugeln dort wochenlang schon hängen bevor sie überhaupt aufgeschaltet werden können? Droht man mit deren Einschaltung falls das Volk zu wenig Ramsch kauft?
 
