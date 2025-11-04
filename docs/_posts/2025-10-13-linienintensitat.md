@@ -7,6 +7,10 @@ categories: Physik
 > Gott kümmert sich nicht um unsere mathematischen Schwierigkeiten. Er integriert empirisch.   
 > *aus: "Einstein sagt", Piper Verlag, S 309*
 
+Der Aussage von Einstein füge ich hinzu: die Eigenwerte sind objektiv, die Born-Regel aber ist eine subjektive Zuschreibung. Wer das versteht und sowieso auch dieser Ansicht ist, braucht nicht weiterzulesen.
+
+Nun denn:
+
 Im Wasserstoffatom schwirrt ein einzelnes Elektron um den Atomkern. Man darf sich die Schalen, in denen das Elektron bevorzugt herumschwirrt, ungestraft als Ladungswolken denken. Überhaupt vergessen Sie bitte das Elektron vorerst und denken nur an Wolken.
 
 Man darf sich auch vorstellen, dass es zwischen diesen Wolken blitzt.
@@ -31,6 +35,8 @@ Während objektiv jeder beliebige Ort als Aufenthalt des Elektrons möglich ist,
 
 Also: während die Theorie die möglichen Farben objektiv angibt, ist die Häufigkeit der Blitze den jeweiligen Farben bloss zugedacht.
 
+In technischer Sprache: die Eigenwerte bezeichnen objektive Eigenschaften des Elektrons. Auch die zugehörigen Eigenvektoren bezeichnen manche objektive Eigenschaften: sie sind eindeutig und quadratintegrabel und (nix anderes von Beidem als) entweder symmetrisch oder anti-symmetrisch. Die Born-Regel aber ist eine rein subjektive Zuschreibung.
+
 Im Sprachgebrauch verwende ich abwechselnd die drei Begriffe "wahrscheinliche Anzahl", "Häufigkeit", "Wahrscheinlichkeit". Diese drei Begriffe meinen im Grunde dasselbe, jedenfalls eine bloss gedankliche Zuschreibung an eine objektiv existierende Möglichkeit.
 
 Die Sache wird etwas klarer, wenn man sich am Beispiel der Blitze die Wahrscheinlichkeit zwar als eine Anzahl denkt, aber nicht etwa als erwartete Anzahl in Zukunft, sondern als eine Zahl, die den bereits vergangenen Blitzen zugeschrieben wird. Es stellt sich heraus, dass die Anzahl der tatsächlich in der Vergangenheit gefallenen Blitze nie und nimmer der zugeschriebenen Häufigkeit entspricht.
@@ -39,7 +45,7 @@ Ok, der Ausdruck "nie und nimmer" ist hart. Zur Erklärung will ich aus den Feyn
 
 > You may have noticed another rather “subjective” aspect of our definition of probability. We have referred to N<sub>A</sub> as “our estimate of the most likely number …” We do not mean that we expect to observe exactly N<sub>A</sub>, ...
 
-Feynman stimmt mir also zu, dass die zugeschriebene Häufigkeit nicht genau der tasächlichen Anzahl entspricht. Das ist mit meinem "nie und nimmer" gemeint. Er fährt fort:
+Feynman stimmt mir also zu, dass die zugeschriebene Häufigkeit nicht genau der tatsächlichen Anzahl entspricht. Das ist mit meinem "nie und nimmer" gemeint. Er fährt fort:
 
 > ... but that we expect a number near N<sub>A</sub> , ...
 
@@ -74,3 +80,5 @@ Wenn wir aber einen Blitz im Jetzt sehen, können wir nicht erklären, warum er 
 Aharonov sagt uns aber, dass Messungen in der Zukunft sehr wohl erklären werden können, warum im Jetzt etwa ein roter und kein blauer Blitz erschienen ist. Wo wir also bisher alle roten Blitze in einen Topf geworfen und dann eine Häufigkeit zugedacht haben, werden wir mit Geduld jeden roten Blitz als Individuum identifizieren können. Es wird eben erst in der Zukunft objektiv festgelegt, was genau den einzelnen Racker dazu getrieben hat, so zu sein wie er jetzt ist.
 
 Tja, Gott hat leicht integrieren. Wir armen Würsteln dagegen müssen viel Geduld haben bis alles Subjektive aus unseren Erklärungen verschwindet. Vielleicht interessieren uns aber eh nur die Häufigkeiten und wir pfeifen nur allzugern auf die Details.
+
+Trotzdem sind in der klassischen Punktmechanik die Teilchen Individuen, sie sind unter-scheidbar. Im Gegensatz dazu müssen sämtliche Feldquanten der modernen Physik immer un-unter-scheidbar sein. Vielleicht stimmt beides: un-unterscheidbare Häufigkeiten der Vergangenheit werden zukünftig zu Individuen. Während die Häufigkeiten der Vergangenheit durch Wellen erklärt werden, löst sich die Welle durch zukünftige Messungen in ein Meer des Jetzt der Individuen auf.
