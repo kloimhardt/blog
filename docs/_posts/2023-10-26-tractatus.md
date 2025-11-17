@@ -241,6 +241,8 @@ Die gegenseitige räumliche Lage dieser Dinge drückt dann den Sinn des Satzes a
 
 -> Ich kann mir den Weltenpunkt als einen einzigen roten Punkt am Blatt Papier vorstellen, aber auch die Koordinaten des Punktes in vielen, vielen Zahlen angeben. Ich kann mir auch den einen Punkt kurzzeitig wieder als mehrere Punkte im Raum vorstellen.
 
+As they say: there is a lot to illustrate, so we can only spare one point per scenario.
+
 Beim nächsten Statement wird klar gemacht, dass ein Satz nicht unbedingt den Weltpunkt genau festlegen muss, ein Satz schränkt den Weltpunkt vielmehr auf einen Bereich (Spielraum, Platz, Schublade, Unterraum) ein. Ein darauffolgender (wahrer) Satz muss den Weltpunkt in den verbleibenden Bereich werfen. Falls zwei Sätze den Weltpunkt in verschiedene Bereiche werfen, sind diese sinnlos, da die Wirklichkeit durch die beiden Sätze dann nicht bestimmt wird.
 
 4.463 Die Wahrheitsbedingungen bestimmen den Spielraum, der den Tatsachen durch den Satz gelassen wird.  
