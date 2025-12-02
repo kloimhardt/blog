@@ -12,16 +12,28 @@ He is opposed to locating free will within the laws of quantum mechanics. Full d
 Quote:
 > free use of the “choice” ... would infringe the statistical laws.
 
-Schrödinger has a notion of "free" as in: all singing and dancing and anything goes. But there is another definition of "free" will. It is Immanuel Kant's "act only according to that maxim whereby you can at the same time will that it should become a universal law." Car drivers have free will. Accidents happen, but on the whole they act statistically out of free reasoning. Good compromise stemming from free will. What puzzles me is that Schrödinger certainly knew Kant well and could have brought this argument by himself.
+Schrödinger has a notion of "free" as in: all singing and dancing and anything goes. But there is another definition of "free" will: if you find a rule reasonable, as a rule play by that rule.
+
+Car drivers have free will. Accidents happen, but on average, drivers obey a speed limit. It is a good compromise stemming from free will. This is Immanuel Kant's "act only according to that maxim whereby you can at the same time will that it should become a universal law." What puzzles me is that Schrödinger certainly knew Kant well and could have brought this argument by himself.
 
 I take the liberty to mention that Schrödinger was wrong in the following:
 > let me observe that physics strictly disallows a mutual dependence of the "choices" taken by various electrons unless they are close neighbours.
 
-The "unless they are close neighbours" is the expression of locality in physics. Locality is not assumed in 21st century physics anymore. It is commonly assumed that in their insistence on locality, Schrödinger and Einstein erred.
+The "physics strictly disallows ...unless they are close neighbours" is the assertion of locality as a principle in physics. Such a strict locality is not part of 21st century physics anymore. It is commonly accepted that in their insistence on strict locality, Schrödinger and Einstein erred.
 
 > there might be a delicate system of relay action which we may have hitherto failed to discover.
 
-Why failed to discover? Schrödinger himself discovered this "relay action". That is because he correctly insisted, from the outset, on his wave-function living in high dimensional configuration space. Consequently, he even coined the notion of "entanglement" as _the_ new trait of Quantum Mechanics. But he obviously did not believe in the full stretch of that relay action deeply rooted in his wave mechanics. In the 21st century, after lots of experiments, we definitely do believe in correlations over miles of distances.
+Why failed to discover? Schrödinger himself discovered this "relay action". That is because he correctly insisted, from the outset, on his wave-function living in high dimensional configuration space. Consequently, he even coined the notion of "entanglement" as _the_ new trait of his Wave Mechanics.
+
+But he obviously did not believe in the full stretch of that relay action which is nonetheless so deeply rooted in his quantum mechanics. This is understandable. As he could not include the light-speed-limit in a form that fulfilled his own taste, he (under pains) dropped this limit in his formulation. He certainly assumed that this lack of speed-limit was the cause for the unwieldy prediction of nonlocality, allowing two entangled sub-systems to be stretched without range-limit. Quote from the 1935 "The current situation in Quantum Mechanics": "The mental connection of two or more systems into a single one meets great difficulties as soon as one tries to introduce, into Q.M., the principle of special relativity", i.e. the speed limit.
+
+This well funded doubt in his own "thought-schema" was also the reason he considered that most famous prediction of his mechanics, namely Schrödinger's Cat, a burlesque situation. I think in that he was right.
+
+But not in the hoped for appearance of a range-limit. Because when the speed-limit was firmly engrained in Quantum Physics in its form of Quantum Field Theory, no range limit appeared. And no range limit ever since. In the 21st century, after lots of experiments, we definitely do believe in correlations over miles of distances.
+
+Out of this, one thing seems to be clear to me: any attempt to include free will in the formalism of Physics must not be based on Wave Mechanics (or its equivalents Matrix Mechanics or Path Integral). Rather, we need to consider field theory.
+
+To my mind, free will and the light-speed-limit are connected. Just as Schrödinger thought.
 
 ## Do electrons think?
 
@@ -317,7 +329,7 @@ would entirely spoil the
 game; for the point was that their
 behavior was to be exempt from physical
 causation. If you want to keep this up, you
-needs must be prepared to let let all
+needs must be prepared to let all
 the thinking and weighing of motivs be
 done by the one master-group of
 electrons alone and without any
