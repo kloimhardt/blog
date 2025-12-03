@@ -25,13 +25,13 @@ The "physics strictly disallows ...unless they are close neighbours" is the asse
 
 Why failed to discover? Schrödinger himself discovered this "relay action". That is because he correctly insisted, from the outset, on his wave-function living in high dimensional configuration space. Consequently, he even coined the notion of "entanglement" as _the_ new trait of his Wave Mechanics.
 
-But he obviously did not believe in the full stretch of that relay action which is nonetheless so deeply rooted in his quantum mechanics. This is understandable. As he could not include the light-speed-limit in a form that fulfilled his own taste, he (under pains) dropped this limit in his formulation. He certainly assumed that this lack of speed-limit was the cause for the unwieldy prediction of nonlocality, allowing two entangled sub-systems to be stretched without range-limit. Quote from the 1935 "The current situation in Quantum Mechanics": "The mental connection of two or more systems into a single one meets great difficulties as soon as one tries to introduce, into Q.M., the principle of special relativity", i.e. the speed limit.
+But he obviously did not believe in the full stretch of that relay action which is nonetheless so deeply rooted in his quantum mechanics. This is understandable. As he could not include the light-speed-limit in a form that fulfilled his own taste, he (under pains) dropped this limit in his formulation. He certainly assumed that this lack of speed-limit was the cause for the unwieldy prediction of nonlocality in that this "unrelativistic" treatment allows two entangled sub-systems to be stretched without range-limit. Quote from the 1935 "The current situation in Quantum Mechanics": "The mental connection of two or more systems into a single one meets great difficulties as soon as one tries to introduce, into Q.M., the principle of special relativity", i.e. the speed limit. "With this aufbau from sub-systems according to the pattern of the unrelative theory, one admittedly gets far but presumably not quite to the finish". "Maybe this simple procedure of the unrelative theory is after all a convenient calculation-gimmic only".
 
-This well funded doubt in his own "thought-schema" was also the reason he considered that most famous prediction of his mechanics, namely Schrödinger's Cat, a burlesque situation. I think in that he was right.
+The doubt in his own "thought-schema" of "aufbau from sub-systems" was also the reason he considered the very most famous prediction of his mechanics, namely Schrödinger's Cat, to be a burlesque situation. I think in that he was right.
 
-But not in the hoped for appearance of a range-limit. Because when the speed-limit was firmly engrained in Quantum Physics in its form of Quantum Field Theory, no range limit appeared. And no range limit ever since. In the 21st century, after lots of experiments, we definitely do believe in correlations over miles of distances.
+But not in the hoped for appearance of a range-limit. Because when the speed-limit was firmly engrained in Quantum Physics in its form of Relativistic Quantum Field Theory, no range-limit appeared. And no range-limit ever since. In the 21st century, after lots of experiments, we definitely do believe in correlations over miles of distances.
 
-Out of this, one thing seems to be clear to me: any attempt to include free will in the formalism of Physics must not be based on Wave Mechanics (or its equivalents Matrix Mechanics or Path Integral). Rather, we need to consider field theory.
+Out of this, one thing seems to be clear to me: any attempt to include free will in the formalism of Physics must not be based on Wave Mechanics (or its equivalents Matrix Mechanics or Path Integral). Rather, we need to consider (by lack of anything better) field theory.
 
 To my mind, free will and the light-speed-limit are connected. Just as Schrödinger thought.
 
@@ -78,7 +78,7 @@ suggested. Descartes, for instance, deemed us
 to be on the whole automatons, only the
 pineal gland, he said, was
 not. According to Descartes it was this organ
-which which controlled and directed all
+which controlled and directed all
 our spontaneous bodily
 movements.
 
@@ -158,13 +158,13 @@ of
 Epicurus, who lived in the 4th century
 B.C. Their suggestion had no consequences
 it was all but
-forgotten. The second time the strictly
+forgotten. The second time that the strictly
 causal linkage in the chain of physical
 happenings was thrown into doubt
 was only 30 years ago by Franz Exner in
 Vienna. About 10 years later, that is
 about 20 years ago from
-today, the disbelief in strict cation
+today, the disbelief in strict causation
 became part and parcel of what you might
 call the New Creed now adopted by most
 physicists and called Quantum Mechanics.
