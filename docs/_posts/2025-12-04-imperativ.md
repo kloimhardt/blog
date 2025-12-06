@@ -27,6 +27,8 @@ Es ist nicht der Fall dass jeder sich die Uhren  langsam denken muss. Es ist nic
 
 "Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu denken möglich, was ohne Einschränkung für gut gehalten werden könne, als allein ein guter Wille."
 
+Es ist mein guter Wille, dass die beste Erklärung zum allgemeinen Urteil wird.
+
 Nun bin ich doch wieder bei der Ethik gelandet. Der Spruch über den guten Willen ist von Kant. Wenn wir das Wort "Gesetz" aus der Natur lassen, wird die Naturwissenschaft von Haus aus ethisch. Und die ursprüngliche Blaupause für meinen Ansatz bekommt vielleicht langsam wieder Sinn:
 
 "Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, daß sie ein allgemeines Gesetz werde."
