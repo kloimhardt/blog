@@ -16,6 +16,8 @@ Schrödinger has a notion of "free" as in: all singing and dancing and anything 
 
 Car drivers have free will. Accidents happen, but on average, drivers obey a speed limit. It is a good compromise stemming from free will. This is Immanuel Kant's "act only according to that maxim whereby you can at the same time will that it should become a universal law." What puzzles me is that Schrödinger certainly knew Kant well and could have brought this argument by himself.
 
+Maybe it is best to substitute the notion of "free will" with "comprehension". Both have their basis in consciousness. And certainly for Schrödinger, in the moment when he saw his equation for the first time, comprehension and free will was one and the same.
+
 I take the liberty to mention that Schrödinger was wrong in the following:
 > let me observe that physics strictly disallows a mutual dependence of the "choices" taken by various electrons unless they are close neighbours.
 
@@ -31,9 +33,9 @@ The doubt in his own "thought-schema" of "aufbau from sub-systems" was also the 
 
 But not in the hoped for appearance of a range-limit. Because when the speed-limit was firmly engrained in Quantum Physics in its form of Relativistic Quantum Field Theory, no range-limit appeared. And no range-limit ever since. In the 21st century, after lots of experiments, we definitely do believe in correlations over miles of distances.
 
-Out of this, one thing seems to be clear to me: any attempt to include free will in the formalism of Physics must not be based on Wave Mechanics (or its equivalents Matrix Mechanics or Path Integral). Rather, we need to consider (by lack of anything better) field theory.
+Out of this, one thing seems to be clear to me: any attempt to include free will or comprehension in the formalism of Physics must not be based on Wave Mechanics (or its equivalents Matrix Mechanics or Path Integral). Rather, we need to consider (by lack of anything better) field theory.
 
-To my mind, free will and the light-speed-limit are connected. Just as Schrödinger thought.
+To my mind, free will-comprehension and the light-speed-limit are connected. Just as Schrödinger thought.
 
 ## Do electrons think?
 
