@@ -4,6 +4,30 @@ title:  "Uncollected"
 date:   2025-08-21 06:00:00 +0100
 categories: Crônica
 ---
+## Party on
+
+Der Grossraumwagen ist voll  
+Der Grossraumwagen ist leise  
+
+Die Menschen erscheinen  
+ausgeschlafen und hellwach  
+und leise
+
+Wie schön Zugfahren ist  
+Wenn der Grossraumwagen voll  
+Ausgeschlafen und  
+leise ist
+
+Am 1. Januar ist  
+Der Grossraumwagen  
+Am Morgen  
+durch die Silvesternacht gefiltert  
+
+Wie schön die Menschheit ist  
+Ohne die paar Lauten
+
+Party On!
+
 ## Kassler
 Ich will nicht  
 dass du dort alleine hingehst  
