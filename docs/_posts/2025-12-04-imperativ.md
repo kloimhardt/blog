@@ -2,7 +2,7 @@
 layout: post
 title:  "Allgemeines Urteil"
 date:   2025-12-04 06:00:01 +0100
-categories: Literatur
+categories: Physik
 ---
 Ich weiss nicht ob die Fachdisziplin Ethik Sinn macht. Karl Popper meint, es bringe nichts einem Ehebrecher zu erklären unter welchen Umständen er vielleicht doch u.s.w. Ich mein, in Fragen der Moral sind die Randbereiche klar: man stösst keinen Rollstuhlfahrer die Treppe runter.
 
