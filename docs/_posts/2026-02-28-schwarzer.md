@@ -116,6 +116,9 @@ Islams, sondern des politischen Islams. Und Journalisten, wie sie scheinen sich
 immer noch zu weigern, endlich zu begreifen die Dimension der Bedrohung
 durch den politischen Islam, der auch sie bedroht.
 
+Feldenkirchen:  
+Gut, dann gehe ich noch mal in Klausur.
+
 ---
 39:41 Schwarzer:  
 Sie haben das vielleicht auch schon gesehen in ihrem Leben, wenn sie auf der Straße haben sie
