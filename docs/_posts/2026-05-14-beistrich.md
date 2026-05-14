@@ -20,9 +20,11 @@ Das klappte hervorragend. Niemals nach Gefühl, a so ein Blödsinn.
 
 In einer früheren Crônica hatte ich mal erwähnt, dass ich den Sinn der Ethik nicht ganz versteh, weil die Ehebrecher sowieso tun was sie tun, es also keinen Sinn macht Umstände anzugeben unter denen vielleicht doch u.s.w.
 
-Damals hatte ich noch nicht erkannt, dass es mit den Ethikregeln wie mit den Beistrichregeln ist. Soll heissen: die Ethik ist für jene da, die schon ethisch sind. Für den, der von Haus aus gut seit möchte sind ethische Regeln sehr hilfreich um seinem Gefühl rationale Sicherheit zu geben.
+Damals hatte ich noch nicht erkannt, dass es mit den Ethikregeln wie mit den Beistrichregeln ist. Soll heissen: die Ethik ist für jene da, die schon ethisch sind. Für den, der von Haus aus gut sein möchte sind ethische Regeln sehr hilfreich um seinem Gefühl rationale Sicherheit zu geben.
 
-Der gute Mensch setzt seine Handlungen nach gutem Gewissen, nach gutem Willen, nach guter Absicht. Der Gutmensch belässt es dabei, darum ist Gutmensch auch ein Schimpfwort. Der ethische Mensch klopft seine nach Gefühl gesetzten Handlungen nach allgemeinen Regeln ab.
+Dem geneigten Leser wird jetzt vielleicht ein Lächeln um die Lippen spielen, weil ich wiedermal der Letzte bin, der das alles kapiert hat. Warum wären sonst die 10 Gebote in die Form "du sollst nicht" gegossen? Wenn du gut sein willst, dann sollst du nicht lügen. So ist die Idee.
+
+Der gute Mensch setzt also seine Handlungen nach gutem Gewissen, nach gutem Willen, nach guter Absicht. Der Gutmensch belässt es dabei, darum ist Gutmensch auch ein Schimpfwort. Der ethische Mensch klopft seine nach Gefühl gesetzten Handlungen nach allgemeinen Regeln ab.
 
 Beachte ich ethische Regeln, dann widerspricht das Gutsein also zumindest nicht der Rationalität. Die Ethikregeln sind der Garant dafür, dass ich gut sein darf wenn ich das denn aus freien Stücken sein will.
 
