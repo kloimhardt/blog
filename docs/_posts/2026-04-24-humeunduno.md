@@ -60,9 +60,9 @@ Die drei Fragen können nie beantwortet werden, weil Seele/Wille/Gott keine grei
 
 Nun, Orban hat Antworten! 1) die Familie bietet Unsterblichkeit 2) die Nation agiert frei ohne Zwang 3) Gott gibt's.
 
-D.h. Orban antwortet mit den greifbaren Gegenständen Familie und Nation und trixt den ungreifbaren Gott hinein. Weil Gott eben zur uns eingewobenen Trias hinzugehört, andernfalls die Antworten nicht zögen.
+D.h. Orban antwortet mit den greifbaren Gegenständen Familie und Nation und trixt den ungreifbaren Gott als etwas Greifbares hinein. Weil Gott eben zur uns eingewobenen obigen Trias hinzugehört, beim Weglassen Gottes also die beiden ersten Antworten (Familie, Nation) nicht voll zögen.
 
-Würde man antworten 1) ja, die Seele gibt's, dann käme sofort die Frage nach dem ich und du, der Familie und eben nach den Menschen über den Stamm hinaus.
+Würde man antworten 1) ja, die Seele gibt's, dann käme sofort die Frage nach dem ich und du, der Familie und dann  ganz wichtig nach den Menschen über den eigenen Stamm hinaus.
 
 Würde man antworten 2) ja, die Freiheit gibt's, käme sofort die Frage nach der Rolle der Nation und darüber hinaus der Nationen und der Uno als Hilfe und Bedrohung meiner Freiheit.
 
