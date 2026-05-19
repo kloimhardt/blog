@@ -21,7 +21,11 @@ Ein Paradebeispiel für die wissenschaftliche Methode ist das Beispiel von Mermi
 
 Die klassische Auffassung ist also exakt falsch. Und trotzdem mag ich die klassische Auffassung. Weil sie die Basis ist. Sie ist fundamentaler. Denn für die richtigere Auffassung der Sachlage reicht das Photon nicht aus, die richtigere Auffassung braucht sowohl das Photon aus auch das Auge.
 
-Und ich denke hier kann ich auf ein Missverständnis aufmerksam machen. Üblicherweise wird behauptet, die fundamentale Theorie der Natur ist die Quantentheorie (es wird nie gesagt ob das Quanten-Feldtheorie oder Quanten-Mechanik ist). Es ist aber nicht korrekt, zu behaupten, dass die Quantentheorie (QT) fundamentaler ist als die klassische Punktmechanik (KT). Die QT ist zwar richtiger als die KT, aber die KT ist fundamentaler. Denn die QT braucht mehr zur Erklärung drumherum. Die KT kennt nur das Photon, die QT braucht Photon plus Auge.
+Und ich denke hier kann ich auf ein Missverständnis aufmerksam machen. Üblicherweise wird behauptet, die fundamentale Theorie der Natur ist die Quantentheorie. Es wird dabei nie gesagt ob das Quanten-Feldtheorie oder Quanten-Mechanik ist.
+
+Zur Klärung: die Substanz der Quantenmechanik ist das Punktteilchen das Masse in sich trägt. Die Substanz der Quantenfeldtheorie ist das Feld das Energie in sich trägt. Das zeigt sich klar in der jeweiligen Pfadintegralformulierung der beiden Theorien, wohingegen die kanonische Formulierung nur "Zustände" kennt. Folgerichtig handelt es sich dabe dann in der QM einerseits um Zustände von Punktteilchen und andererseits in der QFT um Zustände von Feldern. In der QFT sind Teilchen Energiepakete die das Feld ausspuckt und verschluckt, in der QM ist jedes Teilchen Substanz und bleibt mit seiner Masse immer erhalten.
+
+Es ist aber nicht korrekt, zu behaupten, dass die Quantentheorie (QT) fundamentaler ist als die klassische Punktmechanik (KT). Die QT ist zwar richtiger als die KT, aber die KT ist fundamentaler. Denn die QT braucht mehr zur Erklärung drumherum. Die KT kennt nur das Photon, die QT braucht Photon plus Auge.
 
 Sehr schön sieht man das am Experiment das sich Mermin 1990 ausdenkt. Er beschreibt es als drei Teilchen die sich klassisch bewegen und dann auf Detektoren auftreffen. Und dann zeigt er, dass die Anzeige der Detektoren nicht die ist, die man sich klassischerweise erwarten würde.
 

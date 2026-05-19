@@ -74,3 +74,22 @@ Diese Symmetrie, dass der eine jeweils vom anderen denkt, dass er langsamer tick
 Eine Galaxie besteht aus Sternen. Aber wir müssen nicht so weit gehen, es reicht ein Blick auf die Saturnringe in Wikipedia.  "Die Ringe bestehen aus einer ungeheuren Anzahl einzelner kleiner Materialbrocken, die den Saturn umkreisen. Die Größe dieser Partikel, die im Wesentlichen aus Eis und Gestein bestehen, reicht von Staubteilchen bis zu einigen Metern. Aus der Ferne betrachtet erscheinen sie als geschlossener ringscheibenförmiger Körper."
 
 Existieren nun die Ringe oder die Brocken? Beides. Denn Ringe gibt's auch anderswo, in der rhythmischen Sportgymnastik vielleicht. Und Brocken auch.
+
+## Zugleichseyn bei Kant und Schopi
+Bei Kant gibt die einfache Wahrnehmung keine Ordnung von zwei Ereignissen A und B als vorher und nachher. Erst der Verstand erkennt Ursache und Wirkung und ordnet A als Ursache von B in der Zeit vorher an. Zuerst kommt das Prinzip der Kausalität, dann erst der Zeitpfeil.
+
+Nun ist Kant bei der Gleichzeitigkeit in der Bredouille. Denn die Wahrnehmung kann die Gleichzeitigkeit nicht erkennen. Das ist weil sie nichtmal Vorher und Nachher unterscheiden kann. Also muss ein Prinzip her. Er nennt es Wechselwirkung. Ohne eine Art Wechselwirkung könne die Gleichzeitige Existenz von Objekten nicht erkannt werden.
+
+Bei Kant ist Wechselwirkung der Gegenstände untereinander genauso fundamental wie Kausalität. Es kann keine Ausnahme geben. Er rühmt sich der Erste zu sein, der eine fundamentale Wechselwirkung zwischen allen Objekten, die gleichzeitig existieren, als zwingend erkannt hat. Einfach weil sonst eine Lücke im Denken wär.
+
+Das ist zu finden in Kr.d.r.V,, C. Dritte Analogie, Grundsatz des Zugleichseins, nach dem Gesetze der Wechselwirkung, oder Gemeinschaft.
+
+Schopenhauer widerspricht. Für ihn liefert die einfache Wahrnehmung zweier Ereignisse A und B schon deren Reihenfolge in der Zeit. Es muss nix weiter hineininterpretiert werden, für den Zeitpfeil ist keine Kausalität nötig. Aus heutiger Sicht hat Schopi recht gegenüber dem irrenden Kant.
+
+Da Schopi kein weiteres Prinzip, keine Kausalität, für das Erkennen des Nacheinander braucht, muss er auch keine Art von Wechselwirkung einführen für die Gleichzeitigkeit. Viermehr meint er dass das Wort "Wechselwirkung" gar keinen Sinn macht und von den Leuten immer dann verwendet wird, wenn sie nicht genau wissen wovon sie reden.
+
+Auch macht er klar, dass der Begriff "Gleichzeitigkeit" nicht die Existenz von Objekten, sondern nur die Veränderung der Eigenschaften von Objekten betreffen kann. Auch hier ist er viel klarer.
+
+Das ist zu finden in "Über die vierfache Wurzel...", Kapitel 4,  §23 "Bestreitung des von Kant aufgestellten Beweises".
+
+Wiewohl Schopenhauer entgegen Kant in die richtige Richtung spezielle Relativitätstheorie geht (auch §18 Gleichzeitigkeit "entsteht also erst durch den Verein von Zeit und Raum"), ist das Phänomen der Quantenverschränkung doch ein Kandidat zur Füllung der von Kant gesehenen Lücke einer fundamentalen "Wechselwirkung". Mir kommt vor, das Thema "Zugleichseyn" ist noch nicht ganz durch.

@@ -65,6 +65,8 @@ Ich will nochmal wiederholen dass der objektive Teil der Theorie behauptet, dass
 
 Die angenommene Häufigkeit der Blitze entspricht beim Wasserstoff  der gemessenen Lichtintensität einer Spektrallinie. Die Intensität ist natürlich wirklich, kommt aber auf eine Weise zustande, die niemand kennt, jedenfalls auf eine Art und Weise die anders ist als sich das der rationale Agent denken muss. Die Intensität wird von Gott nämlich empirisch integriert.
 
+Und nochwas: Zufall bedeutet Beschränkung meiner Freiheit. Wenn die Harley Davidson nur hi und da anspringt, ist's nix mit Freiheit auf der Route 66. Ich kann wohl wollen was ich will, aber nicht tun was ich will. Der freie Wille existiert insofern, als ich der unwilligen Harley mehr davon zuschreibe als etwa einem unkaputtbaren Tretroller oder einem erratischen Choleriker (über meine Wenigkeit mögen andere subjektiv entscheiden). Zugegeben, eine Harley die mit Sicherheit nie anspringt wäre nicht besser, aber immerhin ersparte ich mir das durch den Zufall erzwungene Fluchen und gut Zureden und könnte gleich das Taxi rufen.
+
 Popper meinte irgendwo, dass sich Boltzmann das Leben nahm als ihm seine eigene Komplizenschaft beim  Einbruch des Subjektiven in die Physik dämmerte.
 
 Es gibt aber vielleicht einen Ausweg. Im "Theory of Everything" Podcast vom 13. Oktober sagt Yakir Aharonov:

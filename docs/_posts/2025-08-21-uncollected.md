@@ -172,3 +172,17 @@ Denn auf der Terrasse
 kriegt man Eiskaffee  
 Obwohl der nicht auf der Karte steht  
 
+## Stimmung
+Wir haben chronischen Mangel  
+An mieser Stimmung  
+
+Wir haben viel zu viel  
+Täuschende Glückszustände  
+
+Die wir  
+Ab sofort  
+Kritisch überprüfen müssen  
+
+Und das  
+Nehmen  
+Wir uns jetzt vor  
