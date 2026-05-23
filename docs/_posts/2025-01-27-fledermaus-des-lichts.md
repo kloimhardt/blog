@@ -88,7 +88,7 @@ Schopenhauer widerspricht. Für ihn liefert die einfache Wahrnehmung zweier Erei
 
 Da Schopi kein weiteres Prinzip, keine Kausalität, für das Erkennen des Nacheinander braucht, muss er auch keine Art von Wechselwirkung einführen für die Gleichzeitigkeit. Viermehr meint er dass das Wort "Wechselwirkung" gar keinen Sinn macht und von den Leuten immer dann verwendet wird, wenn sie nicht genau wissen wovon sie reden.
 
-Auch macht er klar, dass der Begriff "Gleichzeitigkeit" nicht die Existenz von Objekten, sondern nur die Veränderung der Eigenschaften von Objekten betreffen kann. Auch hier ist er viel klarer.
+Auch macht er klar, dass der Begriff "Gleichzeitigkeit" nicht die Existenz von Objekten, sondern nur die Veränderung der Eigenschaften von Objekten betreffen kann. Auch hier ist er viel klarer. Existieren tut das Objekt als Zustand der Substanz, d.h. existieren tut der Zustand, die Substanz ist eine Art reine Kausalität für die der Begriff Existenz keinen Sinn macht. Da das Feststellen von Kausalität die Leistung des Verstandes und nicht "da draussen" ist, ist Substanz als "reine Kausalität" auch nicht "da draussen". Die Veränderung eines Zustandes ist die Ursache für die Veränderung eines anderen Zustandes. Ein Zustand selbst, ein Objekt, kann nie Ursache sein.
 
 Das ist zu finden in "Über die vierfache Wurzel...", Kapitel 4,  §23 "Bestreitung des von Kant aufgestellten Beweises".
 
