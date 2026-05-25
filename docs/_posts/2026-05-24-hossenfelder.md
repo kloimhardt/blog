@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Hossenfelder"
-date:   2026-05-24 06:00:00 +0100
+title: Hossenfelder
+date: 2026-05-24 06:00:00 +0100
 categories: Physik
 ---
-In ihrem 320 Seiten Buch "Mehr als Atome" deklariert sich Sabine Hossenfelder als Parmenidin. Das entspricht dem Mainstream der Wissenschaft.
+In ihrem 320 Seiten Buch "Mehr als nur Atome" deklariert sich Sabine Hossenfelder als Parmenidin. Das entspricht dem Mainstream der Wissenschaft.
 
 Parmenides hat behauptet, die Ab- und Zunahme des Mondes sei nur scheinbar, in Wirklichkeit ist er ein unveränderlicher Stein. Er hatte damit recht. Dieses Konzept hat er und praktisch alle nach ihm auf die komplette Natur ausgedehnt, Stichwort Blockuniversum.
 
@@ -46,7 +46,7 @@ Wenn das Universum nicht parmenidisch ist, ist eine Apologese für Kollaps und E
 
 Schopenhauer meint, dass unser Verstand überhaupt nur dazu da ist, Invarianten zu suchen. Gegeben dass wir dem weiter Rechnung tragen, wären 1) Kollaps und 2) Entropie ein Riesengeschenk. Weil 1) und 2) eben grad das am wenigsten subjektive wären. In diesem Sinne bin ich sogar ein Anti-Apologet und meine, dass wir 1) und 2) auf keinen Fall wegentschuldigen sondern umarmen und weiter beibehalten sollten, auch wenn das bedeutet, dass das hier und jetzt etwas besonderes ist und ich und die Oma verschwinden werden.
 
-Aber Hossi bevorzugt die Apologese des Parmenides, und wirklich, "Kinder des Universums" zu sein hat etwas tröstliches.
+Aber Hossi bevorzugt die Apologese des Parmenides, und wirklich, "Kinder des Universums" zu sein hat etwas Tröstliches.
 
 ### Anmerkungen
 
@@ -55,3 +55,22 @@ Die Idee "Beyond the search for invariants" hab ich von Popper "The world of Par
 Dass dieser Slogan zu grob ist und die Idee, dass Invarianten nichts Absolutes sind, wird ganz deutlich auch bei David Bohm in "The Special Theory of Relativity", Kapitel 25 "The falsification of theories". Zitat: "Mankind has never encountered any general statement that were not approximations, having limited domains and conditions of validity." Ausnahmslos ist jeder Erhaltungssatz nur eine Näherung, die auch nur den jeweils untersuchten Prozess betrifft, eine Näherung die darüber hinaus aber nicht mehr gut genug ist. Mein Beispiel: die Erhaltung der Substanz (Masse) ist zwar gegeben beim Verdampfen von Wasser am Herd aber beim Zünden einer Atombombe nicht, wobei sich dort dann die Erhaltung der Summe einschliesslich auch anderer Energieformen zeigt.
 
 Bezüglich Schopenhauer ist anzumerken, dass in seiner Darstellung der Verstand überhaupt nur dazu da ist zureichende Gründe für die Wahrnehmung zu suchen. Eine mögliche Begründung ist physische Kausalität, was für ihn Substanzerhaltung zwingend beinhaltet und sogar der Kern ist, wobei Substanz und Masse um 1850 dasselbe bedeuten. Soweit deckt sich das gut mit meinem Haupttext, wenn man Schopi nur das moderne Wort "Invarianz" für "Substanz" zugesteht (was ich tue). Als möglicher Grund kämen aber auch, das wird im Haupttext unterschlagen, logische oder geometrische Überlegungen in Frage und natürlich auch der (unfreie) Wille.
+
+### Entropie
+Die Sache mit der Entropie ist doppelbödig, twists and turns. Get ready for the ride.
+
+Boltzmann wollte mit seiner parmenidischen Teilchentheorie die Ungleichung vom Entropiezuwachs erklären. Das ist ihm nicht gelungen, er musste eine Apologie machen.
+
+Die Apologie selbst versteh ich nicht genau, geht aber ca. so: das Universum fluktuiert manchmal aus Zufall von einem ungeordneten in einen hochgeordneten Zustand, der Zeitpfeil folgt daraus subjektiv als immer in Richtung Unordnung egal wie das Universum grad fluktuiert.
+
+Nun hat man, zurecht, geschrien: Apologie! Dismissed! Zu unrecht hat man aber auch gesagt: Entropie nicht erklärt daher Atomtheorie falsch. Darum ging's nämlich hauptsächlich, ob jetzt Atome existieren.
+
+Derart z'sammgstaucht und seine Apologie selbst nicht mögend meint Boltzmann dann schüchtern: nur weil die Brown'sche Bewegung, die aus den Atomen folgt und dem Entropiesatz widerspricht, noch nicht beobachtet wurde, heisst das nicht dass die Atomtheorie falsch ist. Darauf Ernst Mach: Ha, Atome sind auf jeden Fall Bruch des zweiten Hauptsatzes! Das zeigt wie lächerlich Atome sind!
+
+Wie wir heute wissen, ging Mach damit zu weit. Denn die Ungleichung vom Entropiezuwachs, also der zweite Hauptsatz der Thermodynamik, gilt anscheinend wirklich nicht. Boltzmann wollte aus seiner mechanischen Theorie die alte nicht-parmenidische Entropie ableiten, was nicht ging und stattdessen zum Widerspruch in Form der Brown'schen Bewegung führte. Seine parmenidische Atomtheorie stellte sich als richtig heraus, der Entropiesatz ist also anscheinend widerlegt.
+
+Aus all dem folgt, dass jedenfalls keine Art von Zeitpfeil durch die Entropie erklärbar ist. Denn die Ungleichung der Entropie gilt anscheinend gar nicht. Doch die Zeit hat, nach allem was wir wissen, anscheinend schon eine Richtung, da hat noch nie wer was anderes gesehen. Der Entropiesatz hingegen gilt nur scheinbar denn hi und da hakt's.
+
+Hossenfelder hat also recht mit ihrem Verdacht, dass das mit der Entropie fishy ist und man nicht dran glauben muss. Aber die Apologie, dass uns die Entropie den subjektiven Zeitpfeil beschert ist doppelt irreführend. Denn die Zeitrichtung ist empirisch stärker als der Entropiezuwachs und wir wissen überhaupt gar nicht, was uns den Zeitpfeil, subjektiv oder sonstwie, beschert.
+
+Von der doppelten Irreführung unbeeindruckt ist Poppers Vorschlag nun, die Suche nach dem Zeitpfeil nicht aufzugeben und weiterzusuchen nach Gesetzen die den Zeitpfeil drin haben. Eine Motivation wäre, dass der Entropiesatz (2. Hauptsatz) geschichtlich vor dem Energieerhaltungssatz (1. Hauptsatz) erfunden wurde. Der heute als Zweiter bezeichnete war also der Erste und die Kant'sche exklusive Aktivschnüffelei nach Invarianten war früher doch eher Hume'sche Bequemlichkeit unter vielen anderen möglichen nützlichen Annahmen. Das sollte wieder so werden.
