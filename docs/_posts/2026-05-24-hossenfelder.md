@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hossenfelder"
-date:   2026-05-24 21:00:00 +0100
+date:   2026-05-24 06:00:00 +0100
 categories: Physik
 ---
 In ihrem 320 Seiten Buch "Mehr als Atome" deklariert sich Sabine Hossenfelder als Parmenidin. Das entspricht dem Mainstream der Wissenschaft.
@@ -47,3 +47,11 @@ Wenn das Universum nicht parmenidisch ist, ist eine Apologese für Kollaps und E
 Schopenhauer meint, dass unser Verstand überhaupt nur dazu da ist, Invarianten zu suchen. Gegeben dass wir dem weiter Rechnung tragen, wären 1) Kollaps und 2) Entropie ein Riesengeschenk. Weil 1) und 2) eben grad das am wenigsten subjektive wären. In diesem Sinne bin ich sogar ein Anti-Apologet und meine, dass wir 1) und 2) auf keinen Fall wegentschuldigen sondern umarmen und weiter beibehalten sollten, auch wenn das bedeutet, dass das hier und jetzt etwas besonderes ist und ich und die Oma verschwinden werden.
 
 Aber Hossi bevorzugt die Apologese des Parmenides, und wirklich, "Kinder des Universums" zu sein hat etwas tröstliches.
+
+### Anmerkungen
+
+Die Idee "Beyond the search for invariants" hab ich von Popper "The world of Parmenides". Dort wird auch wieder klar, dass "Falsifikation" nur ein allzu grober Slogan für Poppers Philosophie ist.
+
+Dass dieser Slogan zu grob ist und die Idee, dass Invarianten nichts Absolutes sind, wird ganz deutlich auch bei David Bohm in "The Special Theory of Relativity", Kapitel 25 "The falsification of theories". Zitat: "Mankind has never encountered any general statement that were not approximations, having limited domains and conditions of validity." Ausnahmslos ist jeder Erhaltungssatz nur eine Näherung, die auch nur den jeweils untersuchten Prozess betrifft, eine Näherung die darüber hinaus aber nicht mehr gut genug ist. Mein Beispiel: die Erhaltung der Substanz (Masse) ist zwar gegeben beim Verdampfen von Wasser am Herd aber beim Zünden einer Atombombe nicht, wobei sich dort dann die Erhaltung der Summe einschliesslich auch anderer Energieformen zeigt.
+
+Bezüglich Schopenhauer ist anzumerken, dass in seiner Darstellung der Verstand überhaupt nur dazu da ist zureichende Gründe für die Wahrnehmung zu suchen. Eine mögliche Begründung ist physische Kausalität, was für ihn Substanzerhaltung zwingend beinhaltet und sogar der Kern ist, wobei Substanz und Masse um 1850 dasselbe bedeuten. Soweit deckt sich das gut mit meinem Haupttext, wenn man Schopi nur das moderne Wort "Invarianz" für "Substanz" zugesteht (was ich tue). Als möglicher Grund kämen aber auch, das wird im Haupttext unterschlagen, logische oder geometrische Überlegungen in Frage und natürlich auch der (unfreie) Wille.
