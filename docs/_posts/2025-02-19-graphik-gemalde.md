@@ -60,3 +60,13 @@ Hier können wir uns wieder an Hilma af Klint wenden, die zwar 40 Jahre nach ihr
 ![barbapapa](/blog/images/barbapapa.png)
 
 Ps vom 15.4.25: Hab grad rausgefunden, dass die Formel "klar und deutlich" ganz alt aus der Scholastik ist und somit nicht von Hertz stammt. Bei Descartes ist die Formel zentral. Leibnitz führt die Formel "klar aber verworren" ein, wenn wir zwar den klaren Begriff für einen Gegenstand als Ganzes, aber keine Vorstellung für die Teilbegriffe dieses Objekts haben. Darauf spielt Hertz an: die Newton Mechanik ist "klar aber verworren". Genau darauf spielt auch Schrödinger an: sein eigener Wellenbegriff ist "klar aber verworren".
+
+### Hertz und Äther
+
+Ps vom 27.5.26: Mir ist jetzt klar, was die Motivation von Hertz für seine Mechanik der starren Verbindungen war: der Äther. Im Folgenden Zitate aus Einstein "Äther und Relativitätstheorie".
+
+Als in der ersten Hälfte des 19. Jahrhunderts die weitgehende Ähnlichkeit offenbar wurde, welche zwischen den Eigenschaften des Lichtes und denen der elastischen Wellen in ponderabeln Körpern besteht, gewann die Ätherhypothese eine neue Stütze. Es schien unzweifelhaft, daß das Licht als Schwingungsvorgang eines den Weltraum erfüllenden, elastischen, trägen Mediums gedeutet werden müsse. Auch Schien aus der Polarisierbarkeit des Lichtes mit Notwendigkeit hervorzugehen, daß dieses Medium - der Äther - von der Art eines festen Körpers sein müsse, weil nur in einem solchen, nicht aber in einer Flüssigkeit Transversalwellen möglich sind. Man mußte so zu der Theorie des "quasi- starren" Lichtäthers kommen, dessen Teile relativ zueinander keine anderen Bewegungen auszuführen vermögen als die kleinen Deformationsbewegungen, welche den Licht- wellen entsprechen.
+
+Bei ihm [Hertz] tritt die Materie nicht nur als Trägerin von Geschwindigkeiten, kinetischer Energie und mechanischen Druckkräften, sondern auch als Trägerin von elektro-
+magnetischen Feldern auf. Da solche Felder auch im Vakuum - d. h. im freien Äther - auftreten, so erscheint auch der Äther als Träger von elektromagnetischen Feldern. Er erscheint der ponderabeln Materie als durchaus gleichartig und nebengeordnet. Er nimmt in der Materie an den Bewegungen dieser teil und hat im leeren Raum überall eine Geschwindigkeit, derart, daß die Äthergeschwindigkeit im ganzen Raume stetig verteilt ist. Der Hertzsche Äther unterscheidet sich grundsätzlich in nichts von der
+(zum Teil in Äther bestehenden) ponderabeln Materie.
