@@ -120,3 +120,73 @@ Während in der klassischen Physik die Körper-Geometrie als unabhängig vom Bew
 Lorentz-Kontraktion geschlossen werden. Also wird die Körpergeometrie wie die Dynamik vom Äther mitbedingt.
 
 Dass für die Bevorzugung der Inertialsysteme gegenüber den Nicht-Inertialsystemen ein reales Ding als Ursache vorausgesetzt werden müsse, wurde den Physikern erst in den letzten Jahren deutlich.
+
+### Poincaré
+
+Aus: Einstein, Mein Weltbild, Geometrie und Erfahrung
+
+Es ist klar,
+daß das Begriffssystem der axiomatischen Geometrie
+allein über das Verhalten derartiger Gegenstände der
+Wirklichkeit, die wir als praktisch starre Körper bezeichnen wollen, keine Aussage liefern kann.
+
+Um dies zu bewerkstelligen, braucht man nur den Satz zuzufügen:
+Feste Körper verhalten sich bezüglich ihrer Lagerungsmöglichkeiten wie Körper der euklidischen Geometrie von drei Dimensionen; dann enthalten die
+Sätze der euklidischen Geometrie Aussagen über das
+Verhalten praktisch starrer Körper.
+
+Die so ergänzte Geometrie ist offenbar eine Naturwissenschaft; wir können sie geradezu als den ältesten
+Zweig der Physik betrachten. Ihre Aussagen beruhen
+im wesentlichen auf Induktion aus der Erfahrung,
+nicht aber nur auf logischen Schlüssen. Wir wollen
+die so ergänzte Geometrie »praktische Geometrie«
+nennen und sie im folgenden von der »rein axiomatischen Geometrie« unterscheiden.
+
+In einem relativ zu einem Inertialsystem rotierenden Bezugssystem entsprechen die
+Lagerungsgesetze starrer Körper wegen der LorentzKontraktion nicht den Regeln der euklidischen Geometrie; also muß bei der Zulassung von Nicht-Inertialsystemen als gleichberechtigten Systemen die euklidische Geometrie verlassen werden.
+
+Lehnt man die Beziehung zwischen dem praktisch-starren Körper und der
+Geometrie ab, so wird man sich in der Tat nicht leicht
+von der Konvention freimachen, daß an der euklidischen Geometrie als der einfachsten festzuhalten sei.
+
+Lehnt man die Beziehung zwischen dem Körper der
+axiomatischen euklidischen Geometrie und dem praktisch-starren Körper der Wirklichkeit ab, so gelangt
+man zur folgenden Auffassung, der insbesondere der
+scharfsinnige und tiefe Henri Poincaré gehuldigt hat:
+
+Die Geometrie (G) sagt nichts über das Verhalten der wirklichen Dinge aus, sondern nur die Geometrie zusammen mit dem Inbegriff (P) der physikalischen Gesetze. Symbolisch können wir sagen, daß nur
+die Summe (G) + (P) der Kontrolle der Erfahrung unterliegt. Es kann also (G) willkürlich gewählt werden,
+ebenso Teile von (P); all diese Gesetze sind Konventionen. Es ist zur Vermeidung von Widersprüchen
+nötig, den Rest von (P) so zu wählen, daß (G) und
+das totale (P) zusammen den Erfahrungen gerecht
+wird. Bei dieser Auffassung erscheinen die axiomatische Geometrie und der zu Konventionen erhobene
+Teil der Naturgesetze als erkenntnistheoretisch gleichwertig.
+
+Warum wird von Poincaré und anderen Forschern
+die naheliegende Äquivalenz des praktisch-starren
+Körpers der Erfahrung und des Körpers der Geometrie abgelehnt? Einfach deshalb, weil die wirklichen
+festen Körper der Natur bei genauerer Betrachtung
+nicht starr sind, weil ihr geometrisches Verhalten, d.h.
+ihre relativen Lagerungsmöglichkeiten, von Temperatur, äußeren Kräften usw. abhängen.
+
+Sub specie aeterni hat Poincaré mit dieser Auffassung nach meiner Meinung recht. Der Begriff des
+Meßkörpers sowie auch der ihm in der Relativitätstheorie koordinierte Begriff der Meßuhr findet in der
+wirklichen Welt kein ihm exakt entsprechendes Objekt. Auch ist klar, daß der feste Körper und die Uhr
+nicht die Rolle von irreduzibeln Elementen im Begriffsgebäude der Physik spielen, sondern die Rolle
+von zusammengesetzten Gebilden, die im Aufbau der
+theoretischen Physik keine selbständige Rolle spielen
+dürfen. Aber es ist meine Überzeugung, daß diese Begriffe beim heutigen Entwicklungsstadium der theoretischen Physik noch als selbständige Begriffe herangezogen werden müssen; denn wir sind noch weit von
+einer so gesicherten Kenntnis der theoretischen
+Grundlagen der Atomistik entfernt, daß wir exakte
+theoretische Konstruktionen jener Gebilde geben
+könnten.
+
+
+### Zur Zurechtrückung
+
+If for some reason we should consider the system A at rest (say, for argument's sake, in the ether) and B moving with velocity v, the rods of the system B would look contracted not only if measured with the rods of A, but also, and by exactly the same amount, if measured with the rods of a system C which, relative to B, moves with the same velocity v with which B moves relative to A (so that, according to Einstein's rule for adding velocities, C will move relative to A with a velocity u = 2v/(I +v^2/c^2) in the same direction as B). That is to say, we get the same contraction if we measure the B-rod in two systems, A and C, which move with a high velocity relative to each other.
+
+It is this situation which shows that none of the (inertial) systems is to be preferred as being at rest, and which thus leads to the abandonment of the ether, that is to say, of the assumption that there is a system, such as A, which is at rest relative to the ether (and therefore' absolutely' at rest): it is impossible that A and C are both at rest, yet the rods in B behave symmetrically with respect to A and C. Or to put it in another way: the conjecture that the ether makes the rods of the moving system B contract relative to the system A (which was assumed to be at rest in the ether) is to be rejected according to Einstein, because the rods of B are contracted in exactly the same manner relative to C which cannot possibly be at rest in the ether if A is at rest in the ether.
+
+(aus: Popper, "A Note on the Difference Between the Lorentz–Fitzgerald Contraction and the Einstein Contraction", Br. J. Phil. Sci. 16:64 (Feb 1966): 332–333)
+

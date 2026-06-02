@@ -36,7 +36,7 @@ Zusammengefasst besteht ihre Welt einstweilen aus der Zweiteilung von Subjekt un
 
 Mit dieser Sicht kann ich prinzipiell leben. Die Suche nach Invarianten hat uns weit gebracht und wir sollten noch weiter auf diesem Schiff segeln.
 
-Meine grundsätzliche Auffassung ist jedoch etwas anders:
+Hossenfelder ist eine wichtige Stimme im Wissenschaftsbetrieb, gerade auch weil sie offen die Meinung vertritt, die viele Uniangestellte nur verhalten äussern: die Jagt nach Stipendien und Karrieren steht der Forschung im Wege. Meine grundsätzliche Auffassung zum Weltbild ist jedoch anders als ihr parmenidisches:
 
 Nach Hume ist die Annahme von Invarianten eine reine Sache der Gewohnheit. Nach Kant suchen wir die Invarianten aktiv auf. Für beide Herren und auch mich existiert da draussen nichts was invariant ist. Es sind wir, die die Invarianten in die Natur legen. Die Natur selbst hat ohne uns nichts Invariantes. Die Zukunft ist offen und die Vergangenheit ist grossteils weg.
 

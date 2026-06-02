@@ -14,3 +14,6 @@ Zitat aus Wittgensteins [Tractatus](https://www.wittgensteinproject.org/w/index.
 
 Zitat aus Poppers Conjectures and Refutations:
 > Neither observation nor reason are authorities. Intellectual intuition and imagination are most important, but they are not reliable: they may show us things very clearly, and yet they may mislead us. They are indispensable as the main sources of our theories.
+
+Kommentar 30.5.26
+Weil's sonst nirgends reinpasst: Platon hat seinen Staat nach Sparta modelliert, Popper sein Gegenmodell  nach dem Wien der Jahrhundertwende. Der Wiener Kreis hat seine Philosophie modelliert nach dem Operationalismus der Uhrensynchronisation des jungen Einstein, Popper sein Gegenmodell nach der Kühnheit der Gravitation des mittleren Einstein.
