@@ -51,7 +51,7 @@ Schrödinger hatte seinen Hertz sehr genau gelesen: denn die Unbestimmtheit sein
 
 > in so naiver Weise ein ,,verwaschenes Modell" als Abbild der Wirklichkeit gelten zu lassen. An sich enthielte es nichts Unklares oder Widerspruchsvolles. Es ist ein Unterschied zwischen einer verwackelten oder unscharf eingestellten Photographie und einer Aufnahme von Wolken und Nebelschwaden.
 
-Klar durchdacht (und empirisch richtig sowieso) sei sein Bild, aber eben undeutlich. Zur Zeit dieses Verdikts wäre Hertz 78 gewesen, aber weil er gleich nach Abfassung seiner Abhandlung gestorben ist, fehlt uns die Beurteilung seines Erbes jetzt bitterlich.
+Klar durchdacht (und empirisch richtig sowieso) sei sein Bild, aber eben undeutlich. Zur Zeit dieses Verdikts wäre Hertz 78 gewesen, aber weil er gleich nach Abfassung seiner Abhandlung gestorben ist, fehlt uns seine Beurteilung des eigenen Erbes jetzt bitterlich.
 
 Er hielt noch fest, dass seine Mechanik bewusst so starr gewählt wurde, dass sie niemals das Leben selbst erklären wird können. Ganz Kantianer wollte er Geist, Seele, Freiheit und Leben weiterhin dem Bereich des Unbeweisbaren überlassen.
 

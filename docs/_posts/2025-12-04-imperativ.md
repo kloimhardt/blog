@@ -34,3 +34,19 @@ Nun bin ich doch wieder bei der Ethik gelandet. Der Spruch über den guten Wille
 "Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, daß sie ein allgemeines Gesetz werde."
 
 Denn es sind wir, die die Gesetze machen.
+
+### Cournot's Prinzip (Juni 2026)
+
+Es heisst in §2 "Das Verhältnis zur Erfahrungswelt" von [Kolmogorov, Grundbegriffen der Wahrscheinlichkeit](https://archive.org/details/kolmogoroff-1933-grundbegriffe-der-wahrscheinlichkeitsrechnung/page/4/mode/1up)
+
+> Ist P(A) sehr klein, so kann man praktisch sicher sein, daß bei einer einmaligen Realisation der Bedingungen G das Ereignis A nicht stattfindet.
+
+Im Juni 2026 bin ich auf das Buch "Typicality Reasoning" von Lazarovici gestossen. Er bezieht Kolmogorov zurück auf A. A. Cournot und zeigt glaubwürdig, dass dessen Prinzip das einzig nötige ist zum Verständnis der Wahrscheinlichkeit.
+
+> A physically [i.e. empirically] impossible event is one whose [theoretical] probability is infinitely [i.e. very] small. This remark alone gives substance – an objective and phenomenological value – to the mathematical theory of probability. (Cournot, 1843)
+
+Desweiteren wird ausgeführt, dass die Wurzel von Cournots Prinzip im Begriff der moralischen Sicherheit gefunden werden kann, ein Begriff der wohl schon bei Bernoulli und Leibnitz zu finden sein soll und heute mit "beyond reasonabe doubt" bezeichnet wird. Sicherheit ist dort zu finden wo Zweifel verachtenswert wird.
+
+Weitere historische Analysen sind im Artikel "The History of Moral Certainty" von M. Hubert im Detlev Dürr gewidmeten Buch "Physics and the Nature of Reality" zu finden.
+
+Ich bin also nicht der erste, der Ethische Prinzipien ins Spiel bringt. Surprise, surprise.

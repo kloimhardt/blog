@@ -48,7 +48,7 @@ Mit dieser Stuhl-als-Lichtblitz Vorstellung will ich auf Folgendes hinaus: dass 
 
 Galaxien existieren nicht, nur Sterne. So wurde gesagt. Der Raum existiert nicht, nur Objekte im Raum existieren. So wurde gesagt. Existiert der Stuhl? Oder nur die Lichtblitze? Antwort: der Stuhl existiert als einer unter vielen. Als ein Stuhl von vielen existiert der Stuhl. Als einzelner Stuhl für sich gesehen existiert er nicht, da gibt's nur die Lichtblitze.
 
-Da wird einem Schwindlig. Aber man gewöhnt sich dran. Existieren tun Objekte nur in Bezug auf ein Grösseres Ganzes, in Bezug auf ein Ensemble von Objekten mit gleichen Eigenschaften die entweder wirklich existieren oder existieren könnten, existieren werden usw. Die Dinge stützen sich gegenseitig, wie ein Kreis von Kindern wo jeder auf dem Schoss des hinteren Kindes sitzt, letzlich jeder also auf sich selbst.
+Da wird einem Schwindlig. Aber man gewöhnt sich dran. Existieren tun Objekte nur in Bezug auf ein Grösseres Ganzes, in Bezug auf ein Ensemble von Objekten mit gleichen Eigenschaften die entweder wirklich existieren oder existieren könnten, existieren werden usw. Die Dinge stützen sich gegenseitig, wie ein Kreis von Kindern wo jeder auf dem Schoss des hinteren Kindes sitzt, letztlich jeder also auf sich selbst.
 
 Allgemein gilt: Objekte haben Eigenschaften (schwer, durchsichtig usw.), und Existenz ist eben grad keine Eigenschaft des Objekts. Der Zehn-Euroschein in der Schublade hat die selben Eigenschaften, ob er da drin liegt oder nicht. Ändern tut sich nur mein Vermögen mit seiner Existenz.
 
@@ -69,6 +69,10 @@ Wenn sich eine Uhr bewegt, geht sie langsamer, so wurde gesagt. Aber von sich au
 Es gibt auch noch andere Effekte. Z.B. geht eine Uhr am Berg oben langsamer als am Fuß. Aber damit tut man sich leicht. Eine geht langsamer als die andere. Basta. Isso. Akzeptabel, weil diese blöde Symmetrie nicht besteht.  Alle sind sich einig.
 
 Diese Symmetrie, dass der eine jeweils vom anderen denkt, dass er langsamer tickt, und beide recht haben, das hat einen Namen: Lorentz-Invarianz. Diese Lorentz-Invarianz ist das profundeste Rätsel der Physik. Alles Andere ist Kinderkram dagegen.
+
+Lorenz-Invarianz heisst dass der Begriff "Gleichzeitigkeit" nicht absolut gilt. Man kann tatsächlich salopp sagen: "ein Stab ist gleichzeitig länger und kürzer als ein anderer" und lügt dabei nicht. Die Aussage ist paradox, weil das Wort "gleichzeitig" hier zu salopp verwendet wird. Einstein hat das eingeführt und klären können, letztendlich erst mit seiner Gravitationstheorie.
+
+Der Begriff "Gleichzeitigkeit" scheint (nicht nur) mir auch der Schlüssel zum Welle-Teilchen Dualismus zu sein. Es wird gesagt: "Ein Elektron ist gleichzeitig an zwei Orten", oder "Das magnetische Feld hat an der selben Stelle verschiedene Werte gleichzeitig". Dass hier das Wort gleichzeitig auftaucht haben natürlich schon schlauere Leute vor mir bemerkt. Nur klären konnt letztendlich bisher keiner, ob da der Hund drin liegt oder doch woanders.
 
 ### Nur von außen eine Galaxie
 Eine Galaxie besteht aus Sternen. Aber wir müssen nicht so weit gehen, es reicht ein Blick auf die Saturnringe in Wikipedia.  "Die Ringe bestehen aus einer ungeheuren Anzahl einzelner kleiner Materialbrocken, die den Saturn umkreisen. Die Größe dieser Partikel, die im Wesentlichen aus Eis und Gestein bestehen, reicht von Staubteilchen bis zu einigen Metern. Aus der Ferne betrachtet erscheinen sie als geschlossener ringscheibenförmiger Körper."
