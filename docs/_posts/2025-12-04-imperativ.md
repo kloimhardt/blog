@@ -45,8 +45,14 @@ Im Juni 2026 bin ich auf das Buch "Typicality Reasoning" von Lazarovici gestosse
 
 > A physically [i.e. empirically] impossible event is one whose [theoretical] probability is infinitely [i.e. very] small. This remark alone gives substance – an objective and phenomenological value – to the mathematical theory of probability. (Cournot, 1843)
 
-Desweiteren wird ausgeführt, dass die Wurzel von Cournots Prinzip im Begriff der moralischen Sicherheit gefunden werden kann, ein Begriff der wohl schon bei Bernoulli und Leibnitz zu finden sein soll und heute mit "beyond reasonabe doubt" bezeichnet wird. Sicherheit ist dort zu finden wo Zweifel verachtenswert wird.
+Desweiteren wird ausgeführt, dass die Wurzel von Cournots Prinzip im Begriff der moralischen Sicherheit gefunden werden kann, ein Begriff der wohl schon bei Bernoulli und Leibnitz zu finden sein soll und heute mit "beyond reasonable doubt" bezeichnet wird. Sicherheit ist dort zu finden wo Zweifel verachtenswert wird.
 
 Weitere historische Analysen sind im Artikel "The History of Moral Certainty" von M. Hubert im Detlev Dürr gewidmeten Buch "Physics and the Nature of Reality" zu finden.
 
+Descartes sieht den Glauben an die Existenz der Aussenwelt als moralische Pflicht aller an. Alle müssen an die Aussenwelt glauben. Der Einzelne kann zwar prinzipiell an dieser sicheren Existenz zweifeln, dieser Zweifel ist aber verachtenswert.
+
+Im Umkehrschluss muss es dann wohl so sein, dass alle and die Nichtexistenz von Geistern glauben müssen, obwohl der Einzelne zwar prinzipiell Zweifel hegen und Geister für möglich halten kann, was aber verachtenswert ist.
+
 Ich bin also nicht der erste, der Ethische Prinzipien ins Spiel bringt. Surprise, surprise.
+
+In diesem Sinne wärs auch verwerflich, wenn wir daran Zweifeln, dass die Zeit etwas Absolutes ist. Denn sie ist praktisch so absolut dass wir nie die Erfahrung machen dass eine Handyuhr am Internet langsamer geht als die andere. Und ich muss also dem speziellen Gedanken etwas abgewinnen, dass wir nie jemandem abverlangen sollten komplizierter zu denken als in der Situation nötig. Nur so kompliziert wie nötig, so einfach wie eben möglich. Tja, wenn das so einfach wär.

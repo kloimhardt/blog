@@ -79,6 +79,20 @@ Eine Galaxie besteht aus Sternen. Aber wir müssen nicht so weit gehen, es reich
 
 Existieren nun die Ringe oder die Brocken? Beides. Denn Ringe gibt's auch anderswo, in der rhythmischen Sportgymnastik vielleicht. Und Brocken auch.
 
+Gibt es den Mikrozustand eines Gases? Nein. Laut Boltzmann sind alle Zustände gleichwahrscheinlich. Das heisst, die Wahrscheinlichkeit, dass ein einzelner konkreter Zustand existiert ist praktisch Null und daher existiert er nicht (Cournots Prinzip: fast Null reicht, muss nicht genau Null sein). Den Eigenschaften eine Zustandes kann man wohl Wahrscheinlichkeiten zuschreiben. Aber Existenz ist eben niemals eine Eigenschaft. Existenz ist vielmehr die Wahrscheinlichkeit nahe Eins (muss aber nicht ganz Eins sein).
+
+Dieses Argument beweist also scheinbar, dass ein Gas (wie etwa die Luft) gar nicht existiert. Aber halt. Denn: ein bestimmter Zustand bekommt seine Existenz quasi von aussen und oben her, nämlich sobald er Teil der Menge von den vielen Zuständen ist, die alle durch die gleiche Temperatur (mittlere Molekülgeschwindigkeit) verbunden sind. Es existiert nicht DER Zustand, es existiert EIN Zustand von vielen gleichartigen.
+
+Also nochmal die Frage: Gibt es den Mikrozustand eines Gases? Antwort: nur dann wenn er ein Teil von etwas Grösserem ist. Nur dann wird er ein Gegenstand der möglichen Erfahrung, wird er bei einer Erfahrung als Gegenstand erkannt, wird erfahrbar.
+
+Das ist das Paradoxe in der Demokratie. Eine Wählerstimme zählt nichts, in Summe (als Teil einer geheimen Wahl) aber dann doch. Umweltschutz dasselbe. Eine einzelne Autofahrt tut nix.
+
+Ein Mikrozustand mit geringer Wahrscheinlichkeit ist also kein Gegenstand der möglichen Erfahrung. Laut Theorie ist es zwar prinzipiell möglich, dass ich einen Reifen sehe der sich selber aufpumpt, aber der zugehörige Mikrozustand ist laut derselben Theorie eben gerade kein Gegenstand dieser Erfahrung, der Zustand existiert laut Theorie nie, die Erfahrung bleibt laut Theorie aber möglich.
+
+Sollte sich der Reifen mehrmals selber aufpumpen, dann liegt anscheinend tatsächlich ein existierender Zustand dahinter der aber von der Theorie ausgeschlossen wird und daher wäre die Theorie falsch und eine neue Theorie muss gesucht werden.
+
+Boltzmanns Theorie spricht also von einer Erfahrung, die man eigentlich nicht machen sollte (und eh noch niemand je gemacht hat). Damit hat Boltzmann ein mögliches Kriterium für das Verwerfen seiner Theorie selbst in diese Theorie eingebaut. Was für ein verdammtes Genie. (Schrödingers Gleichung spricht von einer Katzenerfahrung die man eigentlich gewohnheitsmässig machen sollte aber halt noch niemand je gemacht hat, er fand demgemäss Boltzmann viel tiefer und wahrer).
+
 ## Zugleichseyn bei Kant und Schopi
 Bei Kant gibt die einfache Wahrnehmung keine Ordnung von zwei Ereignissen A und B als vorher und nachher. Erst der Verstand erkennt Ursache und Wirkung und ordnet A als Ursache von B in der Zeit vorher an. Zuerst kommt das Prinzip der Kausalität, dann erst der Zeitpfeil.
 

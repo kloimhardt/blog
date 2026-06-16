@@ -49,3 +49,20 @@ Im "Theory of Everything" Podcast vom 13.10. sagt Yakir Aharonov:
 > Classically, once you know the past, there is no new information in the future. But in quantum mechanics, you have new information in the future, and both informations are relevant in the present.
 
 So gesehen spricht die QM über ein Leben nach dem Tod. Klassisch geht's ewig gleich weiter, die QM bringt Neuigkeiten aus der Zukunft. Diese Sicht fiel mir nicht ein bisher, damit kann ich aber gut leben.
+
+### Lottoparadoxon (Juni 2026)
+Meine Formulierung von Cournots Prinzip ist: Ereignisse mit geringer Wahrscheinlichkeit kommen nicht vor. Ich glaube an Cournots Prinzip, es muss nur klar werden was Ereignis heisst.
+
+Ein Ereignis ist eine Zustandsänderung eines Gegenstandes. Die Fussgängerampel schaltet von rot auf grün. Es gibt aber mögliche Erfahrungen, denen kein Gegenstand zugeordnet wird. Es ist unwahrscheinlich dass eine Fussgängerampel von rot auf grün und hin und her blinkt. Tut sie das, ist sie keine Fussgängerampel.
+
+Im Rahmen des Begriffes Wahrscheinlichkeit ist die Grundmenge der möglichen Erfahrungen genau festgelegt. Vielen dieser Erfahrungen liegt ein möglicher Gegenstand zu Grunde. Auch die möglichen Gegenstände sind genau festgelegt. Eine Statistik über die Wahrscheinlichkeit dass bei Fussgängerampeln der Knopf gedrückt und diese dann grün wird hat eben Fussgängerampeln zum Gegenstand.
+
+Meine genauere Formulierung von Cournots Prinzip ist: Erfahrungen mit geringer Wahrscheinlichkeit kommen vor. Aber Erfahrungen mit geringer Wahrscheinlichkeit laufen Gefahr, keinen Gegenstand zu haben, und damit kommen Ereignisse mit geringer Wahrscheinlichkeit nicht vor. Denn wo kein Gegenstand, da auch keine Änderung und damit kein Ereignis (und doch eine mögliche Erfahrung).
+
+Das Lottoparadoxon ist, dass jede einzelne Erfahrung praktisch Null Wahrscheinlichkeit hat und doch eine Ziehung passiert. Die Lösung ist eben, dass diese unwahrscheinliche Erfahrung sehr wohl einen Gegenstand hat, nämlich die Kugeln, die wie alle anderen ausschauen. Ein Gegenstand ist nur ein Gegenstand wenn er einer von vielen ist.
+
+Im speziellen Fall vom Lotto hat jede mögliche Erfahrung mit Sicherheit einen Gegenstand. Die Erfahrung der Ziehung hat Wahrscheinlichkeit praktisch Null, das Ereignis (der Gegenstand, die Reihe der Bälle) erfolgt aber mit Sicherheit.
+
+Im Gegensatz zum Lotto gibts in der statistischen Mechanik mögliche Erfahrungen die eben grad keinen Gegenstand haben. Wie die Erfahrung einer Fussgängerampel die wild blinkt und daher gar keine Fussgängerampel ist. Es fehlen hier die Worte, aber du weisst was ich meine. Solch eine Erfahrung ist vielleicht merkwürdig, jedenfalls aber gegenstandslos im Sinne der Problemstellung (würdig zu merken aber ohne Gegenstand).
+
+Wenn sich ein Reifen von selber aufpumpt dann ist das eine mögliche Erfahrung mit geringer Wahrscheinlichkeit, die aber keinen Gegenstand hat. Die Erfahrung hat deswegen keinen Gegenstand, weil die statistische Mechanik nur Mikrozustände zum Gegenstand hat. Und weil der gedachte Mikrozustand des selbstpumpenden Reifens so speziell ist, hat er die Bezeichnung Gegenstand nicht verdient. Dieser Mikrozustand ist kein Gegenstand möglicher Erfahrung. Der Mikrozustand hat zwar erdachte Eigenschaften, existiert aber nicht (Existenz ist niemals eine Eigenschaft des Objekts, auch dann nicht wenn es tatsächlich existieren würde).  Dieser Mikrozustand ist mehr eine Geistererscheinung die nach einer Erklärung ausserhalb der Theorie verlangt, so wie ein wild blinkendes Dingsbumbs am Strassenrand.

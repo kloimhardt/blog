@@ -84,3 +84,21 @@ Aharonov sagt uns aber, dass Messungen in der Zukunft sehr wohl erklären werden
 Tja, Gott hat leicht integrieren. Wir armen Würsteln dagegen müssen viel Geduld haben bis alles Subjektive aus unseren Erklärungen verschwindet. Vielleicht interessieren uns aber eh nur die Häufigkeiten und wir pfeifen nur allzugern auf die Details.
 
 Trotzdem sind in der klassischen Punktmechanik die Teilchen Individuen, sie sind unter-scheidbar. Im Gegensatz dazu müssen sämtliche Feldquanten der modernen Physik immer un-unter-scheidbar sein. Vielleicht stimmt beides: un-unterscheidbare Häufigkeiten der Vergangenheit werden zukünftig zu Individuen. Während die Häufigkeiten der Vergangenheit durch Wellen erklärt werden, löst sich die Welle durch zukünftige Messungen in ein Meer des Jetzt der Individuen auf.
+
+### The Grammar of Typicality (Juni 2026)
+
+ist ein Artikel von Tim Maudlin aus 2020.
+
+> Non-trivial objective single-case probabilities cannot be conjured out of a deterministic dynamics no matter what you try  (p240)
+
+Aus einer deterministischen Theorie kann man keine Wahrscheinlichkeit für das Einzelereignis ableiten die irgendwie objektiv ist. Dasselbe soll wohl Lewis 1986, p118 gemeint haben. Das passt mit meinen Überlegungen zusammen.
+
+> once we get to a collective containing enough coin flips, outcomes that are *approximately* 50% heads can become typical... The set of possible flipping sequences leading to the outcome "50% plusminus epsilon" can be a big set ... This is not exactly the thing we were originally after -- namely the attribution of the precise probability 50% to the symmetric coin -- but is close enough for all practical purposes (p 243).
+
+Wenn wir also epsilon wählen haben wir die typischen Fälle definiert. Das gibt noch keine Wahrscheinlichkeiten. Typizität ist ein Begriff der schwächer ist als Wahrscheinlichkeit. Was ist aber, wenn Wahrscheinlichkeiten schon gegeben sind?
+
+> Using a probability measure to define a measure of typicality is trivial: all one needs to do is choose a threshold near 1, such as 0.999999 ... every measurable set above the threshold counts as a "big" set. That define a measure of typicality.
+
+> Rather than an assignment of real numbers to all the measurable subsets, a "measure of typicality" is a simple predicate on the set of subsets of the sample space. It defines what we may call a "big subset" of the sample space. That's it... Given that single predicate we can immediately define two more: a subset of the sample space is a "small subset" iff [and only if] it is the complement of a big subset, and a subset is "indeterminate" iff it is neither big nor small. It must be acknowledged that there is no sharp line ... it contradicts the very notion of a "big" subset that the loss of a single element would render it "indeterminate"... "big" is a vague predicate.
+
+Mit dem Begriff "Typizität" kommen wir also in die Paradoxie des Haufens (Sorites Paradoxie) hinein. Aber das nehm ich in Kauf.
