@@ -8,7 +8,15 @@ In ihrem 320 Seiten Buch "Mehr als nur Atome" deklariert sich Sabine Hossenfelde
 
 Parmenides hat behauptet, die Ab- und Zunahme des Mondes sei nur scheinbar, in Wirklichkeit ist er ein unveränderlicher Stein. Er hatte damit recht. Dieses Konzept hat er und praktisch alle nach ihm auf die komplette Natur ausgedehnt, Stichwort Blockuniversum.
 
-In moderner Form bedeutet das, dass aus dem jetzigen Zustand der Natur die Vergangenheit genau berechnet werden kann. Oder anders: das Wichtigste in der Physik sind Invarianten und Erhaltungssätze. Oder auch: in der Natur geht keine Information verloren.
+Alles ist schon da in einem grossen Bild, es wird nur verschieden beleuchtet.
+
+Die genialste Realisierung des Blockuniversums ist das mobile Adventure [Moida Mansion](https://dukope.itch.io/moida-mansion).
+
+![Moida Mansion](/blog/images/moida.png)
+
+Entsprechend der fixen Verdrahtung eines alten LCD Displays werden die Räume des Mainson nur aus jenen Elementen zusammengesetzt, die im obigen Bild alle eingeschaltet und also komplett sichtbar sind. Wir sehen hier quasi das Gottesbild (es wird im Spiel nur einen Augenblick am Anfang gezeigt), es gibt keine Überlappungen, es ist schon alles da. Jeder Spieldurchgang leuchtet die Räume nach dem Zufallsprinzip aus, wobei die Zahlen des Zufallsgenerators wie alles am Computer von Vornherein bestimmt und also nur scheinbar sind. Es gibst natürlich noch mehr Regeln als die "Nichtüberlappung", z.B. ist immer nur ein einziges "Monsta"-Element auf einmal sichtbar (ich konnte einen Regelbruch finden und - wie genial ist das denn - im Spiel beseitigen).
+
+Ausgedrückt in der modernen Form der Physik: mit Parmenides kann aus dem jetzigen Zustand der Natur die Vergangenheit genau berechnet werden. Oder anders: das Wichtigste in der Physik sind Invarianten und Erhaltungssätze. Oder auch: in der Natur geht keine Information verloren (keine "Überlappungen").
 
 Mathematisch ausgedrückt heisst das: die physikalischen Formeln sind Gleichungen die keinen Zeitpunkt (das "Jetzt") sondern nur Zeitspannen enthalten.
 
@@ -36,11 +44,11 @@ Zusammengefasst besteht ihre Welt einstweilen aus der Zweiteilung von Subjekt un
 
 Mit dieser Sicht kann ich prinzipiell leben. Die Suche nach Invarianten hat uns weit gebracht und wir sollten noch weiter auf diesem Schiff segeln.
 
-Hossenfelder ist eine wichtige Stimme im Wissenschaftsbetrieb, gerade auch weil sie offen die Meinung vertritt, die viele Uniangestellte nur verhalten äussern: die Jagt nach Stipendien und Karrieren steht der Forschung im Wege. Meine grundsätzliche Auffassung zum Weltbild ist jedoch anders als ihr parmenidisches:
+Hossenfelder ist eine wichtige Stimme im Wissenschaftsbetrieb. Es soll hier nicht weiter ausgeführt werden, dass ihre Rolle deswegen so wichtig ist, weil sie offen jene Meinung vertritt, die viele Uniangestellte nur verhalten äussern, nämlich dass die Jagt nach Stipendien und Karrieren der Forschung im Wege stehen. In diesem Artikel geht es nicht um diesen wichtige soziologischen Aspekt sondern um ihr Weltbild. Und meine grundsätzliche Auffassung zum Weltbild ist anders als ihr parmenidisches:
 
 Nach Hume ist die Annahme von Invarianten eine reine Sache der Gewohnheit. Nach Kant suchen wir die Invarianten aktiv auf. Für beide Herren und auch mich existiert da draussen nichts was invariant ist. Es sind wir, die die Invarianten in die Natur legen. Die Natur selbst hat ohne uns nichts Invariantes. Die Zukunft ist offen und die Vergangenheit ist grossteils weg.
 
-Moralisch ist das natürlich eine Katastrophe, denn wer rächt die Frauen deren neugeborene Kinder von den Schergen zertreten wurden, wer rächt sie wenn das Knacken der aufgeplatzten Babyköpfe nirgends aufgezeichnet ist? Antwort: es ist an uns, die Aufzeichnungen und Gerichtsverfahren zu führen.
+Moralisch ist das natürlich eine Katastrophe, denn wer rächt die Frauen, deren neugeborene Kinder von den Schergen zertreten wurden, wer rächt sie wenn das Knacken der aufgeplatzten Babyköpfe nirgends aufgezeichnet ist? Antwort: es ist an uns, die Aufzeichnungen und Gerichtsverfahren zu führen.
 
 Wenn das Universum nicht parmenidisch ist, ist eine Apologese für Kollaps und Entropie hinfällig. Dem Suchen nach Invarianten und dem Führen von Aufzeichnungen tut das keinen Abbruch und kann weitergehen und muss es auch.
 

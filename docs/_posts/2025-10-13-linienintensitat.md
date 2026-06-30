@@ -87,7 +87,7 @@ Trotzdem sind in der klassischen Punktmechanik die Teilchen Individuen, sie sind
 
 ### The Grammar of Typicality (Juni 2026)
 
-ist ein Artikel von Tim Maudlin aus 2020.
+ist ein Artikel von Tim Maudlin aus 2020 im Buch [Statistical Mechanics and Scientific Explanation](https://www.google.at/books/edition/Statistical_Mechanics_And_Scientific_Exp/9tLkDwAAQBAJ?hl=en&gbpv=1&dq=Statistical%20Mechanics%20and%20Scientific%20Explanation&pg=PR13&printsec=frontcover).
 
 > Non-trivial objective single-case probabilities cannot be conjured out of a deterministic dynamics no matter what you try  (p240)
 
@@ -102,3 +102,5 @@ Wenn wir also epsilon wählen haben wir die typischen Fälle definiert. Das gibt
 > Rather than an assignment of real numbers to all the measurable subsets, a "measure of typicality" is a simple predicate on the set of subsets of the sample space. It defines what we may call a "big subset" of the sample space. That's it... Given that single predicate we can immediately define two more: a subset of the sample space is a "small subset" iff [and only if] it is the complement of a big subset, and a subset is "indeterminate" iff it is neither big nor small. It must be acknowledged that there is no sharp line ... it contradicts the very notion of a "big" subset that the loss of a single element would render it "indeterminate"... "big" is a vague predicate.
 
 Mit dem Begriff "Typizität" kommen wir also in die Paradoxie des Haufens (Sorites Paradoxie) hinein. Aber das nehm ich in Kauf.
+
+Ist der Mond auch da wenn keiner hinschaut? Typischerweise ja. Und das Untypische ist zwar denkbar aber nicht wirklich und gegenstandslos. Sollte jemand mal bemerken dass der Mond nicht da ist wenn keine hinschaut, dann müssen wir unsere Theorie des Mondes ändern. Bis dahin bleibt der Mond wo er ist.
