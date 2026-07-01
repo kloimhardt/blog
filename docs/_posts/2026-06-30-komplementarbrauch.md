@@ -18,9 +18,13 @@ Manche würden sagen, das Bild zeigt sowohl eine junge als auch eine alte Frau. 
 
 Denn wenn sich zwei Aussagen widersprechen muss eine auf jeden Fall falsch sein, aber es ist logisch problemlos denkbar, dass beide falsch sind. Dies ist dem steirische Brauch intuitiv klar, befriedigt ihn aber keineswegs und stellt daher keinen brauchbaren Sachverhalt dar.
 
-Um die brauchbare Lösung zu explizieren bitte ich den Leser folgendem Gedankengang zu folgen. Das Bild könnte folgendermassen zustandegekommen sein: der Maler hat beide Frauen hintereinander vor eine Glasscheibe gesetzt, mit einem Stift beidemale die Konturen nachgemalt, und dann alles wegradiert was einem der Beiden widerspricht.
+Um die brauchbare Lösung zu explizieren bitte ich den Leser folgendem Gedankengang zu folgen. Das Bild könnte folgendermassen zustandegekommen sein: der Maler hat beide fair bezahlten Models hintereinander vor eine Glasscheibe gesetzt, mit einem Stift beidemale die Konturen nachgemalt, und dann alles wegradiert was einem der Beiden widerspricht.
 
-Der Maler hat den Minimalsatz gewählt mit dem am Meisten geht. Dieser grösste gemeinsame Nenner ist die Dualität des "beides falsch". Diese grösstmögliche Dualität ist ziemlich klein, darum jetzt der Begriff "Minisatz".
+Der Maler hat die "Invarianten der Wahrnehmung" herausgearbeitet. Warum tut er das, dieses Herausarbeiten? Weil es eine Art weltweite Gewohnheit ist das Invariante aufzusuchen, also keine exklusiv steirische Kultur sondern ein Weltkulturerbe des Aufsuchens.
+
+Der Maler hat den Minimalsatz gewählt mit dem am Meisten geht. Dieser grösste gemeinsame Nenner führt hier zur Dualität des "beides falsch". Diese grösstmögliche Dualität ist ziemlich klein, darum jetzt der Begriff "Minisatz".
+
+Im Fall unseres Bildes sind also die Invarianten der Wahrnehmung so ein Minisatz, dass beide Aussagen 1) "junge Frau" und 2) "alte Frau" falsch sind. Er herrscht Dualität der Wahrnehmung.
 
 Die Dualität ist eine Eigenschaft der Glasscheibe, eine Folge der Abstraktion. Oft wird gesagt: der Maler ging auf eine höhere Ebene der Abstraktion um die Frauen beschreiben zu können. Ich sage: Abstraktion ist niemals eine höhere Ebene, Abstraktion ist vielmehr eine niedere Ebene der Beschreibung.
 
@@ -30,7 +34,7 @@ Nun zur Lösung.
 
 Er fügt einfach genug Striche hinzu, sodass klar wird, welche Ansicht die falsche ist. So würde vielleicht ein Ball im Stefaniensaal dazuskizziert oder der Clubraum "Aktiver Leben(sabend)", Moserhofgasse 47.
 
-Durch Kontext kommt man nämlich von der Dualität auf Komplementarität. Komplementär sind zwei Zeichnungen, wenn sie einen gemeinsamen Kern haben, sich aber trotzdem gegenseitig ausschliessen.
+Durch Kontext kommt man so von der Dualität zu Komplementarität. Komplementär sind zwei Zeichnungen, wenn sie einen gemeinsamen Kern haben, sich aber trotzdem gegenseitig ausschliessen.
 
 Dieser gemeinsame Kern, dieser Minisatz des Malers, ist ein Ausdruck der Sparsamkeit. Diese entspricht einem impliziten Bereich des steirischen Brauchs und wird auch Occam's Rasiermesser genannt. Lass alles weg was unnötig ist, das hat den Vorteil dass es weniger kostet. Dazu mehrfach verwendbar.
 
@@ -48,6 +52,6 @@ Im folgenden Bild ist das Mittlere wegzudenken, ich habe es nur als im Normalfal
 
 ![Fraudrei](/blog/images/fraualtjungdrei.jpg)
 
-Unter pfeifen auf Hinzufügungskontext wird das Bild direkt eingefärbt sodass in seiner Zweifachausführung der Sache selbst auf den Grund gegangen werden kann. Es herrscht eine Art grosse Koalition, eine andere Dualität des gleichzeitigen Neben- und Miteinander. Komplementarität ist hier gar kein Thema daher. Nach Wegdenken der Mittlungskrücke herrscht eine letzteinheitliche Bedingtheit.
+Die Suche nach Invarianten wird aufgegeben. Unter pfeifen auf Hinzufügungskontext wird das Bild direkt eingefärbt sodass in seiner Zweifachausführung der Sache selbst auf den Grund gegangen werden kann. Es herrscht eine dynamische Koalition des gleichzeitigen Neben- und Miteinander. Komplementarität ist hier gar kein Thema daher. Nach Wegdenken der Mittlungskrücke herrscht eine letzteinheitliche Bedingtheit.
 
 Ps: Der Leser wird einwenden dass die Charakterisierung mittels der Begrifflichkeit "Dualitätsmanagement" auch andere ethnische Gruppen umzirkeln könnte. Das gebe ich zu, schiebe aber die Beweislast zum Leser mit dem Hinweis, dass zumindest im doch überregionalen Lesekreis von Rosegger und Gruber kein Wein plus Erz und Berg meine Umschreibung besser trifft.
