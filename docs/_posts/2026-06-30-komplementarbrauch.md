@@ -10,6 +10,10 @@ Erzherzog Johann war eine Art familiäre innerösterreichische Opposition zu Kai
 
 Es gibt Ideen, die Steiermark als 51. US Bundesstaat zu deklarieren um dann den mächtigsten Mann der Welt von dorther stellen zu können. Daher ist eine genauere Analyse des steirischen Brauchs angebracht.
 
+(Metabemerkung: der vorhergehende Absatz sollte Optimismus der Gegenwart und lustige Aussichten projizieren. Nie kann meine geschriebene Analyse die des Onkel Zyniker sein, niemals ein "ich bin der Erwachsene im Raum der die Korruption durchschaut für die naiven Kinderlein". Doch auch ein radikaler Skeptizismus, dieses "nix hängt mit nix z'samm, oft geht bled", ist mir zu freudlos für eine unterhaltsame Ontologie der Gegenwart.)
+
+Nun denn.
+
 ![Frau](/blog/images/fraualtjung.png)
 
 Mit dem bekannten obigen Bild - in dieser einfachen Form - sieht sich der steirische Brauch gereizt. Mit diesem Beispiel will ich daher über das Gebräuchliche hinausgehen um dann dorthin zurückzukehren.
