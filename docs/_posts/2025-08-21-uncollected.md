@@ -186,3 +186,8 @@ Kritisch überprüfen müssen
 Und das  
 Nehmen  
 Wir uns jetzt vor  
+
+### Dukka
+Das Leben ist Unbill  
+Dunkel wie Hölle und  
+Doppelt so teuer  
