@@ -166,3 +166,6 @@ In order to activate the "rich-comment comprehension", a user must be able to op
 This concludes my essay à clef. While the vast field of handling error messages is still open, the other SciKloj features described are technically there already. I took some literary license with the name "double-comma", which in reality is not the same as printline debugging, the real version only evaluates top-level forms.
 
 All in all, SciKloj is a fiction that can be seen as a partly concrete aspect of the whole multifaceted SciCloj project.
+
+##  Note on February 2026
+The [Fegloj](https://github.com/scicloj/fegloj) project has implemented the main idea of this SciKloj essay, however Fegloj never made it into SciCloj mainstream.
