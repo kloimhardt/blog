@@ -5,6 +5,14 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
+### On public demand ein Kommentar zum [2012 TED talk des Futurologen Tapscott](https://www.youtube.com/watch?v=jfqwHT3u1-8).
+
+Hab das Video in meiner allzukurzen Mittagspause gesehen, ach dieses Hobbymaxing. Don war euphorisch bezüglich Internet und KI, und ich bin das Ende 2026 genauso. Wir müssen aber seit der Steinzeit (seit 2025) ein paar Schädlinge managen um die Früchte zu ernten.
+
+"Think about the kids today in the Arab spring" mit ihren mobilmachenden Vernetzhandys. Was der gute Don nichtmal in seiner Vergangenheit gesehen hatte war dass dann am Tahrir Platz richtig schön die Mädls vollorganisiert begrapscht wurden als Vorglühparty zu Köln Silvester 2015, siehe Sammad Video unten.
+
+"Could we go beyond just sharing information ... Could we create some kind of collective Intelligence that goes beyond an individual or a team". Dazu [Terry Tao in Math 2.0](https://www.youtube.com/watch?v=aHpPoNNTOKY) "in fact now mathematicians are hiding their problems you used to share very openly all their promising research directions and now they are afraid that someone with an AI will input their idea into a frontier model before they can finish their work".
+
 ## Link assortment 19.Nov26
 
 [Drei Stunden Video mit Hamed Abdel Sammad](https://www.youtube.com/watch?v=QxMuH1bjMwo)
@@ -13,7 +21,7 @@ Die Fatwa hat diesen Aufklärer aus Ägypten raufgespült zum Kontinent der frü
 [Ein Standardartikel zum Ruanda Returnhub](https://www.derstandard.at/story/3000000349718/abschiebung-illegaler-migranten-ist-wichtiger-teil-gemeinsamer-eu-migrationspolitik) ist ein seltener Beitrag zum bisher wenig diskutierten historischen Schritt. Es gibt keine moralische Pflicht zur Selbstaufgabe. Jeder Staat hat das Recht zu bestimmen wer auf seinem Gebiet sich aufhält. Jetzt werden die de-jure Kriminellen ausgewiesen, ich sehe das Hope Hostel als Real-Option auf Ausbau und hoffentlich einen Swap gegen die jetzig noch nur de-factos. Wie wir alle wissen bewerten sich Realoptionen nicht nach dem üblichen Discounted-Cashflow Modell sondern eben nach Black-Scholes und damit ist das Kigali-Ressort auch im Geld.
 
 [Bruno Buchberger](https://www.youtube.com/watch?v=WLYW6BPkkIk)
-Der Weltmathematiker aus Linz, Mastermind of Hagenberg. Zuerst Formalisierung dann LMM, genauso wie Ken Ono von [Axiommath](https://axiommath.ai/), in Tradition natürlich der beiden Antagonisten Steve Wolfram und Gery Sussman. Mit 85 Jahren noch mal loslegen, Chapeau. Ich halluziniere auch Emmi's Johannes Brandstetter geht mit Mistral in die Richtung, da ist aber [wenig bekannt über Flair](https://flarephysicsai.com).
+Der Weltmathematiker aus Linz, Mastermind of Hagenberg. Zuerst Formalisierung dann LMM, genauso wie Ken Ono von [Axiommath](https://axiommath.ai/), in Tradition natürlich der beiden Antagonisten Steve Wolfram und Gery Sussman. Mit 85 Jahren noch mal loslegen, Chapeau. Ich halluziniere auch Emmi's Johannes Brandstetter geht mit Mistral in die Richtung, da ist aber [wenig bekannt über Flare](https://flarephysicsai.com).
 
 [Federico Faggin](https://www.youtube.com/watch?v=zZvswwFsgxU) hat sein Buch jetzt in Amerika rausgebracht. Er zeigt dass Harari keine Ahnung hat von Buddhismus und freiem Willen, den es natürlich gibt im Schopenhauer'schen Sinn.  Bei uns ist sein Buch schon lange verfügbar, liegt auch daran dass (wo die Amis alles in China drucken lassen) wir unsere eigenen Pressen haben.
 
