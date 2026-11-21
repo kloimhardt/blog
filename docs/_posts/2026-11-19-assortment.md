@@ -5,7 +5,27 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
-### On public demand ein Kommentar zum [2012 TED talk des Futurologen Tapscott](https://www.youtube.com/watch?v=jfqwHT3u1-8).
+## 2.Nov26 [Jolt native regions](https://github.com/jolt-lang/jolt-lang.github.io/pull/80/files)
+Jolt, Yogthos' Clojure Dialekt, hat "block of numeric code that `jolt build` compiles to C and links into the binary". Es ist eine ähnliche Idee wie mein [LisRoot](https://github.com/kloimhardt/LisRoot). Aber nicht ganz, weil Jolt ANSI-C (und zwar memory-safe) macht und LisRoot zwar volles C++ aber komplett ohne memory management.
+
+### Details
+Ich kann LisRoot nicht direkt vom Ferret-dialekt nach Jolt portieren, weil Jolt gar keinen Code direkt als String akzeptiert, also auch keinen C++ Code im Speziellen. Er will memory-safety. Er hat seine starre DSL die nach Ansi C transpiliert.  Kommunikation diesbezüglich mit Yogthos:
+
+And for writing C code directly, I prefer simply adding it in `native` folder and then having a task in `deps.edn` to compile it instead of interleaving it as strings directly in Clojure. It’s kind of similar approach as hugsql where you write your SQL in its own file and then have functions to call it from Clojure which in this case are the FFI wrappers.
+
+Ich hatte LisRoot ja zugunsten [jank+CppInterOp](https://compiler-research.org/assets/presentations/Aaron_CHEP2026_ROOT_Python_CppInterOp.pdf) aufgegeben bzw. LisRoot war eh als Vorläufer gedacht. Yogthos:
+
+I actually looked at Jank approach a little while back, but as I recall it’s tied to LLVM magic. It’s more powerful because Jank can generate code at runtime, and with Jolt it’s a compile time mechanic which needs a C compiler on the system.
+
+The flip side is that Jank basically has a DSL to write C style semantics in Clojure where Jolt DSL is a region inside which you write regular Clojure and can use functions like map or reduce directly.
+
+it has a natural fallback to getting compiled as regular Jolt forms during dev.
+
+I’m limiting it to numeric computations since that tends to be where most of the benefit is. Making a full language DSL here would be a much bigger lift for little practical gain I suspect.
+
+In Summe bleibt für mein LisRoot übrig, dass zumindest auch Yogthos jenes Konzept gut findet welches ich "statically compiled layer" und er "compile time mechanic" nennt. Es ist aber wohl so dass wenn schon C++ (und nicht nur ANSI-C), denn schon die "powerful LLVM magic" von jank+CppInterOp.
+
+## On public demand ein Kommentar zum [2012 TED talk des Futurologen Tapscott](https://www.youtube.com/watch?v=jfqwHT3u1-8).
 
 Hab das Video in meiner allzukurzen Mittagspause gesehen, ach dieses Hobbymaxing. Don war euphorisch bezüglich Internet und KI, und ich bin das Ende 2026 genauso. Wir müssen aber seit der Steinzeit (seit 2025) ein paar Schädlinge managen um die Früchte zu ernten.
 
@@ -47,4 +67,4 @@ Erstens die faktisch unzulänglich belegte Euphorie für den arabischen Raum. In
 
 Und zweitens der Sharingglaube an die US Softwareindustrie ohne auf eine eigene Software für die EU Verwaltung zu pochen. Putin sagt "Hey, die drohnenbomben meine Raffinerien, drosselt Starlink sonst wird's Öl um noch einiges teurer für euch Amis". Zugegeben, dass US+Russkis Buddies werden hat keiner sehen können in 2012.
 
-Symbolpolitik muss nichts Schlechtes sein. Wichtig ist, dass das Symbol eine klare Bedeutung trägt. Der Signifikant braucht ein Signifikat. Das Ruanda Treffen von Dk, Nl, D und Ö symbolisiert eine verschärfte Migrationspolitik und gibt bis jetzt ein solides Bild ab. Im Gegensatz dazu ist mir nicht klar was das Dreiertreffen Xi-Putin-Trump (für wen?) symbolisiert haben soll. Für jeden wohl was anderes, was unseren wichtigster Politiker den Westen armselig aussehen lässt. Den Westen gibt's, er zeichnet sich durch Meinungsfreiheit aus und kann darum nicht gar so einfach verlassen werden.
+Symbolpolitik muss nichts Schlechtes sein. Wichtig ist, dass das Symbol eine klare Bedeutung trägt. Der Signifikant braucht ein Signifikat. Das Ruanda Treffen von Dk, Nl, Gl, D und Ö symbolisiert eine verschärfte Migrationspolitik und gibt bis jetzt ein solides Bild ab. Im Gegensatz dazu ist mir nicht klar was das Dreiertreffen Xi-Putin-Trump (für wen?) symbolisiert haben soll. Für jeden wohl was anderes, was  den Westen (durch unseren wichtigsten POTUS Politiker) armselig aussehen lässt. Den Westen gibt's, er zeichnet sich durch Meinungsfreiheit aus und kann darum nicht gar so einfach verlassen werden.
