@@ -5,8 +5,11 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
-## 2.Nov26 [Jolt native regions](https://github.com/jolt-lang/jolt-lang.github.io/pull/80/files)
+## [Jolt native regions](https://github.com/jolt-lang/jolt-lang.github.io/pull/80/files) 21.Nov26
+
 Jolt, Yogthos' Clojure Dialekt, hat "block of numeric code that `jolt build` compiles to C and links into the binary". Es ist eine ähnliche Idee wie mein [LisRoot](https://github.com/kloimhardt/LisRoot). Aber nicht ganz, weil Jolt ANSI-C (und zwar memory-safe) macht und LisRoot zwar volles C++ aber komplett ohne memory management.
+
+Die Idee ähnelt eher mehr dem Ansatz von [Bun](https://bun.com/blog/compile-and-run-c-in-js), jener JavaScript runtime die Einbundung von C code in JS erlaubt. Bun wurde Dez25 von Anthripic gekauft, woraufhin die 1Mio Loc Codebase im May26 agentic innerhalb von 11 Tagen von Zig-lang nach Rust-lang portiert wurde. Mit einem pre-release von Claude Fable 5. "Just a total shit show, from an employment perspective", sagt die Zig Software Foundation.
 
 ### Details
 Ich kann LisRoot nicht direkt vom Ferret-dialekt nach Jolt portieren, weil Jolt gar keinen Code direkt als String akzeptiert, also auch keinen C++ Code im Speziellen. Er will memory-safety. Er hat seine starre DSL die nach Ansi C transpiliert.  Kommunikation diesbezüglich mit Yogthos:
@@ -25,7 +28,7 @@ I’m limiting it to numeric computations since that tends to be where most of t
 
 In Summe bleibt für mein LisRoot übrig, dass zumindest auch Yogthos jenes Konzept gut findet welches ich "statically compiled layer" und er "compile time mechanic" nennt. Es ist aber wohl so dass wenn schon C++ (und nicht nur ANSI-C), denn schon die "powerful LLVM magic" von jank+CppInterOp.
 
-## On public demand ein Kommentar zum [2012 TED talk des Futurologen Tapscott](https://www.youtube.com/watch?v=jfqwHT3u1-8).
+## [2012 TED talk des Futurologen Tapscott](https://www.youtube.com/watch?v=jfqwHT3u1-8) 20.Nov26
 
 Hab das Video in meiner allzukurzen Mittagspause gesehen, ach dieses Hobbymaxing. Don war euphorisch bezüglich Internet und KI, und ich bin das Ende 2026 genauso. Wir müssen aber seit der Steinzeit (seit 2025) ein paar Schädlinge managen um die Früchte zu ernten.
 
