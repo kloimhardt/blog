@@ -5,11 +5,17 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
+## [IronChIF](https://intfiction.org/t/iron-chif-season-one-episode-4-vyner-vanderhumeken-vs-svlin-using-twine/82215) 24.Nov26
+
+Die japanische Fernsehsendung "Iron Chef" übertragen auf Interactive Fiction. Zwei Autoren (diesmal für das Tool Twine/Sugarcube) schreiben innerhalb einer Woche ein Textadventure. Ein Fünfer-"panel of judges" führt in der Zeit Interviews und kommentiert Fortschritt und Technik. Einer der Autoren ist dabei der altbekannte Branchenhase mit vielen Kreationen am Buckel, der amtierende ChIF eben. Interviews/Kommentare sind schriftlich in einem einzigen Forum-Thread wo die 7 Leute reinschreiben. Es gibt auch einen zweiten Thread für die Groundlings. Sie Software selbst wird zwei Tage vor Ende publiziert zum Bewerten. Es gibt den 5er Expertenvote und den alles entscheidenden Pöbelvote.
+
+Ich sehe das als Modell für Mathematiker. Die Professoren führen einen Beweis nicht mehr nur vor Publikum, die Prüflinge nicht mehr nur vor der Jury. Vorlesung und Prüfung sind Zeitgleich, die Jungen fordern den Status Quo heraus und die Alten zeigen wo der Hammer hängt. Skin in the Hunger Game, Baby!
+
 ## [Jolt native regions](https://github.com/jolt-lang/jolt-lang.github.io/pull/80/files) 21.Nov26
 
 Jolt, Yogthos' Clojure Dialekt, hat "block of numeric code that `jolt build` compiles to C and links into the binary". Es ist eine ähnliche Idee wie mein [LisRoot](https://github.com/kloimhardt/LisRoot). Aber nicht ganz, weil Jolt ANSI-C (und zwar memory-safe) macht und LisRoot zwar volles C++ aber komplett ohne memory management.
 
-Die Idee ähnelt eher mehr dem Ansatz von [Bun](https://bun.com/blog/compile-and-run-c-in-js), jener JavaScript runtime die Einbundung von C code in JS erlaubt. Bun wurde Dez25 von Anthripic gekauft, woraufhin die 1Mio Loc Codebase im May26 agentic innerhalb von 11 Tagen von Zig-lang nach Rust-lang portiert wurde. Mit einem pre-release von Claude Fable 5. "Just a total shit show, from an employment perspective", sagt die Zig Software Foundation.
+Die Idee ähnelt eher mehr dem Ansatz von [Bun](https://bun.com/blog/compile-and-run-c-in-js), jener JavaScript runtime die Einbundung von C code in JS erlaubt. Bun wurde Dez25 von Anthripic gekauft, woraufhin die 1Mio Loc Codebase im May26 agentic innerhalb von 11 Tagen von Zig-lang nach Rust-lang portiert wurde. Mit einem pre-release von Claude Fable 5. "Just a total shit show, from an employment perspective", sagt die Zig Software Foundation. Trotzdem: Der Bun ist aus dem Ofen und schmeckt, mir auf jeden Fall.
 
 ### Details
 Ich kann LisRoot nicht direkt vom Ferret-dialekt nach Jolt portieren, weil Jolt gar keinen Code direkt als String akzeptiert, also auch keinen C++ Code im Speziellen. Er will memory-safety. Er hat seine starre DSL die nach Ansi C transpiliert.  Kommunikation diesbezüglich mit Yogthos:
