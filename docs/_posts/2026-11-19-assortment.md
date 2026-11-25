@@ -5,13 +5,28 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
-## Assortment 24.Nov26
+## Assortment 25.Nov26
+
+### Mathematik
+
+Der Review der Riemann Hypothese wird am schnellsten gehen mit weltweiter Koordination. Ich schlage eine Nobelpreis-UNO als mathematische Dachorganisation vor, die Riemann-Aufgaben hauptsächlich nach Afrika und Süden verteilt und finanziert.
+
+Abweichler in UNIs die anderweitig zugeteilte Ergebnisse publizieren werden gedisst vom Rest. Privat kann jeder machen was er will, aber sobald Steuergeld und Riemann im Spiel ist: Mathe-UNO mit Sitz der Fieldsträger in ... Genf? Wien?
+
+Wiewohl es traurig ist, dass es bei uns kaum mehr Schuster gibt, geh ich doch zum Humanic. Das Einzelkämpfertum ist zwar cool für den einzelnen Kämpfer, aber es braucht Global Player, auch wenn mein Herz schmerzt. Aber so einzelne Riemann-Teilbeweise als Hobbymaxxing sind wertlos.
+
+Zur Physik: Niemand weiss ob und wann die KI neue Steleratoren vorschlägt die es dann zu prüfen gilt. Sobald die KI auch die Physik übernimmt würd ich beim Thema Kernfusion dasselbe vorschlagen: eine Nobel-UNO mit Durchgriffsrecht und -möglichkeit.
+
+Terry Tao mit Riemann beginnt schon:  https://rh-polymath.zulipchat.com "public, with all discussions preserved and viewable without logging in". Hat die Physik einen Terry Tao? Ich seh keinen. Damit ist auch klar dass der nächste Physiknobelpreis an einen coolen Plasmaphysiker gehen wird. Mit Ernst Happel als Trainer laufen die Burschen im Takt, Rehakles und die Griechen, Greenspan in der Fed. Richard Feynman, Hans Bethe schauts oba!
 
 ### Plachutta
-Ich mag's nicht wenn im Wirtshausfassbier Schaum:Flüssigkeit = 1:1 und keine Rechnung. Die Kellner schneiden da mit und werden dafür nicht gefeuert.
-Der Plachutta Mario ist ein Sack, drum boykottier ich sein Gasthaus. Aber er geht mir ab. Ich fühlte mich wohl bei ihm weil das Personal auf die Gäste hin diszipliniert ist und doch nicht frustriert oder wurschtig scheint.
 
-Die Ex-Partie vom Cafe Engländer, das von Plachutta+Friese geschluckt wurde, wollen selber einen Laden aufmachen. Wenn die da dann so auf Wirtshausbier machen wird's mir noch schwerer fallen das Gasthaus zu vermeiden.
+Ich mag's nicht wenn im Wirtshausfassbier Schaum:Flüssigkeit = 1:1 und keine Rechnung. Die Kellner schneiden da mit und werden dafür nicht gefeuert.
+Der Plachutta Mario ist ein Sack, drum boykottier ich sein Gasthaus. Aber er geht mir ab. Ich fühlte mich wohl bei ihm weil das Personal auf die Gäste hin diszipliniert war und doch nicht frustriert oder wurschtig schien.
+
+Die Ex-Partie vom Cafe Engländer, das von Plachutta+Friese geschluckt wurde, wollen selber einen Laden aufmachen. Wenn die da dann so auf Wirtshausbier machen wird's mir noch schwerer fallen das Gasthaus zu meiden.
+
+## Assortment 24.Nov26
 
 ### [IronChIF](https://intfiction.org/t/iron-chif-season-one-episode-4-vyner-vanderhumeken-vs-svlin-using-twine/82215)
 
