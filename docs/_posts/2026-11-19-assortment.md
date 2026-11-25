@@ -1,4 +1,4 @@
-
+---
 layout: post
 title:  "Link Assortment"
 date:   2026-11-19 06:00:00 +0100
@@ -7,17 +7,11 @@ categories: Crônica
 
 ## Assortment 25.Nov26
 
-### Mathematik
+### [Riemann Polymath](https://rh-polymath.zulipchat.com)
 
-Der Review der Riemann Hypothese wird am schnellsten gehen mit weltweiter Koordination. Ich schlage eine Nobelpreis-UNO als mathematische Dachorganisation vor, die Riemann-Aufgaben hauptsächlich nach Afrika und Süden verteilt und finanziert.
+Terry Tao empfiehlt die internationale Koordination von Riemann über Zulipchat, "public, with all discussions preserved and viewable without logging in".
 
-Abweichler in UNIs die anderweitig zugeteilte Ergebnisse publizieren werden gedisst vom Rest. Privat kann jeder machen was er will, aber sobald Steuergeld und Riemann im Spiel ist: Mathe-UNO mit Sitz der Fieldsträger in ... Genf? Wien?
-
-Wiewohl es traurig ist, dass es bei uns kaum mehr Schuster gibt, geh ich doch zum Humanic. Das Einzelkämpfertum ist zwar cool für den einzelnen Kämpfer, aber es braucht Global Player, auch wenn mein Herz schmerzt. Aber so einzelne Riemann-Teilbeweise als Hobbymaxxing sind wertlos.
-
-Zur Physik: Niemand weiss ob und wann die KI neue Steleratoren vorschlägt die es dann zu prüfen gilt. Sobald die KI auch die Physik übernimmt würd ich beim Thema Kernfusion dasselbe vorschlagen: eine Nobel-UNO mit Durchgriffsrecht und -möglichkeit.
-
-Terry Tao mit Riemann beginnt schon:  https://rh-polymath.zulipchat.com "public, with all discussions preserved and viewable without logging in". Hat die Physik einen Terry Tao? Ich seh keinen. Damit ist auch klar dass der nächste Physiknobelpreis an einen coolen Plasmaphysiker gehen wird. Mit Ernst Happel als Trainer laufen die Burschen im Takt, Rehakles und die Griechen, Greenspan in der Fed. Richard Feynman, Hans Bethe schauts oba!
+Ich bin im Zulipchat für "Science in Clojure", [SciCloj](https://clojurians.zulipchat.com/#narrow/channel/488851-scicloj-webpublic). Während die Softwareentwickler Slack bevorzugen, verwendet die Wissenschaft Zulipchat. Gut so.
 
 ### Plachutta
 
@@ -25,6 +19,20 @@ Ich mag's nicht wenn im Wirtshausfassbier Schaum:Flüssigkeit = 1:1 und keine Re
 Der Plachutta Mario ist ein Sack, drum boykottier ich sein Gasthaus. Aber er geht mir ab. Ich fühlte mich wohl bei ihm weil das Personal auf die Gäste hin diszipliniert war und doch nicht frustriert oder wurschtig schien.
 
 Die Ex-Partie vom Cafe Engländer, das von Plachutta+Friese geschluckt wurde, wollen selber einen Laden aufmachen. Wenn die da dann so auf Wirtshausbier machen wird's mir noch schwerer fallen das Gasthaus zu meiden.
+
+### Langwierige Details: Meinung Riemann
+
+Der Review der Riemann Hypothese wird am schnellsten gehen mit weltweiter Koordination. Ich schlage eine Nobelpreis-UNO als mathematische Dachorganisation vor, die Riemann-Aufgaben hauptsächlich nach Afrika und Süden verteilt und finanziert.
+
+Abweichler in UNIs die anderweitig zugeteilte Ergebnisse publizieren werden gedisst vom Rest. Privat kann jeder machen was er will, aber sobald Steuergeld und Riemann im Spiel ist: Mathe-UNO mit Sitz der Fieldsträger in ... Genf? Wien?
+
+Wiewohl es traurig ist, dass es bei uns kaum mehr Schuster gibt, geh ich doch zum Humanic. Das Einzelkämpfertum ist zwar cool für den einzelnen Kämpfer, aber es braucht Global Player, auch wenn mein Herz schmerzt. Aber so einzelne Riemann-Teilbeweise als Hobbymaxxing sind wertlos.
+
+Wenns darum geht Lösungen zu finden ist Pluralismus angesagt. Das ist bei Riemann aber nicht der Fall. Wenns darum geht Fehler in vorhandenen Beweisketten zu finden ist eine zentrale globale Steuerung angesagt. Das ist bei Riemann der Fall. Nicht internationale Treffen an einem gemeinsamen Ort sondern internationale Verortung mit einem gemeinsamen Ziel.
+
+Zur Physik: Niemand weiss ob und wann die KI neue Steleratoren vorschlägt die es dann zu prüfen gilt. Sobald die KI auch die Physik übernimmt würd ich beim Thema Kernfusion dasselbe vorschlagen: eine Nobel-UNO mit Durchgriffsrecht und -möglichkeit.
+
+Terry Tao mit Riemann beginnt schon. Hat die Physik einen Terry Tao? Ich seh keinen. Damit ist auch klar dass der nächste Physiknobelpreis an einen coolen Plasmaphysiker gehen wird. Mit Ernst Happel als Trainer laufen die Burschen im Takt, Rehakles und die Griechen, Greenspan in der Fed. Richard Feynman, Hans Bethe schauts oba!
 
 ## Assortment 24.Nov26
 
