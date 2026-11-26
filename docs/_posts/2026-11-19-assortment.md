@@ -7,6 +7,18 @@ categories: Crônica
 
 ## Assortment 25.Nov26
 
+### [Meine Blöcke, clj-tiles](https://kloimhardt.github.io/cljtiles.html?page=FDG001)
+
+Ich weiss jetzt was die sind, was die Blöcke sind, aber erst seit Oktober sind. Physics-informed Math. Physikinformierte Mathematik. Denn Mathematik ist, und zwar seit Oktober, das Finden der besten Erklärung für einen computergeführten Beweis. Und die beste Erklärung ist das graphische Zusammenbaun aus einer handvoll von Elementarblöcken.
+
+### Berliner Linksabgeordnete Vanessa Emde
+
+Die nunmehr wilde "Vedi" erklärte, dass Staaten kein Recht auf Existenz hätten sondern nur Menschen. Sie ist also eine Hypernominalistin im ewigen Universalienstreit. Die alte Methode des braven Soldat Schwejk "melde gehorsamst ich bin bled" Josef. Auch er kannte nur seinen Kaiser für den er kämpft "bis es mich zerreisst".
+
+### Twine ChIF
+
+Der Twine-ChIF (siehe unten) hat den Herausforderer geschlagen. Wie jeder ChIF in den bisherigen 4 Episoden (AFAIR).
+
 ### [Riemann Polymath](https://rh-polymath.zulipchat.com)
 
 Terry Tao empfiehlt die internationale Koordination von Riemann über Zulipchat, "public, with all discussions preserved and viewable without logging in".
@@ -20,19 +32,43 @@ Der Plachutta Mario ist ein Sack, drum boykottier ich sein Gasthaus. Aber er geh
 
 Die Ex-Partie vom Cafe Engländer, das von Plachutta+Friese geschluckt wurde, wollen selber einen Laden aufmachen. Wenn die da dann so auf Wirtshausbier machen wird's mir noch schwerer fallen das Gasthaus zu meiden.
 
-### Langwierige Details: Meinung Riemann
+### Langwierige Details (1): Meinung Riemann
 
 Der Review der Riemann Hypothese wird am schnellsten gehen mit weltweiter Koordination. Ich schlage eine Nobelpreis-UNO als mathematische Dachorganisation vor, die Riemann-Aufgaben hauptsächlich nach Afrika und Süden verteilt und finanziert.
 
-Abweichler in UNIs die anderweitig zugeteilte Ergebnisse publizieren werden gedisst vom Rest. Privat kann jeder machen was er will, aber sobald Steuergeld und Riemann im Spiel ist: Mathe-UNO mit Sitz der Fieldsträger in ... Genf? Wien?
+Abweichler in UNIs die anderweitig zugeteilte Ergebnisse publizieren werden gedisst vom Rest. Oder die UNO teilt wirklich an zwei verschiedene und dann: public IronProof contest. Privat kann jeder machen was er will, aber sobald Steuergeld und Riemann im Spiel ist: Mathe-UNO mit Sitz der Fieldsträger in ... Genf? Wien?
 
 Wiewohl es traurig ist, dass es bei uns kaum mehr Schuster gibt, geh ich doch zum Humanic. Das Einzelkämpfertum ist zwar cool für den einzelnen Kämpfer, aber es braucht Global Player, auch wenn mein Herz schmerzt. Aber so einzelne Riemann-Teilbeweise als Hobbymaxxing sind wertlos.
 
 Wenns darum geht Lösungen zu finden ist Pluralismus angesagt. Das ist bei Riemann aber nicht der Fall. Wenns darum geht Fehler in vorhandenen Beweisketten zu finden ist eine zentrale globale Steuerung angesagt. Das ist bei Riemann der Fall. Nicht internationale Treffen an einem gemeinsamen Ort sondern internationale Verortung mit einem gemeinsamen Ziel.
 
-Zur Physik: Niemand weiss ob und wann die KI neue Steleratoren vorschlägt die es dann zu prüfen gilt. Sobald die KI auch die Physik übernimmt würd ich beim Thema Kernfusion dasselbe vorschlagen: eine Nobel-UNO mit Durchgriffsrecht und -möglichkeit.
+Zur Physik: Niemand weiss ob und wann die zukünftigen (nicht LLMs sondern) "Physics-Informed Neural Networks" neue Steleratoren vorschlagen.  Die gilt es dann zu prüfen. Sobald also die KI auch die Physik übernimmt, würd ich beim Thema Kernfusion dasselbe vorschlagen: eine Nobel-UNO mit Durchgriffsrecht und -möglichkeit. Kein Hobbymaxxing von zig lokalen Modellierungen auf Steuerkosten.
 
-Terry Tao mit Riemann beginnt schon. Hat die Physik einen Terry Tao? Ich seh keinen. Damit ist auch klar dass der nächste Physiknobelpreis an einen coolen Plasmaphysiker gehen wird. Mit Ernst Happel als Trainer laufen die Burschen im Takt, Rehakles und die Griechen, Greenspan in der Fed. Richard Feynman, Hans Bethe schauts oba!
+Wer einen Forschungsantrag stellt mit Argument "relevant Kernfusion", wird sofort Bountyhunter der UNO-zwangskoordinierten Suche der Fehler ("dead or alive") in jener einen Simulation mit den meisten Papiergigawatten per Papierdollar. Meinetwegen zwei Modelle im IronFuse Contest.
+
+Terry Tao mit Riemann beginnt schon zu koordinieren. Hat die Physik einen Terry Tao? Ich seh keinen. Damit ist auch klar dass der nächste Physiknobelpreis an einen coolen  Plasmaphysiker gehen wird, Format Startupprofessor Ken Ono. Mit Ernst Happel als Trainer laufen die Burschen im Takt, Rehakles und die Griechen, Greenspan in der Fed. Richard Feynman, Hans Bethe schauts oba!
+
+### Langwierige Details (2): Meinung Universalien
+
+Mit der Demokratie ists wie beim Geld: wenn man blöd tut iss' weg. Beides trägt den Keim der Verdünnisierung und sollte also besser vernünftig gehandhabt werden. Also durch reversible Reformen des Status Quo. "Melde gehorsamst, ich irr' mich kleinweis empor", sagt mein Girokonto.
+
+Nota bene: allzugute "Reformen" führen zum Zuviel des Guten. Das können wir schmerzlich beobachten. Demokratie beinhaltet Minderheitenschutz, nicht jede Minderheit ist schützenswert.
+
+Universalien sind anstrengend, es gibt Intersektionalität, eine Person kann in der Schnittmenge zweier Minderheiten sein, das Paradebeispiel die schwarze Lesbe. Doppelt am Rand.
+
+Ich bin die Vereinigungsmenge: der alte Weisse. "Standing in the middle of the road, get knocked from both sides". Ist auszuhalten mit Girokonto. Wie für J.K.Rowling, für die Intersektionalität keine Narrenfreiheit bedeutet. Wie für mich Religionsfreiheit.
+
+### Langwierige Details (3): die Taxonomie des MINT
+
+Im Allgemeinen teilt sich MINT aus ChatClaude Sicht in zwei Teile: (1) M+I und (2) N+T. In (1) ist ChatClaude der Meister, in (2) ist ChatClaude ein Hilfsmittel.
+
+Das englische STEM teilt sich folglich also in (1) M+T und (2) S+E. Note: das I in MINT ist das T in STEM; und das T ist das E.
+
+Physik ist komplett MINT: M ist mathematische Physik ist Axiomatisierung der Theorie; I ist computational Physics ist Numerik; N ist Grundlagenphysik ist Experiementplanung mit Theorieentwicklung; T ist angewandte Physik ist Anlagenbau.
+
+Mathematik ist M+I: vor dem Oktober26 war Informatik ein Teilzweig der Mathematik. Jetzt ist Mathematik ein echtes Subset der Informatik.
+
+Ich bin also seit Oktober Mathematiker, bin aber erst heute draufgekommen. Physikinformierter Mathematiker, genaugenommen.
 
 ## Assortment 24.Nov26
 
