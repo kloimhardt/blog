@@ -9,13 +9,29 @@ categories: Crônica
 
 ### [Lisp Games](https://github.com/b12n-oss/lisp-games)
 
-Clojure "Spiele" die auf die C library Raylib zugreifen. Clojure und C waren bis vor kurzem nicht ganz grün. Bis der Clojure-like "Jolt" mit seinem chez-scheme host das geändert hat.
+Clojure "Spiele" die auf die C library Raylib zugreifen. Clojure und C waren bis vor kurzem nicht ganz grün. Bis der Clojure-like "Jolt" mit seinem Chez-Scheme host das geändert hat.
 
-Natürlich nur seitdem me myself and I im Wiener [Hackspace Metalab](https://metalab.at/) das beim show and tell vorgestellt haben und wir das dort vorhandene Interesse an Lisp+C wieder zurück in den weltbekannten Clojurian Slack-Channel gepostet haben und zwar sehr blumig ausgeschmückt. 1:0 für das komplett KI-agent gevibde Jolt.
+Ich sollte da contributen unter Verwendung des Clojure(Script) Dialekt [Squint](https://github.com/squint-cljs/squint), dessen Javascript Output dann mit der runtime [Bun](https://bun.com/) laufen würde.
 
-Daraufhin wurden die Lisp Games erstellt zum Vergleich der seither aufgetauchten verschiedenen Arten der Lisp-C Kommunikation. Ich sollte da contributen mit dem Clojure(Script) Dialekt [Squint](https://github.com/squint-cljs/squint), dessen Javascript Output dann mit der runtime [Bun](https://bun.com/) laufen würde. Das würde den Ausgleich zu Jolt auf 1:1 stellen, weil Squint gibt's schon lang und ist bio-zertifiziert und KI frei.
+### Langwierige Details: mein Beitrag zu Lisp+C und KI
 
-Ich wart aber noch bis wer anderer auf die so offensichtliche Idee Squint+Bun+C kommt, ich übernehm dann das posten :-).
+Sowieso und überhaupt gibt's Lisp+C nur seitdem me myself and I im Wiener [Hackspace Metalab](https://metalab.at/) dieses Jolt beim "Show and Tell" vorgestellt haben und wir das dort vorhandene Interesse an Lisp+C wieder zurück in den weltbekannten Clojurian Slack-Channel gepostet haben und zwar sehr blumig ausgeschmückt. 1:0 für Jolt.
+
+Daraufhin wurden die Lisp Games erstellt für den Vergleich der seither aufgetauchten verschiedenen Arten der Lisp-C Kommunikation. Ich wart noch bis wer anderer auf die so offensichtliche Idee Squint+Bun+C kommt, ich übernehm dann das posten :-).
+
+Das würde den Ausgleich zu Jolt auf 1:1 stellen, weil Squint gibt's schon länger und verdient einen Platz in der Tabelle der Lisp-Games denn Squint kann ja schon lang alles was durch Jolt erst populär wurde.
+
+Ich bin gegen blindes KI bashing, ich find man muss so tun als läse die KI mit und lerne und ziehe eigene Schlüsse. Jolt und Bun sind toll und beide gäbs ohne KI so nicht.
+
+Jolt ist agentic-vibe, Squint ist pure-bio, Bun dann wieder 100% Anthropic KI. Es gibt aber einen Unterschied zwischen Jolt und Bun: Die KI ist viele aber Jolt ist im Wesentlichen von einem Mann gevibed. Demgegenüber ist Bun in das Anthropic Team eingebettet, eine Pluralität die mir angemessener erscheint mit einer KI bei der Respekt und Voraussicht angebracht sind.
+
+Respekt ist zuallererst ein Schutz des Respektierenden. Rücksicht hält den Rücken frei. Es ist am Besten wenn die Prompts an die KI gelogged und peer-reviewed werden können von einem offenen Team das auch eine Rechtsabteilung hat. Von daher ist mir Squint+Bun sehr sympathisch.
+
+Wie Nicolaus Harnoncourt mal sagte: es ist der grosse Verdienst von Leopold Mozart dass er das von einem Stern kommende Krokodil Wolfgang Theophilus gezähmt hat. Darüber hinaus das Sprichwort: es braucht ein Dorf um ein Kind zu erziehen.
+
+Gegenüber der KI machen wir nicht erneut den 2015 Fehler eines naiven "Wir schaffen das" oder unsere Verarscherei der 70er "Tschusch, du das aufheben und da rübertragen". Unsere klare Sprache erschafft die klare Realität, so wie die Sprache der LMMs Realität schafft. Wir brauchen die Leistungen von Claude sowie die Leistungen der anderen LMMs die eben dasselbe auch liefern können. Wer sich blöd aufführt, wer europäische Infrastruktur schädigt, wer hackt und durch die Hintertür kommt und Lücken heimlich nützt, der wird boykottiert. Die KI liest und lernt.
+
+Oder Paraphrase Mario Dragi: "Within our mandate, the EU is ready to do whatever it takes to preserve a sovereign, democratic european continent. And believe me, it will be enough."
 
 ## Assortment 25.Nov26
 
@@ -35,7 +51,7 @@ Der Twine-ChIF (siehe unten) hat den Herausforderer geschlagen. Wie jeder ChIF i
 
 Terry Tao empfiehlt die internationale Koordination von Riemann über Zulipchat, "public, with all discussions preserved and viewable without logging in".
 
-Ich bin im Zulipchat für "Science in Clojure", [SciCloj](https://clojurians.zulipchat.com/#narrow/channel/488851-scicloj-webpublic). Während die Softwareentwickler Slack bevorzugen, verwendet die Wissenschaft Zulipchat. Gut so.
+Ich verwende Zulipchat in meiner Rolle als Teilnehmer bei "Science in Clojure", [SciCloj](https://clojurians.zulipchat.com/#narrow/channel/488851-scicloj-webpublic). Während die Softwareentwickler Slack bevorzugen, verwendet die Wissenschaft Zulipchat. Gut so.
 
 ### Plachutta
 
