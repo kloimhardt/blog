@@ -5,6 +5,18 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
+## Assortment 26.Nov26
+
+### [Lisp Games](https://github.com/b12n-oss/lisp-games)
+
+Clojure "Spiele" die auf die C library Raylib zugreifen. Clojure und C waren bis vor kurzem nicht ganz grün. Bis der Clojure-like "Jolt" mit seinem chez-scheme host das geändert hat.
+
+Natürlich nur seitdem me myself and I im Wiener [Hackspace Metalab](https://metalab.at/) das beim show and tell vorgestellt haben und wir das dort vorhandene Interesse an Lisp+C wieder zurück in den weltbekannten Clojurian Slack-Channel gepostet haben und zwar sehr blumig ausgeschmückt. 1:0 für das komplett KI-agent gevibde Jolt.
+
+Daraufhin wurden die Lisp Games erstellt zum Vergleich der seither aufgetauchten verschiedenen Arten der Lisp-C Kommunikation. Ich sollte da contributen mit dem Clojure(Script) Dialekt [Squint](https://github.com/squint-cljs/squint), dessen Javascript Output dann mit der runtime [Bun](https://bun.com/) laufen würde. Das würde den Ausgleich zu Jolt auf 1:1 stellen, weil Squint gibt's schon lang und ist bio-zertifiziert und KI frei.
+
+Ich wart aber noch bis wer anderer auf die so offensichtliche Idee Squint+Bun+C kommt, ich übernehm dann das posten :-).
+
 ## Assortment 25.Nov26
 
 ### [Meine Blöcke, clj-tiles](https://kloimhardt.github.io/cljtiles.html?page=FDG001)
