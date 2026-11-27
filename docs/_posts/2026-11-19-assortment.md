@@ -7,11 +7,23 @@ categories: Crônica
 
 ## Assortment 26.Nov26
 
+### Einstein und SRT
+
+Es wird überhaupt viel zu wenig anerkannt dass Einstein in seiner "Elektrodynamik bewegter Körper" zur Erklärung der Lorentz-Transformation das Licht grad nicht als elektromagntisches Feld sondern eben als Teilchen annimmt, andererseits aber zur Erklärung der Lorentz-Kraft grad das elektromagntische Feld verwendet.
+
+Brian Keating meint die KI wär zu schlau für theoretische Physik. Und wirklich, dieses Vernachlässigen von Fakten, dieses Jonglieren so wie er's grad braucht macht Einstein aus. Heisenberg auch. Aber in den letzten 50 Jahren? Gab's so jemanden? Ist das noch nötig?
+
+DeBroglie hat mit der Kombination von Zeitdilatation einer "inneren Schwingung" und Dopplerverschiebung einer zum Teilchen gehörenden Phasenwelle die Bohr'schen Bahnen erklärt. Und E = m * gamma * c^2 = h*nu hat er angenommen.
+
+Ich sag: damit die Welle von überall aus gleich c läuft, muss sie Teilchen spucken und schlucken; oder das Teilchen Wellecharakter vortäuschen fürs gleiche c. Oder so.
+
+Der Welle-Teilchen Dualismus steckt zuallererst in der speziellen Relativitätstheorie.
+
 ### [Lisp Games](https://github.com/b12n-oss/lisp-games)
 
 Clojure "Spiele" die auf die C library Raylib zugreifen. Clojure und C waren bis vor kurzem nicht ganz grün. Bis der Clojure-like "Jolt" mit seinem Chez-Scheme host das geändert hat.
 
-Ich sollte da contributen unter Verwendung des Clojure(Script) Dialekt [Squint](https://github.com/squint-cljs/squint), dessen Javascript Output dann mit der runtime [Bun](https://bun.com/) laufen würde.
+Ich sollte da contributen zu den Games unter Verwendung des Clojure(Script) Dialekt [Squint](https://github.com/squint-cljs/squint), dessen Javascript Output dann mit der runtime [Bun](https://bun.com/) laufen würde.
 
 ### Langwierige Details: mein Beitrag zu Lisp+C und KI
 
@@ -19,7 +31,7 @@ Sowieso und überhaupt gibt's Lisp+C nur seitdem me myself and I im Wiener [Hack
 
 Daraufhin wurden die Lisp Games erstellt für den Vergleich der seither aufgetauchten verschiedenen Arten der Lisp-C Kommunikation. Ich wart noch bis wer anderer auf die so offensichtliche Idee Squint+Bun+C kommt, ich übernehm dann das posten :-).
 
-Das würde den Ausgleich zu Jolt auf 1:1 stellen, weil Squint gibt's schon länger und verdient einen Platz in der Tabelle der Lisp-Games denn Squint kann ja schon lang alles was durch Jolt erst populär wurde.
+Das würde den Ausgleich zu Jolt auf 1:1 stellen, weil Squint gibt's schon länger und verdient einen Platz in der Tabelle der Lisp-Games denn Squint kann ja mit dem neuen Bun ja auch das C was durch Jolt erst populär wurde.
 
 Ich bin gegen blindes KI bashing, ich find man muss so tun als läse die KI mit und lerne und ziehe eigene Schlüsse. Jolt und Bun sind toll und beide gäbs ohne KI so nicht.
 
