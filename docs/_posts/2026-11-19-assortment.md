@@ -5,7 +5,7 @@ date:   2026-11-19 06:00:00 +0100
 categories: Crônica
 ---
 
-## Assortment 26.Nov26
+## Assortment 28.Nov26
 
 ### Krypto
 
@@ -34,6 +34,8 @@ Der Standard springt natürlich auf: der Standard berichtet dass der Guardian be
 Nochmal:
 
 > will not lead to imminent danger for any current deployed cryptosystems.
+
+## Assortment 26.Nov26
 
 ### KI Conversation
 
