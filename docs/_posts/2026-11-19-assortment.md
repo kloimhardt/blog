@@ -7,6 +7,48 @@ categories: Crônica
 
 ## Assortment 26.Nov26
 
+### Krypto
+
+Folgende Aussage von Scott Aaronson ist mit einem erfolgreichen KI Beweis P ungleich NP vereinbar.
+
+> I have specific information that the labs will soon release a major breakthrough in theoretical cryptanalysis—which breakthrough, however, will not lead to imminent danger for any current deployed cryptosystems.
+
+Die Frage der Journalisten ist:
+
+> Are the AI labs sitting on a break, or aren’t they?
+
+Hier wird von beiden Seiten gespielt mit den Worten 1) "break" und 2) "breakthrough". 1) "break" heisst cracken, knacken. 2) "breakthrough" heisst bahnbrechende Erkenntnis.
+
+>  it would be astonishing good luck if all our current crypto protocols managed to survive the onslaught of the newly superhuman AI mathematicians without a scratch. But I don’t have any specific, actionable information there.
+
+Also, es wird Hackerangriffe geben und es wird gestohlen werden. No na net. Kein seriöser Mensch kann das ausschliessen.
+
+> AI labs are now sitting on one or more bombshells in that area. However, until I either see details or hear directly from someone at a lab, I feel much, much less confident about the specific nature of those bombshells.
+
+Hier wird mit dem Wort "bombshell" gespielt. Es ist eine sensationelle Entdeckung, die da kommen wird. Immer die Worte "break" und "bomb". Aber eben mit "-through" und "-shell". Säcke sind sie schon.
+
+Der Standard springt natürlich auf: der Standard berichtet dass der Guardian berichtet dass Aaronson berichtet dass es eine "bombshell" geben wird.
+
+> Einer, der mit Andeutungen auf seinem Blog darauf aufmerksam machte, ist der Computerwissenschafter Scott Aaronson. Er deutete an, dass KI-Labore auf einigen "Bombshells" sitzen – auf sensationellen Entdeckungen, und bezog sich dabei offenbar auf Verschlüsselung. Könnte das den Internetverkehr unsicher machen? Diese Möglichkeit deuten Nature und der Guardian an.
+
+Nochmal:
+
+> will not lead to imminent danger for any current deployed cryptosystems.
+
+### KI Conversation
+
+Gemini ist ganz poetisch:
+
+> Particles are the discrete notes that a continuous field is forced to play when its information is fundamentally limited and fuzzy".
+
+Zuvor hat Gemini mir "Information Geometry" erklärt
+
+> In the late 1990s, physicists like B. Roy Frieden and later Reginatto showed that you can derive the Schrödinger equation purely from information theory (specifically, minimizing something called Fisher Information, which measures how much information a measurement gives you about an unknown parameter). If you start with classical Hamilton-Jacobi mechanics and simply add the rule "we have limited, fuzzy information about where the particle actually is," the math forces the probability distribution to obey the Schrödinger equation.
+
+Und die standard Textbuchweisheit dass die Mathematik des Lorentz-relativistischen Feldes (nach Fouriertransformation) dieselbe ist wie ein Haufen Galilei-klassischer Teilchen:
+
+> a relativistic field is mathematically identical to a collection of infinite vibrating guitar strings (harmonic oscillators)—and when you combine "fuzzy information" with "oscillation," discreteness becomes mathematically unavoidable.
+
 ### Einstein und SRT
 
 Es wird überhaupt viel zu wenig anerkannt dass Einstein in seiner "Elektrodynamik bewegter Körper" zur Erklärung der Lorentz-Transformation das Licht grad nicht als elektromagntisches Feld sondern eben als Teilchen annimmt, andererseits aber zur Erklärung der Lorentz-Kraft grad das elektromagntische Feld verwendet.
@@ -92,7 +134,7 @@ Terry Tao mit Riemann beginnt schon zu koordinieren. Hat die Physik einen Terry 
 
 Mit der Demokratie ists wie beim Geld: wenn man blöd tut iss' weg. Beides trägt den Keim der Verdünnisierung und sollte also besser vernünftig gehandhabt werden. Also durch reversible Reformen des Status Quo. "Melde gehorsamst, ich irr' mich kleinweis empor", sagt mein Girokonto.
 
-Nota bene: allzugute "Reformen" führen zum Zuviel des Guten. Das können wir schmerzlich beobachten. Demokratie beinhaltet Minderheitenschutz, nicht jede Minderheit ist schützenswert.
+Nota bene: allzugute "Reformen" führen zum Zuviel des Guten. Das können wir schmerzlich beobachten. Zum Beispiel: sich soweit menschenrechtlich zu reformieren, dass dann ein Folterverbot "weltweit, absolut" zu gelten hat, das geht als Reform zu weit. Denn ein demokratischer Staat muss handlungsfähig mit anderen Staaten verkehren, auch wenn dort Folter an der Tagesordnung ist; jene Staaten die am wenigsten foltern werden lediglich deutlich bevorzugt, je weniger desto besser. Und ja, Demokratie beinhaltet Minderheitenschutz, aber nicht jede Minderheit ist schützenswert, schon gar nicht absolut und bedingungslos .
 
 Universalien sind anstrengend, es gibt Intersektionalität, eine Person kann in der Schnittmenge zweier Minderheiten sein, das Paradebeispiel die schwarze Lesbe. Doppelt am Rand.
 
